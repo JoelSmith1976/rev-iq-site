@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder-Led, Sales-Led, or Product-Led: Pick One — Rev-IQ</title>
+  <meta name="description" content="Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f7f3ee;
+      --color-surface: #fcfaf7;
+      --color-surface-2: #f2ece5;
+      --color-border: #d8cfc6;
+      --color-divider: #e3dbd2;
+      --color-text: #2d251f;
+      --color-text-muted: #6f665f;
+      --color-text-faint: #9c948d;
+      --color-primary: #7a4b2b;
+      --color-primary-hover: #61391f;
+      --color-primary-soft: #eadfd5;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.25rem;
+      --shadow-sm: 0 2px 10px rgba(45,37,31,0.05);
+      --shadow-md: 0 10px 28px rgba(45,37,31,0.08);
+      --font-display: 'Manrope', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    nav ul a:hover { color: var(--color-primary); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
+    h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+    section { padding: clamp(1.2rem, 3vw, 2.4rem) 0; }
+    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-msg-error { color: #a12c2c; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    @media (max-width: 920px) {
+      nav ul { display: none; }
+      h1 { max-width: 100%; }
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>REV-IQ</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#focus">Focus</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../resources.html">Resources</a>&nbsp;/&nbsp;Strategy</div>
+        <div class="eyebrow"><span class="dot"></span>Strategy</div>
+        <h1>Founder-Led, Sales-Led, or Product-Led: Pick One</h1>
+        <p class="dek">Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one.</p>
+        <div class="meta-row"><span>7 min read</span><span>Free resource</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+        <h2>The 'Try Everything' Trap</h2>
+<p>Early-stage SaaS teams often respond to the pressure of zero revenue by trying every motion at once: a bit of outbound, a free trial, some content, maybe a paid ad test. This feels like coverage. In practice it means no motion gets enough attention or repetition to prove whether it works, and the team ends up with a pile of half-tested tactics instead of a system.</p>
+<p>A go-to-market motion is not a marketing channel. It's the core mechanism by which prospects become customers — who talks to whom, in what order, and who does the convincing. Choosing one is a structural decision that should be made early and deliberately, based on the shape of the business, not copied from whatever the last SaaS company you read about was doing.</p>
+<h2>The Three Motions, and What Each One Assumes</h2>
+<p>Founder-led sales assumes the founder personally talks to prospects, understands the problem better than anyone, and can close deals through direct conversation and credibility. It works when deal sizes are large enough to justify time-intensive selling, and the market is small or unfamiliar enough that a scripted sales process would fail.</p>
+<p>Sales-led (through hired reps) assumes there's a repeatable, teachable process for closing deals, and the deal size or sales cycle justifies paying a dedicated seller's time to pursue each one. It's a bet that the founder-led version of the motion already works and can now be transferred to someone else.</p>
+<p>Product-led assumes the product itself can demonstrate its value with little or no human involvement — through a free trial, freemium tier, or self-serve signup — and that the buyer is empowered to adopt it without approval from a committee. It works when deal sizes are small enough that person-to-person selling doesn't make economic sense, and the buying decision sits with the end user.</p>
+<h2>The Three Real Inputs to This Decision</h2>
+<p>First, ACV and deal size. Low ACV (roughly under a few thousand dollars a year) can't economically support a human sales process — it needs product-led or highly efficient self-serve. High ACV deals justify and require a human in the conversation, because the buyer needs confidence a self-serve flow can't provide.</p>
+<p>Second, market and buyer type. Is the buyer an individual or small team who can adopt something on their own authority, or does the purchase require approval, procurement, or multiple stakeholders? The more approvals required, the more a human-led motion is necessary to navigate that process — a product-led motion has no mechanism for managing a committee.</p>
+<p>Third, founder strengths and constraints. A founder who is a strong communicator and enjoys direct customer conversations has a real advantage in founder-led sales. A founder who is heads-down on product and genuinely does not want to spend their week in sales calls should weight harder toward product-led, even if the deal size could technically support selling — because a motion nobody on the team wants to run consistently will not be run consistently.</p>
+<h2>Why You Can Change Motions Later, But Not Now</h2>
+<p>The motion you start with is not a permanent identity — plenty of companies that start product-led add a sales-led layer once ACV or deal complexity grows, and plenty of founder-led companies eventually hire and systematize a sales team. The mistake isn't picking a motion that later needs to evolve. The mistake is refusing to pick one now and running a diluted version of all three.</p>
+<h2>Getting a Structured Answer Instead of a Guess</h2>
+<p>Use the GTM Motion Decision Tree to work through this for your business: it walks through ACV, buyer type, and founder fit in order, and arrives at a single recommended starting motion rather than a menu of options to pick from based on preference.</p>
+<p>The output should be one motion, run deliberately and consistently for a defined period, not three motions run half-heartedly at once.</p>
+
+        <div class="takeaways">
+          <strong>Key takeaways</strong>
+          <ul>
+            <li>A GTM motion is the core mechanism of who convinces whom, not a marketing channel or a list of tactics.</li>
+<li>Low ACV and self-directed buyers point to product-led; high ACV and committee-based buying point to founder-led or sales-led.</li>
+<li>Founder-led sales requires a founder willing to personally run sales conversations — if that's not sustainable, weight toward product-led even at higher ACV.</li>
+<li>Running all three motions at once usually means none of them get proven or disproven.</li>
+<li>The starting motion can evolve later; the goal now is one deliberate choice, not full coverage.</li>
+
+          </ul>
+        </div>
+        <div class="download-card" id="download">
+          <div>
+            <div class="label">Decision Tree · Free download</div>
+            <h3>GTM Motion Decision Tree</h3>
+            <p>For founders choosing their first go-to-market motion — walks through deal size, buyer type, and founder fit to arrive at one recommended starting motion.</p>
+          </div>
+          <a class="btn btn-primary" href="../assets/02-gtm-motion-decision-tree.pdf" download>Download PDF</a>
+        </div>
+        <div class="nav-links">
+          <a href="01-the-5-levers-that-actually-drive-saas-revenue.html">← The 5 Levers That Actually Drive SaaS Revenue</a>
+          <a href="03-designing-a-simple-operating-rhythm-for-your-saas.html">Designing a Simple Operating Rhythm for Your SaaS →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Rev-IQ. All rights reserved.</div>
+      <div>Rev-IQ</div>
+    </div>
+  </footer>
+  <script src="../js/forms.js" defer></script>
+</body>
+</html>

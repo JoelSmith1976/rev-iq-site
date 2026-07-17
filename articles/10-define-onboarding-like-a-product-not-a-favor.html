@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Define Onboarding Like a Product, Not a Favor — Rev-IQ</title>
+  <meta name="description" content="How to set scope, timelines, and mutual responsibilities up front so customers know exactly what onboarding includes before it starts." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f7f3ee;
+      --color-surface: #fcfaf7;
+      --color-surface-2: #f2ece5;
+      --color-border: #d8cfc6;
+      --color-divider: #e3dbd2;
+      --color-text: #2d251f;
+      --color-text-muted: #6f665f;
+      --color-text-faint: #9c948d;
+      --color-primary: #7a4b2b;
+      --color-primary-hover: #61391f;
+      --color-primary-soft: #eadfd5;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.25rem;
+      --shadow-sm: 0 2px 10px rgba(45,37,31,0.05);
+      --shadow-md: 0 10px 28px rgba(45,37,31,0.08);
+      --font-display: 'Manrope', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    nav ul a:hover { color: var(--color-primary); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
+    h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+    section { padding: clamp(1.2rem, 3vw, 2.4rem) 0; }
+    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-msg-error { color: #a12c2c; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    @media (max-width: 920px) {
+      nav ul { display: none; }
+      h1 { max-width: 100%; }
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>REV-IQ</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#focus">Focus</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../resources.html">Resources</a>&nbsp;/&nbsp;Implementation / Onboarding</div>
+        <div class="eyebrow"><span class="dot"></span>Implementation / Onboarding</div>
+        <h1>Define Onboarding Like a Product, Not a Favor</h1>
+        <p class="dek">How to set scope, timelines, and mutual responsibilities up front so customers know exactly what onboarding includes before it starts.</p>
+        <div class="meta-row"><span>5 min read</span><span>Free · email required</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+        <h2>Undefined onboarding becomes unlimited onboarding</h2>
+<p>When onboarding has no written scope, it quietly expands to fill whatever time and goodwill the customer is willing to spend. Every new request feels reasonable in isolation — one more integration, one more training session, one more custom report — but without a boundary, the implementer ends up delivering a different, larger scope for every customer, at a real cost to margin and sanity.</p>
+<p>This is especially common for small teams selling to their first mid-size customers, where the instinct is to say yes to everything to protect the relationship. The problem is that 'yes to everything' isn't a repeatable service — it's a one-off arrangement that can't be priced, staffed, or promised to the next customer.</p>
+<p>The fix is treating onboarding as a defined service with a scope, not an open-ended favor extended to whoever asks the most. That doesn't require rigidity — it requires writing down what's included, what isn't, and what happens if the customer wants more.</p>
+<h2>Scope is a list, not a feeling</h2>
+<p>A useful onboarding scope names the specific deliverables included: number of configuration sessions, which integrations are supported out of the box, how much data migration is covered, and how many training sessions are standard. Anything outside that list is either a paid add-on or a documented 'phase 2' — not a silent scope creep.</p>
+<p>This protects the customer as much as the business. A customer who knows exactly what's included can plan around it and staff their side accordingly; a customer left guessing will assume 'everything' is included and be disappointed when it isn't, even if nothing was ever promised.</p>
+<h2>Timelines need both sides' commitments, not just yours</h2>
+<p>Most onboarding delays are caused by the customer, not the vendor — a slow-to-respond technical contact, data that isn't ready, or approvals that stall internally. A timeline that only states your commitments hides this. State both sides' responsibilities against the same timeline, so a delay has a visible owner instead of becoming a vague frustration pointed at the implementation team.</p>
+<p>This also changes the conversation when things slip. Instead of an awkward, undocumented back-and-forth about whose fault a delay is, both sides can point to the same written commitments and see exactly where the gap is.</p>
+<p>Use the Onboarding Scope &amp; Service Description to put this in writing before the project starts, not after the first delay happens.</p>
+<h2>Success criteria prevent onboarding from running forever</h2>
+<p>Without an explicit definition of 'done,' onboarding can drift indefinitely, with the customer treating it as ongoing support rather than a bounded project. Defining success criteria up front — specific, checkable conditions like 'all target users are provisioned and have logged in' — gives both sides a clear finish line and a clean handoff to whoever owns the account afterward.</p>
+<p>It also gives the implementer a legitimate way to close a project that's technically complete but where the customer keeps finding 'one more thing.' Pointing back to the agreed criteria is far less awkward than trying to explain, after the fact, why the engagement should be wrapping up.</p>
+<h2>This document is a sales tool too</h2>
+<p>A clear, professional onboarding scope document does double duty: it's operationally useful, and it signals maturity to a prospective customer during the sales process. Showing a buyer exactly what onboarding will look like — before they've signed anything — is a credibility signal that most small SaaS vendors skip and most enterprise buyers expect.</p>
+
+        <div class="takeaways">
+          <strong>Key takeaways</strong>
+          <ul>
+            <li>Undefined onboarding scope always expands — write down exactly what's included and what isn't.</li>
+<li>State both the vendor's and the customer's responsibilities on the same timeline so delays have a clear owner.</li>
+<li>Define explicit, checkable success criteria so onboarding has a real finish line.</li>
+<li>Anything outside the defined scope becomes a paid add-on or a phase 2, not silent extra work.</li>
+<li>A well-written onboarding scope document is also a sales credibility signal, not just an internal tool.</li>
+
+          </ul>
+        </div>
+        <div class="download-card" id="download">
+          <div>
+            <div class="label">Template · Free with email</div>
+            <h3>Onboarding Scope &amp; Service Description</h3>
+            <p>A one-page, lightweight statement of work that sets expectations for scope, timeline, responsibilities, and success criteria before implementation begins.</p>
+          </div>
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/10-onboarding-scope-service-description.pdf">
+            <input type="hidden" name="_subject" value="Download Request: Onboarding Scope &amp; Service Description — rev-iq.ai" />
+            <input type="hidden" name="asset" value="Onboarding Scope &amp; Service Description" />
+            <input type="hidden" name="form_type" value="Download request" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div data-state="idle" class="gate-fields">
+              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+            </div>
+            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
+            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
+            <p class="gate-note" data-state="idle">No spam — just the template.</p>
+          </form>
+        </div>
+        <div class="nav-links">
+          <a href="09-how-to-onboard-customers-without-reinventing-it-every-time.html">← How to Onboard Customers Without Reinventing It Every Time</a>
+          <a href="11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Customer Success at 0-20 Customers, Before You Hire a CSM →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Rev-IQ. All rights reserved.</div>
+      <div>Rev-IQ</div>
+    </div>
+  </footer>
+  <script src="../js/forms.js" defer></script>
+</body>
+</html>

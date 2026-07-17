@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 5 Levers That Actually Drive SaaS Revenue — Rev-IQ</title>
+  <meta name="description" content="If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f7f3ee;
+      --color-surface: #fcfaf7;
+      --color-surface-2: #f2ece5;
+      --color-border: #d8cfc6;
+      --color-divider: #e3dbd2;
+      --color-text: #2d251f;
+      --color-text-muted: #6f665f;
+      --color-text-faint: #9c948d;
+      --color-primary: #7a4b2b;
+      --color-primary-hover: #61391f;
+      --color-primary-soft: #eadfd5;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.25rem;
+      --shadow-sm: 0 2px 10px rgba(45,37,31,0.05);
+      --shadow-md: 0 10px 28px rgba(45,37,31,0.08);
+      --font-display: 'Manrope', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    nav ul a:hover { color: var(--color-primary); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
+    h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+    section { padding: clamp(1.2rem, 3vw, 2.4rem) 0; }
+    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-msg-error { color: #a12c2c; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    @media (max-width: 920px) {
+      nav ul { display: none; }
+      h1 { max-width: 100%; }
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>REV-IQ</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#focus">Focus</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../resources.html">Resources</a>&nbsp;/&nbsp;Strategy</div>
+        <div class="eyebrow"><span class="dot"></span>Strategy</div>
+        <h1>The 5 Levers That Actually Drive SaaS Revenue</h1>
+        <p class="dek">If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
+        <div class="meta-row"><span>7 min read</span><span>Free · email required</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+        <h2>Why a Working Product Isn't a Working Business</h2>
+<p>A lot of SaaS founders arrive at the same wall: the product works, a handful of people use it, and revenue is flat or nonexistent. This is especially common now that AI tools make it possible to build a functioning product without ever building a go-to-market function alongside it.</p>
+<p>The product is not the bottleneck in this scenario. The absence of a revenue model is. Revenue in a subscription business is not one thing you're either good or bad at — it's the output of five distinct levers working together. Most stuck founders are only aware of one or two of them, usually acquisition, and are quietly bleeding out through the other three.</p>
+<h2>The Five Levers, Defined Plainly</h2>
+<p>Acquisition is how many qualified people find out you exist and enter your funnel. Conversion is what percentage of those people become paying customers, and how long that takes. Pricing is what you charge and how that price is structured against the value delivered. Retention is whether customers stay long enough for their revenue to be worth acquiring them in the first place. Expansion is whether existing customers grow their spend over time through upgrades, seats, or usage.</p>
+<p>Each lever affects the others. A pricing structure that's too complicated will quietly suppress conversion. Weak retention makes acquisition a treadmill instead of a compounding asset. Founders who only think about the top of the funnel are optimizing one-fifth of the machine and wondering why the whole thing doesn't move.</p>
+<h2>How the Levers Compound Into ARR</h2>
+<p>Think of ARR as the result of a simple chain: the number of qualified people you reach, multiplied by the percentage who convert, multiplied by what they pay, multiplied by how long they stay, plus whatever additional revenue existing customers add over time. This isn't a formula to calculate precisely — it's a lens for diagnosis.</p>
+<p>If acquisition is healthy but revenue still isn't growing, the leak is downstream: conversion, pricing, or retention. If new logos convert fine but ARR still stalls quarter over quarter, churn is likely erasing new bookings as fast as they come in. Most 'we need more leads' problems are actually 'we lose what we get' problems in disguise.</p>
+<h2>Why Order Matters More Than Effort</h2>
+<p>It's tempting to work on all five levers at once, but a five-person team pulling on five levers simultaneously usually just produces motion, not results. The right move is to identify which single lever, if improved even modestly, would change the trajectory of the business the most right now — and put disproportionate attention there for a defined period.</p>
+<p>A pre-revenue founder with a working product but no pipeline has an acquisition and conversion problem, not a retention problem, no matter how good the product's stickiness looks in theory. A founder with steady sign-ups but high churn has the opposite priority. The lever that matters is the one closest to where revenue is currently leaking, not the one that feels most urgent emotionally.</p>
+<h2>Turning This Into a Decision, Not a Feeling</h2>
+<p>Use the SaaS Growth Model Worksheet to work through this for your business: plug in your current, honest situation for each of the five levers, and the worksheet is structured to help you see which one is the real constraint right now, rather than the one you happen to like working on.</p>
+<p>The point isn't to fix all five levers this quarter. It's to stop guessing about where the constraint actually is, and to give the business one clear growth priority instead of five vague ones.</p>
+
+        <div class="takeaways">
+          <strong>Key takeaways</strong>
+          <ul>
+            <li>Revenue is the output of five levers: acquisition, conversion, pricing, retention, and expansion — not just top-of-funnel volume.</li>
+<li>A product-only founder without a GTM model is usually leaking revenue in conversion or retention, not lacking leads.</li>
+<li>Weak retention turns acquisition into a treadmill instead of a compounding asset.</li>
+<li>Diagnose which lever is the actual constraint before deciding where to spend effort — don't work all five at once.</li>
+<li>The single highest-leverage move is usually the lever closest to where revenue is currently leaking, not the one that feels most urgent.</li>
+
+          </ul>
+        </div>
+        <div class="download-card" id="download">
+          <div>
+            <div class="label">Worksheet · Free with email</div>
+            <h3>SaaS Growth Model Worksheet</h3>
+            <p>For founders and early SaaS teams who need to identify which of the five growth levers is the real constraint on revenue right now.</p>
+          </div>
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/01-saas-growth-model-worksheet.pdf">
+            <input type="hidden" name="_subject" value="Download Request: SaaS Growth Model Worksheet — rev-iq.ai" />
+            <input type="hidden" name="asset" value="SaaS Growth Model Worksheet" />
+            <input type="hidden" name="form_type" value="Download request" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div data-state="idle" class="gate-fields">
+              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+            </div>
+            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
+            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
+            <p class="gate-note" data-state="idle">No spam — just the template.</p>
+          </form>
+        </div>
+        <div class="nav-links">
+          <a href="../resources.html">← All resources</a>
+          <a href="02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Rev-IQ. All rights reserved.</div>
+      <div>Rev-IQ</div>
+    </div>
+  </footer>
+  <script src="../js/forms.js" defer></script>
+</body>
+</html>

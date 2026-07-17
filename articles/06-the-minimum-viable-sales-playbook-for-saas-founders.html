@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Minimum Viable Sales Playbook for SaaS Founders — Rev-IQ</title>
+  <meta name="description" content="A working sales process needs four decisions made in advance, not improvised call by call: what you ask, who qualifies, what the stages are, and what counts as progress." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f7f3ee;
+      --color-surface: #fcfaf7;
+      --color-surface-2: #f2ece5;
+      --color-border: #d8cfc6;
+      --color-divider: #e3dbd2;
+      --color-text: #2d251f;
+      --color-text-muted: #6f665f;
+      --color-text-faint: #9c948d;
+      --color-primary: #7a4b2b;
+      --color-primary-hover: #61391f;
+      --color-primary-soft: #eadfd5;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.875rem;
+      --radius-xl: 1.25rem;
+      --shadow-sm: 0 2px 10px rgba(45,37,31,0.05);
+      --shadow-md: 0 10px 28px rgba(45,37,31,0.08);
+      --font-display: 'Manrope', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    nav ul a:hover { color: var(--color-primary); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
+    h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+    section { padding: clamp(1.2rem, 3vw, 2.4rem) 0; }
+    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-msg-error { color: #a12c2c; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    @media (max-width: 920px) {
+      nav ul { display: none; }
+      h1 { max-width: 100%; }
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>REV-IQ</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html#focus">Focus</a></li>
+          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../resources.html">Resources</a>&nbsp;/&nbsp;New Business Development &amp; Sales</div>
+        <div class="eyebrow"><span class="dot"></span>New Business Development &amp; Sales</div>
+        <h1>The Minimum Viable Sales Playbook for SaaS Founders</h1>
+        <p class="dek">A working sales process needs four decisions made in advance, not improvised call by call: what you ask, who qualifies, what the stages are, and what counts as progress.</p>
+        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+        <h2>Why 'just wing it' stops working around deal five</h2>
+<p>Early sales conversations for a new SaaS product tend to go fine on instinct. The founder knows the product cold, the prospect is usually warm (a referral, a waitlist signup, someone who found the product themselves), and the call is really just two people talking shop. This works for the first handful of deals and then quietly stops working.</p>
+<p>The failure shows up as inconsistency: some calls run 20 minutes and close, others run 90 minutes and go nowhere, and there is no way to tell in advance which is which. That inconsistency is not a talent problem. It is the absence of a playbook — a repeatable set of questions, criteria, and stage definitions that turn selling from an improvised conversation into a process you can run, measure, and eventually hand to someone else.</p>
+<h2>Discovery questions are a filter, not small talk</h2>
+<p>The purpose of a discovery call is not to describe the product. It is to determine, as quickly and honestly as possible, whether this prospect has a problem worth solving, a way to pay for the solution, and a plausible path to a decision. Every question on the call should map to one of those three things.</p>
+<p>A minimum viable set covers: the specific problem and its cost today (in time, money, or risk), who else is affected by it, what they have already tried, who is involved in deciding, what budget or approval process exists, and what would need to be true for them to move forward. If a call ends and you cannot answer these six things, the call did not do its job, regardless of how pleasant it was.</p>
+<h2>Qualification criteria: writing down what a 'good deal' means</h2>
+<p>Most early-stage founders qualify prospects on vibes — enthusiasm on the call, a fast reply, a senior-sounding title. Vibes correlate poorly with deals that actually close. Qualification criteria replace vibes with a short, explicit checklist applied the same way to every prospect: does the problem match what the product actually solves, is there budget authority in the room or a credible path to it, is there a timeline driven by something real, and is the company a shape the product currently serves well.</p>
+<p>Writing these criteria down does two things. It stops the pipeline from filling up with deals that feel active but are not, and it gives you language to disqualify politely and early instead of dragging unlikely deals through six weeks of calls.</p>
+<h2>Pipeline stages should describe the buyer's commitment, not your activity</h2>
+<p>A common mistake is naming stages after what the seller did ("Demo sent," "Proposal emailed") rather than what the buyer has actually agreed to. Activity-based stages make the pipeline look busy and tell you almost nothing about whether a deal will close. Commitment-based stages track what the prospect has committed to, which is a much better predictor.</p>
+<p>A basic five-stage structure works for most early SaaS pipelines: Discovery Booked, Qualified, Solution Agreed, Commercials in Review, Verbal Commit. Each stage should have a one-sentence definition of what must be true for a deal to sit there, which removes the guesswork of "is this really a Stage 3 or am I being optimistic."</p>
+<h2>Defining 'next step' so deals stop going quiet</h2>
+<p>The single biggest cause of stalled pipelines is a vague or missing next step. "They're going to think about it" is not a next step — it has no date, no owner, and no defined action. A real next step names a specific action, a specific date, and a specific person responsible, on both sides.</p>
+<p>Build this into the playbook as a rule, not a preference: no call ends, and no deal stays in a stage, without a next step that meets that bar. If a deal cannot produce one, that is itself useful information — it usually means the deal is not as real as it looks and should be marked stalled or disqualified rather than left to rot in the pipeline. Use the Sales Playbook &amp; Discovery Toolkit to put these stage definitions, questions, and follow-up templates in writing before your next call.</p>
+
+        <div class="takeaways">
+          <strong>Key takeaways</strong>
+          <ul>
+            <li>A sales playbook is four written decisions: discovery questions, qualification criteria, pipeline stages, and a definition of 'next step.'</li>
+<li>Discovery questions should filter for problem, budget, and decision path — not just build rapport.</li>
+<li>Qualify on a fixed checklist, not enthusiasm or title, to keep unlikely deals from clogging the pipeline.</li>
+<li>Name pipeline stages after buyer commitment, not seller activity, so the pipeline reflects reality.</li>
+<li>No deal or call should end without a next step that has a specific action, date, and owner.</li>
+
+          </ul>
+        </div>
+        <div class="download-card" id="download">
+          <div>
+            <div class="label">Template · Free with email</div>
+            <h3>Sales Playbook &amp; Discovery Toolkit</h3>
+            <p>A minimum viable sales process for SaaS founders and early teams running their own first sales conversations.</p>
+          </div>
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/06-sales-playbook-discovery-toolkit.pdf">
+            <input type="hidden" name="_subject" value="Download Request: Sales Playbook &amp; Discovery Toolkit — rev-iq.ai" />
+            <input type="hidden" name="asset" value="Sales Playbook &amp; Discovery Toolkit" />
+            <input type="hidden" name="form_type" value="Download request" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div data-state="idle" class="gate-fields">
+              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+            </div>
+            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
+            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
+            <p class="gate-note" data-state="idle">No spam — just the template.</p>
+          </form>
+        </div>
+        <div class="nav-links">
+          <a href="05-three-campaigns-you-can-run-without-hiring-a-marketer.html">← Three Campaigns You Can Run Without Hiring a Marketer</a>
+          <a href="07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Fixing the Pipeline Mess So You Can Forecast With Confidence →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Rev-IQ. All rights reserved.</div>
+      <div>Rev-IQ</div>
+    </div>
+  </footer>
+  <script src="../js/forms.js" defer></script>
+</body>
+</html>

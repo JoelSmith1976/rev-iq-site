@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — Rev-IQ</title>
+  <meta name="description" content="Free frameworks, worksheets and playbooks for SaaS founders and operators covering strategy, marketing, sales, customer success, finance, product and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+      --color-bg: #f7f3ee; --color-surface: #fcfaf7; --color-border: #d8cfc6; --color-divider: #e3dbd2;
+      --color-text: #2d251f; --color-text-muted: #6f665f; --color-text-faint: #9c948d;
+      --color-primary: #7a4b2b; --color-primary-hover: #61391f; --color-primary-soft: #eadfd5;
+      --radius-lg: 0.875rem; --radius-xl: 1.25rem;
+      --shadow-sm: 0 2px 10px rgba(45,37,31,0.05); --shadow-md: 0 10px 28px rgba(45,37,31,0.08);
+      --font-display: 'Manrope', 'Inter', Arial, sans-serif; --font-body: 'Inter', Arial, sans-serif;
+      --content: 1180px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: 1rem; }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    nav ul a:hover { color: var(--color-primary); }
+    h1, h2, h3 { margin: 0; line-height: 1.15; font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
+    .hero { padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(2rem, 4vw, 3rem); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
+    .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); max-width: 20ch; }
+    .lead { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .res-category { padding: var(--space-8) 0; }
+    .res-category h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--color-divider); }
+    .res-category:first-of-type h2 { border-top: none; padding-top: 0; }
+    .res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); }
+    .res-card { display: flex; gap: var(--space-4); background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+    .res-num { font-family: var(--font-display); font-size: 1.1rem; color: var(--color-primary); font-weight: 800; flex-shrink: 0; width: 2rem; }
+    .res-card-body h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+    .res-card-body h3 a:hover { color: var(--color-primary); }
+    .res-card-body p { margin: 0 0 var(--space-4); color: var(--color-text-muted); font-size: var(--text-sm); }
+    .res-card-footer { display: flex; flex-direction: column; gap: 0.5rem; font-size: var(--text-sm); }
+    .res-read { color: var(--color-primary); font-weight: 600; }
+    .res-download { color: var(--color-text-muted); border-top: 1px dashed var(--color-divider); padding-top: 0.5rem; }
+    .res-download:hover { color: var(--color-primary); }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
+    .footer-row { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    @media (max-width: 820px) {
+      nav ul { display: none; }
+      .res-grid { grid-template-columns: 1fr; }
+      .res-card { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>REV-IQ</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html#focus">Focus</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span>Free resource library</div>
+        <h1>Frameworks and templates for growing a software business without guesswork.</h1>
+        <p class="lead">Seventeen practical playbooks covering strategy, marketing, sales, account management, onboarding, customer success, support, finance, internal operations and product — each paired with a free, downloadable worksheet you can use today. Quick-reference tools are instant downloads; deeper templates are sent straight to your inbox.</p>
+      </div>
+    </section>
+    
+    <section class="res-category">
+      <div class="container">
+        <h2>Strategy</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">01</div>
+          <div class="res-card-body">
+            <h3><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue</a></h3>
+            <p>If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">Read the piece →</a>
+              <a class="res-download" href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html#download">Get: SaaS Growth Model Worksheet (email required) →</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">02</div>
+          <div class="res-card-body">
+            <h3><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One</a></h3>
+            <p>Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Read the piece →</a>
+              <a class="res-download" href="assets/02-gtm-motion-decision-tree.pdf" download>Download: GTM Motion Decision Tree</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">03</div>
+          <div class="res-card-body">
+            <h3><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html">Designing a Simple Operating Rhythm for Your SaaS</a></h3>
+            <p>Turning a project into a business means deciding what gets reviewed weekly, monthly, and quarterly — a simple cadence that fits a small team.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html">Read the piece →</a>
+              <a class="res-download" href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html#download">Get: Operating Rhythm Calendar Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Marketing</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">04</div>
+          <div class="res-card-body">
+            <h3><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html">Your Product Works. Your Story Doesn't Exist Yet.</a></h3>
+            <p>A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html">Read the piece →</a>
+              <a class="res-download" href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html#download">Get: Positioning Canvas for This Product (email required) →</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">05</div>
+          <div class="res-card-body">
+            <h3><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Three Campaigns You Can Run Without Hiring a Marketer</a></h3>
+            <p>A repeatable playbook for founder-led content, partner co-marketing, and network email sequences that generate real pipeline on no budget.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Read the piece →</a>
+              <a class="res-download" href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html#download">Get: Campaign Planning Templates for Founder-Led, Partner, and Network Email Marketing (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>New Business Development &amp; Sales</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">06</div>
+          <div class="res-card-body">
+            <h3><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders</a></h3>
+            <p>A working sales process needs four decisions made in advance, not improvised call by call: what you ask, who qualifies, what the stages are, and what counts as progress.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">Read the piece →</a>
+              <a class="res-download" href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html#download">Get: Sales Playbook &amp; Discovery Toolkit (email required) →</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">07</div>
+          <div class="res-card-body">
+            <h3><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Fixing the Pipeline Mess So You Can Forecast With Confidence</a></h3>
+            <p>A pipeline you cannot trust is not a forecasting problem, it is a data hygiene problem, and it is fixable with three habits: clean stages, tracked reasons, and aging rules.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Read the piece →</a>
+              <a class="res-download" href="assets/07-crm-pipeline-configuration-checklist.pdf" download>Download: CRM Pipeline Configuration Checklist</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Account Management</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">08</div>
+          <div class="res-card-body">
+            <h3><a href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html">When Your Customer List Needs Account Management, Not Vibes</a></h3>
+            <p>A practical way to segment accounts by value and risk, run lightweight account plans, and set a review cadence you'll actually keep.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html">Read the piece →</a>
+              <a class="res-download" href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html#download">Get: Account Plan Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Implementation / Onboarding</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">09</div>
+          <div class="res-card-body">
+            <h3><a href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html">How to Onboard Customers Without Reinventing It Every Time</a></h3>
+            <p>A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html">Read the piece →</a>
+              <a class="res-download" href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html#download">Get: Standard Implementation Plan Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">10</div>
+          <div class="res-card-body">
+            <h3><a href="articles/10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor</a></h3>
+            <p>How to set scope, timelines, and mutual responsibilities up front so customers know exactly what onboarding includes before it starts.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/10-define-onboarding-like-a-product-not-a-favor.html">Read the piece →</a>
+              <a class="res-download" href="articles/10-define-onboarding-like-a-product-not-a-favor.html#download">Get: Onboarding Scope &amp; Service Description (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Customer Success</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">11</div>
+          <div class="res-card-body">
+            <h3><a href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Customer Success at 0-20 Customers, Before You Hire a CSM</a></h3>
+            <p>A simple health scoring method, a minimum touchpoint schedule, and a lightweight QBR substitute you can run without any dedicated CS headcount.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Read the piece →</a>
+              <a class="res-download" href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html#download">Get: Customer Health Score Worksheet &amp; CS Playbook Outline (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Support</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">12</div>
+          <div class="res-card-body">
+            <h3><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">How to Set Up Support Tiers, SLAs, and a Knowledge Base</a></h3>
+            <p>A practical structure for response times, escalation levels, and documentation so a small team can scale support without over-promising or losing track of answers.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">Read the piece →</a>
+              <a class="res-download" href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html#download">Get: Support Tier &amp; SLA Framework + Knowledge Base Article Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Finance</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">13</div>
+          <div class="res-card-body">
+            <h3><a href="articles/13-the-six-saas-numbers-that-actually-matter.html">The Six SaaS Numbers That Actually Matter</a></h3>
+            <p>A plain-language guide to ARR, MRR, churn, CAC, LTV, payback, and runway, and why each one changes how you should run the business.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/13-the-six-saas-numbers-that-actually-matter.html">Read the piece →</a>
+              <a class="res-download" href="articles/13-the-six-saas-numbers-that-actually-matter.html#download">Get: Finance Dashboard Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">14</div>
+          <div class="res-card-body">
+            <h3><a href="articles/14-a-practical-way-to-price-early-stage-saas.html">A Practical Way to Price Early-Stage SaaS</a></h3>
+            <p>How to choose tiers, pick a value metric, and set a discount policy so pricing decisions stop happening ad hoc, deal by deal.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/14-a-practical-way-to-price-early-stage-saas.html">Read the piece →</a>
+              <a class="res-download" href="articles/14-a-practical-way-to-price-early-stage-saas.html#download">Get: Pricing Worksheet (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>IT / Internal Operations</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">15</div>
+          <div class="res-card-body">
+            <h3><a href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html">The Minimum Internal Stack Before You Add More Tools</a></h3>
+            <p>A practical baseline for CRM, support, documentation, analytics, and security so the business runs on systems, not memory.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html">Read the piece →</a>
+              <a class="res-download" href="assets/15-internal-systems-map-process-checklist.pdf" download>Download: Internal Systems Map &amp; Process Checklist</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+    <section class="res-category">
+      <div class="container">
+        <h2>Product &amp; Development</h2>
+        <div class="res-grid">
+        <article class="res-card">
+          <div class="res-num">16</div>
+          <div class="res-card-body">
+            <h3><a href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html">How to Build a Roadmap Instead of a Request Queue</a></h3>
+            <p>A scoring framework for turning scattered feature requests into a prioritized roadmap tied to business goals, not the loudest voice.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html">Read the piece →</a>
+              <a class="res-download" href="assets/16-roadmap-prioritization-scorecard.pdf" download>Download: Roadmap Prioritization Scorecard</a>
+            </div>
+          </div>
+        </article>
+        <article class="res-card">
+          <div class="res-num">17</div>
+          <div class="res-card-body">
+            <h3><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Closing the Gap Between What Sales Hears and What Product Builds</a></h3>
+            <p>A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs.</p>
+            <div class="res-card-footer">
+              <a class="res-read" href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Read the piece →</a>
+              <a class="res-download" href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html#download">Get: Feedback Intake &amp; Triage Template (email required) →</a>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Rev-IQ. All rights reserved.</div>
+      <div>Rev-IQ</div>
+    </div>
+  </footer>
+</body>
+</html>

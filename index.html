@@ -39,6 +39,7 @@
       --content: 1100px;
     }
     * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
@@ -129,7 +130,7 @@
       <nav aria-label="Primary">
         <ul>
           <li><a href="#focus">Focus</a></li>
-          <li><a href="#insights">Insights</a></li>
+          <li><a href="resources.html">Resources</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -144,7 +145,7 @@
           <h1>Clear thinking for growth, retention and better operating performance.</h1>
           <p class="lead">Rev-IQ is a welcoming place for founders and business leaders to find practical ideas, operating frameworks and grounded commercial insight. If you want to accelerate your business performance, reduce your churn, eliminate the pain of doing business and unlock better ways to operate, this is the place for you. Or at least, it will be soon!</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#insights">Explore insights</a>
+            <a class="btn btn-primary" href="resources.html">Explore the resource library</a>
             <a class="btn btn-secondary" href="#contact">Get in touch</a>
           </div>
         </div>
@@ -162,7 +163,7 @@
       <div class="container">
         <div class="section-intro">
           <h2>Areas of focus</h2>
-          <p>This first version of Rev-IQ is intentionally simple - its role is to create a clear, easy to navigate home for ideas, methodologies, resources, frameworks and playbooks that will help you drive growth, retention and best-practice operations within your business.</p>
+          <p>This first version of Rev-IQ is intentionally simple - it's role is to create a clear, easy to navigate home for ideas, methodologies, resources, frameworks and playbooks that will help you drive growth, retention and best-practice operations within your business.</p>
         </div>
         <div class="grid-3">
           <article class="card"><h3>Growth</h3><p>How businesses create momentum, improve commercial performance, and convert effort into sustainable progress.</p></article>
@@ -174,13 +175,16 @@
     <section class="muted-band" id="insights">
       <div class="container">
         <div class="section-intro">
-          <h2>Featured themes</h2>
-          <p>This launch version of the site uses a small number of editorial placeholders - in due course a larger library of articles and downloadable resources will be added.</p>
+          <h2>The resource library</h2>
+          <p>Seventeen free frameworks and downloadable worksheets covering strategy, marketing, sales, account management, onboarding, customer success, support, finance, internal operations and product — for founders and teams building a software business without a playbook.</p>
         </div>
         <div class="list">
-          <article class="list-item"><span>Essay</span><div><h3>Why growth problems are often operating problems in disguise</h3><p>A practical exploration of how weak operating rhythm, poor clarity and inconsistent execution quietly suppress commercial performance.</p></div></article>
-          <article class="list-item"><span>Framework</span><div><h3>The difference between activity, output and progress</h3><p>A simple lens for leaders who want to improve how teams define momentum, measure traction and focus attention.</p></div></article>
-          <article class="list-item"><span>Resource</span><div><h3>Coming soon: practical tools, notes and downloadable assets</h3><p>Over time Rev-IQ will include short papers, templates, operating checklists and curated resources designed to be useful in the real world.</p></div></article>
+          <article class="list-item"><span>Strategy</span><div><h3><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue</a></h3><p>Acquisition, conversion, pricing, retention and expansion — with a worksheet to identify which lever is really constraining growth.</p></div></article>
+          <article class="list-item"><span>Sales</span><div><h3><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders</a></h3><p>Stages, qualification criteria and discovery scripts, plus a ready-to-use playbook template.</p></div></article>
+          <article class="list-item"><span>Finance</span><div><h3><a href="articles/13-the-six-saas-numbers-that-actually-matter.html">The Six SaaS Numbers That Actually Matter</a></h3><p>ARR, churn, CAC, LTV, payback and runway explained plainly, with a one-page dashboard template.</p></div></article>
+        </div>
+        <div class="actions" style="margin-top: var(--space-8);">
+          <a class="btn btn-primary" href="resources.html">See all 17 resources</a>
         </div>
       </div>
     </section>
@@ -207,11 +211,16 @@
             <p>If you would like to reach out, please use the form here and we'll be in touch.</p>
           </div>
         </div>
-        <form action="https://formspree.io/f/your-form-id" method="POST">
-          <div><label for="name">Name</label><input id="name" name="Name" type="text" required /></div>
-          <div><label for="email">Email</label><input id="email" name="Email" type="email" required /></div>
-          <div><label for="message">Message</label><textarea id="message" name="Message" required></textarea></div>
-          <button class="btn btn-primary" type="submit">Send message</button>
+        <form data-rev-iq-form>
+          <input type="hidden" name="_subject" value="New Contact Message — rev-iq.ai" />
+          <input type="hidden" name="form_type" value="Contact message" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <div data-state="idle"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
+          <div data-state="idle"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+          <div data-state="idle"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+          <button data-state="idle" class="btn btn-primary" type="submit">Send message</button>
+          <p data-state="success" hidden style="color: var(--color-primary); margin: 0; font-weight: 600;">Thanks — your message is on its way. We'll be in touch.</p>
+          <p data-state="error" hidden style="color: #a12c2c; margin: 0;">Something went wrong. Please email joel.smith@rev-iq.ai directly.</p>
         </form>
       </div>
     </section>
@@ -222,5 +231,6 @@
       <div>Rev-IQ</div>
     </div>
   </footer>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>

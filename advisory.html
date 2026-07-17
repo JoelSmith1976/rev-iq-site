@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Onboard Customers Without Reinventing It Every Time — Rev-IQ</title>
-  <meta name="description" content="A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it." />
+  <title>Advisory &amp; Fractional Support — Rev-IQ</title>
+  <meta name="description" content="Fractional commercial leadership, growth and GTM advisory, retention advisory, and workshops or speaking sessions for SaaS and technology businesses." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,33 +142,15 @@
     }
 
 
-    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
-    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
-    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
-    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
-    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
-    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
-    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
-    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
-    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
-    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
-    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
-    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
-    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
-    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
-    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
-    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
-    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
-    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
-    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
-    .gate-msg-error { color: #a12c2c; }
-    .diagnose-card { margin: var(--space-10) 0; }
-    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
-    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    .path-block { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; padding: var(--space-9) 0; border-bottom: 1px solid var(--color-divider); }
+    .path-block:last-of-type { border-bottom: 0; }
+    .path-block h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: var(--space-3); }
+    .path-block .includes { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .path-block .includes li { padding-left: 1.4rem; position: relative; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .path-block .includes li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .principles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
     @media (max-width: 920px) {
-      .download-card { flex-direction: column; align-items: flex-start; }
+      .path-block, .principles-grid { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -177,7 +159,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container nav">
-      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+      <a class="brand" href="index.html" aria-label="Rev-IQ home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
@@ -194,13 +176,13 @@
       </button>
       <nav aria-label="Primary" id="primary-nav">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../resources.html" aria-current="page">Resource Library</a></li>
-          <li><a href="../browse-by-challenge.html">Browse by Challenge</a></li>
-          <li><a href="../who-its-for.html">Who It's For</a></li>
-          <li><a href="../advisory.html">Advisory &amp; Fractional Support</a></li>
-          <li><a href="../about.html">About Rev-IQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resource Library</a></li>
+          <li><a href="browse-by-challenge.html">Browse by Challenge</a></li>
+          <li><a href="who-its-for.html">Who It's For</a></li>
+          <li><a href="advisory.html" aria-current="page">Advisory &amp; Fractional Support</a></li>
+          <li><a href="about.html">About Rev-IQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -232,72 +214,86 @@
     })();
   </script>
   <main id="main">
-    <section class="article-header">
-      <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Implementation / Onboarding</div>
-        <div class="eyebrow"><span class="dot"></span>Implementation / Onboarding</div>
-        <h1 class="article-h1">How to Onboard Customers Without Reinventing It Every Time</h1>
-        <p class="dek">A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
-        <div class="tag-row"><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+    <section class="hero" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span>Advisory &amp; fractional support</div>
+        <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">When a framework isn't enough, Rev-IQ works directly with your business.</h1>
+        <p class="lead" style="max-width: 66ch;">Four ways to bring Rev-IQ in — from a few hours of structured advice to ongoing fractional leadership. All of it is scoped to the actual problem, not sold as a package.</p>
       </div>
     </section>
-    <section class="article-body">
-      <div class="container-narrow">
-        <h2>Why every implementation feels like the first one</h2>
-<p>Small teams tend to run onboarding as a series of one-off projects. Each new customer gets a slightly different kickoff, a slightly different set of questions, and a slightly different path to go-live — because the person running it is improvising from memory rather than following a defined process. This is exhausting for the implementer and inconsistent for the customer.</p>
-<p>The fix isn't hiring an implementation team. It's turning the journey into a repeatable sequence of phases, each with a clear purpose and a small set of artefacts, so the process holds together whether you've done this ten times or it's someone's first week.</p>
-<h2>Seven phases, not one long blur</h2>
-<p>Kickoff, discovery, configure, migrate, pilot, go-live, and success handover are distinct phases with different goals: kickoff aligns on scope and roles, discovery uncovers the customer's actual workflow and data, configure builds the environment, migrate moves their data in, pilot tests it with real users before full rollout, go-live is the switch, and handover transitions the account to whoever owns it long-term.</p>
-<p>Treating these as one undifferentiated 'onboarding' blob is what causes scope creep and missed steps. Naming the phases forces you to know which one you're in and what's supposed to be true before you move to the next.</p>
-<h2>Every phase needs an artefact, not just a conversation</h2>
-<p>A phase without a tangible output is just a meeting. Discovery should produce a written requirements summary, not just notes in someone's head. Configure should produce a documented setup. Pilot should produce documented feedback and a go/no-go decision. Artefacts are what let a second person pick up an implementation mid-stream, and what let you improve the process over time instead of just repeating the same conversations.</p>
-<p>Use the Standard Implementation Plan Template to define what happens and what gets produced in each phase, so the plan exists independently of who's running it that week.</p>
-<h2>Designing for a team of one</h2>
-<p>If you're the only implementer, the temptation is to skip documentation because 'it's all in my head anyway.' Do the opposite: a solo implementer benefits most from a written process, because there's no one else to catch a missed step, and because the business is one sick day away from either delaying every customer or losing the only person who knows how onboarding works.</p>
-<p>A repeatable plan also protects the customer experience — new customers get the same quality of onboarding as your very first one, instead of a version that depends on how much bandwidth you happen to have that month.</p>
-<h2>Roles clarify what customers are responsible for too</h2>
-<p>A common cause of stalled implementations is ambiguity about who does what. Naming roles — implementer, customer project lead, customer technical contact, executive sponsor — for each phase makes it clear when the delay is on your side versus theirs, and gives you something concrete to point to when a project stalls.</p>
-
-        <div class="takeaways">
-          <strong>Key takeaways</strong>
-          <ul>
-            <li>Split implementation into seven named phases: kickoff, discovery, configure, migrate, pilot, go-live, success handover.</li>
-<li>Every phase should produce a written artefact, not just a conversation, so the process survives staff changes.</li>
-<li>A solo implementer needs a documented process more than a team does — there's no one else to catch a gap.</li>
-<li>Naming roles per phase clarifies whether a stall is on your side or the customer's.</li>
-<li>A repeatable plan protects customer experience consistency, regardless of how busy the implementer is that month.</li>
-
-          </ul>
-        </div>
-        <div class="download-card" id="download">
+    <section class="muted-band">
+      <div class="container">
+        <div class="principles-grid"><article class="card"><h3>Grounded, not sold</h3><p>No urgency tactics, no inflated promises. If Rev-IQ isn't the right fit, that gets said plainly.</p></article><article class="card"><h3>Built on operating experience</h3><p>The frameworks and advisory work here come from actually running commercial functions inside SaaS and technology businesses across Australia, New Zealand and the UK — not from theory.</p></article><article class="card"><h3>Structured before commercial</h3><p>Every engagement starts with a diagnostic read of what's actually happening, not a proposal for a program.</p></article></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="path-block" id="fractional-leadership">
           <div>
-            <div class="label">Plan · Free with email</div>
-            <h3>Standard Implementation Plan Template</h3>
-            <p>A phase-by-phase implementation plan covering kickoff through success handover, with a checklist for each phase.</p>
+            <span class="kicker">Fractional</span>
+            <h2>Fractional commercial leadership</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses that need senior commercial leadership — CRO or CCO-level thinking on pipeline, pricing, retention and team structure — but aren't ready for, or don't yet need, a full-time hire.</p>
           </div>
-          <form class="gate-form" data-rev-iq-form data-pdf="../assets/09-standard-implementation-plan-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Standard Implementation Plan Template — rev-iq.ai" />
-            <input type="hidden" name="asset" value="Standard Implementation Plan Template" />
-            <input type="hidden" name="form_type" value="Download request" />
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <div data-state="idle" class="gate-fields">
-              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">What this typically includes</strong>
+            <ul class="includes"><li>A structured read on the current commercial engine and where it's constrained</li><li>Direct involvement in pipeline, forecasting, pricing or retention decisions</li><li>A working cadence set to match the size of the problem — weekly, fortnightly, or project-based</li><li>A clear handover plan once a full-time leader is hired or the gap is closed</li></ul>
+            <div class="actions" style="margin-top: var(--space-6);">
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=fractional-leadership">Discuss fractional leadership →</a>
             </div>
-            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
-            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
-            <p class="gate-note" data-state="idle">No spam — just the template.</p>
-          </form>
+          </div>
         </div>
-        <div class="card path-card diagnose-card">
-          <span class="kicker">Want it applied to your business?</span>
-          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">Templates get you moving fast. If you want a structured read on where this is actually breaking down in your business, that's a short diagnostic conversation, not another download.</p>
-          <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
+        <div class="path-block" id="gtm-advisory">
+          <div>
+            <span class="kicker">Advisory</span>
+            <h2>Growth &amp; GTM advisory</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses that need to build, fix or scale their go-to-market motion — from a first sales process to a pipeline that can actually be forecast.</p>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">What this typically includes</strong>
+            <ul class="includes"><li>Diagnosing whether the model is founder-led, sales-led or product-led — and whether that's still the right call</li><li>Designing or repairing the sales process, qualification criteria and pipeline structure</li><li>Reviewing pricing and packaging against the current market and customer base</li><li>Working alongside existing sales and marketing leaders rather than replacing them</li></ul>
+            <div class="actions" style="margin-top: var(--space-6);">
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=gtm-advisory">Discuss GTM advisory →</a>
+            </div>
+          </div>
         </div>
-        <div class="nav-links">
-          <a href="08-when-your-customer-list-needs-account-management-not-vibes.html">← When Your Customer List Needs Account Management, Not Vibes</a>
-          <a href="10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor →</a>
+        <div class="path-block" id="retention-advisory">
+          <div>
+            <span class="kicker">Advisory</span>
+            <h2>Retention &amp; customer journey advisory</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses where the front door works but the back end leaks — onboarding that varies by who's running it, customer success with no early warning system, or churn no one saw coming.</p>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">What this typically includes</strong>
+            <ul class="includes"><li>Mapping the customer journey from signed deal through renewal</li><li>Designing a standard onboarding scope and implementation plan</li><li>Building a health-score model and a customer success operating rhythm</li><li>Setting support tiers and SLAs that match the size of the customer base</li></ul>
+            <div class="actions" style="margin-top: var(--space-6);">
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=retention-advisory">Discuss retention advisory →</a>
+            </div>
+          </div>
+        </div>
+        <div class="path-block" id="workshops-speaking">
+          <div>
+            <span class="kicker">Sessions</span>
+            <h2>Workshops, speaking &amp; leadership sessions</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For leadership teams, boards or events that want a grounded, commercially literate perspective on growth, retention and operating performance — delivered as a working session, not a keynote for its own sake.</p>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">What this typically includes</strong>
+            <ul class="includes"><li>Leadership team workshops on a specific commercial problem — pipeline, pricing, retention, operating rhythm</li><li>Board or investor-facing sessions on commercial readiness ahead of a raise or exit</li><li>Conference or event speaking on SaaS growth, retention and revenue operations</li><li>Content built specifically for the audience, not a repeated deck</li></ul>
+            <div class="actions" style="margin-top: var(--space-6);">
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=workshop-speaking">Enquire about a workshop or session →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="muted-band">
+      <div class="container">
+        <div class="card path-card" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: var(--space-6); padding: var(--space-8);">
+          <div>
+            <span class="kicker">Not sure which pathway fits?</span>
+            <h3 style="margin-bottom: var(--space-2);">Start with a conversation, not a proposal</h3>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Book a strategy conversation</a>
         </div>
       </div>
     </section>
@@ -306,15 +302,15 @@
     <div class="container footer-row">
       <div>© 2026 Rev-IQ. All rights reserved.</div>
       <div class="footer-links">
-        <a href="../resources.html">Resource Library</a>
-        <a href="../browse-by-challenge.html">Browse by Challenge</a>
-        <a href="../who-its-for.html">Who It's For</a>
-        <a href="../advisory.html">Advisory &amp; Fractional Support</a>
-        <a href="../about.html">About Rev-IQ</a>
-        <a href="../contact.html">Contact</a>
+        <a href="resources.html">Resource Library</a>
+        <a href="browse-by-challenge.html">Browse by Challenge</a>
+        <a href="who-its-for.html">Who It's For</a>
+        <a href="advisory.html">Advisory &amp; Fractional Support</a>
+        <a href="about.html">About Rev-IQ</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
-  <script src="../js/forms.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Onboard Customers Without Reinventing It Every Time — Rev-IQ</title>
-  <meta name="description" content="A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it." />
+  <title>Who It's For — Rev-IQ</title>
+  <meta name="description" content="Rev-IQ works with founder-led software businesses, legacy platforms modernizing commercially, scaling firms building structure, and AI-built products with no GTM function yet." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,33 +142,16 @@
     }
 
 
-    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
-    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
-    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
-    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
-    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
-    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
-    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
-    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
-    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
-    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
-    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
-    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
-    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
-    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
-    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
-    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
-    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
-    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
-    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
-    .gate-msg-error { color: #a12c2c; }
-    .diagnose-card { margin: var(--space-10) 0; }
-    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
-    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    .segment-block { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-10); align-items: start; padding: var(--space-10) 0; border-bottom: 1px solid var(--color-divider); }
+    .segment-block:last-of-type { border-bottom: 0; }
+    .segment-block h2 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: var(--space-4); }
+    .segment-block .signals { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .segment-block .signals li { padding-left: 1.4rem; position: relative; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .segment-block .signals li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .segment-panel { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+    .segment-panel strong { display: block; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-3); }
     @media (max-width: 920px) {
-      .download-card { flex-direction: column; align-items: flex-start; }
+      .segment-block { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -177,7 +160,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container nav">
-      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+      <a class="brand" href="index.html" aria-label="Rev-IQ home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
@@ -194,13 +177,13 @@
       </button>
       <nav aria-label="Primary" id="primary-nav">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../resources.html" aria-current="page">Resource Library</a></li>
-          <li><a href="../browse-by-challenge.html">Browse by Challenge</a></li>
-          <li><a href="../who-its-for.html">Who It's For</a></li>
-          <li><a href="../advisory.html">Advisory &amp; Fractional Support</a></li>
-          <li><a href="../about.html">About Rev-IQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resource Library</a></li>
+          <li><a href="browse-by-challenge.html">Browse by Challenge</a></li>
+          <li><a href="who-its-for.html" aria-current="page">Who It's For</a></li>
+          <li><a href="advisory.html">Advisory &amp; Fractional Support</a></li>
+          <li><a href="about.html">About Rev-IQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -232,72 +215,93 @@
     })();
   </script>
   <main id="main">
-    <section class="article-header">
-      <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Implementation / Onboarding</div>
-        <div class="eyebrow"><span class="dot"></span>Implementation / Onboarding</div>
-        <h1 class="article-h1">How to Onboard Customers Without Reinventing It Every Time</h1>
-        <p class="dek">A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
-        <div class="tag-row"><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+    <section class="hero" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span>Who it's for</div>
+        <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">Four kinds of businesses show up here most often.</h1>
+        <p class="lead" style="max-width: 66ch;">Rev-IQ isn't built for every software business — it's built for the ones where the product has outrun the commercial engine. If one of these sounds familiar, you're in the right place.</p>
       </div>
     </section>
-    <section class="article-body">
-      <div class="container-narrow">
-        <h2>Why every implementation feels like the first one</h2>
-<p>Small teams tend to run onboarding as a series of one-off projects. Each new customer gets a slightly different kickoff, a slightly different set of questions, and a slightly different path to go-live — because the person running it is improvising from memory rather than following a defined process. This is exhausting for the implementer and inconsistent for the customer.</p>
-<p>The fix isn't hiring an implementation team. It's turning the journey into a repeatable sequence of phases, each with a clear purpose and a small set of artefacts, so the process holds together whether you've done this ten times or it's someone's first week.</p>
-<h2>Seven phases, not one long blur</h2>
-<p>Kickoff, discovery, configure, migrate, pilot, go-live, and success handover are distinct phases with different goals: kickoff aligns on scope and roles, discovery uncovers the customer's actual workflow and data, configure builds the environment, migrate moves their data in, pilot tests it with real users before full rollout, go-live is the switch, and handover transitions the account to whoever owns it long-term.</p>
-<p>Treating these as one undifferentiated 'onboarding' blob is what causes scope creep and missed steps. Naming the phases forces you to know which one you're in and what's supposed to be true before you move to the next.</p>
-<h2>Every phase needs an artefact, not just a conversation</h2>
-<p>A phase without a tangible output is just a meeting. Discovery should produce a written requirements summary, not just notes in someone's head. Configure should produce a documented setup. Pilot should produce documented feedback and a go/no-go decision. Artefacts are what let a second person pick up an implementation mid-stream, and what let you improve the process over time instead of just repeating the same conversations.</p>
-<p>Use the Standard Implementation Plan Template to define what happens and what gets produced in each phase, so the plan exists independently of who's running it that week.</p>
-<h2>Designing for a team of one</h2>
-<p>If you're the only implementer, the temptation is to skip documentation because 'it's all in my head anyway.' Do the opposite: a solo implementer benefits most from a written process, because there's no one else to catch a missed step, and because the business is one sick day away from either delaying every customer or losing the only person who knows how onboarding works.</p>
-<p>A repeatable plan also protects the customer experience — new customers get the same quality of onboarding as your very first one, instead of a version that depends on how much bandwidth you happen to have that month.</p>
-<h2>Roles clarify what customers are responsible for too</h2>
-<p>A common cause of stalled implementations is ambiguity about who does what. Naming roles — implementer, customer project lead, customer technical contact, executive sponsor — for each phase makes it clear when the delay is on your side versus theirs, and gives you something concrete to point to when a project stalls.</p>
-
-        <div class="takeaways">
-          <strong>Key takeaways</strong>
-          <ul>
-            <li>Split implementation into seven named phases: kickoff, discovery, configure, migrate, pilot, go-live, success handover.</li>
-<li>Every phase should produce a written artefact, not just a conversation, so the process survives staff changes.</li>
-<li>A solo implementer needs a documented process more than a team does — there's no one else to catch a gap.</li>
-<li>Naming roles per phase clarifies whether a stall is on your side or the customer's.</li>
-<li>A repeatable plan protects customer experience consistency, regardless of how busy the implementer is that month.</li>
-
-          </ul>
-        </div>
-        <div class="download-card" id="download">
+    <section>
+      <div class="container">
+        <div class="segment-block" id="founder-led">
           <div>
-            <div class="label">Plan · Free with email</div>
-            <h3>Standard Implementation Plan Template</h3>
-            <p>A phase-by-phase implementation plan covering kickoff through success handover, with a checklist for each phase.</p>
+            <span class="kicker">Founder-led</span>
+            <h2>Founder-led software businesses</h2>
+            <p style="color: var(--color-text-muted); max-width: 52ch;">The founder is still the best salesperson, the best implementer and often the best support person in the business — which was fine at $500K ARR and is now the ceiling. Growth has outpaced the founder's personal bandwidth, but nothing has been built to replace it.</p>
           </div>
-          <form class="gate-form" data-rev-iq-form data-pdf="../assets/09-standard-implementation-plan-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Standard Implementation Plan Template — rev-iq.ai" />
-            <input type="hidden" name="asset" value="Standard Implementation Plan Template" />
-            <input type="hidden" name="form_type" value="Download request" />
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <div data-state="idle" class="gate-fields">
-              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+          <div>
+            <div class="segment-panel" style="margin-bottom: var(--space-5);">
+              <strong>What this usually looks like</strong>
+              <ul class="signals"><li>Every meaningful deal still needs the founder in the room</li><li>Pipeline exists in the founder's head, not in a system</li><li>Hiring a first commercial leader feels overdue but also risky</li></ul>
             </div>
-            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
-            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
-            <p class="gate-note" data-state="idle">No spam — just the template.</p>
-          </form>
+            <div class="segment-panel">
+              <strong>Start here</strong>
+              <ul style="margin:0; padding:0; list-style:none; display:grid; gap: var(--space-1);"><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">The Minimum Viable Sales Playbook for SaaS Founders →</a></li><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">Founder-Led, Sales-Led, or Product-Led: Pick One →</a></li></ul>
+            </div>
+          </div>
         </div>
-        <div class="card path-card diagnose-card">
-          <span class="kicker">Want it applied to your business?</span>
-          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">Templates get you moving fast. If you want a structured read on where this is actually breaking down in your business, that's a short diagnostic conversation, not another download.</p>
-          <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
+        <div class="segment-block" id="legacy-modernizing">
+          <div>
+            <span class="kicker">Modernizing</span>
+            <h2>Legacy software modernizing</h2>
+            <p style="color: var(--color-text-muted); max-width: 52ch;">An established, profitable product with a customer base that still trusts it — but a commercial model built for a different era. Pricing hasn't moved in years, renewals are reactive, and newer competitors are winning on packaging and experience rather than substance.</p>
+          </div>
+          <div>
+            <div class="segment-panel" style="margin-bottom: var(--space-5);">
+              <strong>What this usually looks like</strong>
+              <ul class="signals"><li>Revenue is stable but growth has flattened</li><li>Pricing and packaging haven't been revisited in years</li><li>Customer success and support are under-resourced relative to the base</li></ul>
+            </div>
+            <div class="segment-panel">
+              <strong>Start here</strong>
+              <ul style="margin:0; padding:0; list-style:none; display:grid; gap: var(--space-1);"><li><a href="articles/14-a-practical-way-to-price-early-stage-saas.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">A Practical Way to Price Early-Stage SaaS →</a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">How to Set Up Support Tiers, SLAs, and a Knowledge Base →</a></li></ul>
+            </div>
+          </div>
         </div>
-        <div class="nav-links">
-          <a href="08-when-your-customer-list-needs-account-management-not-vibes.html">← When Your Customer List Needs Account Management, Not Vibes</a>
-          <a href="10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor →</a>
+        <div class="segment-block" id="building-structure">
+          <div>
+            <span class="kicker">Scaling</span>
+            <h2>Small/mid-sized firms building commercial structure</h2>
+            <p style="color: var(--color-text-muted); max-width: 52ch;">There's real traction — a functioning product, paying customers, a small team — but no formal pipeline process, no onboarding standard, and no operating rhythm. The business has outgrown improvisation but hasn't had time to design what should replace it.</p>
+          </div>
+          <div>
+            <div class="segment-panel" style="margin-bottom: var(--space-5);">
+              <strong>What this usually looks like</strong>
+              <ul class="signals"><li>Onboarding and account management vary by who's doing them</li><li>No consistent view of pipeline health or forecast accuracy</li><li>Leadership cadence is reactive rather than scheduled</li></ul>
+            </div>
+            <div class="segment-panel">
+              <strong>Start here</strong>
+              <ul style="margin:0; padding:0; list-style:none; display:grid; gap: var(--space-1);"><li><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">Fixing the Pipeline Mess So You Can Forecast With Confidence →</a></li><li><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">Designing a Simple Operating Rhythm for Your SaaS →</a></li></ul>
+            </div>
+          </div>
+        </div>
+        <div class="segment-block" id="ai-built">
+          <div>
+            <span class="kicker">AI-built</span>
+            <h2>AI-built products with little or no GTM capability</h2>
+            <p style="color: var(--color-text-muted); max-width: 52ch;">Built fast with modern AI tooling, shipped to real users, and validated demand faster than a traditional build ever could. The gap now isn't the product — it's that no one on the team has ever built a commercial engine, and the instinct is to keep shipping features instead.</p>
+          </div>
+          <div>
+            <div class="segment-panel" style="margin-bottom: var(--space-5);">
+              <strong>What this usually looks like</strong>
+              <ul class="signals"><li>Users are signing up faster than anyone can explain why</li><li>No one owns pricing, positioning or the sales conversation</li><li>The team is technical-first and has never run a GTM motion</li></ul>
+            </div>
+            <div class="segment-panel">
+              <strong>Start here</strong>
+              <ul style="margin:0; padding:0; list-style:none; display:grid; gap: var(--space-1);"><li><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">Your Product Works. Your Story Doesn't Exist Yet. →</a></li><li><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html" style="color: var(--color-primary); font-weight: 600; display:block; padding: 0.35rem 0;">The 5 Levers That Actually Drive SaaS Revenue →</a></li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="muted-band">
+      <div class="container">
+        <div class="final-cta card path-card" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: var(--space-6); padding: var(--space-8);">
+          <div>
+            <span class="kicker">Not sure which one fits?</span>
+            <h3 style="margin-bottom: var(--space-2);">A short conversation will tell you faster than a framework will</h3>
+          </div>
+          <a class="btn btn-primary" href="contact.html">Book a strategy conversation</a>
         </div>
       </div>
     </section>
@@ -306,15 +310,15 @@
     <div class="container footer-row">
       <div>© 2026 Rev-IQ. All rights reserved.</div>
       <div class="footer-links">
-        <a href="../resources.html">Resource Library</a>
-        <a href="../browse-by-challenge.html">Browse by Challenge</a>
-        <a href="../who-its-for.html">Who It's For</a>
-        <a href="../advisory.html">Advisory &amp; Fractional Support</a>
-        <a href="../about.html">About Rev-IQ</a>
-        <a href="../contact.html">Contact</a>
+        <a href="resources.html">Resource Library</a>
+        <a href="browse-by-challenge.html">Browse by Challenge</a>
+        <a href="who-its-for.html">Who It's For</a>
+        <a href="advisory.html">Advisory &amp; Fractional Support</a>
+        <a href="about.html">About Rev-IQ</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
-  <script src="../js/forms.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>

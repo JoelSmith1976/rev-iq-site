@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+
     :root {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
       --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
@@ -46,24 +47,105 @@
     img, svg { display: block; max-width: 100%; }
     .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
     .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
-    header { position: sticky; top: 0; z-index: 20; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
+    .container-wide { width: min(calc(100% - 2rem), 1240px); margin: 0 auto; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 1rem; top: 1rem; background: var(--color-surface); padding: 0.75rem 1rem; z-index: 1000; border-radius: var(--radius-sm); }
+    header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px); background: rgba(247,243,238,0.86); border-bottom: 1px solid rgba(45,37,31,0.08); }
     .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
-    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-weight: 600; letter-spacing: 0.02em; flex-shrink: 0; }
     .brand-mark { width: 34px; height: 34px; border-radius: 10px; border: 1.5px solid currentColor; display: grid; place-items: center; }
     .brand-mark svg { width: 19px; height: 19px; }
-    nav ul { display: flex; list-style: none; gap: 1.2rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
-    nav ul a:hover { color: var(--color-primary); }
-    h1, h2, h3 { margin: 0; line-height: 1.15; }
+    nav ul { display: flex; list-style: none; gap: 1.15rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-xs); flex-wrap: nowrap; }
+    nav ul a:hover, nav ul a[aria-current="page"] { color: var(--color-primary); }
+    nav ul a[aria-current="page"] { font-weight: 600; }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; border: 1px solid rgba(45,37,31,0.16); border-radius: var(--radius-md); background: transparent; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .nav-toggle-bar { width: 18px; height: 2px; background: var(--color-text); transition: 160ms ease; }
+    body.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    body.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    h1, h2, h3 { margin: 0; line-height: 1.12; }
     h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em; }
-    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
-    .breadcrumb a { color: var(--color-primary); }
+    h3 { font-family: var(--font-display); font-weight: 700; }
     .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); }
     .dot { width: 8px; height: 8px; border-radius: 999px; background: var(--color-primary); }
-    h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    .hero { padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 6vw, 4rem); }
+    h1 { font-size: clamp(2.6rem, 5.4vw, 4.6rem); max-width: 16ch; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: end; }
+    .lead { margin-top: var(--space-6); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .hero-card { background: linear-gradient(180deg, rgba(252,250,247,0.9), rgba(242,236,229,0.9)); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); }
+    .hero-card p { margin: 0 0 var(--space-5); color: var(--color-text-muted); }
+    .hero-card strong { display: block; font-size: var(--text-sm); margin-bottom: 0.4rem; }
+    .actions { display: flex; gap: 0.9rem; margin-top: var(--space-8); flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.3rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary { border: 1px solid rgba(45,37,31,0.16); background: rgba(252,250,247,0.7); color: var(--color-text); }
+    .btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .btn-ghost { border: 1px solid rgba(45,37,31,0.12); background: transparent; color: var(--color-text-muted); }
+    .btn-ghost:hover { color: var(--color-primary); border-color: var(--color-primary); }
+    .btn-sm { min-height: 38px; padding: 0.55rem 1rem; font-size: var(--text-xs); }
+    section { padding: clamp(3.2rem, 6.5vw, 5.5rem) 0; }
+    .section-tight { padding: clamp(1.2rem, 3vw, 2.2rem) 0; }
+    .section-intro { margin-bottom: var(--space-8); max-width: 60ch; }
+    .section-intro h2 { font-size: clamp(1.9rem, 3.8vw, 3rem); margin-bottom: var(--space-4); }
+    .section-intro p { color: var(--color-text-muted); margin: 0; }
+    .kicker { font-size: var(--text-xs); color: var(--color-primary); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: var(--space-3); display: block; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+    .card { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+    .card h3 { font-size: 1.1rem; margin-bottom: var(--space-3); }
+    .card p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .card-link { display: block; transition: 160ms ease; }
+    .card-link:hover .card { border-color: var(--color-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .card-link .card { transition: 160ms ease; }
+    .tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: var(--space-4); }
+    .tag { font-size: var(--text-xs); padding: 0.3rem 0.7rem; border-radius: 999px; background: var(--color-primary-soft); color: var(--color-primary-hover); font-weight: 600; }
+    .tag-muted { background: var(--color-surface-2); color: var(--color-text-muted); }
+    .muted-band { background: rgba(252,250,247,0.72); border-block: 1px solid var(--color-divider); }
+    .list { display: grid; gap: var(--space-4); }
+    .list-item { display: grid; grid-template-columns: 130px 1fr; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--color-divider); }
+    .list-item:last-child { border-bottom: 0; }
+    .list-item span { color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; }
+    .list-item h3 { font-size: 1.15rem; margin-bottom: 0.35rem; font-weight: 700; }
+    .list-item p { margin: 0; color: var(--color-text-muted); }
+    .about-grid, .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
+    .note { background: var(--color-primary-soft); border-radius: var(--radius-lg); padding: var(--space-6); color: var(--color-text); }
+    form { display: grid; gap: var(--space-4); background: var(--color-surface); padding: var(--space-6); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    label { font-size: var(--text-sm); font-weight: 600; }
+    input, textarea, select { width: 100%; margin-top: 0.45rem; border-radius: 12px; border: 1px solid var(--color-border); padding: 0.9rem 1rem; font: inherit; background: #fff; color: var(--color-text); }
+    textarea { min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus, a:focus, button:focus { outline: 2px solid rgba(122,75,43,0.3); outline-offset: 2px; }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    .footer-links { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+    .footer-links a:hover { color: var(--color-primary); }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .path-card { border-left: 3px solid var(--color-primary); }
+    .path-card .kicker { margin-bottom: var(--space-2); }
+    @media (max-width: 1080px) {
+      nav ul { gap: 0.85rem; font-size: 0.72rem; }
+    }
+    @media (max-width: 920px) {
+      .hero-grid, .about-grid, .contact-grid, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .nav { flex-wrap: wrap; }
+      .nav-toggle { display: flex; }
+      nav[aria-label="Primary"] { flex-basis: 100%; order: 3; max-height: 0; overflow: hidden; transition: max-height 220ms ease; }
+      body.nav-open nav[aria-label="Primary"] { max-height: 70vh; overflow-y: auto; }
+      nav ul { display: flex; flex-direction: column; gap: 0; flex-wrap: nowrap; padding: var(--space-2) 0 var(--space-5); font-size: var(--text-base); }
+      nav ul li { border-bottom: 1px solid var(--color-divider); }
+      nav ul a { display: block; padding: 0.85rem 0.1rem; }
+      .list-item { grid-template-columns: 1fr; gap: var(--space-2); }
+      h1 { max-width: 100%; }
+    }
+
+
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
     .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
-    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
-    section { padding: clamp(1.2rem, 3vw, 2.4rem) 0; }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
     .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
     .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
     .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
@@ -75,28 +157,24 @@
     .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
     .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
     .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: 999px; font-size: var(--text-sm); font-weight: 600; transition: 180ms ease; border: none; cursor: pointer; white-space: nowrap; }
-    .btn-primary { background: var(--color-primary); color: #fff; }
-    .btn-primary:hover { background: var(--color-primary-hover); }
     .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
     .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
     .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
     .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
     .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
     .gate-msg-error { color: #a12c2c; }
-    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); }
+    .diagnose-card { margin: var(--space-10) 0; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
     .nav-links a { color: var(--color-primary); font-weight: 600; }
-    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); margin-top: var(--space-12); }
-    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
     @media (max-width: 920px) {
-      nav ul { display: none; }
-      h1 { max-width: 100%; }
       .download-card { flex-direction: column; align-items: flex-start; }
     }
+
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container nav">
       <a class="brand" href="../index.html" aria-label="Rev-IQ home">
@@ -109,24 +187,59 @@
         </span>
         <span>REV-IQ</span>
       </a>
-      <nav aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav aria-label="Primary" id="primary-nav">
         <ul>
-          <li><a href="../index.html#focus">Focus</a></li>
-          <li><a href="../resources.html">Resources</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../resources.html" aria-current="page">Resource Library</a></li>
+          <li><a href="../browse-by-challenge.html">Browse by Challenge</a></li>
+          <li><a href="../who-its-for.html">Who It's For</a></li>
+          <li><a href="../advisory.html">Advisory &amp; Fractional Support</a></li>
+          <li><a href="../about.html">About Rev-IQ</a></li>
+          <li><a href="../contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      function closeMenu() {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+      toggle.addEventListener('click', function () {
+        var open = document.body.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 920) closeMenu();
+      });
+    })();
+  </script>
   <main id="main">
     <section class="article-header">
       <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resources</a>&nbsp;/&nbsp;Strategy</div>
+        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Strategy</div>
         <div class="eyebrow"><span class="dot"></span>Strategy</div>
-        <h1>The 5 Levers That Actually Drive SaaS Revenue</h1>
+        <h1 class="article-h1">The 5 Levers That Actually Drive SaaS Revenue</h1>
         <p class="dek">If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
         <div class="meta-row"><span>7 min read</span><span>Free · email required</span></div>
+        <div class="tag-row"><span class="tag">No GTM structure</span><span class="tag">Weak commercial operating rhythm</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
       </div>
     </section>
     <section class="article-body">
@@ -178,6 +291,11 @@
             <p class="gate-note" data-state="idle">No spam — just the template.</p>
           </form>
         </div>
+        <div class="card path-card diagnose-card">
+          <span class="kicker">Want it applied to your business?</span>
+          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">Templates get you moving fast. If you want a structured read on where this is actually breaking down in your business, that's a short diagnostic conversation, not another download.</p>
+          <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
+        </div>
         <div class="nav-links">
           <a href="../resources.html">← All resources</a>
           <a href="02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a>
@@ -188,7 +306,14 @@
   <footer>
     <div class="container footer-row">
       <div>© 2026 Rev-IQ. All rights reserved.</div>
-      <div>Rev-IQ</div>
+      <div class="footer-links">
+        <a href="../resources.html">Resource Library</a>
+        <a href="../browse-by-challenge.html">Browse by Challenge</a>
+        <a href="../who-its-for.html">Who It's For</a>
+        <a href="../advisory.html">Advisory &amp; Fractional Support</a>
+        <a href="../about.html">About Rev-IQ</a>
+        <a href="../contact.html">Contact</a>
+      </div>
     </div>
   </footer>
   <script src="../js/forms.js" defer></script>

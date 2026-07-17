@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How to Onboard Customers Without Reinventing It Every Time — Rev-IQ</title>
-  <meta name="description" content="A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it." />
+  <title>Browse by Challenge — Rev-IQ</title>
+  <meta name="description" content="Find the right framework or advisory conversation for the specific commercial problem you're dealing with — from weak pipeline to churn to pricing." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -142,33 +142,14 @@
     }
 
 
-    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
-    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
-    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
-    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
-    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
-    .takeaways { background: var(--color-surface); border: 1px solid rgba(45,37,31,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
-    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
-    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
-    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
-    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
-    .download-card { background: linear-gradient(180deg, rgba(252,250,247,0.95), rgba(242,236,229,0.95)); border: 1px solid rgba(45,37,31,0.1); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-md); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
-    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
-    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
-    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
-    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
-    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
-    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: 999px; border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
-    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
-    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
-    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
-    .gate-msg-error { color: #a12c2c; }
-    .diagnose-card { margin: var(--space-10) 0; }
-    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
-    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    .challenge-block { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; padding: var(--space-9) 0; border-bottom: 1px solid var(--color-divider); }
+    .challenge-block:last-of-type { border-bottom: 0; }
+    .challenge-block h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: var(--space-3); }
+    .challenge-block .res-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
+    .challenge-block .res-list a { color: var(--color-text); font-weight: 600; font-size: var(--text-sm); display: block; padding: 0.4rem 0; }
+    .challenge-block .res-list a:hover { color: var(--color-primary); }
     @media (max-width: 920px) {
-      .download-card { flex-direction: column; align-items: flex-start; }
+      .challenge-block { grid-template-columns: 1fr; }
     }
 
   </style>
@@ -177,7 +158,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
     <div class="container nav">
-      <a class="brand" href="../index.html" aria-label="Rev-IQ home">
+      <a class="brand" href="index.html" aria-label="Rev-IQ home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
@@ -194,13 +175,13 @@
       </button>
       <nav aria-label="Primary" id="primary-nav">
         <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../resources.html" aria-current="page">Resource Library</a></li>
-          <li><a href="../browse-by-challenge.html">Browse by Challenge</a></li>
-          <li><a href="../who-its-for.html">Who It's For</a></li>
-          <li><a href="../advisory.html">Advisory &amp; Fractional Support</a></li>
-          <li><a href="../about.html">About Rev-IQ</a></li>
-          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resources.html">Resource Library</a></li>
+          <li><a href="browse-by-challenge.html" aria-current="page">Browse by Challenge</a></li>
+          <li><a href="who-its-for.html">Who It's For</a></li>
+          <li><a href="advisory.html">Advisory &amp; Fractional Support</a></li>
+          <li><a href="about.html">About Rev-IQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -232,72 +213,119 @@
     })();
   </script>
   <main id="main">
-    <section class="article-header">
-      <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Implementation / Onboarding</div>
-        <div class="eyebrow"><span class="dot"></span>Implementation / Onboarding</div>
-        <h1 class="article-h1">How to Onboard Customers Without Reinventing It Every Time</h1>
-        <p class="dek">A repeatable implementation journey with clear phases, roles, and artefacts — built to work even if you're the only person running it.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
-        <div class="tag-row"><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+    <section class="hero" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="eyebrow"><span class="dot"></span>Browse by challenge</div>
+        <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">Start with the problem, not the department.</h1>
+        <p class="lead" style="max-width: 66ch;">Most commercial problems don't sit neatly inside one function. These are the seven we see most often in SaaS, software and technology businesses — each mapped to the resources and advisory pathways that address it directly.</p>
       </div>
     </section>
-    <section class="article-body">
-      <div class="container-narrow">
-        <h2>Why every implementation feels like the first one</h2>
-<p>Small teams tend to run onboarding as a series of one-off projects. Each new customer gets a slightly different kickoff, a slightly different set of questions, and a slightly different path to go-live — because the person running it is improvising from memory rather than following a defined process. This is exhausting for the implementer and inconsistent for the customer.</p>
-<p>The fix isn't hiring an implementation team. It's turning the journey into a repeatable sequence of phases, each with a clear purpose and a small set of artefacts, so the process holds together whether you've done this ten times or it's someone's first week.</p>
-<h2>Seven phases, not one long blur</h2>
-<p>Kickoff, discovery, configure, migrate, pilot, go-live, and success handover are distinct phases with different goals: kickoff aligns on scope and roles, discovery uncovers the customer's actual workflow and data, configure builds the environment, migrate moves their data in, pilot tests it with real users before full rollout, go-live is the switch, and handover transitions the account to whoever owns it long-term.</p>
-<p>Treating these as one undifferentiated 'onboarding' blob is what causes scope creep and missed steps. Naming the phases forces you to know which one you're in and what's supposed to be true before you move to the next.</p>
-<h2>Every phase needs an artefact, not just a conversation</h2>
-<p>A phase without a tangible output is just a meeting. Discovery should produce a written requirements summary, not just notes in someone's head. Configure should produce a documented setup. Pilot should produce documented feedback and a go/no-go decision. Artefacts are what let a second person pick up an implementation mid-stream, and what let you improve the process over time instead of just repeating the same conversations.</p>
-<p>Use the Standard Implementation Plan Template to define what happens and what gets produced in each phase, so the plan exists independently of who's running it that week.</p>
-<h2>Designing for a team of one</h2>
-<p>If you're the only implementer, the temptation is to skip documentation because 'it's all in my head anyway.' Do the opposite: a solo implementer benefits most from a written process, because there's no one else to catch a missed step, and because the business is one sick day away from either delaying every customer or losing the only person who knows how onboarding works.</p>
-<p>A repeatable plan also protects the customer experience — new customers get the same quality of onboarding as your very first one, instead of a version that depends on how much bandwidth you happen to have that month.</p>
-<h2>Roles clarify what customers are responsible for too</h2>
-<p>A common cause of stalled implementations is ambiguity about who does what. Naming roles — implementer, customer project lead, customer technical contact, executive sponsor — for each phase makes it clear when the delay is on your side versus theirs, and gives you something concrete to point to when a project stalls.</p>
-
-        <div class="takeaways">
-          <strong>Key takeaways</strong>
-          <ul>
-            <li>Split implementation into seven named phases: kickoff, discovery, configure, migrate, pilot, go-live, success handover.</li>
-<li>Every phase should produce a written artefact, not just a conversation, so the process survives staff changes.</li>
-<li>A solo implementer needs a documented process more than a team does — there's no one else to catch a gap.</li>
-<li>Naming roles per phase clarifies whether a stall is on your side or the customer's.</li>
-<li>A repeatable plan protects customer experience consistency, regardless of how busy the implementer is that month.</li>
-
-          </ul>
-        </div>
-        <div class="download-card" id="download">
+    <section>
+      <div class="container">
+        <div class="challenge-block" id="no-gtm">
           <div>
-            <div class="label">Plan · Free with email</div>
-            <h3>Standard Implementation Plan Template</h3>
-            <p>A phase-by-phase implementation plan covering kickoff through success handover, with a checklist for each phase.</p>
-          </div>
-          <form class="gate-form" data-rev-iq-form data-pdf="../assets/09-standard-implementation-plan-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Standard Implementation Plan Template — rev-iq.ai" />
-            <input type="hidden" name="asset" value="Standard Implementation Plan Template" />
-            <input type="hidden" name="form_type" value="Download request" />
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            <div data-state="idle" class="gate-fields">
-              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+            <span class="kicker">Challenge</span>
+            <h2>No GTM structure</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no repeatable way to find, qualify or close a customer — every deal is figured out from scratch.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=no-gtm">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
-            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
-            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
-            <p class="gate-note" data-state="idle">No spam — just the template.</p>
-          </form>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue →</a></li><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a></li><li><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html">Your Product Works. Your Story Doesn't Exist Yet. →</a></li></ul>
+          </div>
         </div>
-        <div class="card path-card diagnose-card">
-          <span class="kicker">Want it applied to your business?</span>
-          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">Templates get you moving fast. If you want a structured read on where this is actually breaking down in your business, that's a short diagnostic conversation, not another download.</p>
-          <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
+        <div class="challenge-block" id="weak-pipeline">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Weak pipeline</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Deals are somewhere in the process, but no one can say with confidence what will close this quarter and why.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=weak-pipeline">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Three Campaigns You Can Run Without Hiring a Marketer →</a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders →</a></li><li><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Fixing the Pipeline Mess So You Can Forecast With Confidence →</a></li></ul>
+          </div>
         </div>
-        <div class="nav-links">
-          <a href="08-when-your-customer-list-needs-account-management-not-vibes.html">← When Your Customer List Needs Account Management, Not Vibes</a>
-          <a href="10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor →</a>
+        <div class="challenge-block" id="founder-led-bottleneck">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Founder-led sales bottleneck</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Every meaningful commercial decision or conversation still routes through the founder, and it's now the constraint on growth.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=founder-led-bottleneck">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a></li><li><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Three Campaigns You Can Run Without Hiring a Marketer →</a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders →</a></li></ul>
+          </div>
+        </div>
+        <div class="challenge-block" id="onboarding-issues">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Onboarding issues</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">New customers land, but what happens next depends on who's handling them — with no consistent standard or scope.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=onboarding-issues">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html">How to Onboard Customers Without Reinventing It Every Time →</a></li><li><a href="articles/10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor →</a></li><li><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Closing the Gap Between What Sales Hears and What Product Builds →</a></li></ul>
+          </div>
+        </div>
+        <div class="challenge-block" id="churn">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Churn / poor retention</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Customers are leaving, or staying but not growing, and there's no structured way to see it coming.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=churn">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html">When Your Customer List Needs Account Management, Not Vibes →</a></li><li><a href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Customer Success at 0-20 Customers, Before You Hire a CSM →</a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">How to Set Up Support Tiers, SLAs, and a Knowledge Base →</a></li></ul>
+          </div>
+        </div>
+        <div class="challenge-block" id="pricing">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Pricing and packaging issues</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Pricing was set early and never revisited, or was copied from a competitor without a clear rationale.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=pricing">See all 1 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/14-a-practical-way-to-price-early-stage-saas.html">A Practical Way to Price Early-Stage SaaS →</a></li></ul>
+          </div>
+        </div>
+        <div class="challenge-block" id="operating-rhythm">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h2>Weak commercial operating rhythm</h2>
+            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no consistent cadence of meetings, reviews or decisions — the business runs on whoever shouts loudest that week.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=operating-rhythm">See all 7 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
+            <ul class="res-list"><li><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue →</a></li><li><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html">Designing a Simple Operating Rhythm for Your SaaS →</a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">How to Set Up Support Tiers, SLAs, and a Knowledge Base →</a></li><li><a href="articles/13-the-six-saas-numbers-that-actually-matter.html">The Six SaaS Numbers That Actually Matter →</a></li><li><a href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html">The Minimum Internal Stack Before You Add More Tools →</a></li><li><a href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html">How to Build a Roadmap Instead of a Request Queue →</a></li><li><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Closing the Gap Between What Sales Hears and What Product Builds →</a></li></ul>
+          </div>
         </div>
       </div>
     </section>
@@ -306,15 +334,15 @@
     <div class="container footer-row">
       <div>© 2026 Rev-IQ. All rights reserved.</div>
       <div class="footer-links">
-        <a href="../resources.html">Resource Library</a>
-        <a href="../browse-by-challenge.html">Browse by Challenge</a>
-        <a href="../who-its-for.html">Who It's For</a>
-        <a href="../advisory.html">Advisory &amp; Fractional Support</a>
-        <a href="../about.html">About Rev-IQ</a>
-        <a href="../contact.html">Contact</a>
+        <a href="resources.html">Resource Library</a>
+        <a href="browse-by-challenge.html">Browse by Challenge</a>
+        <a href="who-its-for.html">Who It's For</a>
+        <a href="advisory.html">Advisory &amp; Fractional Support</a>
+        <a href="about.html">About Rev-IQ</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </footer>
-  <script src="../js/forms.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>

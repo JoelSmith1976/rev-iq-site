@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Closing the Gap Between What Sales Hears and What Product Builds — Rev-IQ</title>
-  <meta name="description" content="A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs." />
+  <title>What to Actually Do in the First Hour of a Security Incident — Rev-IQ</title>
+  <meta name="description" content="Small software teams don't need an elaborate incident response program — they need a clear, calm first-response sequence they can run under pressure." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -234,57 +234,49 @@
   <main id="main">
     <section class="article-header">
       <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Product &amp; Development</div>
-        <div class="eyebrow"><span class="dot"></span>Product &amp; Development</div>
-        <h1 class="article-h1">Closing the Gap Between What Sales Hears and What Product Builds</h1>
-        <p class="dek">A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
-        <div class="tag-row"><span class="tag">Weak commercial operating rhythm</span><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Compliance &amp; Security</div>
+        <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
+        <h1 class="article-h1">What to Actually Do in the First Hour of a Security Incident</h1>
+        <p class="dek">Small software teams don't need an elaborate incident response program — they need a clear, calm first-response sequence they can run under pressure.</p>
+        <div class="meta-row"><span>7 min read</span><span>Free · email required</span></div>
+        <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span><span class="tag tag-muted">Mature / legacy modernization</span></div>
       </div>
     </section>
     <section class="article-body">
       <div class="container-narrow">
-        <h2>The Most Valuable Feedback Usually Dies in a DM</h2>
-<p>Sales and customer success hear more about what's actually wrong with the product than almost anyone else in the business. A prospect who churns to a competitor, a customer who nearly cancels, a deal that stalls on a missing feature — this is direct signal about the product and the market.</p>
-<p>Most of it never reaches product in a usable form. It gets mentioned once in a deal review, said out loud in a call debrief, or sent as a one-off Slack message that scrolls away. The information existed. It just never became a decision input.</p>
-<p>This isn't a discipline problem for the sales or CS team. It's a design problem: no one ever built a path for that information to travel, so it takes the path of least resistance, which is nowhere in particular.</p>
-<h2>Feedback Needs a Home Before It Needs a Process</h2>
-<p>Before building a review cadence, fix the more basic problem: there needs to be exactly one place feedback goes, and everyone in sales and CS needs to know logging it there takes less effort than not logging it. If entering feedback takes longer than mentioning it in a channel, it will keep dying in channels.</p>
-<p>This doesn't require new software. It requires a two-minute habit tied to something people already do — end of a sales call, end of a support ticket, end of a QBR — and a single field or form that takes seconds to fill in.</p>
-<p>The habit matters more than the tool. A shared spreadsheet with a strict two-minute rule will outperform a sophisticated feedback platform that people forget to open.</p>
-<h2>Tag It So It's Usable Later, Not Just Logged</h2>
-<p>Untagged feedback becomes a pile nobody wants to sort through, which is why most feedback logs die within a quarter. Tag every item by type (bug, feature request, usability friction, competitive gap, pricing objection), by source (which customer/segment), and by a rough severity or frequency signal.</p>
-<p>Consistent tagging is what turns forty scattered comments into 'this specific gap has come up in six deals this quarter' — which is the kind of statement that actually changes a roadmap decision.</p>
-<p>Keep the tag list short and fixed. A tagging system that grows a new category every week is a sign people are tagging based on mood rather than a shared definition.</p>
-<h2>Review on a Fixed Cadence, With the Right People in the Room</h2>
-<p>Feedback that's logged but never reviewed is barely better than feedback that's never logged. Set a fixed, recurring review — every two to four weeks is typical for a small team — with someone from product, someone from sales, and someone from CS or support all present.</p>
-<p>The point of the meeting isn't to promise features. It's to make patterns visible, decide what needs roadmap attention versus a quick fix versus a documented workaround, and close the loop back to whoever raised it.</p>
-<p>Keep the meeting short and pattern-focused rather than relitigating every individual comment. The value is in spotting the six times a gap came up, not debating each mention in isolation.</p>
-<h2>Close the Loop or the System Collapses</h2>
-<p>The single fastest way to kill a feedback system is silence. If a sales rep logs the same objection five times and never hears anything back, they stop logging it — correctly concluding it doesn't matter. Every reviewed item needs a visible outcome, even if that outcome is 'not now, here's why.'</p>
-<p>Closing the loop is also what earns product the credibility to say no. A team that visibly reviews and responds to feedback can decline a request without it feeling like the input was ignored.</p>
-<p>Use the Feedback Intake &amp; Triage Template to define exactly who logs feedback, how it gets tagged, and how often it's reviewed and by whom, so the loop actually closes instead of quietly stopping.</p>
+        <h2>The Real Failure Mode Isn't the Incident — It's the First Hour</h2>
+<p>When something goes wrong — a suspicious login, a data exposure, an outage that looks like an attack, a vendor breach that might affect your customers — the technical problem is rarely what causes the most damage. The damage comes from the chaotic first hour: nobody knows who's in charge, three people are messaging each other in parallel, someone tells a customer something that turns out to be wrong, and thirty minutes are lost figuring out who should even be making decisions.</p>
+<p>Most small software teams have never rehearsed this moment, so the first real incident becomes a live test of a process that doesn't exist. That's the actual risk worth addressing — not the theoretical sophistication of an attacker, but the practical absence of a sequence anyone can follow under stress. A mediocre plan followed calmly beats a perfect plan that exists only in someone's head.</p>
+<h2>The First Four Moves, In Order</h2>
+<p>First: contain. Stop the immediate bleeding — revoke a compromised credential, take a system offline, disable an exposed integration — before worrying about root cause. Second: assess. Get a clear, honest picture of what's actually known versus assumed: what data or systems are affected, how many customers, how confident is that assessment. Third: communicate. Decide who needs to know — internally first, then customers if they're affected, then any required regulatory or contractual notification — and say only what's actually confirmed, updating as more becomes known rather than guessing to sound authoritative.</p>
+<p>Fourth: stabilize and document. Once the immediate risk is contained and the right people are informed, the priority shifts to restoring normal operation and keeping a running log of what happened, when, and what was done about it — not for blame, but because that record is what makes the post-incident review useful and what a customer or auditor will eventually ask to see. Skipping documentation in the moment always feels reasonable and always causes regret two weeks later when nobody can reconstruct the timeline.</p>
+<h2>Not Every Incident Is a Breach — And the Response Should Scale Accordingly</h2>
+<p>One reason small teams avoid building an incident response habit is that 'incident response' sounds like it only applies to dramatic breaches. In practice, the same basic sequence — contain, assess, communicate, stabilize and document — applies to a much wider range of events: a major outage, a data sync bug that exposed the wrong customer's records to another account, a phishing attempt that succeeded against one employee, a vendor announcing their own breach that might touch your data.</p>
+<p>The response should scale to the severity, not follow one rigid script regardless of size. A minor, contained issue might take fifteen minutes and a Slack thread. A serious customer data exposure needs the founder or a senior leader involved immediately, clear customer communication, and possibly legal input. Having a simple severity framework, decided in advance, prevents both underreacting to something serious and overreacting to something minor.</p>
+<h2>The Plan Only Works If People Know It Exists</h2>
+<p>An incident response plan that lives in a document nobody has read is functionally the same as having no plan. The value comes from a short document everyone on the team knows exists, knows where to find, and has at least skimmed once — so that when something happens, the first move is 'open the playbook,' not 'figure out what to do from scratch while panicking.'</p>
+<p>Use the Incident Response Playbook Template to define your severity levels, decision-makers, and first-response sequence now, while there's no pressure, so the plan is ready before it's ever actually needed. Teams that do this find the biggest benefit isn't the plan itself — it's the calm that comes from knowing one exists.</p>
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Feedback needs exactly one low-effort place to go, or it will keep dying in Slack messages and call debriefs.</li>
-<li>Tag every item by type, source, and severity/frequency — untagged feedback becomes an unusable pile.</li>
-<li>Review feedback on a fixed cadence with product, sales, and CS in the room together.</li>
-<li>Every reviewed item needs a visible outcome communicated back to whoever raised it.</li>
-<li>The goal of the loop is visible patterns and decisions, not a promise to build everything requested.</li>
+            <li>The most damaging part of a security incident is usually the chaotic first hour, not the underlying technical problem.</li>
+<li>The first-response sequence is contain, assess, communicate, then stabilize and document — in that order, every time.</li>
+<li>Communication should only state what's actually confirmed, updated as more is known, rather than guessing to sound authoritative.</li>
+<li>Incident response applies to a wider range of events than dramatic breaches — outages, bugs exposing data, phishing, and vendor incidents all use the same basic sequence.</li>
+<li>A plan only has value if the team knows it exists and where to find it — an unread document is functionally the same as no plan.</li>
 
           </ul>
         </div>
         <div class="download-card" id="download">
           <div>
-            <div class="label">Template · Free with email</div>
-            <h3>Feedback Intake &amp; Triage Template</h3>
-            <p>A working template defining who logs product feedback from sales and CS, how it's tagged, and how often it's reviewed and by whom.</p>
+            <div class="label">Playbook · Free with email</div>
+            <h3>Incident Response Playbook Template</h3>
+            <p>For founders and operations leaders who need a clear, ready-to-use first-response sequence for security and operational incidents.</p>
           </div>
-          <form class="gate-form" data-rev-iq-form data-pdf="../assets/17-feedback-intake-triage-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Feedback Intake &amp; Triage Template — rev-iq.ai" />
-            <input type="hidden" name="asset" value="Feedback Intake &amp; Triage Template" />
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/29-incident-response-playbook-template.pdf">
+            <input type="hidden" name="_subject" value="Download Request: Incident Response Playbook Template — rev-iq.ai" />
+            <input type="hidden" name="asset" value="Incident Response Playbook Template" />
             <input type="hidden" name="form_type" value="Download request" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <div data-state="idle" class="gate-fields">
@@ -302,8 +294,8 @@
           <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
         </div>
         <div class="nav-links">
-          <a href="16-how-to-build-a-roadmap-instead-of-a-request-queue.html">← How to Build a Roadmap Instead of a Request Queue</a>
-          <a href="18-org-design-for-growing-software-businesses.html">Org Design for Growing Software Businesses →</a>
+          <a href="28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html">← Your Vendor Stack Is Your Risk Surface — Treat It That Way</a>
+          <a href="30-the-rev-iq-3-pillar-ai-strategy-framework.html">The Rev-IQ 3-Pillar AI Strategy Framework →</a>
         </div>
       </div>
     </section>

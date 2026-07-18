@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Closing the Gap Between What Sales Hears and What Product Builds — Rev-IQ</title>
-  <meta name="description" content="A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs." />
+  <title>Why Access Control Is the Cheapest Risk You're Not Managing — Rev-IQ</title>
+  <meta name="description" content="Unmanaged permissions and slow offboarding are the most common security failure in small software companies — and the easiest to fix." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -234,57 +234,49 @@
   <main id="main">
     <section class="article-header">
       <div class="container-narrow">
-        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Product &amp; Development</div>
-        <div class="eyebrow"><span class="dot"></span>Product &amp; Development</div>
-        <h1 class="article-h1">Closing the Gap Between What Sales Hears and What Product Builds</h1>
-        <p class="dek">A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs.</p>
+        <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Compliance &amp; Security</div>
+        <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
+        <h1 class="article-h1">Why Access Control Is the Cheapest Risk You're Not Managing</h1>
+        <p class="dek">Unmanaged permissions and slow offboarding are the most common security failure in small software companies — and the easiest to fix.</p>
         <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
-        <div class="tag-row"><span class="tag">Weak commercial operating rhythm</span><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+        <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
       </div>
     </section>
     <section class="article-body">
       <div class="container-narrow">
-        <h2>The Most Valuable Feedback Usually Dies in a DM</h2>
-<p>Sales and customer success hear more about what's actually wrong with the product than almost anyone else in the business. A prospect who churns to a competitor, a customer who nearly cancels, a deal that stalls on a missing feature — this is direct signal about the product and the market.</p>
-<p>Most of it never reaches product in a usable form. It gets mentioned once in a deal review, said out loud in a call debrief, or sent as a one-off Slack message that scrolls away. The information existed. It just never became a decision input.</p>
-<p>This isn't a discipline problem for the sales or CS team. It's a design problem: no one ever built a path for that information to travel, so it takes the path of least resistance, which is nowhere in particular.</p>
-<h2>Feedback Needs a Home Before It Needs a Process</h2>
-<p>Before building a review cadence, fix the more basic problem: there needs to be exactly one place feedback goes, and everyone in sales and CS needs to know logging it there takes less effort than not logging it. If entering feedback takes longer than mentioning it in a channel, it will keep dying in channels.</p>
-<p>This doesn't require new software. It requires a two-minute habit tied to something people already do — end of a sales call, end of a support ticket, end of a QBR — and a single field or form that takes seconds to fill in.</p>
-<p>The habit matters more than the tool. A shared spreadsheet with a strict two-minute rule will outperform a sophisticated feedback platform that people forget to open.</p>
-<h2>Tag It So It's Usable Later, Not Just Logged</h2>
-<p>Untagged feedback becomes a pile nobody wants to sort through, which is why most feedback logs die within a quarter. Tag every item by type (bug, feature request, usability friction, competitive gap, pricing objection), by source (which customer/segment), and by a rough severity or frequency signal.</p>
-<p>Consistent tagging is what turns forty scattered comments into 'this specific gap has come up in six deals this quarter' — which is the kind of statement that actually changes a roadmap decision.</p>
-<p>Keep the tag list short and fixed. A tagging system that grows a new category every week is a sign people are tagging based on mood rather than a shared definition.</p>
-<h2>Review on a Fixed Cadence, With the Right People in the Room</h2>
-<p>Feedback that's logged but never reviewed is barely better than feedback that's never logged. Set a fixed, recurring review — every two to four weeks is typical for a small team — with someone from product, someone from sales, and someone from CS or support all present.</p>
-<p>The point of the meeting isn't to promise features. It's to make patterns visible, decide what needs roadmap attention versus a quick fix versus a documented workaround, and close the loop back to whoever raised it.</p>
-<p>Keep the meeting short and pattern-focused rather than relitigating every individual comment. The value is in spotting the six times a gap came up, not debating each mention in isolation.</p>
-<h2>Close the Loop or the System Collapses</h2>
-<p>The single fastest way to kill a feedback system is silence. If a sales rep logs the same objection five times and never hears anything back, they stop logging it — correctly concluding it doesn't matter. Every reviewed item needs a visible outcome, even if that outcome is 'not now, here's why.'</p>
-<p>Closing the loop is also what earns product the credibility to say no. A team that visibly reviews and responds to feedback can decline a request without it feeling like the input was ignored.</p>
-<p>Use the Feedback Intake &amp; Triage Template to define exactly who logs feedback, how it gets tagged, and how often it's reviewed and by whom, so the loop actually closes instead of quietly stopping.</p>
+        <h2>Access Sprawl Happens Quietly, One Invite at a Time</h2>
+<p>No one designs a bad access model on purpose. It happens through a hundred small, reasonable-seeming decisions: a contractor gets admin access because it was faster than scoping permissions properly, a former employee's login still works because nobody remembered to remove it, a departed co-founder still technically has access to the production database. Each individual decision made sense in the moment. Collectively, they produce a system where nobody can say with confidence who can do what.</p>
+<p>This matters more than most operational gaps because access failures are rarely caught by normal business activity. A messy sales process shows up in the pipeline numbers. A messy access model shows up only when something goes wrong — a departed employee does something they shouldn't, a compromised account causes damage, or a customer's security review asks a direct question the team can't answer confidently.</p>
+<h2>Role-Based Access Is Simpler Than It Sounds</h2>
+<p>The instinct to avoid formal access control is usually that it sounds like enterprise bureaucracy — too heavy for a 15-person team. In practice, role-based access at small scale is just a decision about which handful of roles exist (engineer, support, sales, finance, admin) and what each role can see and touch, applied consistently instead of ad hoc. It doesn't require special software; most tools already support role-based permissions, they're just rarely configured deliberately.</p>
+<p>The principle worth adopting early is least privilege: give people access to what their role requires to do the job, not broad access because it's convenient to set up once. This isn't about distrust — it's about limiting the blast radius when an account is compromised, a mistake is made, or someone leaves under bad terms. A smaller blast radius is cheaper every single time something goes wrong, and something eventually does.</p>
+<h2>Offboarding Is Where Access Control Actually Gets Tested</h2>
+<p>Granting access thoughtfully matters, but removing it promptly is where most companies actually fail. Offboarding is emotionally and operationally easy to deprioritize — someone's leaving, there's a notice period, everyone's focused on the transition, and access removal quietly slips to 'sometime this week.' That gap, even if it's only a few days, is exactly when risk is highest: a departing employee has the most reason to be frustrated and the least reason to feel careful.</p>
+<p>A reliable offboarding process treats access removal as a same-day, non-negotiable step tied to the employee's last day, not a follow-up task. It should cover every system that matters — email, code repositories, cloud infrastructure, customer data platforms, financial systems, and any shared credentials — not just the obvious one or two. The goal is a checklist simple enough that whoever runs offboarding, even for the first time, can't miss a system.</p>
+<h2>Turning This Into a Living Policy, Not a One-Time Cleanup</h2>
+<p>A one-time access audit feels productive but decays within a quarter unless it's backed by an actual policy that governs how access is granted, reviewed, and removed going forward. The policy doesn't need to be long. It needs to say, plainly, who approves new access, how often access is reviewed, and what happens on someone's last day — and then actually be followed.</p>
+<p>Use the Access Control and Offboarding Policy Template to define roles and permissions, document your current access map, and put a same-day offboarding checklist in place. Most teams that go through this exercise are surprised by how much access exists that nobody remembers granting.</p>
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Feedback needs exactly one low-effort place to go, or it will keep dying in Slack messages and call debriefs.</li>
-<li>Tag every item by type, source, and severity/frequency — untagged feedback becomes an unusable pile.</li>
-<li>Review feedback on a fixed cadence with product, sales, and CS in the room together.</li>
-<li>Every reviewed item needs a visible outcome communicated back to whoever raised it.</li>
-<li>The goal of the loop is visible patterns and decisions, not a promise to build everything requested.</li>
+            <li>Access sprawl accumulates through small, individually reasonable decisions — not deliberate design — and it's invisible until something goes wrong.</li>
+<li>Role-based access at small-company scale just means deciding which roles exist and what each can touch, applied consistently, not a heavyweight enterprise system.</li>
+<li>The principle of least privilege limits the blast radius when an account is compromised or someone leaves on bad terms.</li>
+<li>Offboarding is where access control actually gets tested, and it should be a same-day, non-negotiable step covering every system, not a follow-up task.</li>
+<li>A one-time access cleanup decays within a quarter without a living policy that governs how access is granted, reviewed, and removed going forward.</li>
 
           </ul>
         </div>
         <div class="download-card" id="download">
           <div>
             <div class="label">Template · Free with email</div>
-            <h3>Feedback Intake &amp; Triage Template</h3>
-            <p>A working template defining who logs product feedback from sales and CS, how it's tagged, and how often it's reviewed and by whom.</p>
+            <h3>Access Control and Offboarding Policy Template</h3>
+            <p>For founders and operations leaders who need a clear, adoptable policy for granting, reviewing, and removing system access.</p>
           </div>
-          <form class="gate-form" data-rev-iq-form data-pdf="../assets/17-feedback-intake-triage-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Feedback Intake &amp; Triage Template — rev-iq.ai" />
-            <input type="hidden" name="asset" value="Feedback Intake &amp; Triage Template" />
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/26-access-control-and-offboarding-policy-template.pdf">
+            <input type="hidden" name="_subject" value="Download Request: Access Control and Offboarding Policy Template — rev-iq.ai" />
+            <input type="hidden" name="asset" value="Access Control and Offboarding Policy Template" />
             <input type="hidden" name="form_type" value="Download request" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <div data-state="idle" class="gate-fields">
@@ -302,8 +294,8 @@
           <a class="btn btn-secondary btn-sm" href="../advisory.html">Discuss advisory support →</a>
         </div>
         <div class="nav-links">
-          <a href="16-how-to-build-a-roadmap-instead-of-a-request-queue.html">← How to Build a Roadmap Instead of a Request Queue</a>
-          <a href="18-org-design-for-growing-software-businesses.html">Org Design for Growing Software Businesses →</a>
+          <a href="25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html">← How to Stop Losing Weeks to Customer Security Questionnaires</a>
+          <a href="27-you-can-t-protect-data-you-haven-t-classified.html">You Can't Protect Data You Haven't Classified →</a>
         </div>
       </div>
     </section>

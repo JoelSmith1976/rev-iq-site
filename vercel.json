@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.rev-iq.ai"
+        }
+      ],
+      "destination": "https://rev-iq.ai/$1",
+      "permanent": true
+    }
+  ]
+}

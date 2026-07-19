@@ -242,6 +242,12 @@
     @media (max-width: 920px) {
       .download-card { flex-direction: column; align-items: flex-start; }
     }
+    .faq-block { margin: var(--space-12) 0; }
+    .faq-block h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: var(--space-5); font-weight: 700; }
+    .faq-item { border-top: 1px solid var(--color-divider); padding: var(--space-5) 0; }
+    .faq-item:first-of-type { border-top: none; }
+    .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
+    .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
 
   </style>
 </head>
@@ -310,7 +316,7 @@
         <div class="eyebrow"><span class="dot"></span>Strategy</div>
         <h1 class="article-h1">Designing a Simple Operating Rhythm for Your SaaS</h1>
         <p class="dek">Turning a project into a business means deciding what gets reviewed weekly, monthly, and quarterly — a simple cadence that fits a small team.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span></div>
+        <div class="meta-row"><span>6 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated July 19, 2026</span></div>
         <div class="tag-row"><span class="tag">Weak commercial operating rhythm</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
         <div style="margin-top: var(--space-6);"><figure class="framework-diagram" style="margin:0; padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-2); min-height: 220px; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="width:100%;"><svg viewBox="6.3 8.0 307.3 216.0" width="100%" role="img" aria-label="Operating rhythm cadence: weekly, monthly and quarterly review cycle" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rq-arrow-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fb8b2"/></marker></defs><circle cx="160" cy="128" r="92" fill="none" stroke="#7fb8b2" stroke-width="2" stroke-dasharray="3 7" /><line x1="239.67433714816838" y1="82.0" x2="244.17433714816838" y2="89.79422863405995" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="160.0" y1="220.0" x2="151.0" y2="220.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="80.32566285183165" y1="82.0" x2="84.82566285183165" y2="74.20577136594005" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><rect x="86.0" y="8.0" width="148" height="56" rx="10" fill="#f5e6c4" stroke="#a8710f" stroke-width="1.5"/><text x="160.0" y="31.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#5c3c07">Weekly</text><text x="160.0" y="46.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#8a5c0b">Pipeline check-ins</text><rect x="165.67433714816838" y="146.0" width="148" height="56" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="239.67433714816838" y="169.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Monthly</text><text x="239.67433714816838" y="184.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#5c5344">Metrics & forecast</text><rect x="6.325662851831638" y="146.0" width="148" height="56" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="80.32566285183164" y="169.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Quarterly</text><text x="80.32566285183164" y="184.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#5c5344">Strategy reset</text></svg></div><figcaption style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align:center;">Weekly, monthly and quarterly review cadence</figcaption></figure></div>
       </div>
@@ -344,6 +350,14 @@
 <li>Start with the smallest workable set of checkpoints and expand only once the business has clearly outgrown it.</li>
 
           </ul>
+        </div>
+        <div class="faq-block">
+          <h2>Frequently asked questions</h2>
+          <div class="faq-item"><h3>What's the difference between a project and a business?</h3><p>A project runs on whoever remembers to check on it. A business runs on a predictable rhythm of reviews — a defined cadence of what gets looked at weekly, monthly, and quarterly.</p></div>
+<div class="faq-item"><h3>How often should I review pipeline, product, and strategy?</h3><p>Match review frequency to how fast the thing actually changes: pipeline weekly, product and customer health monthly, strategy quarterly. Reviewing the wrong topic at the wrong cadence wastes as much time as reviewing nothing.</p></div>
+<div class="faq-item"><h3>How do I stop an operating rhythm from turning into bureaucracy?</h3><p>Every recurring review should produce a specific decision or action. If a meeting doesn't produce one, cut it or merge it into another cadence.</p></div>
+<div class="faq-item"><h3>Where should I start if I don't have any operating rhythm yet?</h3><p>Start with the smallest workable set of checkpoints, not a full framework. Expand only once the business has clearly outgrown what you already have in place.</p></div>
+
         </div>
         <div class="download-card" id="download">
           <div>
@@ -390,6 +404,122 @@
       </div>
     </div>
   </footer>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rev-IQ",
+    "url": "https://rev-iq.ai",
+    "logo": "https://rev-iq.ai/apple-touch-icon.png",
+    "email": "mailto:joel.smith@rev-iq.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressCountry": "AU"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Joel Smith",
+      "jobTitle": "Founder, Rev-IQ",
+      "description": "Group CEO and CRO-level commercial operator with experience building and scaling SaaS and software businesses across Australia, New Zealand, and the UK.",
+      "sameAs": ["https://www.linkedin.com/in/joelsmithau/"]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Designing a Simple Operating Rhythm for Your SaaS",
+  "description": "Turning a project into a business means deciding what gets reviewed weekly, monthly, and quarterly \u2014 a simple cadence that fits a small team.",
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-19",
+  "author": {
+    "@type": "Person",
+    "name": "Joel Smith",
+    "url": "https://www.linkedin.com/in/joelsmithau/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rev-IQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rev-iq.ai/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rev-iq.ai/articles/03-designing-a-simple-operating-rhythm-for-your-saas.html"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rev-iq.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resource Library",
+      "item": "https://rev-iq.ai/resources.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Designing a Simple Operating Rhythm for Your SaaS",
+      "item": "https://rev-iq.ai/articles/03-designing-a-simple-operating-rhythm-for-your-saas.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between a project and a business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A project runs on whoever remembers to check on it. A business runs on a predictable rhythm of reviews \u2014 a defined cadence of what gets looked at weekly, monthly, and quarterly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I review pipeline, product, and strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match review frequency to how fast the thing actually changes: pipeline weekly, product and customer health monthly, strategy quarterly. Reviewing the wrong topic at the wrong cadence wastes as much time as reviewing nothing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop an operating rhythm from turning into bureaucracy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every recurring review should produce a specific decision or action. If a meeting doesn't produce one, cut it or merge it into another cadence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where should I start if I don't have any operating rhythm yet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the smallest workable set of checkpoints, not a full framework. Expand only once the business has clearly outgrown what you already have in place."
+      }
+    }
+  ]
+}
+  </script>
+
   <script src="../js/forms.js" defer></script>
   <script>
     (function () {

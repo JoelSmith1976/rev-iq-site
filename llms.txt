@@ -1,0 +1,24 @@
+# Rev-IQ
+
+> Rev-IQ is a commercial and revenue operations resource for software and SaaS leaders — practical frameworks, templates, and advisory support for founders and executives who want revenue that grows in a straight line rather than a rollercoaster.
+
+Rev-IQ publishes a free resource library of frameworks and templates covering revenue growth, operating rhythm, hiring and org design, security posture, AI strategy, leadership, and partnerships for software businesses. Content is written in a direct, editorial, expert-led voice — no fluff, no growth-hacking clichés.
+
+## Flagship frameworks
+
+- [The 5 Levers That Actually Drive SaaS Revenue](https://rev-iq.ai/articles/01-the-5-levers-that-actually-drive-saas-revenue.html): The core operating logic behind SaaS growth — acquisition, conversion, pricing, retention, and expansion — and how to diagnose which lever is the real constraint.
+- [Designing a Simple Operating Rhythm for Your SaaS](https://rev-iq.ai/articles/03-designing-a-simple-operating-rhythm-for-your-saas.html): How to turn a project into a business with a weekly/monthly/quarterly review cadence that fits a small team.
+- [The Rev-IQ 3-Pillar AI Strategy Framework](https://rev-iq.ai/articles/30-the-rev-iq-3-pillar-ai-strategy-framework.html): A sequencing model for AI adoption in software companies — educate the workforce, operationalise AI internally, then productise it for customers, in that order.
+
+## Resource index
+
+- [Resource Library](https://rev-iq.ai/resources.html): Full library of 46 frameworks and templates, organized by category.
+- [Browse by Challenge](https://rev-iq.ai/browse-by-challenge.html): Find the right resource by the specific business problem you're facing.
+- [Who It's For](https://rev-iq.ai/who-its-for.html): How Rev-IQ resources map to different leadership roles and company stages.
+
+## About
+
+- [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
+- [About Rev-IQ](https://rev-iq.ai/about.html): Background on Rev-IQ and its approach to commercial and revenue operations.
+- [Advisory & Fractional Support](https://rev-iq.ai/advisory.html): Direct advisory and fractional executive support for software businesses.
+- [Contact](https://rev-iq.ai/contact.html): Get in touch with Rev-IQ.

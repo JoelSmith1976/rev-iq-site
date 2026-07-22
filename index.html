@@ -214,6 +214,23 @@
     }
 
 
+    .founder-grid { display: grid; grid-template-columns: 260px 1fr; gap: var(--space-8); align-items: center; }
+    .founder-photo-wrap { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-md); }
+    .founder-photo-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1; }
+    .pull-quote { margin: var(--space-6) 0 0; padding: var(--space-5) var(--space-6); border-left: 3px solid var(--color-primary); background: var(--color-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .pull-quote p { margin: 0 0 var(--space-2); font-size: var(--text-base); color: var(--color-text); font-style: normal; }
+    .pull-quote cite { font-style: normal; font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 600; }
+    .pull-quote cite span { font-weight: 400; }
+    .quote-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); margin-top: var(--space-8); }
+    .quote-card { display: flex; flex-direction: column; gap: var(--space-4); margin: 0; }
+    .quote-card p { margin: 0; color: var(--color-text); font-size: var(--text-sm); flex: 1; }
+    .quote-card cite { font-style: normal; font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; display: block; }
+    .quote-card cite span { font-weight: 400; }
+    @media (max-width: 920px) {
+      .founder-grid { grid-template-columns: 1fr; }
+      .founder-photo-wrap { max-width: 220px; margin: 0 auto; }
+      .quote-grid { grid-template-columns: 1fr; }
+    }
     .segment-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
     .segment-card { display: flex; flex-direction: column; }
     .segment-card .kicker { color: var(--color-text-faint); }
@@ -326,6 +343,23 @@
           <strong>How to engage</strong>
           <p>Start with a free framework, run a short diagnostic, or bring Rev-IQ in directly as fractional leadership or advisory support.</p>
         </aside>
+      </div>
+    </section>
+
+    <section id="founder">
+      <div class="container founder-grid">
+        <div class="founder-photo-wrap reveal">
+          <img src="images/joel-smith-founder-square.jpg" alt="Joel Smith, founder of Rev-IQ" loading="lazy" />
+        </div>
+        <div>
+          <span class="kicker">Founded by Joel Smith</span>
+          <h2 style="font-size: clamp(1.6rem, 2.8vw, 2.2rem); max-width: 26ch;">Built on two decades of operating experience, not theory.</h2>
+          <p style="color: var(--color-text-muted); margin: var(--space-4) 0 0; max-width: 58ch;">Rev-IQ was founded by Joel Smith, a technology CEO with more than two decades leading software and SaaS businesses across Australia, New Zealand and the UK. Having led growth, transformation, acquisitions and AI initiatives from inside executive teams, he built Rev-IQ to help founders and leadership teams build stronger, more valuable software businesses.</p>
+          <blockquote class="pull-quote">
+            <p>&ldquo;Joel makes intelligent, well-informed, but quick decisions — one of the few leaders who truly has a vision and takes action based on it.&rdquo;</p>
+            <cite>Allen Boening <span>&mdash; Co-Founder, Synsona</span></cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 
@@ -544,8 +578,31 @@
         </div>
         <aside class="note">
           <strong style="display:block; margin-bottom: 0.6rem;">Approach</strong>
-          <p style="margin:0; color: var(--color-text-muted);">Rev-IQ is designed to foreground useful ideas over personality. The emphasis is on practical frameworks, grounded observations and thinking that helps leaders make better decisions about growth, retention and operating performance.</p>
+          <p style="margin:0; color: var(--color-text-muted);">Rev-IQ is designed to foreground useful ideas, grounded in real operating experience rather than personality for its own sake. The emphasis stays on practical frameworks and thinking that helps leaders make better decisions about growth, retention and operating performance.</p>
         </aside>
+      </div>
+    </section>
+
+    <section class="muted-band" id="trusted">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Trusted by executives, boards and high-performing teams</h2>
+          <p>Rev-IQ is new, but the operating judgement behind it isn't. The platform is built on more than two decades leading and scaling software businesses, and on the kind of leadership and commercial impact that earns trust from senior leaders, teams and boards.</p>
+        </div>
+        <div class="quote-grid">
+          <blockquote class="card quote-card reveal">
+            <p>&ldquo;Joel instantly understood the value of leveraging best practice to drive change, and moved quickly to reshape commercial messaging.&rdquo;</p>
+            <cite>Amy Orr <span>&mdash; Former Executive Advisor, CEB / Gartner</span></cite>
+          </blockquote>
+          <blockquote class="card quote-card reveal">
+            <p>&ldquo;Joel demonstrated real passion for results through strong sales and channel leadership, with communication skills at the highest level.&rdquo;</p>
+            <cite>Chris Barnet <span>&mdash; Senior Commercial Leader</span></cite>
+          </blockquote>
+          <blockquote class="card quote-card reveal">
+            <p>&ldquo;Joel's professionalism and strong leadership create exceptional loyalty and support. I have no hesitation recommending him to do business with.&rdquo;</p>
+            <cite>David Barrett <span>&mdash; Director, Connect Super</span></cite>
+          </blockquote>
+        </div>
       </div>
     </section>
 

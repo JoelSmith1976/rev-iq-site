@@ -219,6 +219,17 @@
     .principle-list .num { font-family: var(--font-display); font-weight: 700; color: var(--color-primary); font-size: 1.1rem; }
     .principle-list h3 { font-size: 1.05rem; margin-bottom: 0.3rem; }
     .principle-list p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .founder-photo-wrap { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--color-border); box-shadow: var(--shadow-md); max-width: 360px; }
+    .founder-photo-wrap img { display: block; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 5; }
+    .quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-5); margin-top: var(--space-8); }
+    .quote-card { display: flex; flex-direction: column; gap: var(--space-4); margin: 0; }
+    .quote-card p { margin: 0; color: var(--color-text); font-size: var(--text-sm); flex: 1; }
+    .quote-card cite { font-style: normal; font-size: var(--text-xs); color: var(--color-text-muted); font-weight: 600; display: block; }
+    .quote-card cite span { font-weight: 400; }
+    @media (max-width: 920px) {
+      .founder-photo-wrap { margin: 0 auto var(--space-6); }
+      .quote-grid { grid-template-columns: 1fr; }
+    }
 
   </style>
 </head>
@@ -291,6 +302,32 @@
 
     <section>
       <div class="container about-grid">
+        <div class="founder-photo-wrap reveal">
+          <img src="images/joel-smith-founder-portrait.jpg" alt="Joel Smith, founder of Rev-IQ" loading="lazy" />
+        </div>
+        <div>
+          <span class="kicker">Founded by Joel Smith</span>
+          <h2 style="font-size: clamp(1.7rem, 3vw, 2.3rem); max-width: 22ch;">A technology CEO, not a consultant who's never run the function.</h2>
+          <p style="color: var(--color-text-muted); margin: var(--space-4) 0 0; max-width: 58ch;">Rev-IQ was founded by Joel Smith, a technology CEO with more than two decades of experience leading software and SaaS businesses across Australia, New Zealand and the UK. Having led growth, transformation, acquisitions and AI initiatives from inside executive teams &mdash; most recently as Group CEO of a group of MedTech software businesses operating across Australia and New Zealand &mdash; he created Rev-IQ to help founders and leadership teams build stronger, more valuable software businesses.</p>
+          <p style="color: var(--color-text-muted); margin: var(--space-4) 0 0; max-width: 58ch;">The frameworks published here aren't theoretical. They're the operating patterns that held up under real board, investor and customer pressure &mdash; refined across multiple businesses, not written from the outside looking in.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="quote-grid">
+          <blockquote class="card quote-card reveal">
+            <p>&ldquo;Joel makes intelligent, well-informed, but quick decisions — one of the few leaders who truly has a vision and takes action based on it.&rdquo;</p>
+            <cite>Allen Boening <span>&mdash; Co-Founder, Synsona</span></cite>
+          </blockquote>
+          <blockquote class="card quote-card reveal">
+            <p>&ldquo;Joel has unique expertise in sales management and leadership. His hands-on approach and ability to generate results won him the respect of the wider business.&rdquo;</p>
+            <cite>Jason Baxendine <span>&mdash; Director, Datadog</span></cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container about-grid">
         <div>
           <div class="section-intro">
             <h2>What Rev-IQ is</h2>
@@ -324,8 +361,8 @@
           <li>
             <span class="num">02</span>
             <div>
-              <h3>Structure over personality</h3>
-              <p>The emphasis is on frameworks and grounded observations, not on building a following around an individual.</p>
+              <h3>Structure over spectacle</h3>
+              <p>The emphasis stays on frameworks and grounded operating experience &mdash; the judgement behind Rev-IQ is transparent, but the site isn't built around a personal following.</p>
             </div>
           </li>
           <li>

@@ -11,5 +11,15 @@
       "destination": "https://rev-iq.ai/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|about|contact)",
+      "destination": "/:page.html"
+    },
+    {
+      "source": "/articles/:slug([^./]+)",
+      "destination": "/articles/:slug.html"
+    }
   ]
 }

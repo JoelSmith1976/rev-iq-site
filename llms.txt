@@ -1,8 +1,8 @@
 # Rev-IQ
 
-> Rev-IQ is a commercial and revenue operations resource for software and SaaS leaders — practical frameworks, templates, and advisory support for founders and executives who want revenue that grows in a straight line rather than a rollercoaster.
+> Rev-IQ is a commercial and revenue operations resource for leaders of technology businesses, including SaaS and software — practical frameworks, templates, and advisory support for founders and executives who want revenue that grows in a straight line rather than a rollercoaster.
 
-Rev-IQ publishes a free resource library of frameworks and templates covering revenue growth, operating rhythm, hiring and org design, security posture, AI strategy, leadership, and partnerships for software businesses. Content is written in a direct, editorial, expert-led voice — no fluff, no growth-hacking clichés.
+Rev-IQ publishes a free resource library of frameworks and templates covering revenue growth, operating rhythm, hiring and org design, security posture, AI strategy, leadership, and partnerships for technology businesses. Content is written in a direct, editorial, expert-led voice — no fluff, no growth-hacking clichés.
 
 ## Flagship frameworks
 
@@ -20,5 +20,5 @@ Rev-IQ publishes a free resource library of frameworks and templates covering re
 
 - [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
 - [About Rev-IQ](https://rev-iq.ai/about.html): Background on Rev-IQ and its approach to commercial and revenue operations.
-- [Advisory & Fractional Support](https://rev-iq.ai/advisory.html): Direct advisory and fractional executive support for software businesses.
+- [Advisory & Fractional Support](https://rev-iq.ai/advisory.html): Direct advisory and fractional executive support for technology businesses.
 - [Contact](https://rev-iq.ai/contact.html): Get in touch with Rev-IQ.

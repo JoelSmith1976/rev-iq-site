@@ -218,6 +218,7 @@
     h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
     .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
     .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
+    .article-body { padding-top: var(--space-4); }
     .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
     .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
     .takeaways { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
@@ -341,7 +342,7 @@
     </section>
     <section class="article-body">
       <div class="container-narrow">
-        <h2>The Loudest Request Isn't the Most Important One</h2>
+        <h2>The Loudest Request Isn’t the Most Important One</h2>
 <p>In most small SaaS teams, the roadmap is really just a list of whoever asked most recently or most insistently: a sales rep who lost a deal, a founder's pet idea, a support ticket that got escalated. None of that is inherently wrong to listen to, but none of it is a prioritisation method either.</p>
 <p>A real roadmap process doesn't ignore these inputs. It puts them through the same filter every time, so the business builds what actually moves outcomes forward, and everyone understands why something is or isn't being built next.</p>
 <p>Without that filter, the roadmap becomes a running record of internal politics rather than a record of what the product actually needs. That's a hard pattern to unwind once customers and the team both expect the loudest request to win.</p>
@@ -353,7 +354,7 @@
 <p>Every request should be scored against the same short list of criteria: business impact, effort to build, and strategic fit. Business impact means how many customers or how much revenue this touches, not how vocal the requester was. Effort means real engineering cost, not a gut guess. Strategic fit means whether it moves the product toward where the business is actually trying to go.</p>
 <p>Scoring doesn't remove judgment: it structures it. Two people can disagree on a score and have a useful, specific conversation about why, instead of arguing about whose stakeholder matters more.</p>
 <p>Keep the scale simple. A 1-5 range per criterion is enough resolution to rank a backlog usefully without turning scoring into its own multi-week project.</p>
-<h2>Weight Strategic Fit Deliberately, Don't Default to It Last</h2>
+<h2>Weight Strategic Fit Deliberately, Don’t Default to It Last</h2>
 <p>Impact and effort are usually easy to estimate reasonably well. Strategic fit is the one teams skip because it's fuzzier, and it's exactly the one that prevents the roadmap from becoming a pile of small, disconnected wins that don't add up to anything.</p>
 <p>Before scoring anything, write down the 2-3 things the product needs to be true in the next two quarters. Score every request against that, explicitly, every time.</p>
 <p>If a high-impact, low-effort request scores poorly on strategic fit, that's worth building anyway sometimes, but it should be a deliberate exception, not the default way the roadmap gets filled.</p>

@@ -223,13 +223,13 @@
     .pill.active { background: var(--color-primary); color: #fff; }
     .filter-count { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); }
     .filter-empty { display: none; padding: var(--space-8) 0; color: var(--color-text-muted); text-align: center; }
-    .res-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .res-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
     .res-card { display: flex; flex-direction: column; height: 100%; }
     .res-card .badge-row { display: flex; align-items: center; gap: 0.4rem; margin-bottom: var(--space-3); flex-wrap: wrap; }
     .res-card h3 { font-size: 1.1rem; margin-bottom: var(--space-2); }
     .res-card p { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); flex-grow: 1; }
     .res-card .btn { align-self: flex-start; }
-    .res-card-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--color-divider); }
+    .res-card-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--color-divider); }
     .gate-badge { display: inline-flex; align-items: center; gap: 0.3rem; font-size: var(--text-xs); color: var(--color-text-faint); font-weight: 600; }
     .gate-badge.is-free { color: var(--color-primary-hover); }
     .gate-badge svg { width: 13px; height: 13px; flex-shrink: 0; }
@@ -436,7 +436,7 @@
         <a class="card-link res-card-link" href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html" data-function="marketing" data-challenge="no-gtm insufficient-pipeline" data-stage="pre-revenue early-traction">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">Marketing</span></div>
-            <h3>Your Product Works. Your Story Doesn't Exist Yet.</h3>
+            <h3>Your Product Works. Your Story Doesn’t Exist Yet.</h3>
             <p>A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div><div><dt>You'll leave with</dt><dd>Complete a one-page canvas that defines buyer, problem, urgency, promise, proof and pricing in one positioning statement</dd></div><div><dt>Bring</dt><dd>Your product&#x27;s workflow, any beta or internal results, and your current pricing thinking</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
@@ -644,7 +644,7 @@
         <a class="card-link res-card-link" href="articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it.html" data-function="people-culture-hr" data-challenge="hiring-management-gaps" data-stage="early-traction scaling">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
-            <h3>A Hiring Process for Small Technology Teams That Doesn't Need HR to Run It</h3>
+            <h3>A Hiring Process for Small Technology Teams That Doesn’t Need HR to Run It</h3>
             <p>Consistency in hiring doesn't require bureaucracy. It requires a repeatable process anyone on the team can follow.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and hiring managers at small tech teams without HR</dd></div><div><dt>You'll leave with</dt><dd>Run every hire through one structured process with defined signals, round purposes, independent scoring and fast follow-up</dd></div><div><dt>Bring</dt><dd>Role scorecard, 3-4 hiring signals, interviewer list, and target time between stages</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
@@ -722,7 +722,7 @@
         <a class="card-link res-card-link" href="articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing.html" data-function="compliance-security" data-challenge="security-compliance-readiness" data-stage="early-traction scaling">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
-            <h3>Why Access Control Is the Cheapest Risk You're Not Managing</h3>
+            <h3>Why Access Control Is the Cheapest Risk You’re Not Managing</h3>
             <p>Unmanaged permissions and slow offboarding are the most common security failure in small technology companies, and the easiest to fix.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology companies</dd></div><div><dt>You'll leave with</dt><dd>Define roles, map current access, and put a same-day offboarding checklist in place</dd></div><div><dt>Bring</dt><dd>List of your systems, current users and their access, and team roles</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
@@ -735,7 +735,7 @@
         <a class="card-link res-card-link" href="articles/27-you-can-t-protect-data-you-haven-t-classified.html" data-function="compliance-security" data-challenge="ai-governance-gap security-compliance-readiness" data-stage="early-traction scaling">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
-            <h3>You Can't Protect Data You Haven't Classified</h3>
+            <h3>You Can’t Protect Data You Haven’t Classified</h3>
             <p>Most technology companies have no shared answer for what counts as sensitive data, where it lives, or when it should be deleted, and that gap is the real risk.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders setting data handling standards</dd></div><div><dt>You'll leave with</dt><dd>Define data classification tiers, map where sensitive data lives, and set storage, sharing and retirement rules</dd></div><div><dt>Bring</dt><dd>A list of your systems, vendors and the data types each one holds</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
@@ -839,7 +839,7 @@
         <a class="card-link res-card-link" href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html" data-function="ai-strategy" data-challenge="pricing ai-strategy-gap" data-stage="scaling mature">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
-            <h3>Where AI Actually Belongs in Your Product, and Where It Doesn't</h3>
+            <h3>Where AI Actually Belongs in Your Product, and Where It Doesn’t</h3>
             <p>Adding an AI feature is easy; deciding whether AI belongs in your product, packaging, or pricing at all is the harder and more important question.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Product and leadership teams deciding where AI belongs</dd></div><div><dt>You'll leave with</dt><dd>Decide whether a proposed AI feature belongs in your product, packaging and pricing, and record a go/no-go call</dd></div><div><dt>Bring</dt><dd>A proposed AI feature, the customer job it targets, and cost estimates</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
@@ -917,7 +917,7 @@
         <a class="card-link res-card-link" href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html" data-function="leadership-governance" data-challenge="leadership-misalignment" data-stage="scaling mature">
           <article class="card res-card">
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
-            <h3>The Executive Alignment Review: Catching Drift Before It's Expensive</h3>
+            <h3>The Executive Alignment Review: Catching Drift Before It’s Expensive</h3>
             <p>Strategic drift rarely announces itself: it accumulates quietly across a leadership team until priorities that once matched have quietly diverged.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams checking priorities still match agreed strategy</dd></div><div><dt>You'll leave with</dt><dd>Run a recurring review of priorities, risks and resourcing against the agreed strategy to catch drift early</dd></div><div><dt>Bring</dt><dd>The agreed strategy, last review&#x27;s flagged risks, current priorities, and each function&#x27;s resourcing</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">

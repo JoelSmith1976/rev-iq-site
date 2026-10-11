@@ -22,6 +22,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    .form-optin { display: flex !important; gap: var(--space-2); align-items: flex-start; font-size: var(--text-sm); color: var(--color-text-muted); font-weight: 400 !important; line-height: 1.5; cursor: pointer; }
+    .form-optin input { margin-top: 0.25rem; padding: 0; accent-color: var(--color-primary); width: 16px; height: 16px; min-height: 0 !important; flex-shrink: 0; }
+    .form-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .form-note a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+
 
     :root {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -322,7 +327,9 @@
             </select>
           </div>
           <div data-state="idle"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+          <label data-state="idle" class="form-optin"><input type="checkbox" name="marketing_opt_in" value="yes" /><span>Also send me occasional Rev-IQ resources and updates. Unsubscribe any time.</span></label>
           <button data-state="idle" class="btn btn-primary" type="submit">Send message</button>
+          <p data-state="idle" class="form-note">We use your details to reply to your message. <a href="privacy.html">Privacy notice</a></p>
           <p data-state="success" hidden style="color: var(--color-primary); margin: 0; font-weight: 600;">Thanks — your message is on its way. We'll be in touch.</p>
           <p data-state="error" hidden style="color: var(--color-error); margin: 0;">Something went wrong. Please email joel.smith@rev-iq.ai directly.</p>
         </form>

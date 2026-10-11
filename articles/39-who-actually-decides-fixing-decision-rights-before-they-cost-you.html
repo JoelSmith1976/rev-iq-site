@@ -235,6 +235,9 @@
     .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
     .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
     .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-optin { display: flex; gap: var(--space-2); align-items: flex-start; font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; cursor: pointer; }
+    .gate-optin input { margin-top: 0.2rem; accent-color: var(--color-primary); width: 16px; height: 16px; flex-shrink: 0; }
+    .gate-note a, .gate-msg a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
     .gate-msg-error { color: var(--color-error); }
     .diagnose-card { margin: var(--space-10) 0; }
     .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
@@ -364,11 +367,12 @@
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <div data-state="idle" class="gate-fields">
               <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
-              <button class="btn btn-primary" type="submit">Email me the PDF</button>
+              <button class="btn btn-primary" type="submit">Get the PDF</button>
             </div>
-            <p data-state="success" hidden class="gate-msg">Sent — your download should start automatically.</p>
+            <label class="gate-optin" data-state="idle"><input type="checkbox" name="marketing_opt_in" value="yes" /><span>Also send me occasional Rev-IQ resources and updates. Unsubscribe any time.</span></label>
+            <p data-state="success" hidden class="gate-msg">Thanks. Your download should start automatically. If it doesn't, <a href="../assets/39-decision-rights-matrix-template.pdf" download>open the PDF here</a>.</p>
             <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
-            <p class="gate-note" data-state="idle">No spam — just the template.</p>
+            <p class="gate-note" data-state="idle">We only use your email for this request unless you opt in. <a href="../privacy.html">Privacy notice</a></p>
           </form>
         </div>
         <div class="card path-card diagnose-card">

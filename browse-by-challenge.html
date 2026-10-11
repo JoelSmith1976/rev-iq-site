@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Browse by Challenge — Rev-IQ</title>
-  <meta name="description" content="Find the right framework or advisory conversation for the specific commercial problem you're dealing with — from weak pipeline to churn to pricing." />
+  <meta name="description" content="Find the right framework for the commercial problem you're dealing with, from pipeline and forecasting to churn, pricing, AI and partnerships, with a recommended first resource for each." />
   <link rel="canonical" href="https://rev-iq.ai/browse-by-challenge.html" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -217,6 +217,27 @@
     .challenge-block { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: start; padding: var(--space-9) 0; border-bottom: 1px solid var(--color-divider); }
     .challenge-block:last-of-type { border-bottom: 0; }
     .challenge-block h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-bottom: var(--space-3); }
+
+    .group-nav { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-6); }
+    .group-chip { font-size: var(--text-sm); font-weight: 600; padding: 0.5rem 0.95rem; border-radius: var(--radius-full); border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); transition: border-color 160ms var(--ease), color 160ms var(--ease); }
+    .group-chip:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    .challenge-group { padding-top: var(--space-10); scroll-margin-top: 96px; }
+    .challenge-group + .challenge-group { border-top: 2px solid var(--color-ink); margin-top: var(--space-6); }
+    .group-head h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin: var(--space-2) 0 var(--space-2); }
+    .group-head p { color: var(--color-text-muted); max-width: 60ch; margin: 0; }
+    .challenge-block { scroll-margin-top: 96px; }
+    .challenge-block h3 { font-size: clamp(1.35rem, 2.1vw, 1.7rem); margin-bottom: var(--space-3); }
+    .challenge-desc { color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5); }
+    .seq-card { padding: var(--space-6); }
+    .seq-label { display: block; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: var(--space-3); }
+    .seq-label-then { margin-top: var(--space-5); color: var(--color-text-faint); }
+    .step-num { flex-shrink: 0; width: 1.6rem; height: 1.6rem; border-radius: 50%; display: inline-grid; place-items: center; font-size: 0.75rem; font-weight: 700; background: var(--color-primary-soft); color: var(--color-primary-hover); }
+    .seq-first { display: flex; gap: var(--space-3); align-items: center; padding: var(--space-4); border-radius: var(--radius-md); background: var(--color-primary-soft); color: var(--color-ink); font-weight: 600; transition: background 160ms var(--ease); }
+    .seq-first .step-num { background: var(--color-primary); color: #fff; }
+    .seq-first:hover { background: #cfe6e1; }
+    .seq-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-1); }
+    .seq-list a { display: flex; gap: var(--space-3); align-items: center; padding: 0.45rem 0; color: var(--color-text); font-weight: 600; font-size: var(--text-sm); }
+    .seq-list a:hover { color: var(--color-primary); }
     .challenge-block .res-list { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-2); }
     .challenge-block .res-list a { color: var(--color-text); font-weight: 600; font-size: var(--text-sm); display: block; padding: 0.4rem 0; }
     .challenge-block .res-list a:hover { color: var(--color-primary); }
@@ -289,265 +310,331 @@
       <div class="container">
         <div class="eyebrow"><span class="dot"></span>Browse by challenge</div>
         <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">Start with the problem, not the department.</h1>
-        <p class="lead" style="max-width: 66ch;">Most commercial problems don't sit neatly inside one function. These are the seven we see most often in technology businesses, from SaaS and software to technology services — each mapped to the resources and advisory pathways that address it directly.</p>
+        <p class="lead" style="max-width: 66ch;">Most commercial problems don't sit neatly inside one function. These are the 19 we see most often in technology businesses, from SaaS and software to technology services, grouped into five areas. Each one has a recommended first resource and a short sequence to work through.</p>
+        <nav class="group-nav" aria-label="Challenge areas"><a class="group-chip" href="#revenue">Revenue and growth</a><a class="group-chip" href="#retention">Customer retention and expansion</a><a class="group-chip" href="#people">People and execution</a><a class="group-chip" href="#ai-risk">AI and risk</a><a class="group-chip" href="#partnerships">Partnerships</a></nav>
       </div>
     </section>
     <section>
       <div class="container">
+        <div class="challenge-group" id="revenue">
+          <div class="group-head"><span class="kicker">6 challenges</span><h2>Revenue and growth</h2><p>Finding, winning and pricing customers in a repeatable way.</p></div>
+          <span id="weak-pipeline" class="anchor-alias" aria-hidden="true"></span>
         <div class="challenge-block" id="no-gtm">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>No GTM structure</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no repeatable way to find, qualify or close a customer — every deal is figured out from scratch.</p>
+            <h3>No GTM structure</h3>
+            <p class="challenge-desc">There's no repeatable way to find, qualify or close a customer, so every deal is worked out from scratch.</p>
             <div class="actions" style="margin-top:0;">
               <a class="btn btn-secondary btn-sm" href="resources.html?challenge=no-gtm">See all 4 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue →</a></li><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a></li><li><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html">Your Product Works. Your Story Doesn't Exist Yet. →</a></li><li><a href="articles/42-partnership-strategy-for-software-businesses-choosing-where-to-focus.html">Partnership Strategy for Software Businesses: Choosing Where to Focus →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html"><span class="step-num">1</span><span>The 5 Levers That Actually Drive SaaS Revenue</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html"><span class="step-num">2</span><span>Founder-Led, Sales-Led, or Product-Led: Pick One</span></a></li><li><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html"><span class="step-num">3</span><span>Your Product Works. Your Story Doesn't Exist Yet.</span></a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html"><span class="step-num">4</span><span>The Minimum Viable Sales Playbook for Technology Founders</span></a></li></ol>
           </div>
         </div>
-        <div class="challenge-block" id="weak-pipeline">
+        <div class="challenge-block" id="insufficient-pipeline">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Weak pipeline</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Deals are somewhere in the process, but no one can say with confidence what will close this quarter and why.</p>
+            <h3>Not enough qualified pipeline</h3>
+            <p class="challenge-desc">Too few of the right opportunities are entering the funnel, so growth depends on a handful of deals or on the founder's network.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=weak-pipeline">See all 4 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=insufficient-pipeline">See all 4 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Three Campaigns You Can Run Without Hiring a Marketer →</a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders →</a></li><li><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Fixing the Pipeline Mess So You Can Forecast With Confidence →</a></li><li><a href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html">Designing a Referral Motion Simple Enough That Partners Actually Use It →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html"><span class="step-num">1</span><span>Your Product Works. Your Story Doesn't Exist Yet.</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html"><span class="step-num">2</span><span>Three Campaigns You Can Run Without Hiring a Marketer</span></a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html"><span class="step-num">3</span><span>The Minimum Viable Sales Playbook for Technology Founders</span></a></li><li><a href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html"><span class="step-num">4</span><span>Designing a Referral Motion Simple Enough That Partners Actually Use It</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="stalled-deals">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Deals stall or convert poorly</h3>
+            <p class="challenge-desc">Opportunities enter the pipeline but stall, slip or are lost late, often without a clear reason anyone can act on.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=stalled-deals">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html"><span class="step-num">1</span><span>The Minimum Viable Sales Playbook for Technology Founders</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html"><span class="step-num">2</span><span>Fixing the Pipeline Mess So You Can Forecast With Confidence</span></a></li><li><a href="articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html"><span class="step-num">3</span><span>How to Stop Losing Weeks to Customer Security Questionnaires</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="unreliable-forecast">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Unreliable forecasting</h3>
+            <p class="challenge-desc">Deals are somewhere in the process, but no one can say with confidence what will close this quarter and why.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=unreliable-forecast">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html"><span class="step-num">1</span><span>Fixing the Pipeline Mess So You Can Forecast With Confidence</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html"><span class="step-num">2</span><span>Designing a Simple Operating Rhythm for a Growing Business</span></a></li><li><a href="articles/40-management-reporting-the-line-between-noise-and-signal.html"><span class="step-num">3</span><span>Management Reporting: The Line Between Noise and Signal</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="founder-led-bottleneck">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Founder-led sales bottleneck</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Every meaningful commercial decision or conversation still routes through the founder, and it's now the constraint on growth.</p>
+            <h3>Founder-led sales bottleneck</h3>
+            <p class="challenge-desc">Every meaningful commercial decision or conversation still routes through the founder, and it's now the constraint on growth.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=founder-led-bottleneck">See all 3 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=founder-led-bottleneck">See all 4 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a></li><li><a href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html">Three Campaigns You Can Run Without Hiring a Marketer →</a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for SaaS Founders →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="onboarding-issues">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>Onboarding issues</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">New customers land, but what happens next depends on who's handling them — with no consistent standard or scope.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=onboarding-issues">See all 5 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html">How to Onboard Customers Without Reinventing It Every Time →</a></li><li><a href="articles/10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favor →</a></li><li><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Closing the Gap Between What Sales Hears and What Product Builds →</a></li><li><a href="articles/21-the-30-60-90-day-plan-that-actually-shortens-ramp-up.html">The 30/60/90 Day Plan That Actually Shortens Ramp-Up →</a></li><li><a href="articles/44-why-most-partners-go-quiet-after-signing-and-how-to-prevent-it.html">Why Most Partners Go Quiet After Signing — and How to Prevent It →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="churn">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>Churn / poor retention</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Customers are leaving, or staying but not growing, and there's no structured way to see it coming.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=churn">See all 3 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html">When Your Customer List Needs Account Management, Not Vibes →</a></li><li><a href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Customer Success at 0-20 Customers, Before You Hire a CSM →</a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">How to Set Up Support Tiers, SLAs, and a Knowledge Base →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/02-founder-led-sales-led-or-product-led-pick-one.html"><span class="step-num">1</span><span>Founder-Led, Sales-Led, or Product-Led: Pick One</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html"><span class="step-num">2</span><span>The Minimum Viable Sales Playbook for Technology Founders</span></a></li><li><a href="articles/18-org-design-for-growing-software-businesses.html"><span class="step-num">3</span><span>Org Design for Growing Technology Businesses</span></a></li><li><a href="articles/19-why-role-scorecards-beat-job-descriptions.html"><span class="step-num">4</span><span>Why Role Scorecards Beat Job Descriptions</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="pricing">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Pricing and packaging issues</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Pricing was set early and never revisited, or was copied from a competitor without a clear rationale.</p>
+            <h3>Pricing and packaging issues</h3>
+            <p class="challenge-desc">Pricing was set early and never revisited, or was copied from a competitor without a clear rationale.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=pricing">See all 2 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=pricing">See all 3 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/14-a-practical-way-to-price-early-stage-saas.html">A Practical Way to Price Early-Stage SaaS →</a></li><li><a href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html">Where AI Actually Belongs in Your Product — and Where It Doesn't →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/14-a-practical-way-to-price-early-stage-saas.html"><span class="step-num">1</span><span>A Practical Way to Price Early-Stage SaaS</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/13-the-six-saas-numbers-that-actually-matter.html"><span class="step-num">2</span><span>The Six SaaS Numbers That Actually Matter</span></a></li><li><a href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html"><span class="step-num">3</span><span>Where AI Actually Belongs in Your Product, and Where It Doesn't</span></a></li></ol>
           </div>
         </div>
+        </div>
+        <div class="challenge-group" id="retention">
+          <div class="group-head"><span class="kicker">2 challenges</span><h2>Customer retention and expansion</h2><p>Keeping customers, delivering value early and growing accounts over time.</p></div>
+        <div class="challenge-block" id="onboarding-issues">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Onboarding issues</h3>
+            <p class="challenge-desc">New customers land, but what happens next depends on who's handling them, with no consistent standard or scope.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=onboarding-issues">See all 4 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/10-define-onboarding-like-a-product-not-a-favor.html"><span class="step-num">1</span><span>Define Onboarding Like a Product, Not a Favour</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html"><span class="step-num">2</span><span>How to Onboard Customers Without Reinventing It Every Time</span></a></li><li><a href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html"><span class="step-num">3</span><span>Customer Success at 0-20 Customers, Before You Hire a CSM</span></a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html"><span class="step-num">4</span><span>How to Set Up Support Tiers, SLAs, and a Knowledge Base</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="churn">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Churn or poor retention</h3>
+            <p class="challenge-desc">Customers are leaving, or staying but not growing, and there's no structured way to see it coming.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=churn">See all 4 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#retention-advisory">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html"><span class="step-num">1</span><span>Customer Success at 0-20 Customers, Before You Hire a CSM</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html"><span class="step-num">2</span><span>When Your Customer List Needs Account Management, Not Vibes</span></a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html"><span class="step-num">3</span><span>How to Set Up Support Tiers, SLAs, and a Knowledge Base</span></a></li><li><a href="articles/13-the-six-saas-numbers-that-actually-matter.html"><span class="step-num">4</span><span>The Six SaaS Numbers That Actually Matter</span></a></li></ol>
+          </div>
+        </div>
+        </div>
+        <div class="challenge-group" id="people">
+          <div class="group-head"><span class="kicker">5 challenges</span><h2>People and execution</h2><p>The structure, cadence and leadership habits that turn plans into results.</p></div>
         <div class="challenge-block" id="operating-rhythm">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Weak commercial operating rhythm</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no consistent cadence of meetings, reviews or decisions — the business runs on whoever shouts loudest that week.</p>
+            <h3>Weak commercial operating rhythm</h3>
+            <p class="challenge-desc">There's no consistent cadence of meetings, reviews or decisions, so the business runs on whoever shouts loudest that week.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=operating-rhythm">See all 14 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=operating-rhythm">See all 5 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/01-the-5-levers-that-actually-drive-saas-revenue.html">The 5 Levers That Actually Drive SaaS Revenue →</a></li><li><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html">Designing a Simple Operating Rhythm for Your SaaS →</a></li><li><a href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html">How to Set Up Support Tiers, SLAs, and a Knowledge Base →</a></li><li><a href="articles/13-the-six-saas-numbers-that-actually-matter.html">The Six SaaS Numbers That Actually Matter →</a></li><li><a href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html">The Minimum Internal Stack Before You Add More Tools →</a></li><li><a href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html">How to Build a Roadmap Instead of a Request Queue →</a></li><li><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html">Closing the Gap Between What Sales Hears and What Product Builds →</a></li><li><a href="articles/18-org-design-for-growing-software-businesses.html">Org Design for Growing Software Businesses →</a></li><li><a href="articles/22-the-manager-operating-rhythm-most-software-teams-are-missing.html">The Manager Operating Rhythm Most Software Teams Are Missing →</a></li><li><a href="articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are.html">Most AI Ideas Are Not Worth Doing Yet — Here's How to Tell Which Ones Are →</a></li><li><a href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html">Embedding AI Into How the Business Runs, Without Creating Chaos →</a></li><li><a href="articles/38-designing-a-board-and-advisor-rhythm-that-earns-its-time.html">Designing a Board and Advisor Rhythm That Earns Its Time →</a></li><li><a href="articles/40-management-reporting-the-line-between-noise-and-signal.html">Management Reporting: The Line Between Noise and Signal →</a></li><li><a href="articles/46-managing-partners-after-the-honeymoon-a-review-cadence-that-actually-works.html">Managing Partners After the Honeymoon: A Review Cadence That Actually Works →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html"><span class="step-num">1</span><span>Designing a Simple Operating Rhythm for a Growing Business</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/22-the-manager-operating-rhythm-most-software-teams-are-missing.html"><span class="step-num">2</span><span>The Manager Operating Rhythm Most Technology Teams Are Missing</span></a></li><li><a href="articles/37-the-leadership-operating-model-software-businesses-actually-need.html"><span class="step-num">3</span><span>The Leadership Operating Model Technology Businesses Actually Need</span></a></li><li><a href="articles/40-management-reporting-the-line-between-noise-and-signal.html"><span class="step-num">4</span><span>Management Reporting: The Line Between Noise and Signal</span></a></li><li><a href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html"><span class="step-num">5</span><span>The Minimum Internal Stack Before You Add More Tools</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="org-role-clarity">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Unclear roles or org structure</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Roles, reporting lines and decision ownership were never deliberately designed — they just accumulated as the team grew.</p>
+            <h3>Unclear roles or org structure</h3>
+            <p class="challenge-desc">Roles, reporting lines and decision ownership were never deliberately designed. They simply accumulated as the team grew.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=org-role-clarity">See all 6 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=org-role-clarity">See all 3 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/18-org-design-for-growing-software-businesses.html">Org Design for Growing Software Businesses →</a></li><li><a href="articles/19-why-role-scorecards-beat-job-descriptions.html">Why Role Scorecards Beat Job Descriptions →</a></li><li><a href="articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it.html">A Hiring Process for Small Software Teams That Doesn't Need HR to Run It →</a></li><li><a href="articles/23-performance-management-that-works-for-a-software-team-not-a-corporate-hr-department.html">Performance Management That Works for a Software Team, Not a Corporate HR Department →</a></li><li><a href="articles/37-the-leadership-operating-model-software-businesses-actually-need.html">The Leadership Operating Model Software Businesses Actually Need →</a></li><li><a href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html">Who Actually Decides? Fixing Decision Rights Before They Cost You →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/18-org-design-for-growing-software-businesses.html"><span class="step-num">1</span><span>Org Design for Growing Technology Businesses</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/19-why-role-scorecards-beat-job-descriptions.html"><span class="step-num">2</span><span>Why Role Scorecards Beat Job Descriptions</span></a></li><li><a href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html"><span class="step-num">3</span><span>Who Actually Decides? Fixing Decision Rights Before They Cost You</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="hiring-management-gaps">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Inconsistent hiring, onboarding or management rhythm</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Hiring, onboarding and day-to-day management depend entirely on who's doing it, with no consistent process behind any of it.</p>
+            <h3>Inconsistent hiring, onboarding or management rhythm</h3>
+            <p class="challenge-desc">Hiring, onboarding and day-to-day management depend entirely on who's doing it, with no consistent process behind any of it.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=hiring-management-gaps">See all 6 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=hiring-management-gaps">See all 5 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/19-why-role-scorecards-beat-job-descriptions.html">Why Role Scorecards Beat Job Descriptions →</a></li><li><a href="articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it.html">A Hiring Process for Small Software Teams That Doesn't Need HR to Run It →</a></li><li><a href="articles/21-the-30-60-90-day-plan-that-actually-shortens-ramp-up.html">The 30/60/90 Day Plan That Actually Shortens Ramp-Up →</a></li><li><a href="articles/22-the-manager-operating-rhythm-most-software-teams-are-missing.html">The Manager Operating Rhythm Most Software Teams Are Missing →</a></li><li><a href="articles/23-performance-management-that-works-for-a-software-team-not-a-corporate-hr-department.html">Performance Management That Works for a Software Team, Not a Corporate HR Department →</a></li><li><a href="articles/32-why-most-ai-rollouts-skip-the-workforce-and-fail-because-of-it.html">Why Most AI Rollouts Skip the Workforce and Fail Because of It →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="security-compliance-readiness">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>Weak security or compliance posture</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no baseline security or compliance posture in place, and no one is confident what a customer audit would actually find.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=security-compliance-readiness">See all 6 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="contact.html?reason=strategy-conversation">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/24-the-minimum-viable-security-posture-every-software-business-needs.html">The Minimum Viable Security Posture Every Software Business Needs →</a></li><li><a href="articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html">How to Stop Losing Weeks to Customer Security Questionnaires →</a></li><li><a href="articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing.html">Why Access Control Is the Cheapest Risk You're Not Managing →</a></li><li><a href="articles/27-you-can-t-protect-data-you-haven-t-classified.html">You Can't Protect Data You Haven't Classified →</a></li><li><a href="articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html">Your Vendor Stack Is Your Risk Surface — Treat It That Way →</a></li><li><a href="articles/29-what-to-actually-do-in-the-first-hour-of-a-security-incident.html">What to Actually Do in the First Hour of a Security Incident →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="procurement-blockers">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>Losing deals to security or procurement reviews</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Deals are stalling or being lost in procurement and security review because there's nothing ready to hand over.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=procurement-blockers">See all 3 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="contact.html?reason=strategy-conversation">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/24-the-minimum-viable-security-posture-every-software-business-needs.html">The Minimum Viable Security Posture Every Software Business Needs →</a></li><li><a href="articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html">How to Stop Losing Weeks to Customer Security Questionnaires →</a></li><li><a href="articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html">Your Vendor Stack Is Your Risk Surface — Treat It That Way →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="ai-strategy-gap">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>No clear AI strategy or use cases</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">AI is being talked about constantly but there's no real strategy — no agreed use cases, no prioritisation, no owner.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=ai-strategy-gap">See all 7 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/30-the-rev-iq-3-pillar-ai-strategy-framework.html">The Rev-IQ 3-Pillar AI Strategy Framework →</a></li><li><a href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it.html">Is Your Company Actually Ready for AI, or Just Using It? →</a></li><li><a href="articles/32-why-most-ai-rollouts-skip-the-workforce-and-fail-because-of-it.html">Why Most AI Rollouts Skip the Workforce and Fail Because of It →</a></li><li><a href="articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are.html">Most AI Ideas Are Not Worth Doing Yet — Here's How to Tell Which Ones Are →</a></li><li><a href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html">Embedding AI Into How the Business Runs, Without Creating Chaos →</a></li><li><a href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html">Where AI Actually Belongs in Your Product — and Where It Doesn't →</a></li><li><a href="articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now.html">The AI Governance Gap Almost Every Software Company Has Right Now →</a></li></ul>
-          </div>
-        </div>
-        <div class="challenge-block" id="ai-governance-gap">
-          <div>
-            <span class="kicker">Challenge</span>
-            <h2>No AI governance, policy or risk controls</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">People are already using AI tools day to day with no policy, no oversight and no idea what the actual risk exposure looks like.</p>
-            <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=ai-governance-gap">See all 2 resources →</a>
-              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
-            </div>
-          </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it.html">Is Your Company Actually Ready for AI, or Just Using It? →</a></li><li><a href="articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now.html">The AI Governance Gap Almost Every Software Company Has Right Now →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/19-why-role-scorecards-beat-job-descriptions.html"><span class="step-num">1</span><span>Why Role Scorecards Beat Job Descriptions</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it.html"><span class="step-num">2</span><span>A Hiring Process for Small Technology Teams That Doesn't Need HR to Run It</span></a></li><li><a href="articles/21-the-30-60-90-day-plan-that-actually-shortens-ramp-up.html"><span class="step-num">3</span><span>The 30/60/90 Day Plan That Actually Shortens Ramp-Up</span></a></li><li><a href="articles/22-the-manager-operating-rhythm-most-software-teams-are-missing.html"><span class="step-num">4</span><span>The Manager Operating Rhythm Most Technology Teams Are Missing</span></a></li><li><a href="articles/23-performance-management-that-works-for-a-software-team-not-a-corporate-hr-department.html"><span class="step-num">5</span><span>Performance Management That Works for a Technology Team, Not a Corporate HR Department</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="leadership-misalignment">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Leadership team misaligned on priorities or execution</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">The leadership team nods along in the room and then executes against different, sometimes conflicting, priorities.</p>
+            <h3>Leadership team misaligned on priorities or execution</h3>
+            <p class="challenge-desc">The leadership team agrees in the room and then executes against different, sometimes conflicting, priorities.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=leadership-misalignment">See all 4 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=leadership-misalignment">See all 5 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/30-the-rev-iq-3-pillar-ai-strategy-framework.html">The Rev-IQ 3-Pillar AI Strategy Framework →</a></li><li><a href="articles/37-the-leadership-operating-model-software-businesses-actually-need.html">The Leadership Operating Model Software Businesses Actually Need →</a></li><li><a href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html">Who Actually Decides? Fixing Decision Rights Before They Cost You →</a></li><li><a href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html">The Executive Alignment Review: Catching Drift Before It's Expensive →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html"><span class="step-num">1</span><span>The Executive Alignment Review: Catching Drift Before It's Expensive</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/37-the-leadership-operating-model-software-businesses-actually-need.html"><span class="step-num">2</span><span>The Leadership Operating Model Technology Businesses Actually Need</span></a></li><li><a href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html"><span class="step-num">3</span><span>Who Actually Decides? Fixing Decision Rights Before They Cost You</span></a></li><li><a href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html"><span class="step-num">4</span><span>How to Build a Roadmap Instead of a Request Queue</span></a></li><li><a href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html"><span class="step-num">5</span><span>Closing the Gap Between What Sales Hears and What Product Builds</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="board-investor-reporting">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Weak board, investor or management reporting</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Board and investor updates take days to pull together and still don't tell a clear story about what's actually happening.</p>
+            <h3>Weak board, investor or management reporting</h3>
+            <p class="challenge-desc">Board and investor updates take days to pull together and still don't tell a clear story about what's actually happening.</p>
             <div class="actions" style="margin-top:0;">
               <a class="btn btn-secondary btn-sm" href="resources.html?challenge=board-investor-reporting">See all 3 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#fractional-leadership">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/38-designing-a-board-and-advisor-rhythm-that-earns-its-time.html">Designing a Board and Advisor Rhythm That Earns Its Time →</a></li><li><a href="articles/40-management-reporting-the-line-between-noise-and-signal.html">Management Reporting: The Line Between Noise and Signal →</a></li><li><a href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html">The Executive Alignment Review: Catching Drift Before It's Expensive →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/40-management-reporting-the-line-between-noise-and-signal.html"><span class="step-num">1</span><span>Management Reporting: The Line Between Noise and Signal</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/38-designing-a-board-and-advisor-rhythm-that-earns-its-time.html"><span class="step-num">2</span><span>Designing a Board and Advisor Rhythm That Earns Its Time</span></a></li><li><a href="articles/13-the-six-saas-numbers-that-actually-matter.html"><span class="step-num">3</span><span>The Six SaaS Numbers That Actually Matter</span></a></li></ol>
           </div>
         </div>
+        </div>
+        <div class="challenge-group" id="ai-risk">
+          <div class="group-head"><span class="kicker">4 challenges</span><h2>AI and risk</h2><p>Adopting AI with intent and building the security posture customers expect.</p></div>
+        <div class="challenge-block" id="ai-strategy-gap">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>No clear AI strategy or use cases</h3>
+            <p class="challenge-desc">AI is being talked about constantly but there's no real strategy: no agreed use cases, no prioritisation and no owner.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=ai-strategy-gap">See all 6 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/30-the-rev-iq-3-pillar-ai-strategy-framework.html"><span class="step-num">1</span><span>The Rev-IQ 3-Pillar AI Strategy Framework</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it.html"><span class="step-num">2</span><span>Is Your Company Actually Ready for AI, or Just Using It?</span></a></li><li><a href="articles/32-why-most-ai-rollouts-skip-the-workforce-and-fail-because-of-it.html"><span class="step-num">3</span><span>Why Most AI Rollouts Skip the Workforce and Fail Because of It</span></a></li><li><a href="articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are.html"><span class="step-num">4</span><span>Most AI Ideas Are Not Worth Doing Yet: How to Tell Which Ones Are</span></a></li><li><a href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html"><span class="step-num">5</span><span>Embedding AI Into How the Business Runs, Without Creating Chaos</span></a></li><li><a href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html"><span class="step-num">6</span><span>Where AI Actually Belongs in Your Product, and Where It Doesn't</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="ai-governance-gap">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>No AI governance, policy or risk controls</h3>
+            <p class="challenge-desc">People are already using AI tools day to day with no policy, no oversight and no clear view of the actual risk exposure.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=ai-governance-gap">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now.html"><span class="step-num">1</span><span>The AI Governance Gap Almost Every Technology Company Has Right Now</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html"><span class="step-num">2</span><span>Embedding AI Into How the Business Runs, Without Creating Chaos</span></a></li><li><a href="articles/27-you-can-t-protect-data-you-haven-t-classified.html"><span class="step-num">3</span><span>You Can't Protect Data You Haven't Classified</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="security-compliance-readiness">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Weak security or compliance posture</h3>
+            <p class="challenge-desc">There's no baseline security or compliance posture in place, and no one is confident what a customer audit would actually find.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=security-compliance-readiness">See all 6 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/24-the-minimum-viable-security-posture-every-software-business-needs.html"><span class="step-num">1</span><span>The Minimum Viable Security Posture Every Technology Business Needs</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing.html"><span class="step-num">2</span><span>Why Access Control Is the Cheapest Risk You're Not Managing</span></a></li><li><a href="articles/27-you-can-t-protect-data-you-haven-t-classified.html"><span class="step-num">3</span><span>You Can't Protect Data You Haven't Classified</span></a></li><li><a href="articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html"><span class="step-num">4</span><span>Your Vendor Stack Is Your Risk Surface: Treat It That Way</span></a></li><li><a href="articles/29-what-to-actually-do-in-the-first-hour-of-a-security-incident.html"><span class="step-num">5</span><span>What to Actually Do in the First Hour of a Security Incident</span></a></li><li><a href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html"><span class="step-num">6</span><span>The Minimum Internal Stack Before You Add More Tools</span></a></li></ol>
+          </div>
+        </div>
+        <div class="challenge-block" id="procurement-blockers">
+          <div>
+            <span class="kicker">Challenge</span>
+            <h3>Losing deals to security or procurement reviews</h3>
+            <p class="challenge-desc">Deals are stalling or being lost in procurement and security review because there's nothing ready to hand over.</p>
+            <div class="actions" style="margin-top:0;">
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=procurement-blockers">See all 3 resources →</a>
+              <a class="btn btn-ghost btn-sm" href="advisory.html#workshops-speaking">Discuss advisory support →</a>
+            </div>
+          </div>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html"><span class="step-num">1</span><span>How to Stop Losing Weeks to Customer Security Questionnaires</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/24-the-minimum-viable-security-posture-every-software-business-needs.html"><span class="step-num">2</span><span>The Minimum Viable Security Posture Every Technology Business Needs</span></a></li><li><a href="articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html"><span class="step-num">3</span><span>Your Vendor Stack Is Your Risk Surface: Treat It That Way</span></a></li></ol>
+          </div>
+        </div>
+        </div>
+        <div class="challenge-group" id="partnerships">
+          <div class="group-head"><span class="kicker">2 challenges</span><h2>Partnerships</h2><p>Choosing, activating and managing partners so they produce real opportunities.</p></div>
         <div class="challenge-block" id="partner-channel-gap">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>No partner or channel strategy</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">There's no deliberate partner or channel strategy — relationships exist opportunistically, not by design.</p>
+            <h3>No partner or channel strategy</h3>
+            <p class="challenge-desc">There's no deliberate partner or channel strategy. Relationships exist opportunistically, not by design.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=partner-channel-gap">See all 4 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=partner-channel-gap">See all 3 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/42-partnership-strategy-for-software-businesses-choosing-where-to-focus.html">Partnership Strategy for Software Businesses: Choosing Where to Focus →</a></li><li><a href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html">How to Tell a Good Partner From a Time Sink →</a></li><li><a href="articles/44-why-most-partners-go-quiet-after-signing-and-how-to-prevent-it.html">Why Most Partners Go Quiet After Signing — and How to Prevent It →</a></li><li><a href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html">Designing a Referral Motion Simple Enough That Partners Actually Use It →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/42-partnership-strategy-for-software-businesses-choosing-where-to-focus.html"><span class="step-num">1</span><span>Partnership Strategy for Technology Businesses: Choosing Where to Focus</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html"><span class="step-num">2</span><span>How to Tell a Good Partner From a Time Sink</span></a></li><li><a href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html"><span class="step-num">3</span><span>Designing a Referral Motion Simple Enough That Partners Actually Use It</span></a></li></ol>
           </div>
         </div>
         <div class="challenge-block" id="partner-underperformance">
           <div>
             <span class="kicker">Challenge</span>
-            <h2>Partners exist but aren't performing or well managed</h2>
-            <p style="color: var(--color-text-muted); max-width: 48ch; margin: 0 0 var(--space-5);">Partners were signed with enthusiasm but nobody reviews performance, so most quietly go dormant.</p>
+            <h3>Partners exist but aren't performing or well managed</h3>
+            <p class="challenge-desc">Partners were signed with enthusiasm but nobody reviews performance, so most quietly go dormant.</p>
             <div class="actions" style="margin-top:0;">
-              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=partner-underperformance">See all 2 resources →</a>
+              <a class="btn btn-secondary btn-sm" href="resources.html?challenge=partner-underperformance">See all 3 resources →</a>
               <a class="btn btn-ghost btn-sm" href="advisory.html#gtm-advisory">Discuss advisory support →</a>
             </div>
           </div>
-          <div class="card" style="padding: var(--space-6);">
-            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary); margin-bottom: var(--space-4);">Relevant resources</strong>
-            <ul class="res-list"><li><a href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html">How to Tell a Good Partner From a Time Sink →</a></li><li><a href="articles/46-managing-partners-after-the-honeymoon-a-review-cadence-that-actually-works.html">Managing Partners After the Honeymoon: A Review Cadence That Actually Works →</a></li></ul>
+          <div class="card seq-card">
+            <span class="seq-label">Start here</span>
+            <a class="seq-first" href="articles/44-why-most-partners-go-quiet-after-signing-and-how-to-prevent-it.html"><span class="step-num">1</span><span>Why Most Partners Go Quiet After Signing, and How to Prevent It</span></a>
+            <span class="seq-label seq-label-then">Then</span><ol class="seq-list"><li><a href="articles/46-managing-partners-after-the-honeymoon-a-review-cadence-that-actually-works.html"><span class="step-num">2</span><span>Managing Partners After the Honeymoon: A Review Cadence That Actually Works</span></a></li><li><a href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html"><span class="step-num">3</span><span>How to Tell a Good Partner From a Time Sink</span></a></li></ol>
           </div>
+        </div>
         </div>
       </div>
     </section>

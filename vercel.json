@@ -14,7 +14,7 @@
   ],
   "rewrites": [
     {
-      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|about|contact|privacy)",
+      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|fractional-cro|about|contact|privacy)",
       "destination": "/:page.html"
     },
     {

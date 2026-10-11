@@ -170,7 +170,7 @@
     .band-dark .container, .band-dark .container-wide, .band-dark .container-narrow { position: relative; z-index: 1; }
     .band-dark h2, .band-dark h3 { color: var(--color-ink-text); }
     .band-dark p { color: var(--color-ink-muted); }
-    .band-dark .kicker { color: #e3b45c; }
+    .band-dark .kicker { color: #8fcfc6; }
     .band-dark .card { background: var(--color-ink-surface); border-color: var(--color-ink-border); }
     .band-dark .card p { color: var(--color-ink-muted); }
     .band-dark .btn-secondary { background: transparent; border-color: rgba(244,241,230,0.3); color: var(--color-ink-text); }
@@ -242,19 +242,19 @@
 
 
     .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    h1.article-h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 22ch; }
     .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
     .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
     .article-body { padding-top: var(--space-4); }
-    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
     .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
     .takeaways { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
-    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4); }
     .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
     .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
     .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
     .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
-    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: 0.4rem; }
     .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
     .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
     .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
@@ -269,7 +269,10 @@
     .gate-msg-error { color: var(--color-error); }
     .diagnose-card { margin: var(--space-10) 0; }
     .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
-    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    .nav-links a { color: var(--color-primary); font-weight: 600; max-width: 46ch; }
+    .nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--space-4) var(--space-8); }
+    .nav-links .nav-next { grid-column: 2; justify-self: end; text-align: right; }
+    @media (max-width: 640px) { .nav-links { grid-template-columns: 1fr; } .nav-links .nav-next { grid-column: 1; } }
     @media (max-width: 920px) {
       .download-card { flex-direction: column; align-items: flex-start; }
     }
@@ -285,7 +288,7 @@
     .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
     .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
     .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
-    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: 0.5rem; }
     .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
     .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
     .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
@@ -365,7 +368,7 @@
         <div class="eyebrow"><span class="dot"></span>Strategy</div>
         <h1 class="article-h1">The 5 Levers That Actually Drive SaaS Revenue</h1>
         <p class="dek">If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
-        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
+        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published 17 July 2026 · Updated 11 October 2026</span></div>
         <div class="tag-row"><span class="tag">No GTM structure</span><span class="tag">Weak commercial operating rhythm</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
         <div style="margin-top: var(--space-6);"><figure class="framework-diagram" style="margin:0; padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-2); min-height: 220px; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="width:100%;"><svg viewBox="0 0 560 86" width="100%" role="img" aria-label="The five levers of SaaS revenue: acquisition, conversion, pricing, retention, expansion" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rq-arrow-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fb8b2"/></marker></defs><line x1="96" y1="43.0" x2="116" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="212" y1="43.0" x2="232" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="328" y1="43.0" x2="348" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="444" y1="43.0" x2="464" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><rect x="0" y="12" width="96" height="62" rx="10" fill="#f5e6c4" stroke="#a8710f" stroke-width="1.5"/><text x="48.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#5c3c07">Acquisition</text><rect x="116" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="164.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Conversion</text><rect x="232" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="280.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Pricing</text><rect x="348" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="396.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Retention</text><rect x="464" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="512.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Expansion</text></svg></div><figcaption style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align:center;">Acquisition → conversion → pricing → retention → expansion</figcaption></figure></div>
       </div>
@@ -450,7 +453,7 @@
         </div>
         <div class="nav-links">
           <a href="../resources.html">← All resources</a>
-          <a href="02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a>
+          <a class="nav-next" href="02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One →</a>
         </div>
       </div>
     </section>

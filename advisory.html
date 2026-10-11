@@ -12,22 +12,22 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fractional CRO and Commercial Advisory | Rev-IQ</title>
-  <meta name="description" content="Fractional CRO leadership, GTM and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK. Scoped to the actual problem." />
+  <title>Commercial Advisory and Advisory Board Seats | Rev-IQ</title>
+  <meta name="description" content="Commercial diagnostics, advisory board seats, growth and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK." />
   <link rel="canonical" href="https://rev-iq.ai/advisory.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rev-IQ" />
   <meta property="og:locale" content="en_AU" />
   <meta property="og:url" content="https://rev-iq.ai/advisory.html" />
-  <meta property="og:title" content="Advisory &amp; Fractional Support" />
-  <meta property="og:description" content="Fractional CRO leadership, GTM and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK. Scoped to the actual problem." />
+  <meta property="og:title" content="Commercial advisory and advisory board seats" />
+  <meta property="og:description" content="Commercial diagnostics, advisory board seats, growth and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK." />
   <meta property="og:image" content="https://rev-iq.ai/images/og/advisory.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Rev-IQ: When a framework isn’t enough, Rev-IQ works directly with your business." />
+  <meta property="og:image:alt" content="Rev-IQ: Senior commercial judgement, from a diagnostic to a seat on your advisory board." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Advisory &amp; Fractional Support" />
-  <meta name="twitter:description" content="Fractional CRO leadership, GTM and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK. Scoped to the actual problem." />
+  <meta name="twitter:title" content="Commercial advisory and advisory board seats" />
+  <meta name="twitter:description" content="Commercial diagnostics, advisory board seats, growth and retention advisory, and leadership workshops for technology businesses in Australia, New Zealand and the UK." />
   <meta name="twitter:image" content="https://rev-iq.ai/images/og/advisory.jpg" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -260,6 +260,25 @@
     .leave-with { margin-top: var(--space-6); max-width: 50ch; }
     .leave-with strong { display: block; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-3); }
     @media (max-width: 900px) { .involvement-grid { grid-template-columns: 1fr; } }
+    .path-block, #fractional-leadership { scroll-margin-top: 96px; }
+    .adv-overview { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-4); }
+    .adv-pick { display: flex; flex-direction: column; padding: var(--space-5); text-decoration: none; color: inherit; transition: transform 160ms var(--ease), box-shadow 160ms var(--ease); }
+    .adv-pick:hover { transform: translateY(-2px); box-shadow: var(--shadow-md, 0 8px 24px rgba(28,25,18,0.08)); }
+    .adv-pick h3 { font-size: 1.05rem; margin-bottom: var(--space-2); }
+    .adv-pick p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0 0 var(--space-4); flex-grow: 1; }
+    .adv-pick span { font-size: var(--text-xs); font-weight: 700; color: var(--color-primary-hover); }
+    .proof-note { margin-top: var(--space-6); max-width: 50ch; padding: var(--space-4) var(--space-5); background: var(--color-primary-soft); border-radius: var(--radius-md, 10px); }
+    .proof-note strong { display: block; font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-2); }
+    .proof-note p { margin: 0; font-size: var(--text-sm); color: var(--color-text); }
+    @media (max-width: 1080px) { .adv-overview { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 700px) {
+      .adv-overview { grid-template-columns: 1fr; gap: var(--space-2); }
+      .adv-pick { flex-direction: row; align-items: center; justify-content: space-between; padding: var(--space-4) var(--space-5); }
+      .adv-pick h3 { margin: 0; }
+      .adv-pick p { display: none; }
+      .adv-pick span { font-size: 0; }
+      .adv-pick span::after { content: "↓"; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -323,49 +342,57 @@
   <main id="main">
     <section class="hero" style="padding-bottom: 0;">
       <div class="container">
-        <div class="eyebrow"><span class="dot"></span>Advisory &amp; fractional support</div>
-        <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">When a framework isn’t enough, Rev-IQ works directly with your business.</h1>
-        <p class="lead" style="max-width: 66ch;">Four ways to bring Rev-IQ in, from a few hours of structured advice to ongoing fractional leadership. Every engagement is scoped to the actual problem.</p>
+        <div class="eyebrow"><span class="dot"></span>Advisory</div>
+        <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 24ch;">Senior commercial judgement, from a diagnostic to a seat on your advisory board.</h1>
+        <p class="lead" style="max-width: 66ch;">Five ways to work with Rev-IQ in an advisory capacity, each scoped to the actual problem. If you need someone to own the commercial engine day to day, see <a href="fractional-cro.html" style="color: var(--color-primary); font-weight: 600;">Fractional CRO</a>.</p>
       </div>
     </section>
-    <section class="muted-band">
+    <section style="padding-top: var(--space-10); padding-bottom: 0;">
       <div class="container">
-        <div class="principles-grid"><article class="card"><h3>Straight advice</h3><p>Honest advice on what will move the numbers. If Rev-IQ isn't the right fit, you'll hear that plainly.</p></article><article class="card"><h3>Built on operating experience</h3><p>The frameworks and advisory work here come from actually running commercial functions inside telecommunications, technology services, software and SaaS businesses across Australia, New Zealand and the UK.</p></article><article class="card"><h3>Structured before commercial</h3><p>Every engagement starts with a diagnostic read of what's actually happening, so the scope fits the problem.</p></article></div>
-      </div>
-    </section>
-    <section id="involvement">
-      <div class="container">
-        <div class="section-intro">
-          <span class="kicker">Levels of involvement</span>
-          <h2>Advisory, hands-on or embedded</h2>
-          <p>Every engagement sits at one of three levels of involvement. The level is agreed up front, so it is clear who does the work and who owns the outcome.</p>
-        </div>
-        <div class="involvement-grid">
-          <article class="card"><h3>Advisory</h3><p>Structured diagnosis, recommendations and review. Your team does the work, with Rev-IQ checking direction and quality at agreed points.</p></article>
-          <article class="card"><h3>Hands-on implementation</h3><p>Rev-IQ builds alongside your team: designing the process, setting up the tools and templates, and coaching the people who will run it.</p></article>
-          <article class="card"><h3>Embedded leadership</h3><p>Rev-IQ takes a seat in the leadership team on a fractional basis, owns commercial priorities and is accountable for results until a permanent leader is in place.</p></article>
-        </div>
+        <div class="adv-overview"><a class="card adv-pick" href="#commercial-diagnostic"><h3>Commercial diagnostic</h3><p>An evidence-based read on where growth is constrained.</p><span>See details ↓</span></a><a class="card adv-pick" href="#advisory-board"><h3>Advisory board seat</h3><p>Monthly, independent oversight to keep the plan on track.</p><span>See details ↓</span></a><a class="card adv-pick" href="#gtm-advisory"><h3>Growth &amp; GTM advisory</h3><p>Build, fix or scale the go-to-market motion.</p><span>See details ↓</span></a><a class="card adv-pick" href="#retention-advisory"><h3>Retention advisory</h3><p>Onboarding, customer success and renewals that hold.</p><span>See details ↓</span></a><a class="card adv-pick" href="#workshops-speaking"><h3>Workshops &amp; sessions</h3><p>Working sessions for leadership teams, boards and events.</p><span>See details ↓</span></a></div>
       </div>
     </section>
     <section>
       <div class="container">
-        <div class="path-block" id="fractional-leadership">
+        <div class="path-block" id="commercial-diagnostic">
           <div>
-            <span class="kicker">Fractional</span>
-            <h2>Fractional commercial leadership</h2>
-            <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses that need senior commercial leadership (CRO or CCO-level thinking on pipeline, pricing, retention and team structure) but aren't ready for, or don't yet need, a full-time hire.</p>
-            <span class="involvement-tag">Involvement: Embedded leadership</span>
+            <span class="kicker">Diagnostic</span>
+            <h2>Commercial diagnostic</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses that know something in the commercial engine isn't working and want the evidence before committing to a fix. It is often the first step before an advisory board seat or fractional leadership.</p>
+            <span class="involvement-tag">Format: Fixed scope, agreed up front</span>
             <div class="leave-with">
               <strong>What you leave with</strong>
-              <ul class="includes"><li>Agreed commercial constraints, with the evidence gaps named</li><li>A prioritised action list with owners and dates</li><li>An accountable operating cadence and clear decision ownership</li><li>Hands-on execution support until the gap is closed or a permanent leader takes over</li></ul>
+              <ul class="includes"><li>An economic baseline built from your financial and CRM data</li><li>The real causes of churn and stalled growth, with the evidence</li><li>Clear positioning and a credible growth path</li><li>A prioritised 90-day plan with owners and dates</li></ul>
             </div>
           </div>
           <div class="card" style="padding: var(--space-6);">
             <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4);">What this typically includes</strong>
-            <ul class="includes"><li>A structured read on the current commercial engine and where it's constrained</li><li>Direct involvement in pipeline, forecasting, pricing or retention decisions</li><li>A working cadence set to match the size of the problem: weekly, fortnightly, or project-based</li><li>A clear handover plan once a full-time leader is hired or the gap is closed</li></ul>
+            <ul class="includes"><li>Financial and CRM analysis</li><li>Stakeholder and customer interviews</li><li>A churn and retention review</li><li>A positioning review against the market you want to win</li><li>Dashboards for the numbers that matter</li></ul>
             <div class="actions" style="margin-top: var(--space-6);">
-              <a class="btn btn-primary btn-sm" href="contact.html?reason=fractional-leadership">Discuss fractional leadership →</a>
-              <a class="btn btn-secondary btn-sm" href="fractional-cro.html">How a fractional CRO works</a>
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=commercial-diagnostic">Discuss a diagnostic →</a>
+            </div>
+          </div>
+        </div>
+        <div class="path-block" id="advisory-board">
+          <div>
+            <span class="kicker">Advisory board</span>
+            <h2>Advisory board seat</h2>
+            <p style="color: var(--color-text-muted); max-width: 50ch;">For founders and leadership teams with a plan who want experienced, independent oversight to keep execution on track. Joel joins your advisory board as the commercial voice, holding the team to what was agreed and helping make the calls that matter.</p>
+            <span class="involvement-tag">Format: Monthly, with pre-reading and follow-up</span>
+            <div class="leave-with">
+              <strong>What you leave with</strong>
+              <ul class="includes"><li>A standing monthly checkpoint on progress against the plan</li><li>Decisions made and owners named at every session</li><li>Early warning when execution starts to drift</li><li>Written follow-up with actions, owners and dates</li></ul>
+            </div>
+            <div class="proof-note">
+              <strong>In practice</strong>
+              <p>A commercial diagnostic for a New Zealand SaaS business has become a monthly advisory board seat through 2027, keeping the team accountable as they execute their new plan.</p>
+            </div>
+          </div>
+          <div class="card" style="padding: var(--space-6);">
+            <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4);">What this typically includes</strong>
+            <ul class="includes"><li>Pre-reading reviewed before each session</li><li>A monthly session on progress, the numbers and the next decisions</li><li>Commercial challenge on pipeline, pricing, retention and growth priorities</li><li>Input on board and investor readiness ahead of a raise or exit</li></ul>
+            <div class="actions" style="margin-top: var(--space-6);">
+              <a class="btn btn-primary btn-sm" href="contact.html?reason=advisory-board">Discuss an advisory board seat →</a>
             </div>
           </div>
         </div>
@@ -374,7 +401,7 @@
             <span class="kicker">Growth</span>
             <h2>Growth &amp; GTM advisory</h2>
             <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses that need to build, fix or scale their go-to-market motion, from a first sales process to a pipeline that can actually be forecast.</p>
-            <span class="involvement-tag">Involvement: Advisory or hands-on implementation</span>
+            <span class="involvement-tag">Format: Advisory or hands-on implementation</span>
             <div class="leave-with">
               <strong>What you leave with</strong>
               <ul class="includes"><li>A sharp definition of the target customer</li><li>One chosen go-to-market motion, with the reasoning written down</li><li>Qualification standards and pipeline stages the team actually uses</li><li>A measurement plan for pipeline, conversion and forecast accuracy</li></ul>
@@ -393,7 +420,7 @@
             <span class="kicker">Retention</span>
             <h2>Retention &amp; customer journey advisory</h2>
             <p style="color: var(--color-text-muted); max-width: 50ch;">For businesses where the front door works but the back end leaks: onboarding that varies by who's running it, customer success with no early warning system, or churn no one saw coming.</p>
-            <span class="involvement-tag">Involvement: Advisory or hands-on implementation</span>
+            <span class="involvement-tag">Format: Advisory or hands-on implementation</span>
             <div class="leave-with">
               <strong>What you leave with</strong>
               <ul class="includes"><li>A customer journey map from signed deal to renewal, with owners at each stage</li><li>A standard onboarding scope</li><li>A working customer health model</li><li>Support tiers and response targets the team can meet</li></ul>
@@ -412,7 +439,7 @@
             <span class="kicker">Sessions</span>
             <h2>Workshops, speaking &amp; leadership sessions</h2>
             <p style="color: var(--color-text-muted); max-width: 50ch;">For leadership teams, boards or events that want a grounded, commercially literate perspective on growth, retention and operating performance, delivered as a working session that ends in decisions.</p>
-            <span class="involvement-tag">Involvement: Advisory</span>
+            <span class="involvement-tag">Format: A single working session</span>
             <div class="leave-with">
               <strong>What you leave with</strong>
               <ul class="includes"><li>Decisions made in the room</li><li>A named owner for each decision</li><li>Follow-up actions with dates, written up and shared afterwards</li></ul>
@@ -420,16 +447,25 @@
           </div>
           <div class="card" style="padding: var(--space-6);">
             <strong style="display:block; font-size: var(--text-xs); letter-spacing:0.1em; text-transform:uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4);">What this typically includes</strong>
-            <ul class="includes"><li>Leadership team workshops on a specific commercial problem: pipeline, pricing, retention, operating rhythm</li><li>Board or investor-facing sessions on commercial readiness ahead of a raise or exit</li><li>Conference or event speaking on technology business growth, retention and revenue operations</li><li>Content built specifically for your audience</li></ul>
+            <ul class="includes"><li>Leadership team workshops on a specific commercial problem: pipeline, pricing, retention, operating rhythm</li><li>Board or investor-facing sessions on commercial readiness</li><li>Conference or event speaking on technology business growth, retention and revenue operations</li><li>Content built specifically for your audience</li></ul>
             <div class="actions" style="margin-top: var(--space-6);">
               <a class="btn btn-primary btn-sm" href="contact.html?reason=workshop-speaking">Enquire about a workshop or session →</a>
             </div>
           </div>
         </div>
+        <div class="card path-card" id="fractional-leadership" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: var(--space-6); padding: var(--space-8); margin-top: var(--space-10);">
+          <div style="max-width: 60ch;">
+            <span class="kicker">Need someone to own it?</span>
+            <h3 style="margin-bottom: var(--space-2);">Fractional CRO</h3>
+            <p style="margin: 0; color: var(--color-text-muted);">When advice isn't enough, a fractional CRO takes a seat in your leadership team, owns the commercial priorities and is accountable for results.</p>
+          </div>
+          <a class="btn btn-secondary" href="fractional-cro.html">How a fractional CRO works →</a>
+        </div>
       </div>
     </section>
     <section class="muted-band">
       <div class="container">
+        <div class="principles-grid" style="margin-bottom: var(--space-8);"><article class="card"><h3>Straight advice</h3><p>Honest advice on what will move the numbers. If Rev-IQ isn't the right fit, you'll hear that plainly.</p></article><article class="card"><h3>Built on operating experience</h3><p>The frameworks and advisory work here come from actually running commercial functions inside telecommunications, technology services, software and SaaS businesses across Australia, New Zealand and the UK.</p></article><article class="card"><h3>Structured before commercial</h3><p>Every engagement starts with a diagnostic read of what's actually happening, so the scope fits the problem.</p></article></div>
         <div class="card path-card" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap: var(--space-6); padding: var(--space-8);">
           <div>
             <span class="kicker">Not sure which pathway fits?</span>
@@ -497,6 +533,130 @@
   }
   </script>
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "name": "Rev-IQ advisory services",
+  "url": "https://rev-iq.ai/advisory.html",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Commercial diagnostic",
+        "description": "An evidence-based read on where a technology business's commercial engine is constrained, ending in a prioritised 90-day plan.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Advisory board seat",
+        "description": "A monthly advisory board seat, with pre-reading and follow-up, providing commercial oversight to keep a plan's execution on track.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Growth and GTM advisory",
+        "description": "Advice and hands-on support to build, fix or scale a go-to-market motion.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Retention and customer journey advisory",
+        "description": "Onboarding, customer success, health scoring and support design that protects revenue.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Workshops, speaking and leadership sessions",
+        "description": "Working sessions for leadership teams, boards and events on growth, retention and operating performance.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Fractional CRO",
+        "description": "Part-time senior commercial leadership, accountable for results until a permanent leader is in place.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Rev-IQ",
+          "legalName": "Rev-IQ Advisory Pty Ltd",
+          "url": "https://rev-iq.ai"
+        },
+        "areaServed": [
+          "Australia",
+          "New Zealand",
+          "United Kingdom"
+        ]
+      }
+    }
+  ]
+}
+  </script>
   <script src="js/forms.js" defer></script>
   <script>
     (function () {

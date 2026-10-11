@@ -170,7 +170,7 @@
     .band-dark .container, .band-dark .container-wide, .band-dark .container-narrow { position: relative; z-index: 1; }
     .band-dark h2, .band-dark h3 { color: var(--color-ink-text); }
     .band-dark p { color: var(--color-ink-muted); }
-    .band-dark .kicker { color: #e3b45c; }
+    .band-dark .kicker { color: #8fcfc6; }
     .band-dark .card { background: var(--color-ink-surface); border-color: var(--color-ink-border); }
     .band-dark .card p { color: var(--color-ink-muted); }
     .band-dark .btn-secondary { background: transparent; border-color: rgba(244,241,230,0.3); color: var(--color-ink-text); }
@@ -242,19 +242,19 @@
 
 
     .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
-    h1.article-h1 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); max-width: 22ch; }
+    h1.article-h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 22ch; }
     .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
     .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
     .article-body { padding-top: var(--space-4); }
-    .article-body h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
     .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
     .takeaways { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
-    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4); }
     .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
     .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
     .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
     .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
-    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: 0.4rem; }
     .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
     .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
     .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
@@ -269,7 +269,10 @@
     .gate-msg-error { color: var(--color-error); }
     .diagnose-card { margin: var(--space-10) 0; }
     .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
-    .nav-links a { color: var(--color-primary); font-weight: 600; }
+    .nav-links a { color: var(--color-primary); font-weight: 600; max-width: 46ch; }
+    .nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--space-4) var(--space-8); }
+    .nav-links .nav-next { grid-column: 2; justify-self: end; text-align: right; }
+    @media (max-width: 640px) { .nav-links { grid-template-columns: 1fr; } .nav-links .nav-next { grid-column: 1; } }
     @media (max-width: 920px) {
       .download-card { flex-direction: column; align-items: flex-start; }
     }
@@ -285,7 +288,7 @@
     .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
     .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
     .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
-    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: 0.5rem; }
     .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
     .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
     .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
@@ -365,7 +368,7 @@
         <div class="eyebrow"><span class="dot"></span>Implementation / Onboarding</div>
         <h1 class="article-h1">How to Onboard Customers Without Reinventing It Every Time</h1>
         <p class="dek">A repeatable implementation journey with clear phases, roles, and artefacts, built to work even if you're the only person running it.</p>
-        <div class="meta-row"><span>3 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
+        <div class="meta-row"><span>3 min read</span><span>Free · email required</span><span>Published 17 July 2026 · Updated 11 October 2026</span></div>
         <div class="tag-row"><span class="tag">Onboarding issues</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
         
       </div>
@@ -442,7 +445,7 @@
         </div>
         <div class="nav-links">
           <a href="08-when-your-customer-list-needs-account-management-not-vibes.html">← When Your Customer List Needs Account Management, Not Vibes</a>
-          <a href="10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favour →</a>
+          <a class="nav-next" href="10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favour →</a>
         </div>
       </div>
     </section>

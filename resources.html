@@ -170,7 +170,7 @@
     .band-dark .container, .band-dark .container-wide, .band-dark .container-narrow { position: relative; z-index: 1; }
     .band-dark h2, .band-dark h3 { color: var(--color-ink-text); }
     .band-dark p { color: var(--color-ink-muted); }
-    .band-dark .kicker { color: #e3b45c; }
+    .band-dark .kicker { color: #8fcfc6; }
     .band-dark .card { background: var(--color-ink-surface); border-color: var(--color-ink-border); }
     .band-dark .card p { color: var(--color-ink-muted); }
     .band-dark .btn-secondary { background: transparent; border-color: rgba(244,241,230,0.3); color: var(--color-ink-text); }
@@ -248,12 +248,20 @@
     .pill { font-size: var(--text-xs); padding: 0.45rem 0.9rem; border-radius: 999px; background: var(--color-surface-2); color: var(--color-text-muted); border: 1px solid transparent; cursor: pointer; font-weight: 600; transition: 140ms ease; font-family: inherit; }
     .pill:hover { color: var(--color-primary); }
     .pill.active { background: var(--color-primary); color: #fff; }
+    .filter-select { display: none; width: 100%; font: inherit; font-size: var(--text-sm); font-weight: 600; color: var(--color-text); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md, 10px); padding: 0.7rem 2.4rem 0.7rem 0.9rem; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%230b6e66' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; background-size: 12px 8px; }
+    .filter-select.is-set { border-color: var(--color-primary); background-color: var(--color-primary-soft); }
+    @media (max-width: 760px) {
+      .filter-bar { gap: var(--space-3); padding: var(--space-5); }
+      .filter-group { width: 100%; gap: var(--space-2); }
+      .filter-group .pill-row { display: none; }
+      .filter-select { display: block; }
+    }
     .filter-count { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-6); }
     .filter-empty { display: none; padding: var(--space-8) 0; color: var(--color-text-muted); text-align: center; }
     .res-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
     .res-card { display: flex; flex-direction: column; height: 100%; }
     .res-card .badge-row { display: flex; align-items: center; gap: 0.4rem; margin-bottom: var(--space-3); flex-wrap: wrap; }
-    .res-card h3 { font-size: 1.1rem; margin-bottom: var(--space-2); }
+    .res-card h3 { font-size: 1.3rem; line-height: 1.25; margin-bottom: var(--space-3); }
     .res-card p { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); flex-grow: 1; }
     .res-card .btn { align-self: flex-start; }
     .res-card-foot { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-1) var(--space-3); margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--color-divider); }
@@ -267,12 +275,13 @@
     }
 
   
-    .res-meta { margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); font-size: var(--text-xs); line-height: 1.5; }
+    .res-meta { margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); font-size: var(--text-sm); line-height: 1.5; }
     .res-meta div { display: grid; grid-template-columns: 1fr; gap: 0.1rem; }
-    .res-meta dt { color: var(--color-text-faint); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.68rem; padding-top: 0.1rem; }
+    .res-meta dt { color: var(--color-text-faint); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.75rem; padding-top: 0.1rem; }
     .res-meta dd { margin: 0; color: var(--color-text-muted); }
     .res-card p { flex-grow: 0; }
-    .res-card .res-meta { flex-grow: 1; }
+    .res-card .res-meta { flex-grow: 0; }
+    .res-card .badge { font-size: 0.75rem; }
     .res-models { display: flex; flex-wrap: wrap; gap: 0.3rem; }
     .res-models span { font-size: 0.68rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: var(--color-primary-soft); color: var(--color-primary-hover); font-weight: 600; }
     .res-card-foot .foot-right { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: flex-end; }
@@ -358,7 +367,7 @@
       <div class="container">
         <div class="eyebrow"><span class="dot"></span>46 frameworks &amp; worksheets</div>
         <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 26ch;">The Resource Library</h1>
-        <p class="lead" style="max-width: 68ch;">Practical, no-fluff frameworks and worksheets for founders and leaders building a technology business without a commercial playbook. Browse by the part of the business you're responsible for, the problem you're trying to solve, or the stage your company is at.</p>
+        <p class="lead" style="max-width: 68ch;">Practical frameworks and worksheets for founders and leaders building the commercial engine to scale a technology business. Browse by the part of the business you're responsible for, the problem you're trying to solve, or the stage your company is at.</p>
       </div>
     </section>
     <section>
@@ -416,7 +425,7 @@
           </div>
           <div class="filter-group">
             <span class="filter-group-label">Stage</span>
-            <div class="pill-row"><button class="pill active" data-group="stage" data-value="all">All stages</button><button class="pill" data-group="stage" data-value="pre-revenue">Pre-revenue / first customers</button><button class="pill" data-group="stage" data-value="early-traction">Early traction</button><button class="pill" data-group="stage" data-value="scaling">Scaling</button><button class="pill" data-group="stage" data-value="mature">Mature / legacy modernisation</button></div>
+            <div class="pill-row"><button class="pill active" data-group="stage" data-value="all">All stages</button><button class="pill" data-group="stage" data-value="pre-revenue">Pre-revenue / first customers</button><button class="pill" data-group="stage" data-value="early-traction">Early traction</button><button class="pill" data-group="stage" data-value="scaling">Scaling</button><button class="pill" data-group="stage" data-value="mature">Established / next chapter</button></div>
           </div>
         </div>
         <p class="filter-count" id="filter-count">46 resources</p>
@@ -426,12 +435,11 @@
             <div class="badge-row"><span class="badge">Strategy</span></div>
             <h3>The 5 Levers That Actually Drive SaaS Revenue</h3>
             <p>If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and early SaaS teams without a GTM structure</dd></div><div><dt>You'll leave with</dt><dd>Identify which of the five growth levers is the real revenue constraint and set one quarterly priority</dd></div><div><dt>Bring</dt><dd>Current honest figures for acquisition, conversion, pricing, retention and expansion</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and early SaaS teams without a GTM structure</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/02-founder-led-sales-led-or-product-led-pick-one.html" data-function="strategy" data-challenge="no-gtm founder-led-bottleneck" data-stage="pre-revenue early-traction">
@@ -439,12 +447,11 @@
             <div class="badge-row"><span class="badge">Strategy</span></div>
             <h3>Founder-Led, Sales-Led, or Product-Led: Pick One</h3>
             <p>Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders choosing their first go-to-market motion</dd></div><div><dt>You'll leave with</dt><dd>Select one recommended starting GTM motion and set a review date to commit to it</dd></div><div><dt>Bring</dt><dd>Your average deal size (ACV), buyer type and approval process, and honest founder fit</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders choosing their first go-to-market motion</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html" data-function="strategy" data-challenge="unreliable-forecast operating-rhythm" data-stage="early-traction scaling">
@@ -452,12 +459,11 @@
             <div class="badge-row"><span class="badge">Strategy</span></div>
             <h3>Designing a Simple Operating Rhythm for a Growing Business</h3>
             <p>Turning a project into a business means deciding what gets reviewed weekly, monthly, and quarterly: a simple cadence that fits a small team.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams setting up their first recurring business reviews</dd></div><div><dt>You'll leave with</dt><dd>Set owners, timing and agendas for weekly, monthly and quarterly reviews that fit your team</dd></div><div><dt>Bring</dt><dd>Current meetings, key metrics, and who owns pipeline, product and customers</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams setting up their first recurring business reviews</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html" data-function="marketing" data-challenge="no-gtm insufficient-pipeline" data-stage="pre-revenue early-traction">
@@ -465,12 +471,11 @@
             <div class="badge-row"><span class="badge">Marketing</span></div>
             <h3>Your Product Works. Your Story Doesn’t Exist Yet.</h3>
             <p>A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div><div><dt>You'll leave with</dt><dd>Complete a one-page canvas that defines buyer, problem, urgency, promise, proof and pricing in one positioning statement</dd></div><div><dt>Bring</dt><dd>Your product&#x27;s workflow, any beta or internal results, and your current pricing thinking</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/05-three-campaigns-you-can-run-without-hiring-a-marketer.html" data-function="marketing" data-challenge="insufficient-pipeline" data-stage="pre-revenue early-traction">
@@ -478,12 +483,11 @@
             <div class="badge-row"><span class="badge">Marketing</span></div>
             <h3>Three Campaigns You Can Run Without Hiring a Marketer</h3>
             <p>A repeatable playbook for founder-led content, partner co-marketing, and network email sequences that generate real pipeline on no budget.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and generalists running demand generation without a marketer</dd></div><div><dt>You'll leave with</dt><dd>Scope founder-led content, partner co-marketing and network email campaigns, each with assets, steps and success metrics</dd></div><div><dt>Bring</dt><dd>Product and buyer details, real founder stories, potential partners, and your existing contact network</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and generalists running demand generation without a marketer</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 4 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html" data-function="new-business-development-sales" data-challenge="no-gtm insufficient-pipeline stalled-deals founder-led-bottleneck" data-stage="pre-revenue early-traction">
@@ -491,12 +495,11 @@
             <div class="badge-row"><span class="badge">New Business Development &amp; Sales</span></div>
             <h3>The Minimum Viable Sales Playbook for Technology Founders</h3>
             <p>A working sales process needs four decisions made in advance, not improvised call by call: what you ask, who qualifies, what the stages are, and what counts as progress.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running their own first sales conversations</dd></div><div><dt>You'll leave with</dt><dd>Define pipeline stages, qualification criteria and a discovery script the whole team can reuse</dd></div><div><dt>Bring</dt><dd>Recent deals, common buyer questions and your current qualification approach</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running their own first sales conversations</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html" data-function="new-business-development-sales" data-challenge="stalled-deals unreliable-forecast" data-stage="early-traction scaling">
@@ -504,12 +507,11 @@
             <div class="badge-row"><span class="badge">New Business Development &amp; Sales</span></div>
             <h3>Fixing the Pipeline Mess So You Can Forecast With Confidence</h3>
             <p>A pipeline you cannot trust is not a forecasting problem, it is a data hygiene problem, and it is fixable with three habits: clean stages, tracked reasons, and aging rules.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage founders and sales leads with an untrustworthy pipeline</dd></div><div><dt>You'll leave with</dt><dd>Configure your CRM with clear stages, win/loss reasons and aging rules, then keep it clean weekly</dd></div><div><dt>Bring</dt><dd>Current pipeline stages, past deal history, typical days per stage, and CRM admin access</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage founders and sales leads with an untrustworthy pipeline</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html" data-function="account-management" data-challenge="churn" data-stage="early-traction scaling">
@@ -517,12 +519,11 @@
             <div class="badge-row"><span class="badge">Account Management</span></div>
             <h3>When Your Customer List Needs Account Management, Not Vibes</h3>
             <p>A practical way to segment accounts by value and risk, run lightweight account plans, and set a review cadence you'll actually keep.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and team leads managing 20 to 50 customer accounts</dd></div><div><dt>You'll leave with</dt><dd>Draft a one-page account plan covering goals, stakeholders, risk, expansion and a 90-day plan</dd></div><div><dt>Bring</dt><dd>Account revenue, key contacts, customer goals, known risks, and your review schedule</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and team leads managing 20 to 50 customer accounts</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html" data-function="implementation-onboarding" data-challenge="onboarding-issues" data-stage="early-traction scaling">
@@ -530,12 +531,11 @@
             <div class="badge-row"><span class="badge">Implementation / Onboarding</span></div>
             <h3>How to Onboard Customers Without Reinventing It Every Time</h3>
             <p>A repeatable implementation journey with clear phases, roles, and artefacts, built to work even if you're the only person running it.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams running customer onboarding as one-off projects</dd></div><div><dt>You'll leave with</dt><dd>Set up a repeatable seven-phase implementation plan with owners, dates and a checklist per customer</dd></div><div><dt>Bring</dt><dd>Customer scope, key contacts and roles, target dates, and data to migrate</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams running customer onboarding as one-off projects</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/10-define-onboarding-like-a-product-not-a-favor.html" data-function="implementation-onboarding" data-challenge="onboarding-issues" data-stage="pre-revenue early-traction">
@@ -543,12 +543,11 @@
             <div class="badge-row"><span class="badge">Implementation / Onboarding</span></div>
             <h3>Define Onboarding Like a Product, Not a Favour</h3>
             <p>How to set scope, timelines, and mutual responsibilities up front so customers know exactly what onboarding includes before it starts.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage vendors onboarding their first mid-size customers</dd></div><div><dt>You'll leave with</dt><dd>Draft a one-page onboarding scope that sets deliverables, timelines, responsibilities and success criteria before kickoff</dd></div><div><dt>Bring</dt><dd>Included deliverables, integrations supported, timeline, both sides&#x27; responsibilities, and agreed success criteria</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage vendors onboarding their first mid-size customers</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html" data-function="customer-success" data-challenge="onboarding-issues churn" data-stage="early-traction scaling">
@@ -556,12 +555,11 @@
             <div class="badge-row"><span class="badge">Customer Success</span></div>
             <h3>Customer Success at 0-20 Customers, Before You Hire a CSM</h3>
             <p>A simple health scoring method, a minimum touchpoint schedule, and a lightweight QBR substitute you can run without any dedicated CS headcount.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running customer success without a dedicated CSM</dd></div><div><dt>You'll leave with</dt><dd>Score every account&#x27;s health, set a touchpoint cadence, and define standard responses for each tier</dd></div><div><dt>Bring</dt><dd>Your customer list with usage data, support tickets, feedback and champion contacts</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running customer success without a dedicated CSM</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/12-how-to-set-up-support-tiers-slas-and-a-knowledge-base.html" data-function="support" data-challenge="onboarding-issues churn" data-stage="scaling mature">
@@ -569,12 +567,11 @@
             <div class="badge-row"><span class="badge">Support</span></div>
             <h3>How to Set Up Support Tiers, SLAs, and a Knowledge Base</h3>
             <p>A practical structure for response times, escalation levels, and documentation so a small team can scale support without over-promising or losing track of answers.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Small support teams setting response times and documentation</dd></div><div><dt>You'll leave with</dt><dd>Set severity tiers and achievable SLA targets, and write consistent knowledge base articles from a template</dd></div><div><dt>Bring</dt><dd>Current ticket types, support headcount, typical response times, and any existing customer commitments</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Small support teams setting response times and documentation</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/13-the-six-saas-numbers-that-actually-matter.html" data-function="finance" data-challenge="pricing churn board-investor-reporting" data-stage="early-traction scaling mature">
@@ -582,12 +579,11 @@
             <div class="badge-row"><span class="badge">Finance</span></div>
             <h3>The Six SaaS Numbers That Actually Matter</h3>
             <p>A plain-language guide to the six numbers that matter: recurring revenue, gross churn, net churn, CAC, CAC payback and runway, plus where LTV fits.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>SaaS founders and operators without a finance team</dd></div><div><dt>You'll leave with</dt><dd>Build a one-page monthly view of six core SaaS metrics and flag what needs attention</dd></div><div><dt>Bring</dt><dd>Current MRR, churn and expansion figures, sales and marketing spend, gross margin, cash balance, monthly burn</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>SaaS founders and operators without a finance team</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/14-a-practical-way-to-price-early-stage-saas.html" data-function="finance" data-challenge="pricing" data-stage="pre-revenue early-traction">
@@ -595,12 +591,11 @@
             <div class="badge-row"><span class="badge">Finance</span></div>
             <h3>A Practical Way to Price Early-Stage SaaS</h3>
             <p>How to choose tiers, pick a value metric, and set a discount policy so pricing decisions stop happening ad hoc, deal by deal.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage SaaS teams setting or tightening pricing</dd></div><div><dt>You'll leave with</dt><dd>Document pricing assumptions, tiers and discount rules, then log every pricing change so decisions stay deliberate</dd></div><div><dt>Bring</dt><dd>Current list prices, tiers, typical discounts given, and any pricing changes already made</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage SaaS teams setting or tightening pricing</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/15-the-minimum-internal-stack-before-you-add-more-tools.html" data-function="it-internal-operations" data-challenge="operating-rhythm security-compliance-readiness" data-stage="scaling mature">
@@ -608,12 +603,11 @@
             <div class="badge-row"><span class="badge">IT / Internal Operations</span></div>
             <h3>The Minimum Internal Stack Before You Add More Tools</h3>
             <p>A practical baseline for CRM, support, documentation, analytics, and security so the business runs on systems, not memory.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Small technology teams replacing memory with owned systems</dd></div><div><dt>You'll leave with</dt><dd>Map each internal function to one tool and owner, then confirm documentation and security habits are in place</dd></div><div><dt>Bring</dt><dd>Current tools for CRM, support, documentation, analytics and security, plus who maintains each</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Small technology teams replacing memory with owned systems</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/16-how-to-build-a-roadmap-instead-of-a-request-queue.html" data-function="product-development" data-challenge="leadership-misalignment" data-stage="scaling mature">
@@ -621,12 +615,11 @@
             <div class="badge-row"><span class="badge">Product &amp; Development</span></div>
             <h3>How to Build a Roadmap Instead of a Request Queue</h3>
             <p>A scoring framework for turning scattered feature requests into a prioritised roadmap tied to business goals, not the loudest voice.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Product leads at small software teams managing feature requests</dd></div><div><dt>You'll leave with</dt><dd>Score your feature backlog on impact, effort and strategic fit to produce a ranked, defensible roadmap</dd></div><div><dt>Bring</dt><dd>Your open feature requests, your next two quarters&#x27; product priorities, and rough engineering effort estimates</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Product leads at small software teams managing feature requests</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/17-closing-the-gap-between-what-sales-hears-and-what-product-builds.html" data-function="product-development" data-challenge="leadership-misalignment" data-stage="early-traction scaling">
@@ -634,12 +627,11 @@
             <div class="badge-row"><span class="badge">Product &amp; Development</span></div>
             <h3>Closing the Gap Between What Sales Hears and What Product Builds</h3>
             <p>A structured way to route feedback from sales and customer success into product decisions, so nothing useful gets lost in someone's Slack DMs.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Sales, CS and product leads at small tech teams</dd></div><div><dt>You'll leave with</dt><dd>Set up one feedback intake, tagging and review routine that turns sales and CS input into product decisions</dd></div><div><dt>Bring</dt><dd>Current feedback channels, your team roles, and common customer objections or requests</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Sales, CS and product leads at small tech teams</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/18-org-design-for-growing-software-businesses.html" data-function="people-culture-hr" data-challenge="founder-led-bottleneck org-role-clarity" data-stage="early-traction scaling">
@@ -647,12 +639,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>Org Design for Growing Technology Businesses</h3>
             <p>Before you hire your next five people, decide how the business is actually structured, not just who reports to whom.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and leaders mapping accountability before the next hiring round</dd></div><div><dt>You'll leave with</dt><dd>Map outcomes to owners and reporting lines, and identify structural gaps to fix before adding headcount</dd></div><div><dt>Bring</dt><dd>Current team list, reporting lines, key business outcomes, and hiring plans for the next two quarters</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and leaders mapping accountability before the next hiring round</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/19-why-role-scorecards-beat-job-descriptions.html" data-function="people-culture-hr" data-challenge="founder-led-bottleneck org-role-clarity hiring-management-gaps" data-stage="early-traction scaling">
@@ -660,12 +651,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>Why Role Scorecards Beat Job Descriptions</h3>
             <p>A job description tells someone what they'll be doing; a role scorecard tells them what winning actually looks like.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Hiring managers and leaders defining roles in growing tech teams</dd></div><div><dt>You'll leave with</dt><dd>Define a role by its outcomes and checkable success measures before hiring or running a performance review</dd></div><div><dt>Bring</dt><dd>The role&#x27;s expected outcomes, current responsibilities, and how success would be evidenced</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Hiring managers and leaders defining roles in growing tech teams</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it.html" data-function="people-culture-hr" data-challenge="hiring-management-gaps" data-stage="early-traction scaling">
@@ -673,12 +663,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>A Hiring Process for Small Technology Teams That Doesn’t Need HR to Run It</h3>
             <p>Consistency in hiring doesn't require bureaucracy. It requires a repeatable process anyone on the team can follow.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and hiring managers at small tech teams without HR</dd></div><div><dt>You'll leave with</dt><dd>Run every hire through one structured process with defined signals, round purposes, independent scoring and fast follow-up</dd></div><div><dt>Bring</dt><dd>Role scorecard, 3-4 hiring signals, interviewer list, and target time between stages</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and hiring managers at small tech teams without HR</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/21-the-30-60-90-day-plan-that-actually-shortens-ramp-up.html" data-function="people-culture-hr" data-challenge="hiring-management-gaps" data-stage="early-traction scaling">
@@ -686,12 +675,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>The 30/60/90 Day Plan That Actually Shortens Ramp-Up</h3>
             <p>Most onboarding plans describe a new hire's first week; almost none define what accountability looks like by day 90.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Managers onboarding a new hire into a technology team</dd></div><div><dt>You'll leave with</dt><dd>Build a role-specific 30/60/90 day plan tied to accountability, and share it with the new hire</dd></div><div><dt>Bring</dt><dd>The role scorecard, expected day 90 outcomes, and examples of small real tasks</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Managers onboarding a new hire into a technology team</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/22-the-manager-operating-rhythm-most-software-teams-are-missing.html" data-function="people-culture-hr" data-challenge="operating-rhythm hiring-management-gaps" data-stage="early-traction scaling">
@@ -699,12 +687,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>The Manager Operating Rhythm Most Technology Teams Are Missing</h3>
             <p>Good management isn't a personality trait. It's a cadence of 1:1s, team meetings, and feedback loops run consistently enough to become reliable.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>First-time managers and team leads in growing technology companies</dd></div><div><dt>You'll leave with</dt><dd>Map a team&#x27;s recurring meetings, give each one purpose, and cut those that don&#x27;t earn their place</dd></div><div><dt>Bring</dt><dd>Your current recurring meetings, their frequency, attendees, and what each is meant to achieve</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>First-time managers and team leads in growing technology companies</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/23-performance-management-that-works-for-a-software-team-not-a-corporate-hr-department.html" data-function="people-culture-hr" data-challenge="hiring-management-gaps" data-stage="early-traction scaling mature">
@@ -712,12 +699,11 @@
             <div class="badge-row"><span class="badge">People &amp; Culture / HR</span></div>
             <h3>Performance Management That Works for a Technology Team, Not a Corporate HR Department</h3>
             <p>Simple, consistent accountability beats an elaborate performance system that nobody has the time or patience to run properly.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Managers and founders running performance conversations in small technology teams</dd></div><div><dt>You'll leave with</dt><dd>Run consistent quarterly check-ins, address underperformance fairly, and recognise strong performance without heavy HR process</dd></div><div><dt>Bring</dt><dd>Each report&#x27;s role scorecard, recent 1:1 notes, and agreed outcomes for the period</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Managers and founders running performance conversations in small technology teams</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/24-the-minimum-viable-security-posture-every-software-business-needs.html" data-function="compliance-security" data-challenge="security-compliance-readiness procurement-blockers" data-stage="early-traction scaling">
@@ -725,12 +711,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>The Minimum Viable Security Posture Every Technology Business Needs</h3>
             <p>You don't need an enterprise security program to be credible. You need a defensible baseline across trust, access, devices, and documentation.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operators of small technology companies</dd></div><div><dt>You'll leave with</dt><dd>Identify which baseline security controls are in place and list the gaps to fix first</dd></div><div><dt>Bring</dt><dd>Current access lists, device details, existing security documents, and customer-facing security information</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operators of small technology companies</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires.html" data-function="compliance-security" data-challenge="stalled-deals procurement-blockers" data-stage="early-traction scaling">
@@ -738,12 +723,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>How to Stop Losing Weeks to Customer Security Questionnaires</h3>
             <p>The deals that stall in procurement usually aren't lost on price. They're lost on how long it takes to answer a security review.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Revenue and operations leaders facing customer security reviews</dd></div><div><dt>You'll leave with</dt><dd>Build a shared, reusable answer library and spot practice gaps that security questionnaires expose</dd></div><div><dt>Bring</dt><dd>Current security practices, vendor and subprocessor list, backup and incident response details, certifications held</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Revenue and operations leaders facing customer security reviews</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing.html" data-function="compliance-security" data-challenge="security-compliance-readiness" data-stage="early-traction scaling">
@@ -751,12 +735,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>Why Access Control Is the Cheapest Risk You’re Not Managing</h3>
             <p>Unmanaged permissions and slow offboarding are the most common security failure in small technology companies, and the easiest to fix.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology companies</dd></div><div><dt>You'll leave with</dt><dd>Define roles, map current access, and put a same-day offboarding checklist in place</dd></div><div><dt>Bring</dt><dd>List of your systems, current users and their access, and team roles</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology companies</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/27-you-can-t-protect-data-you-haven-t-classified.html" data-function="compliance-security" data-challenge="ai-governance-gap security-compliance-readiness" data-stage="early-traction scaling">
@@ -764,12 +747,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>You Can’t Protect Data You Haven’t Classified</h3>
             <p>Most technology companies have no shared answer for what counts as sensitive data, where it lives, or when it should be deleted, and that gap is the real risk.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders setting data handling standards</dd></div><div><dt>You'll leave with</dt><dd>Define data classification tiers, map where sensitive data lives, and set storage, sharing and retirement rules</dd></div><div><dt>Bring</dt><dd>A list of your systems, vendors and the data types each one holds</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders setting data handling standards</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way.html" data-function="compliance-security" data-challenge="security-compliance-readiness procurement-blockers" data-stage="scaling mature">
@@ -777,12 +759,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>Your Vendor Stack Is Your Risk Surface: Treat It That Way</h3>
             <p>Every tool you connect to customer data or company systems inherits a piece of your risk, whether or not anyone reviewed it before signing up.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and technical leaders reviewing third-party tools</dd></div><div><dt>You'll leave with</dt><dd>Tier your vendors by risk and apply a consistent review before connecting tools to company data</dd></div><div><dt>Bring</dt><dd>A list of current vendors and what data or systems each can access</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and technical leaders reviewing third-party tools</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/29-what-to-actually-do-in-the-first-hour-of-a-security-incident.html" data-function="compliance-security" data-challenge="security-compliance-readiness" data-stage="early-traction scaling mature">
@@ -790,12 +771,11 @@
             <div class="badge-row"><span class="badge">Compliance &amp; Security</span></div>
             <h3>What to Actually Do in the First Hour of a Security Incident</h3>
             <p>Small technology teams don't need an elaborate incident response program. They need a clear, calm first-response sequence they can run under pressure.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology teams</dd></div><div><dt>You'll leave with</dt><dd>Define severity levels, decision-makers and a first-response sequence before an incident happens</dd></div><div><dt>Bring</dt><dd>Names of decision-makers, your systems and data types, and notification obligations</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology teams</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/30-the-rev-iq-3-pillar-ai-strategy-framework.html" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="scaling mature">
@@ -803,12 +783,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-flagship">Flagship</span></div>
             <h3>The Rev-IQ 3-Pillar AI Strategy Framework</h3>
             <p>Most technology companies don't have an AI strategy problem. They have an AI sequencing problem, and this framework fixes the order.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams sequencing AI effort across their technology business</dd></div><div><dt>You'll leave with</dt><dd>Map current AI maturity across three pillars and set one clear 90-day focus</dd></div><div><dt>Bring</dt><dd>Honest view of current AI use, workflows, governance and any AI product commitments</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams sequencing AI effort across their technology business</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it.html" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="early-traction scaling">
@@ -816,12 +795,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Is Your Company Actually Ready for AI, or Just Using It?</h3>
             <p>There's a real difference between individuals using AI tools and an organisation that's genuinely ready to adopt AI at scale. Most companies confuse the two.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams setting a baseline before an AI roadmap</dd></div><div><dt>You'll leave with</dt><dd>Score AI readiness across four dimensions and identify the single constraint to address first this quarter</dd></div><div><dt>Bring</dt><dd>Current evidence of approved AI tools, governance, staff skills and prioritised use cases</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams setting a baseline before an AI roadmap</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/32-why-most-ai-rollouts-skip-the-workforce-and-fail-because-of-it.html" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="early-traction scaling">
@@ -829,12 +807,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Why Most AI Rollouts Skip the Workforce and Fail Because of It</h3>
             <p>Buying tools and hoping people figure it out is not an enablement plan, and it's the single most common reason AI adoption stalls after an enthusiastic start.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and people teams rolling out AI across roles</dd></div><div><dt>You'll leave with</dt><dd>Design a role-specific AI enablement rollout with explicit permissions and a reinforcement schedule that keeps capability current</dd></div><div><dt>Bring</dt><dd>Current AI use by role, any existing AI policy, and team leads&#x27; input</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and people teams rolling out AI across roles</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are.html" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="scaling mature">
@@ -842,12 +819,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Most AI Ideas Are Not Worth Doing Yet: How to Tell Which Ones Are</h3>
             <p>Every technology company has a growing list of 'we could use AI for this' ideas: the constraint isn't imagination, it's prioritisation.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and product teams comparing competing AI ideas</dd></div><div><dt>You'll leave with</dt><dd>Score each AI idea on value, feasibility and risk, then decide what to resource this quarter</dd></div><div><dt>Bring</dt><dd>Your current list of AI ideas, plus data, tooling and skills context</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and product teams comparing competing AI ideas</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 3 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html" data-function="ai-strategy" data-challenge="ai-strategy-gap ai-governance-gap" data-stage="scaling mature">
@@ -855,12 +831,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Embedding AI Into How the Business Runs, Without Creating Chaos</h3>
             <p>The gap between a person using AI well and an organisation using AI well is process, and process is exactly what most companies skip.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and functional leaders embedding AI into real workflows</dd></div><div><dt>You'll leave with</dt><dd>Document each load-bearing AI workflow with an owner, quality standard, review step and failure response plan</dd></div><div><dt>Bring</dt><dd>A list of AI-assisted workflows your team repeatedly relies on, and who currently runs them</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and functional leaders embedding AI into real workflows</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t.html" data-function="ai-strategy" data-challenge="pricing ai-strategy-gap" data-stage="scaling mature">
@@ -868,12 +843,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Where AI Actually Belongs in Your Product, and Where It Doesn’t</h3>
             <p>Adding an AI feature is easy; deciding whether AI belongs in your product, packaging, or pricing at all is the harder and more important question.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Product and leadership teams deciding where AI belongs</dd></div><div><dt>You'll leave with</dt><dd>Decide whether a proposed AI feature belongs in your product, packaging and pricing, and record a go/no-go call</dd></div><div><dt>Bring</dt><dd>A proposed AI feature, the customer job it targets, and cost estimates</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Product and leadership teams deciding where AI belongs</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now.html" data-function="ai-strategy" data-challenge="ai-governance-gap" data-stage="scaling mature">
@@ -881,12 +855,11 @@
             <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>The AI Governance Gap Almost Every Technology Company Has Right Now</h3>
             <p>AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leaders at small technology companies already using AI</dd></div><div><dt>You'll leave with</dt><dd>Adopt seven short AI policies that set ownership, review and escalation, starting with your biggest exposure</dd></div><div><dt>Bring</dt><dd>Current AI tools and uses, data types involved, and who owns decisions</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leaders at small technology companies already using AI</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">ZIP, 7 policies · 4 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/37-the-leadership-operating-model-software-businesses-actually-need.html" data-function="leadership-governance" data-challenge="operating-rhythm leadership-misalignment" data-stage="scaling mature">
@@ -894,12 +867,11 @@
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
             <h3>The Leadership Operating Model Technology Businesses Actually Need</h3>
             <p>Most leadership teams don't fail from lack of talent. They fail because growth, product, customer, and operations are quietly running four different businesses under one logo.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams at scaling technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Agree shared numbers, decision rights, meeting cadence and escalation paths so leaders work from one model</dd></div><div><dt>Bring</dt><dd>Current metric definitions, meeting calendar, decision owners, and examples of recent cross-functional disagreements</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams at scaling technology businesses</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/38-designing-a-board-and-advisor-rhythm-that-earns-its-time.html" data-function="leadership-governance" data-challenge="board-investor-reporting" data-stage="scaling mature">
@@ -907,12 +879,11 @@
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
             <h3>Designing a Board and Advisor Rhythm That Earns Its Time</h3>
             <p>A board meeting that produces no decisions is a governance cost with no governance value. The fix is cadence and structure, not more slides.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs preparing board and advisor meetings in technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Build a repeatable board agenda and pre-read that protects live time for decisions, not reporting</dd></div><div><dt>Bring</dt><dd>Current performance against plan, key risks, pending decisions, and board or advisor expertise</dd></div><div><dt>Suits</dt><dd class="res-models"><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs preparing board and advisor meetings in technology businesses</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html" data-function="leadership-governance" data-challenge="org-role-clarity leadership-misalignment" data-stage="scaling mature">
@@ -920,12 +891,11 @@
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
             <h3>Who Actually Decides? Fixing Decision Rights Before They Cost You</h3>
             <p>Most leadership friction isn't disagreement about the right answer. It's unresolved ambiguity about who had the authority to answer at all.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams in scaling technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Assign one decider per recurring decision and map who recommends and who executes</dd></div><div><dt>Bring</dt><dd>A list of recurring cross-functional decisions that cause friction or get relitigated, plus current leadership structure</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams in scaling technology businesses</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/40-management-reporting-the-line-between-noise-and-signal.html" data-function="leadership-governance" data-challenge="unreliable-forecast operating-rhythm board-investor-reporting" data-stage="scaling mature">
@@ -933,12 +903,11 @@
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
             <h3>Management Reporting: The Line Between Noise and Signal</h3>
             <p>More dashboards and more slides have made most management reporting louder, not more useful. The fix is deciding what a leadership team actually needs to act on.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams of scaling tech businesses with bloated reporting packs</dd></div><div><dt>You'll leave with</dt><dd>Rebuild your monthly pack around decisions, filtering metrics with an inclusion test and a quarterly review</dd></div><div><dt>Bring</dt><dd>Your current reporting pack, metric owners, and the plan or targets you report against</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams of scaling tech businesses with bloated reporting packs</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html" data-function="leadership-governance" data-challenge="leadership-misalignment" data-stage="scaling mature">
@@ -946,12 +915,11 @@
             <div class="badge-row"><span class="badge">Leadership &amp; Governance</span></div>
             <h3>The Executive Alignment Review: Catching Drift Before It’s Expensive</h3>
             <p>Strategic drift rarely announces itself: it accumulates quietly across a leadership team until priorities that once matched have quietly diverged.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams checking priorities still match agreed strategy</dd></div><div><dt>You'll leave with</dt><dd>Run a recurring review of priorities, risks and resourcing against the agreed strategy to catch drift early</dd></div><div><dt>Bring</dt><dd>The agreed strategy, last review&#x27;s flagged risks, current priorities, and each function&#x27;s resourcing</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams checking priorities still match agreed strategy</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/42-partnership-strategy-for-software-businesses-choosing-where-to-focus.html" data-function="partnerships-ecosystem" data-challenge="partner-channel-gap" data-stage="early-traction scaling">
@@ -959,12 +927,11 @@
             <div class="badge-row"><span class="badge">Partnerships &amp; Ecosystem</span></div>
             <h3>Partnership Strategy for Technology Businesses: Choosing Where to Focus</h3>
             <p>Most technology companies collect partners before they decide what partnerships are actually for. Here's how to reverse that order.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and commercial leaders choosing which partnership type to pursue</dd></div><div><dt>You'll leave with</dt><dd>Commit to one primary partnership motion for two quarters, with other types ruled out</dd></div><div><dt>Bring</dt><dd>Your main growth constraint, current stage, existing partner conversations, and available partnerships capacity</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and commercial leaders choosing which partnership type to pursue</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html" data-function="partnerships-ecosystem" data-challenge="partner-channel-gap partner-underperformance" data-stage="early-traction scaling">
@@ -972,12 +939,11 @@
             <div class="badge-row"><span class="badge">Partnerships &amp; Ecosystem</span></div>
             <h3>How to Tell a Good Partner From a Time Sink</h3>
             <p>Enthusiasm and a logo on a slide are not qualification. Here's what actually predicts whether a partner will produce results.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and commercial leaders qualifying prospective partners before agreements</dd></div><div><dt>You'll leave with</dt><dd>Score prospective partners on four factors and decide whether to pursue them before drafting any agreement</dd></div><div><dt>Bring</dt><dd>Partner details, their customer base, past vendor introductions, team capacity, and proposed incentives</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and commercial leaders qualifying prospective partners before agreements</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/44-why-most-partners-go-quiet-after-signing-and-how-to-prevent-it.html" data-function="partnerships-ecosystem" data-challenge="partner-underperformance" data-stage="scaling mature">
@@ -985,12 +951,11 @@
             <div class="badge-row"><span class="badge">Partnerships &amp; Ecosystem</span></div>
             <h3>Why Most Partners Go Quiet After Signing, and How to Prevent It</h3>
             <p>The agreement is rarely the reason a partnership fails to produce anything; the first ninety days after signing usually are.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders onboarding new partners</dd></div><div><dt>You'll leave with</dt><dd>Run a 90-day onboarding plan by partner type, with milestones and a named internal owner</dd></div><div><dt>Bring</dt><dd>Partner type, signed partner details, named internal owner, and first-deal or first-introduction targets</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders onboarding new partners</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html" data-function="partnerships-ecosystem" data-challenge="insufficient-pipeline partner-channel-gap" data-stage="early-traction scaling">
@@ -998,12 +963,11 @@
             <div class="badge-row"><span class="badge">Partnerships &amp; Ecosystem</span></div>
             <h3>Designing a Referral Motion Simple Enough That Partners Actually Use It</h3>
             <p>Most partner-sourced growth motions fail from complexity, not from lack of partner interest. Here's how to design one that survives contact with reality.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Growth and partnerships leaders designing a first partner referral motion</dd></div><div><dt>You'll leave with</dt><dd>Design a low-friction referral motion and run it manually before deciding what tooling to build</dd></div><div><dt>Bring</dt><dd>Target partner types, the referral action you expect, and your proposed reward terms</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Growth and partnerships leaders designing a first partner referral motion</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         <a class="card-link res-card-link" href="articles/46-managing-partners-after-the-honeymoon-a-review-cadence-that-actually-works.html" data-function="partnerships-ecosystem" data-challenge="partner-underperformance" data-stage="scaling mature">
@@ -1011,12 +975,11 @@
             <div class="badge-row"><span class="badge">Partnerships &amp; Ecosystem</span></div>
             <h3>Managing Partners After the Honeymoon: A Review Cadence That Actually Works</h3>
             <p>Partnerships don't fail at signing or onboarding nearly as often as they fail from being left unmanaged for a year. Here's the cadence that prevents that.</p>
-            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders managing active partners</dd></div><div><dt>You'll leave with</dt><dd>Assign partners to tiers, set review frequency, and run consistent reviews that catch drift early</dd></div><div><dt>Bring</dt><dd>Current partner list with recent activity, deal results, champion contacts and known blockers</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
+            <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders managing active partners</dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
               <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
-            <div class="res-updated">Updated October 2026</div>
           </article>
         </a>
         </div>
@@ -1131,7 +1094,38 @@
         }
       });
 
+      // Mobile: one dropdown per filter group, kept in sync with the pills
+      document.querySelectorAll('.filter-group').forEach(function (grp) {
+        var gp = grp.querySelectorAll('.pill');
+        if (!gp.length) return;
+        var group = gp[0].dataset.group;
+        var label = grp.querySelector('.filter-group-label');
+        var sel = document.createElement('select');
+        sel.className = 'filter-select';
+        sel.id = 'filter-select-' + group;
+        sel.setAttribute('aria-label', 'Filter by ' + (label ? label.textContent.toLowerCase() : group));
+        gp.forEach(function (p) {
+          var o = document.createElement('option');
+          o.value = p.dataset.value; o.textContent = p.textContent;
+          sel.appendChild(o);
+        });
+        sel.value = state[group];
+        sel.classList.toggle('is-set', sel.value !== 'all');
+        sel.addEventListener('change', function () {
+          var t = grp.querySelector('.pill[data-value="' + sel.value + '"]');
+          if (t) t.click();
+        });
+        grp.querySelector('.pill-row').insertAdjacentElement('afterend', sel);
+      });
+      function syncSelects() {
+        ['function', 'challenge', 'stage'].forEach(function (g) {
+          var sel = document.getElementById('filter-select-' + g);
+          if (sel) { sel.value = state[g]; sel.classList.toggle('is-set', state[g] !== 'all'); }
+        });
+      }
+
       function apply() {
+        syncSelects();
         var visible = 0;
         cards.forEach(function (card) {
           var fn = card.dataset.function;

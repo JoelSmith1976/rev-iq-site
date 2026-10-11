@@ -21,5 +21,6 @@ Rev-IQ publishes a free resource library of frameworks and templates covering re
 - [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
 - [About Rev-IQ](https://rev-iq.ai/about.html): Background on Rev-IQ and its approach to commercial and revenue operations.
 - [Advisory & Fractional Support](https://rev-iq.ai/advisory.html): Direct advisory and fractional executive support for technology businesses.
+- [Fractional CRO](https://rev-iq.ai/fractional-cro.html): What a fractional Chief Revenue Officer does, when it makes sense, how an engagement runs, and common questions. Based in Sydney, serving Australia, New Zealand and the UK.
 - [Contact](https://rev-iq.ai/contact.html): Get in touch with Rev-IQ.
 - [Privacy notice](https://rev-iq.ai/privacy.html): How Rev-IQ collects, uses and stores personal information.

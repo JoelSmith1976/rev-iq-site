@@ -1,4 +1,6 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/(.*)",
@@ -10,16 +12,6 @@
       ],
       "destination": "https://rev-iq.ai/$1",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|fractional-cro|about|contact|privacy)",
-      "destination": "/:page.html"
-    },
-    {
-      "source": "/articles/:slug([^./]+)",
-      "destination": "/articles/:slug.html"
     }
   ]
 }

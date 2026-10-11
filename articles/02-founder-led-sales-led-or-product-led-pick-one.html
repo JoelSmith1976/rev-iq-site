@@ -249,6 +249,24 @@
     .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
     .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
 
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -316,7 +334,7 @@
         <div class="eyebrow"><span class="dot"></span>Strategy</div>
         <h1 class="article-h1">Founder-Led, Sales-Led, or Product-Led: Pick One</h1>
         <p class="dek">Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one.</p>
-        <div class="meta-row"><span>7 min read</span><span>Free resource</span><span>Published July 17, 2026 · Updated July 19, 2026</span></div>
+        <div class="meta-row"><span>4 min read</span><span>Free resource</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
         <div class="tag-row"><span class="tag">No GTM structure</span><span class="tag">Founder-led sales bottleneck</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
         
       </div>
@@ -352,13 +370,28 @@
           </ul>
         </div>
         
-        <div class="download-card" id="download">
+        <div class="download-card has-inside" id="download">
+          <div class="dl-top">
           <div>
             <div class="label">Decision Tree · Free download</div>
             <h3>GTM Motion Decision Tree</h3>
             <p>Walks founders choosing their first go-to-market motion through deal size, buyer type, and founder fit to arrive at one recommended starting motion.</p>
           </div>
           <a class="btn btn-primary" href="../assets/02-gtm-motion-decision-tree.pdf" download>Download PDF</a>
+          </div>
+          <div class="dl-inside">
+            <img class="dl-thumb" src="../assets/previews/02.webp" alt="First page of the GTM Motion Decision Tree PDF" width="560" height="449" loading="lazy" />
+            <div class="dl-details">
+              <div class="dl-label">What's inside</div>
+              <ol class="dl-sections"><li>Step 1: What is your average deal size (ACV)?</li><li>Step 2: Who is the buyer, and how do they decide?</li><li>Step 3: Founder fit check</li><li>Step 4: Cross-Reference and Recommendation</li><li>Step 5: Commit and Set a Review Date</li><li>Signals It May Be Time to Evolve the Motion</li></ol>
+              <dl class="dl-facts">
+                <div><dt>Format</dt><dd>PDF, 3 pages, printable and editable by hand</dd></div>
+                <div><dt>Best for</dt><dd>Founders choosing their first go-to-market motion</dd></div>
+                <div><dt>What to bring</dt><dd>Your average deal size (ACV), buyer type and approval process, and honest founder fit</dd></div>
+                <div><dt>After you submit</dt><dd>No email needed. The PDF downloads straight away.</dd></div>
+              </dl>
+            </div>
+          </div>
         </div>
         <div class="card path-card diagnose-card">
           <span class="kicker">Want it applied to your business?</span>
@@ -415,7 +448,7 @@
   "headline": "Founder-Led, Sales-Led, or Product-Led: Pick One",
   "description": "Choosing a first go-to-market motion is a decision with real inputs, not a matter of taste, and here's the logic behind picking the right one.",
   "datePublished": "2026-07-17",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-10-11",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

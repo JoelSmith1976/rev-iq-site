@@ -252,6 +252,24 @@
     .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
     .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
 
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -319,7 +337,7 @@
         <div class="eyebrow"><span class="dot"></span>Marketing</div>
         <h1 class="article-h1">Your Product Works. Your Story Doesn't Exist Yet.</h1>
         <p class="dek">A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated July 19, 2026</span></div>
+        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
         <div class="tag-row"><span class="tag">No GTM structure</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
         
       </div>
@@ -357,7 +375,8 @@
           </ul>
         </div>
         
-        <div class="download-card" id="download">
+        <div class="download-card has-inside" id="download">
+          <div class="dl-top">
           <div>
             <div class="label">Canvas · Free with email</div>
             <h3>Positioning Canvas for This Product</h3>
@@ -377,6 +396,20 @@
             <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
             <p class="gate-note" data-state="idle">We only use your email for this request unless you opt in. <a href="../privacy.html">Privacy notice</a></p>
           </form>
+          </div>
+          <div class="dl-inside">
+            <img class="dl-thumb" src="../assets/previews/04.webp" alt="First page of the Positioning Canvas for This Product PDF" width="560" height="449" loading="lazy" />
+            <div class="dl-details">
+              <div class="dl-label">What's inside</div>
+              <ol class="dl-sections"><li>1. Target segment</li><li>2. The problem, in their words</li><li>3. Why now</li><li>4. The promise</li><li>5. Proof</li><li>6. Pricing framing</li><li class="dl-more">and 1 more section</li></ol>
+              <dl class="dl-facts">
+                <div><dt>Format</dt><dd>PDF, 3 pages, printable and editable by hand</dd></div>
+                <div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div>
+                <div><dt>What to bring</dt><dd>Your product&#x27;s workflow, any beta or internal results, and your current pricing thinking</dd></div>
+                <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
+              </dl>
+            </div>
+          </div>
         </div>
         <div class="card path-card diagnose-card">
           <span class="kicker">Want it applied to your business?</span>
@@ -432,7 +465,7 @@
   "headline": "Your Product Works. Your Story Doesn't Exist Yet.",
   "description": "A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.",
   "datePublished": "2026-07-17",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-10-11",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

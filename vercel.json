@@ -14,7 +14,7 @@
   ],
   "rewrites": [
     {
-      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|about|contact)",
+      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|about|contact|privacy)",
       "destination": "/:page.html"
     },
     {

@@ -252,6 +252,24 @@
     .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
     .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
 
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -319,7 +337,7 @@
         <div class="eyebrow"><span class="dot"></span>Strategy</div>
         <h1 class="article-h1">The 5 Levers That Actually Drive SaaS Revenue</h1>
         <p class="dek">If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
-        <div class="meta-row"><span>7 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated July 19, 2026</span></div>
+        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
         <div class="tag-row"><span class="tag">No GTM structure</span><span class="tag">Weak commercial operating rhythm</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
         <div style="margin-top: var(--space-6);"><figure class="framework-diagram" style="margin:0; padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-2); min-height: 220px; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="width:100%;"><svg viewBox="0 0 560 86" width="100%" role="img" aria-label="The five levers of SaaS revenue: acquisition, conversion, pricing, retention, expansion" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rq-arrow-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fb8b2"/></marker></defs><line x1="96" y1="43.0" x2="116" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="212" y1="43.0" x2="232" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="328" y1="43.0" x2="348" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="444" y1="43.0" x2="464" y2="43.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><rect x="0" y="12" width="96" height="62" rx="10" fill="#f5e6c4" stroke="#a8710f" stroke-width="1.5"/><text x="48.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#5c3c07">Acquisition</text><rect x="116" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="164.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Conversion</text><rect x="232" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="280.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Pricing</text><rect x="348" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="396.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Retention</text><rect x="464" y="12" width="96" height="62" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="512.0" y="47.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Expansion</text></svg></div><figcaption style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align:center;">Acquisition → conversion → pricing → retention → expansion</figcaption></figure></div>
       </div>
@@ -361,7 +379,8 @@
 <div class="faq-item"><h3>Why does weak retention undermine acquisition?</h3><p>If customers churn faster than the business compounds, acquisition turns into a treadmill you have to keep running just to stay flat, instead of a lever that builds a growing base of ARR.</p></div>
 
         </div>
-        <div class="download-card" id="download">
+        <div class="download-card has-inside" id="download">
+          <div class="dl-top">
           <div>
             <div class="label">Worksheet · Free with email</div>
             <h3>SaaS Growth Model Worksheet</h3>
@@ -381,6 +400,20 @@
             <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
             <p class="gate-note" data-state="idle">We only use your email for this request unless you opt in. <a href="../privacy.html">Privacy notice</a></p>
           </form>
+          </div>
+          <div class="dl-inside">
+            <img class="dl-thumb" src="../assets/previews/01.webp" alt="First page of the SaaS Growth Model Worksheet PDF" width="560" height="449" loading="lazy" />
+            <div class="dl-details">
+              <div class="dl-label">What's inside</div>
+              <ol class="dl-sections"><li>Lever 1: Acquisition</li><li>Lever 2: Conversion</li><li>Lever 3: Pricing</li><li>Lever 4: Retention</li><li>Lever 5: Expansion</li><li>Constraint Diagnosis</li><li class="dl-more">and 1 more section</li></ol>
+              <dl class="dl-facts">
+                <div><dt>Format</dt><dd>PDF, 3 pages, printable and editable by hand</dd></div>
+                <div><dt>Best for</dt><dd>Founders and early SaaS teams without a GTM structure</dd></div>
+                <div><dt>What to bring</dt><dd>Current honest figures for acquisition, conversion, pricing, retention and expansion</dd></div>
+                <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
+              </dl>
+            </div>
+          </div>
         </div>
         <div class="card path-card diagnose-card">
           <span class="kicker">Want it applied to your business?</span>
@@ -436,7 +469,7 @@
   "headline": "The 5 Levers That Actually Drive SaaS Revenue",
   "description": "If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.",
   "datePublished": "2026-07-17",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-10-11",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

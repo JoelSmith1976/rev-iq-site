@@ -252,6 +252,24 @@
     .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
     .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
 
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
   </style>
 </head>
 <body>
@@ -319,7 +337,7 @@
         <div class="eyebrow"><span class="dot"></span>Marketing</div>
         <h1 class="article-h1">Three Campaigns You Can Run Without Hiring a Marketer</h1>
         <p class="dek">A repeatable playbook for founder-led content, partner co-marketing, and network email sequences that generate real pipeline on no budget.</p>
-        <div class="meta-row"><span>6 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated July 19, 2026</span></div>
+        <div class="meta-row"><span>3 min read</span><span>Free · email required</span><span>Published July 17, 2026 · Updated October 11, 2026</span></div>
         <div class="tag-row"><span class="tag">Weak pipeline</span><span class="tag">Founder-led sales bottleneck</span><span class="tag tag-muted">Pre-revenue / first customers</span><span class="tag tag-muted">Early traction</span></div>
         
       </div>
@@ -354,7 +372,8 @@
           </ul>
         </div>
         
-        <div class="download-card" id="download">
+        <div class="download-card has-inside" id="download">
+          <div class="dl-top">
           <div>
             <div class="label">Template · Free with email</div>
             <h3>Campaign Planning Templates for Founder-Led, Partner, and Network Email Marketing</h3>
@@ -374,6 +393,20 @@
             <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
             <p class="gate-note" data-state="idle">We only use your email for this request unless you opt in. <a href="../privacy.html">Privacy notice</a></p>
           </form>
+          </div>
+          <div class="dl-inside">
+            <img class="dl-thumb" src="../assets/previews/05.webp" alt="First page of the Campaign Planning Templates for Founder-Led, Partner, and Network Email Marketing PDF" width="560" height="449" loading="lazy" />
+            <div class="dl-details">
+              <div class="dl-label">What's inside</div>
+              <ol class="dl-sections"><li>Campaign 1 (founder-led content): brief</li><li>Campaign 1 (founder-led content): assets needed</li><li>Campaign 1 (founder-led content): steps and success metrics</li><li>Campaign 2 (partner co-marketing): brief</li><li>Campaign 2 (partner co-marketing): assets needed &amp; steps</li><li>Campaign 2 (partner co-marketing): success metrics</li><li class="dl-more">and 3 more sections</li></ol>
+              <dl class="dl-facts">
+                <div><dt>Format</dt><dd>PDF, 4 pages, printable and editable by hand</dd></div>
+                <div><dt>Best for</dt><dd>Founders and generalists running demand generation without a marketer</dd></div>
+                <div><dt>What to bring</dt><dd>Product and buyer details, real founder stories, potential partners, and your existing contact network</dd></div>
+                <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
+              </dl>
+            </div>
+          </div>
         </div>
         <div class="card path-card diagnose-card">
           <span class="kicker">Want it applied to your business?</span>
@@ -429,7 +462,7 @@
   "headline": "Three Campaigns You Can Run Without Hiring a Marketer",
   "description": "A repeatable playbook for founder-led content, partner co-marketing, and network email sequences that generate real pipeline on no budget.",
   "datePublished": "2026-07-17",
-  "dateModified": "2026-07-19",
+  "dateModified": "2026-10-11",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

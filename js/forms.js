@@ -1,15 +1,15 @@
 /**
- * Rev-IQ site forms — one shared Formspree endpoint powers every form on the site:
+ * Rev-IQ site forms: one shared Formspree endpoint powers every form on the site:
  * the homepage Contact form and every gated PDF download form on the article pages.
  *
  * SETUP (one-time, ~5 minutes):
  *   1. Go to https://formspree.io and sign up free using joel.smith@rev-iq.ai
  *   2. Create one new form (call it "Rev-IQ site forms")
- *   3. Formspree emails you a confirmation link the first time — click it to activate
+ *   3. Formspree emails you a confirmation link the first time; click it to activate
  *   4. Copy your form's endpoint ID from the Formspree dashboard
  *   5. Paste it below, replacing YOUR_FORM_ID
  *
- * Every submission — contact messages and PDF download requests — will land in the
+ * Every submission (contact messages and PDF download requests) will land in the
  * joel.smith@rev-iq.ai inbox. Each one arrives with a distinct subject line
  * ("New Contact Message" vs "Download Request: <asset name>") and a "form_type" /
  * "asset" field in the message body, so they're easy to tell apart at a glance.

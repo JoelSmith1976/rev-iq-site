@@ -12,8 +12,8 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why Access Control Is the Cheapest Risk You're Not Managing — Rev-IQ</title>
-  <meta name="description" content="Unmanaged permissions and slow offboarding are the most common security failure in small technology companies — and the easiest to fix." />
+  <title>Why Access Control Is the Cheapest Risk You're Not Managing | Rev-IQ</title>
+  <meta name="description" content="Unmanaged permissions and slow offboarding are the most common security failure in small technology companies, and the easiest to fix." />
   <link rel="canonical" href="https://rev-iq.ai/articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing.html" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
@@ -224,7 +224,7 @@
     .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
     .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
     .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
-    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
     .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
     .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
     .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
@@ -318,7 +318,7 @@
         <div class="breadcrumb"><a href="../resources.html">Resource Library</a>&nbsp;/&nbsp;Compliance &amp; Security</div>
         <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
         <h1 class="article-h1">Why Access Control Is the Cheapest Risk You're Not Managing</h1>
-        <p class="dek">Unmanaged permissions and slow offboarding are the most common security failure in small technology companies — and the easiest to fix.</p>
+        <p class="dek">Unmanaged permissions and slow offboarding are the most common security failure in small technology companies, and the easiest to fix.</p>
         <div class="meta-row"><span>6 min read</span><span>Free · email required</span><span>Published July 18, 2026 · Updated July 19, 2026</span></div>
         <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
         
@@ -328,21 +328,21 @@
       <div class="container-narrow">
         <h2>Access Sprawl Happens Quietly, One Invite at a Time</h2>
 <p>No one designs a bad access model on purpose. It happens through a hundred small, reasonable-seeming decisions: a contractor gets admin access because it was faster than scoping permissions properly, a former employee's login still works because nobody remembered to remove it, a departed co-founder still technically has access to the production database. Each individual decision made sense in the moment. Collectively, they produce a system where nobody can say with confidence who can do what.</p>
-<p>This matters more than most operational gaps because access failures are rarely caught by normal business activity. A messy sales process shows up in the pipeline numbers. A messy access model shows up only when something goes wrong — a departed employee does something they shouldn't, a compromised account causes damage, or a customer's security review asks a direct question the team can't answer confidently.</p>
+<p>This matters more than most operational gaps because access failures are rarely caught by normal business activity. A messy sales process shows up in the pipeline numbers. A messy access model shows up only when something goes wrong: a departed employee does something they shouldn't, a compromised account causes damage, or a customer's security review asks a direct question the team can't answer confidently.</p>
 <h2>Role-Based Access Is Simpler Than It Sounds</h2>
-<p>The instinct to avoid formal access control is usually that it sounds like enterprise bureaucracy — too heavy for a 15-person team. In practice, role-based access at small scale is just a decision about which handful of roles exist (engineer, support, sales, finance, admin) and what each role can see and touch, applied consistently instead of ad hoc. It doesn't require special software; most tools already support role-based permissions, they're just rarely configured deliberately.</p>
-<p>The principle worth adopting early is least privilege: give people access to what their role requires to do the job, not broad access because it's convenient to set up once. This isn't about distrust — it's about limiting the blast radius when an account is compromised, a mistake is made, or someone leaves under bad terms. A smaller blast radius is cheaper every single time something goes wrong, and something eventually does.</p>
+<p>The instinct to avoid formal access control is usually that it sounds like enterprise bureaucracy, too heavy for a 15-person team. In practice, role-based access at small scale is just a decision about which handful of roles exist (engineer, support, sales, finance, admin) and what each role can see and touch, applied consistently instead of ad hoc. It doesn't require special software; most tools already support role-based permissions, they're just rarely configured deliberately.</p>
+<p>The principle worth adopting early is least privilege: give people access to what their role requires to do the job, not broad access because it's convenient to set up once. This isn't about distrust. It's about limiting the blast radius when an account is compromised, a mistake is made, or someone leaves under bad terms. A smaller blast radius is cheaper every single time something goes wrong, and something eventually does.</p>
 <h2>Offboarding Is Where Access Control Actually Gets Tested</h2>
-<p>Granting access thoughtfully matters, but removing it promptly is where most companies actually fail. Offboarding is emotionally and operationally easy to deprioritise — someone's leaving, there's a notice period, everyone's focused on the transition, and access removal quietly slips to 'sometime this week.' That gap, even if it's only a few days, is exactly when risk is highest: a departing employee has the most reason to be frustrated and the least reason to feel careful.</p>
-<p>A reliable offboarding process treats access removal as a same-day, non-negotiable step tied to the employee's last day, not a follow-up task. It should cover every system that matters — email, code repositories, cloud infrastructure, customer data platforms, financial systems, and any shared credentials — not just the obvious one or two. The goal is a checklist simple enough that whoever runs offboarding, even for the first time, can't miss a system.</p>
+<p>Granting access thoughtfully matters, but removing it promptly is where most companies actually fail. Offboarding is emotionally and operationally easy to deprioritise: someone's leaving, there's a notice period, everyone's focused on the transition, and access removal quietly slips to 'sometime this week.' That gap, even if it's only a few days, is exactly when risk is highest: a departing employee has the most reason to be frustrated and the least reason to feel careful.</p>
+<p>A reliable offboarding process treats access removal as a same-day, non-negotiable step tied to the employee's last day, not a follow-up task. It should cover every system that matters (email, code repositories, cloud infrastructure, customer data platforms, financial systems, and any shared credentials), not just the obvious one or two. The goal is a checklist simple enough that whoever runs offboarding, even for the first time, can't miss a system.</p>
 <h2>Turning This Into a Living Policy, Not a One-Time Cleanup</h2>
-<p>A one-time access audit feels productive but decays within a quarter unless it's backed by an actual policy that governs how access is granted, reviewed, and removed going forward. The policy doesn't need to be long. It needs to say, plainly, who approves new access, how often access is reviewed, and what happens on someone's last day — and then actually be followed.</p>
+<p>A one-time access audit feels productive but decays within a quarter unless it's backed by an actual policy that governs how access is granted, reviewed, and removed going forward. The policy doesn't need to be long. It needs to say, plainly, who approves new access, how often access is reviewed, and what happens on someone's last day, and then actually be followed.</p>
 <p>Use the Access Control and Offboarding Policy Template to define roles and permissions, document your current access map, and put a same-day offboarding checklist in place. Most teams that go through this exercise are surprised by how much access exists that nobody remembers granting.</p>
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Access sprawl accumulates through small, individually reasonable decisions — not deliberate design — and it's invisible until something goes wrong.</li>
+            <li>Access sprawl accumulates through small, individually reasonable decisions, not deliberate design, and it's invisible until something goes wrong.</li>
 <li>Role-based access at small-company scale just means deciding which roles exist and what each can touch, applied consistently, not a heavyweight enterprise system.</li>
 <li>The principle of least privilege limits the blast radius when an account is compromised or someone leaves on bad terms.</li>
 <li>Offboarding is where access control actually gets tested, and it should be a same-day, non-negotiable step covering every system, not a follow-up task.</li>
@@ -358,7 +358,7 @@
             <p>For founders and operations leaders who need a clear, adoptable policy for granting, reviewing, and removing system access.</p>
           </div>
           <form class="gate-form" data-rev-iq-form data-pdf="../assets/26-access-control-and-offboarding-policy-template.pdf">
-            <input type="hidden" name="_subject" value="Download Request: Access Control and Offboarding Policy Template — rev-iq.ai" />
+            <input type="hidden" name="_subject" value="Download Request: Access Control and Offboarding Policy Template | rev-iq.ai" />
             <input type="hidden" name="asset" value="Access Control and Offboarding Policy Template" />
             <input type="hidden" name="form_type" value="Download request" />
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />

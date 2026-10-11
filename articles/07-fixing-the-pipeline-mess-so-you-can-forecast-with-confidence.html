@@ -12,7 +12,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fixing the Pipeline Mess So You Can Forecast With Confidence — Rev-IQ</title>
+  <title>Fixing the Pipeline Mess So You Can Forecast With Confidence | Rev-IQ</title>
   <meta name="description" content="A pipeline you cannot trust is not a forecasting problem, it is a data hygiene problem, and it is fixable with three habits: clean stages, tracked reasons, and aging rules." />
   <link rel="canonical" href="https://rev-iq.ai/articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
@@ -224,7 +224,7 @@
     .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); }
     .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
     .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
-    .takeaways li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary); }
+    .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
     .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
     .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 0.4rem; }
     .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
@@ -325,16 +325,16 @@
       <div class="container-narrow">
         <h2>The pipeline that looks fine and forecasts terribly</h2>
 <p>Most early-stage pipelines have the same quiet problem: every deal is technically "in progress," the total pipeline value looks healthy, and yet nobody can say with any confidence what will actually close this quarter. The pipeline is not empty. It is full of deals that have not moved in weeks, stages that mean different things depending on who entered the data, and no record of why past deals were won or lost.</p>
-<p>This is not a forecasting skill problem. It is a structure problem. A pipeline can only produce a trustworthy forecast if the underlying data — stage, movement, and outcome — is defined consistently and updated honestly. Fix the structure first; the forecast accuracy follows automatically.</p>
+<p>This is not a forecasting skill problem. It is a structure problem. A pipeline can only produce a trustworthy forecast if the underlying data (stage, movement, and outcome) is defined consistently and updated honestly. Fix the structure first; the forecast accuracy follows automatically.</p>
 <h2>Stage definitions are a contract, not a label</h2>
 <p>A stage name is only useful if everyone who touches the pipeline agrees on exactly what it means for a deal to be there. Without a written definition, one person's "Proposal Sent" is another person's "we mentioned pricing once," and the two are treated as equivalent in every pipeline report even though they represent wildly different odds of closing.</p>
 <p>The fix is a one-sentence, binary entry test per stage: a fact that is either true or not true, never a judgment call. "Buyer has confirmed budget exists" is testable. "Buyer seems interested" is not. Every stage in the pipeline should be defined by the former, never the latter.</p>
 <h2>Win/loss reasons turn closed deals into future intelligence</h2>
-<p>Most pipelines record whether a deal closed, and completely fail to record why. That single missing field is the difference between a pipeline that just reports history and one that actively improves how you sell. Every closed-won and closed-lost deal should be tagged with a reason from a short, fixed list — not a free-text field that nobody fills in consistently.</p>
+<p>Most pipelines record whether a deal closed, and completely fail to record why. That single missing field is the difference between a pipeline that just reports history and one that actively improves how you sell. Every closed-won and closed-lost deal should be tagged with a reason from a short, fixed list, not a free-text field that nobody fills in consistently.</p>
 <p>Over even a modest number of deals, reason tracking reveals patterns no individual call can show you: a competitor that keeps appearing at the same stage, a pricing objection that clusters around one segment, a qualification criterion that predicts losses reliably enough to screen for earlier. None of that is visible without the habit of tagging the reason at the moment the deal closes, while the reason is still remembered accurately.</p>
 <h2>Deal aging: the silent killer of forecast accuracy</h2>
 <p>A deal that has sat in the same stage for far longer than deals at that stage normally take is not "still in progress." It is stalled, and treating it as active pipeline is what makes forecasts overstate what will actually close. Aging rules make this visible instead of invisible.</p>
-<p>Set a maximum expected number of days per stage based on your own deal history, and flag any deal that exceeds it. A flagged deal is not automatically dead — but it must be actively reviewed: contacted, reclassified, or disqualified with a reason. Pipelines that skip this step accumulate dead weight for months, and every forecast built on top of that pipeline inherits the same inflated optimism.</p>
+<p>Set a maximum expected number of days per stage based on your own deal history, and flag any deal that exceeds it. A flagged deal is not automatically dead, but it must be actively reviewed: contacted, reclassified, or disqualified with a reason. Pipelines that skip this step accumulate dead weight for months, and every forecast built on top of that pipeline inherits the same inflated optimism.</p>
 <h2>Hygiene is a weekly habit, not a quarterly cleanup</h2>
 <p>None of this works as an occasional deep-clean exercise. Stage definitions, win/loss tagging, and aging reviews need to happen as a standing weekly habit, ideally the same day and same order every week, so drift never has more than seven days to accumulate.</p>
 <p>Use the CRM Pipeline Configuration Checklist to set up the required fields, stage rules, and reminders once, so that keeping the pipeline clean becomes a five-minute weekly pass rather than a periodic scramble before a board meeting or investor update.</p>
@@ -343,7 +343,7 @@
           <strong>Key takeaways</strong>
           <ul>
             <li>A messy forecast is almost always a symptom of undefined pipeline structure, not a forecasting skills gap.</li>
-<li>Every stage needs a one-sentence, binary entry test — not a subjective label.</li>
+<li>Every stage needs a one-sentence, binary entry test, not a subjective label.</li>
 <li>Tag win/loss reasons from a fixed list on every closed deal to turn history into pattern recognition.</li>
 <li>Set expected time-in-stage limits and review any deal that overstays them.</li>
 <li>Pipeline hygiene is a weekly five-minute habit, not a quarterly cleanup project.</li>

@@ -241,7 +241,7 @@
 
   
     .res-meta { margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); font-size: var(--text-xs); line-height: 1.5; }
-    .res-meta div { display: grid; grid-template-columns: 92px 1fr; gap: var(--space-2); }
+    .res-meta div { display: grid; grid-template-columns: 1fr; gap: 0.1rem; }
     .res-meta dt { color: var(--color-text-faint); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.68rem; padding-top: 0.1rem; }
     .res-meta dd { margin: 0; color: var(--color-text-muted); }
     .res-card p { flex-grow: 0; }
@@ -249,20 +249,23 @@
     .res-models { display: flex; flex-wrap: wrap; gap: 0.3rem; }
     .res-models span { font-size: 0.68rem; padding: 0.1rem 0.45rem; border-radius: 999px; background: var(--color-primary-soft); color: var(--color-primary-hover); font-weight: 600; }
     .res-card-foot .foot-right { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: flex-end; }
+    .res-card-foot .gate-badge { white-space: nowrap; }
     .res-updated { font-size: 0.68rem; color: var(--color-text-faint); margin-top: var(--space-2); }
     .journeys { margin-bottom: var(--space-12); scroll-margin-top: 96px; }
     .journeys-head { display: flex; justify-content: space-between; align-items: end; gap: var(--space-6); flex-wrap: wrap; margin-bottom: var(--space-6); }
     .journeys-head h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin: 0 0 var(--space-2); }
     .journeys-head p { margin: 0; color: var(--color-text-muted); max-width: 62ch; }
-    .journey-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-5); }
-    .journey { display: flex; flex-direction: column; padding: var(--space-6); }
+    .journey-grid { display: grid; gap: var(--space-4); }
+    .journey { display: grid; grid-template-columns: minmax(220px, 300px) 1fr; gap: var(--space-6); align-items: start; padding: var(--space-6); }
     .journey h3 { font-size: 1.15rem; margin: 0.2rem 0 var(--space-2); }
     .journey .journey-outcome { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0 0 var(--space-4); }
-    .journey ol { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: var(--space-2); }
+    .journey ol { margin: 0; padding: 0; list-style: none; counter-reset: step; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--space-3); }
+    .journey .journey-outcome { margin-bottom: 0; }
+    @media (max-width: 760px) { .journey { grid-template-columns: 1fr; gap: var(--space-4); } }
     .journey li { counter-increment: step; display: grid; grid-template-columns: 1.6rem 1fr; gap: var(--space-2); font-size: var(--text-sm); line-height: 1.4; }
     .journey li::before { content: counter(step); width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; font-size: 0.72rem; display: inline-flex; align-items: center; justify-content: center; }
-    .journey li a { color: var(--color-text); text-decoration: none; border-bottom: 1px solid var(--color-primary-soft-2); }
-    .journey li a:hover { color: var(--color-primary); border-bottom-color: var(--color-primary); }
+    .journey li a { color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-primary-soft-2); text-underline-offset: 3px; }
+    .journey li a:hover { color: var(--color-primary); text-decoration-color: var(--color-primary); }
   </style>
 </head>
 <body>
@@ -344,33 +347,33 @@
           </div>
           <div class="journey-grid">
           <article class="card journey">
-            <span class="kicker">Path 1 · 4 resources</span>
+            <div><span class="kicker">Path 1 · 4 resources</span>
             <h3>Revenue engine</h3>
-            <p class="journey-outcome">A clear market story, one chosen go-to-market motion, a repeatable sales process and a pipeline you can forecast from.</p>
+            <p class="journey-outcome">A clear market story, one chosen go-to-market motion, a repeatable sales process and a pipeline you can forecast from.</p></div>
             <ol><li><a href="articles/04-your-product-works-your-story-doesn-t-exist-yet.html">Your Product Works. Your Story Doesn&#x27;t Exist Yet.</a></li><li><a href="articles/02-founder-led-sales-led-or-product-led-pick-one.html">Founder-Led, Sales-Led, or Product-Led: Pick One</a></li><li><a href="articles/06-the-minimum-viable-sales-playbook-for-saas-founders.html">The Minimum Viable Sales Playbook for Technology Founders</a></li><li><a href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence.html">Fixing the Pipeline Mess So You Can Forecast With Confidence</a></li></ol>
           </article>
           <article class="card journey">
-            <span class="kicker">Path 2 · 4 resources</span>
+            <div><span class="kicker">Path 2 · 4 resources</span>
             <h3>Retention and expansion</h3>
-            <p class="journey-outcome">A scoped onboarding, a repeatable implementation plan, an account health model and account plans that surface expansion early.</p>
+            <p class="journey-outcome">A scoped onboarding, a repeatable implementation plan, an account health model and account plans that surface expansion early.</p></div>
             <ol><li><a href="articles/10-define-onboarding-like-a-product-not-a-favor.html">Define Onboarding Like a Product, Not a Favour</a></li><li><a href="articles/09-how-to-onboard-customers-without-reinventing-it-every-time.html">How to Onboard Customers Without Reinventing It Every Time</a></li><li><a href="articles/11-customer-success-at-0-20-customers-before-you-hire-a-csm.html">Customer Success at 0-20 Customers, Before You Hire a CSM</a></li><li><a href="articles/08-when-your-customer-list-needs-account-management-not-vibes.html">When Your Customer List Needs Account Management, Not Vibes</a></li></ol>
           </article>
           <article class="card journey">
-            <span class="kicker">Path 3 · 4 resources</span>
+            <div><span class="kicker">Path 3 · 4 resources</span>
             <h3>Operating discipline</h3>
-            <p class="journey-outcome">A review cadence the team actually runs, one decider per recurring decision, reporting built around decisions and an early warning on strategic drift.</p>
+            <p class="journey-outcome">A review cadence the team actually runs, one decider per recurring decision, reporting built around decisions and an early warning on strategic drift.</p></div>
             <ol><li><a href="articles/03-designing-a-simple-operating-rhythm-for-your-saas.html">Designing a Simple Operating Rhythm for a Growing Business</a></li><li><a href="articles/39-who-actually-decides-fixing-decision-rights-before-they-cost-you.html">Who Actually Decides? Fixing Decision Rights Before They Cost You</a></li><li><a href="articles/40-management-reporting-the-line-between-noise-and-signal.html">Management Reporting: The Line Between Noise and Signal</a></li><li><a href="articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive.html">The Executive Alignment Review: Catching Drift Before It&#x27;s Expensive</a></li></ol>
           </article>
           <article class="card journey">
-            <span class="kicker">Path 4 · 5 resources</span>
+            <div><span class="kicker">Path 4 · 5 resources</span>
             <h3>AI adoption</h3>
-            <p class="journey-outcome">A readiness baseline, a ranked shortlist of AI ideas, role-based enablement, documented workflows and governance policies in place.</p>
+            <p class="journey-outcome">A readiness baseline, a ranked shortlist of AI ideas, role-based enablement, documented workflows and governance policies in place.</p></div>
             <ol><li><a href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it.html">Is Your Company Actually Ready for AI, or Just Using It?</a></li><li><a href="articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are.html">Most AI Ideas Are Not Worth Doing Yet: How to Tell Which Ones Are</a></li><li><a href="articles/32-why-most-ai-rollouts-skip-the-workforce-and-fail-because-of-it.html">Why Most AI Rollouts Skip the Workforce and Fail Because of It</a></li><li><a href="articles/34-embedding-ai-into-how-the-business-runs-without-creating-chaos.html">Embedding AI Into How the Business Runs, Without Creating Chaos</a></li><li><a href="articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now.html">The AI Governance Gap Almost Every Technology Company Has Right Now</a></li></ol>
           </article>
           <article class="card journey">
-            <span class="kicker">Path 5 · 5 resources</span>
+            <div><span class="kicker">Path 5 · 5 resources</span>
             <h3>Partners</h3>
-            <p class="journey-outcome">One primary partnership motion, qualified partners, a 90-day onboarding plan, a working referral motion and a tiered review rhythm.</p>
+            <p class="journey-outcome">One primary partnership motion, qualified partners, a 90-day onboarding plan, a working referral motion and a tiered review rhythm.</p></div>
             <ol><li><a href="articles/42-partnership-strategy-for-software-businesses-choosing-where-to-focus.html">Partnership Strategy for Technology Businesses: Choosing Where to Focus</a></li><li><a href="articles/43-how-to-tell-a-good-partner-from-a-time-sink.html">How to Tell a Good Partner From a Time Sink</a></li><li><a href="articles/44-why-most-partners-go-quiet-after-signing-and-how-to-prevent-it.html">Why Most Partners Go Quiet After Signing, and How to Prevent It</a></li><li><a href="articles/45-designing-a-referral-motion-simple-enough-that-partners-actually-use-it.html">Designing a Referral Motion Simple Enough That Partners Actually Use It</a></li><li><a href="articles/46-managing-partners-after-the-honeymoon-a-review-cadence-that-actually-works.html">Managing Partners After the Honeymoon: A Review Cadence That Actually Works</a></li></ol>
           </article>
           </div>
@@ -399,7 +402,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and early SaaS teams without a GTM structure</dd></div><div><dt>You'll leave with</dt><dd>Identify which of the five growth levers is the real revenue constraint and set one quarterly priority</dd></div><div><dt>Bring</dt><dd>Current honest figures for acquisition, conversion, pricing, retention and expansion</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -412,7 +415,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders choosing their first go-to-market motion</dd></div><div><dt>You'll leave with</dt><dd>Select one recommended starting GTM motion and set a review date to commit to it</dd></div><div><dt>Bring</dt><dd>Your average deal size (ACV), buyer type and approval process, and honest founder fit</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -425,7 +428,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams setting up their first recurring business reviews</dd></div><div><dt>You'll leave with</dt><dd>Set owners, timing and agendas for weekly, monthly and quarterly reviews that fit your team</dd></div><div><dt>Bring</dt><dd>Current meetings, key metrics, and who owns pipeline, product and customers</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -438,7 +441,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div><div><dt>You'll leave with</dt><dd>Complete a one-page canvas that defines buyer, problem, urgency, promise, proof and pricing in one positioning statement</dd></div><div><dt>Bring</dt><dd>Your product&#x27;s workflow, any beta or internal results, and your current pricing thinking</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -451,7 +454,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and generalists running demand generation without a marketer</dd></div><div><dt>You'll leave with</dt><dd>Scope founder-led content, partner co-marketing and network email campaigns, each with assets, steps and success metrics</dd></div><div><dt>Bring</dt><dd>Product and buyer details, real founder stories, potential partners, and your existing contact network</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 4 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 4 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -464,7 +467,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running their own first sales conversations</dd></div><div><dt>You'll leave with</dt><dd>Define pipeline stages, qualification criteria and a discovery script the whole team can reuse</dd></div><div><dt>Bring</dt><dd>Recent deals, common buyer questions and your current qualification approach</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -477,7 +480,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage founders and sales leads with an untrustworthy pipeline</dd></div><div><dt>You'll leave with</dt><dd>Configure your CRM with clear stages, win/loss reasons and aging rules, then keep it clean weekly</dd></div><div><dt>Bring</dt><dd>Current pipeline stages, past deal history, typical days per stage, and CRM admin access</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -490,7 +493,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and team leads managing 20 to 50 customer accounts</dd></div><div><dt>You'll leave with</dt><dd>Draft a one-page account plan covering goals, stakeholders, risk, expansion and a 90-day plan</dd></div><div><dt>Bring</dt><dd>Account revenue, key contacts, customer goals, known risks, and your review schedule</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -503,7 +506,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Small teams running customer onboarding as one-off projects</dd></div><div><dt>You'll leave with</dt><dd>Set up a repeatable seven-phase implementation plan with owners, dates and a checklist per customer</dd></div><div><dt>Bring</dt><dd>Customer scope, key contacts and roles, target dates, and data to migrate</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -516,7 +519,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage vendors onboarding their first mid-size customers</dd></div><div><dt>You'll leave with</dt><dd>Draft a one-page onboarding scope that sets deliverables, timelines, responsibilities and success criteria before kickoff</dd></div><div><dt>Bring</dt><dd>Included deliverables, integrations supported, timeline, both sides&#x27; responsibilities, and agreed success criteria</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -529,7 +532,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders running customer success without a dedicated CSM</dd></div><div><dt>You'll leave with</dt><dd>Score every account&#x27;s health, set a touchpoint cadence, and define standard responses for each tier</dd></div><div><dt>Bring</dt><dd>Your customer list with usage data, support tickets, feedback and champion contacts</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -542,7 +545,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Small support teams setting response times and documentation</dd></div><div><dt>You'll leave with</dt><dd>Set severity tiers and achievable SLA targets, and write consistent knowledge base articles from a template</dd></div><div><dt>Bring</dt><dd>Current ticket types, support headcount, typical response times, and any existing customer commitments</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -555,7 +558,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>SaaS founders and operators without a finance team</dd></div><div><dt>You'll leave with</dt><dd>Build a one-page monthly view of six core SaaS metrics and flag what needs attention</dd></div><div><dt>Bring</dt><dd>Current MRR, churn and expansion figures, sales and marketing spend, gross margin, cash balance, monthly burn</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -568,7 +571,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage SaaS teams setting or tightening pricing</dd></div><div><dt>You'll leave with</dt><dd>Document pricing assumptions, tiers and discount rules, then log every pricing change so decisions stay deliberate</dd></div><div><dt>Bring</dt><dd>Current list prices, tiers, typical discounts given, and any pricing changes already made</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -581,7 +584,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Small technology teams replacing memory with owned systems</dd></div><div><dt>You'll leave with</dt><dd>Map each internal function to one tool and owner, then confirm documentation and security habits are in place</dd></div><div><dt>Bring</dt><dd>Current tools for CRM, support, documentation, analytics and security, plus who maintains each</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -594,7 +597,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Product leads at small software teams managing feature requests</dd></div><div><dt>You'll leave with</dt><dd>Score your feature backlog on impact, effort and strategic fit to produce a ranked, defensible roadmap</dd></div><div><dt>Bring</dt><dd>Your open feature requests, your next two quarters&#x27; product priorities, and rough engineering effort estimates</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge is-free"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 4.9-.6"/></svg>Free download</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -607,7 +610,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Sales, CS and product leads at small tech teams</dd></div><div><dt>You'll leave with</dt><dd>Set up one feedback intake, tagging and review routine that turns sales and CS input into product decisions</dd></div><div><dt>Bring</dt><dd>Current feedback channels, your team roles, and common customer objections or requests</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -620,7 +623,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and leaders mapping accountability before the next hiring round</dd></div><div><dt>You'll leave with</dt><dd>Map outcomes to owners and reporting lines, and identify structural gaps to fix before adding headcount</dd></div><div><dt>Bring</dt><dd>Current team list, reporting lines, key business outcomes, and hiring plans for the next two quarters</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -633,7 +636,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Hiring managers and leaders defining roles in growing tech teams</dd></div><div><dt>You'll leave with</dt><dd>Define a role by its outcomes and checkable success measures before hiring or running a performance review</dd></div><div><dt>Bring</dt><dd>The role&#x27;s expected outcomes, current responsibilities, and how success would be evidenced</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -646,7 +649,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and hiring managers at small tech teams without HR</dd></div><div><dt>You'll leave with</dt><dd>Run every hire through one structured process with defined signals, round purposes, independent scoring and fast follow-up</dd></div><div><dt>Bring</dt><dd>Role scorecard, 3-4 hiring signals, interviewer list, and target time between stages</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -659,7 +662,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Managers onboarding a new hire into a technology team</dd></div><div><dt>You'll leave with</dt><dd>Build a role-specific 30/60/90 day plan tied to accountability, and share it with the new hire</dd></div><div><dt>Bring</dt><dd>The role scorecard, expected day 90 outcomes, and examples of small real tasks</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -672,7 +675,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>First-time managers and team leads in growing technology companies</dd></div><div><dt>You'll leave with</dt><dd>Map a team&#x27;s recurring meetings, give each one purpose, and cut those that don&#x27;t earn their place</dd></div><div><dt>Bring</dt><dd>Your current recurring meetings, their frequency, attendees, and what each is meant to achieve</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -685,7 +688,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Managers and founders running performance conversations in small technology teams</dd></div><div><dt>You'll leave with</dt><dd>Run consistent quarterly check-ins, address underperformance fairly, and recognise strong performance without heavy HR process</dd></div><div><dt>Bring</dt><dd>Each report&#x27;s role scorecard, recent 1:1 notes, and agreed outcomes for the period</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -698,7 +701,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operators of small technology companies</dd></div><div><dt>You'll leave with</dt><dd>Identify which baseline security controls are in place and list the gaps to fix first</dd></div><div><dt>Bring</dt><dd>Current access lists, device details, existing security documents, and customer-facing security information</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -711,7 +714,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Revenue and operations leaders facing customer security reviews</dd></div><div><dt>You'll leave with</dt><dd>Build a shared, reusable answer library and spot practice gaps that security questionnaires expose</dd></div><div><dt>Bring</dt><dd>Current security practices, vendor and subprocessor list, backup and incident response details, certifications held</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -724,7 +727,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology companies</dd></div><div><dt>You'll leave with</dt><dd>Define roles, map current access, and put a same-day offboarding checklist in place</dd></div><div><dt>Bring</dt><dd>List of your systems, current users and their access, and team roles</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -737,7 +740,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders setting data handling standards</dd></div><div><dt>You'll leave with</dt><dd>Define data classification tiers, map where sensitive data lives, and set storage, sharing and retirement rules</dd></div><div><dt>Bring</dt><dd>A list of your systems, vendors and the data types each one holds</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -750,7 +753,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and technical leaders reviewing third-party tools</dd></div><div><dt>You'll leave with</dt><dd>Tier your vendors by risk and apply a consistent review before connecting tools to company data</dd></div><div><dt>Bring</dt><dd>A list of current vendors and what data or systems each can access</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -763,7 +766,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and operations leaders at small technology teams</dd></div><div><dt>You'll leave with</dt><dd>Define severity levels, decision-makers and a first-response sequence before an incident happens</dd></div><div><dt>Bring</dt><dd>Names of decision-makers, your systems and data types, and notification obligations</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -776,7 +779,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams sequencing AI effort across their technology business</dd></div><div><dt>You'll leave with</dt><dd>Map current AI maturity across three pillars and set one clear 90-day focus</dd></div><div><dt>Bring</dt><dd>Honest view of current AI use, workflows, governance and any AI product commitments</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -789,7 +792,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams setting a baseline before an AI roadmap</dd></div><div><dt>You'll leave with</dt><dd>Score AI readiness across four dimensions and identify the single constraint to address first this quarter</dd></div><div><dt>Bring</dt><dd>Current evidence of approved AI tools, governance, staff skills and prioritised use cases</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 3 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 3 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -802,7 +805,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and people teams rolling out AI across roles</dd></div><div><dt>You'll leave with</dt><dd>Design a role-specific AI enablement rollout with explicit permissions and a reinforcement schedule that keeps capability current</dd></div><div><dt>Bring</dt><dd>Current AI use by role, any existing AI policy, and team leads&#x27; input</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -815,7 +818,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership and product teams comparing competing AI ideas</dd></div><div><dt>You'll leave with</dt><dd>Score each AI idea on value, feasibility and risk, then decide what to resource this quarter</dd></div><div><dt>Bring</dt><dd>Your current list of AI ideas, plus data, tooling and skills context</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">3 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 3 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -828,7 +831,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Operations and functional leaders embedding AI into real workflows</dd></div><div><dt>You'll leave with</dt><dd>Document each load-bearing AI workflow with an owner, quality standard, review step and failure response plan</dd></div><div><dt>Bring</dt><dd>A list of AI-assisted workflows your team repeatedly relies on, and who currently runs them</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -841,7 +844,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Product and leadership teams deciding where AI belongs</dd></div><div><dt>You'll leave with</dt><dd>Decide whether a proposed AI feature belongs in your product, packaging and pricing, and record a go/no-go call</dd></div><div><dt>Bring</dt><dd>A proposed AI feature, the customer job it targets, and cost estimates</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -854,7 +857,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leaders at small technology companies already using AI</dd></div><div><dt>You'll leave with</dt><dd>Adopt seven short AI policies that set ownership, review and escalation, starting with your biggest exposure</dd></div><div><dt>Bring</dt><dd>Current AI tools and uses, data types involved, and who owns decisions</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">ZIP, 7 policies</span><span class="gate-badge">4 min read</span></span>
+              <span class="gate-badge">ZIP, 7 policies · 4 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -867,7 +870,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams at scaling technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Agree shared numbers, decision rights, meeting cadence and escalation paths so leaders work from one model</dd></div><div><dt>Bring</dt><dd>Current metric definitions, meeting calendar, decision owners, and examples of recent cross-functional disagreements</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -880,7 +883,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs preparing board and advisor meetings in technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Build a repeatable board agenda and pre-read that protects live time for decisions, not reporting</dd></div><div><dt>Bring</dt><dd>Current performance against plan, key risks, pending decisions, and board or advisor expertise</dd></div><div><dt>Suits</dt><dd class="res-models"><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -893,7 +896,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>CEOs and leadership teams in scaling technology businesses</dd></div><div><dt>You'll leave with</dt><dd>Assign one decider per recurring decision and map who recommends and who executes</dd></div><div><dt>Bring</dt><dd>A list of recurring cross-functional decisions that cause friction or get relitigated, plus current leadership structure</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -906,7 +909,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams of scaling tech businesses with bloated reporting packs</dd></div><div><dt>You'll leave with</dt><dd>Rebuild your monthly pack around decisions, filtering metrics with an inclusion test and a quarterly review</dd></div><div><dt>Bring</dt><dd>Your current reporting pack, metric owners, and the plan or targets you report against</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -919,7 +922,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams checking priorities still match agreed strategy</dd></div><div><dt>You'll leave with</dt><dd>Run a recurring review of priorities, risks and resourcing against the agreed strategy to catch drift early</dd></div><div><dt>Bring</dt><dd>The agreed strategy, last review&#x27;s flagged risks, current priorities, and each function&#x27;s resourcing</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -932,7 +935,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and commercial leaders choosing which partnership type to pursue</dd></div><div><dt>You'll leave with</dt><dd>Commit to one primary partnership motion for two quarters, with other types ruled out</dd></div><div><dt>Bring</dt><dd>Your main growth constraint, current stage, existing partner conversations, and available partnerships capacity</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -945,7 +948,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and commercial leaders qualifying prospective partners before agreements</dd></div><div><dt>You'll leave with</dt><dd>Score prospective partners on four factors and decide whether to pursue them before drafting any agreement</dd></div><div><dt>Bring</dt><dd>Partner details, their customer base, past vendor introductions, team capacity, and proposed incentives</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -958,7 +961,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders onboarding new partners</dd></div><div><dt>You'll leave with</dt><dd>Run a 90-day onboarding plan by partner type, with milestones and a named internal owner</dd></div><div><dt>Bring</dt><dd>Partner type, signed partner details, named internal owner, and first-deal or first-introduction targets</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -971,7 +974,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Growth and partnerships leaders designing a first partner referral motion</dd></div><div><dt>You'll leave with</dt><dd>Design a low-friction referral motion and run it manually before deciding what tooling to build</dd></div><div><dt>Bring</dt><dd>Target partner types, the referral action you expect, and your proposed reward terms</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>
@@ -984,7 +987,7 @@
             <dl class="res-meta"><div><dt>Best for</dt><dd>Partnerships and channel leaders managing active partners</dd></div><div><dt>You'll leave with</dt><dd>Assign partners to tiers, set review frequency, and run consistent reviews that catch drift early</dd></div><div><dt>Bring</dt><dd>Current partner list with recent activity, deal results, champion contacts and known blockers</dd></div><div><dt>Suits</dt><dd class="res-models"><span>SaaS</span><span>Software</span><span>Technology services</span></dd></div></dl>
             <div class="res-card-foot">
               <span class="gate-badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3.5" y="7" width="9" height="6.5" rx="1.2"/><path d="M5.5 7V4.8a2.5 2.5 0 0 1 5 0V7"/></svg>Email to unlock</span>
-              <span class="foot-right"><span class="gate-badge">PDF, 2 pages</span><span class="gate-badge">5 min read</span></span>
+              <span class="gate-badge">PDF, 2 pages · 5 min read</span>
             </div>
             <div class="res-updated">Updated October 2026</div>
           </article>

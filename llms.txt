@@ -12,7 +12,7 @@ Rev-IQ publishes a free resource library of frameworks and templates covering re
 
 ## Resource index
 
-- [Resource Library](https://rev-iq.ai/resources.html): Full library of 46 frameworks and templates, organized by category.
+- [Resource Library](https://rev-iq.ai/resources.html): Full library of 46 frameworks and templates, organised by category.
 - [Browse by Challenge](https://rev-iq.ai/browse-by-challenge.html): Find the right resource by the specific business problem you're facing.
 - [Who It's For](https://rev-iq.ai/who-its-for.html): How Rev-IQ resources map to different leadership roles and company stages.
 

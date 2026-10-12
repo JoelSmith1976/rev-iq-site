@@ -1,0 +1,258 @@
+{
+ "version": 1,
+ "bundles": {
+  "founder-led-sales-kit": {
+   "name": "Rev-IQ Founder-led Sales Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-gtm-motion-picker",
+      "label": "Rev-IQ GTM Motion Picker",
+      "filename": "rev-iq-gtm-motion-picker.zip",
+      "bytes": 3258,
+      "sha256": "2fc2ec71b2877d951ac109ebf6be18088331b2001b2dce650ee255a80e49f8c4"
+     },
+     {
+      "key": "rev-iq-discovery-call-prep-and-debrief",
+      "label": "Rev-IQ Discovery Call Prep and Debrief",
+      "filename": "rev-iq-discovery-call-prep-and-debrief.zip",
+      "bytes": 3426,
+      "sha256": "2ad2cf1ef3fcf59f5296eb687bca08c7a1321e03f38f8cd5ecbb3b2bd25a8eda"
+     },
+     {
+      "key": "rev-iq-deal-qualification-scorer",
+      "label": "Rev-IQ Deal Qualification Scorer",
+      "filename": "rev-iq-deal-qualification-scorer.zip",
+      "bytes": 4949,
+      "sha256": "e3f70ecd0e2cf0eed67b263fc507950aa9c6dfcf7b9512bae42dcdebabe3f8e8"
+     },
+     {
+      "key": "rev-iq-follow-up-email-writer",
+      "label": "Rev-IQ Follow-up Email Writer",
+      "filename": "rev-iq-follow-up-email-writer.zip",
+      "bytes": 4117,
+      "sha256": "cf494d2b1f3a5447b78d072205268e36f1fc4ebebcabf06c035c77e7fe5fd6d7"
+     },
+     {
+      "key": "rev-iq-account-plan-builder",
+      "label": "Rev-IQ Account Plan Builder",
+      "filename": "rev-iq-account-plan-builder.zip",
+      "bytes": 5581,
+      "sha256": "4d7b2658f753d0c9d9a380e6037c7a1a02afff4f4e5018aea5950f54efccac7b"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
+      "filename": "Rev-IQ-founder-led-sales-kit-claude.zip",
+      "bytes": 134516,
+      "sha256": "53f413936e3ed49cd8716a34cb4cf7f8990eb8891cb3fb571f18194c1c15e049"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-gtm-motion-picker",
+      "label": "Rev-IQ GTM Motion Picker",
+      "filename": "rev-iq-gtm-motion-picker.zip",
+      "bytes": 3615,
+      "sha256": "3ef6f0e8a00d5a40057442303b28f7d8b7c5ee214a8847643db0824e3d997e27"
+     },
+     {
+      "key": "rev-iq-discovery-call-prep-and-debrief",
+      "label": "Rev-IQ Discovery Call Prep and Debrief",
+      "filename": "rev-iq-discovery-call-prep-and-debrief.zip",
+      "bytes": 3808,
+      "sha256": "b86fcbc849fed0418a3262e889854bdd3ce77b2897f3ec8ba6ab92b95ec4c4d0"
+     },
+     {
+      "key": "rev-iq-deal-qualification-scorer",
+      "label": "Rev-IQ Deal Qualification Scorer",
+      "filename": "rev-iq-deal-qualification-scorer.zip",
+      "bytes": 5321,
+      "sha256": "209936ea9fa8817166bae944d16947c6cf08bb0d3abde548baccafb6889828bf"
+     },
+     {
+      "key": "rev-iq-follow-up-email-writer",
+      "label": "Rev-IQ Follow-up Email Writer",
+      "filename": "rev-iq-follow-up-email-writer.zip",
+      "bytes": 4477,
+      "sha256": "846b9d8fa9185b437f751a4961873678ebd17808502bf7305885d766ac9f899d"
+     },
+     {
+      "key": "rev-iq-account-plan-builder",
+      "label": "Rev-IQ Account Plan Builder",
+      "filename": "rev-iq-account-plan-builder.zip",
+      "bytes": 5946,
+      "sha256": "ddf3fdcfe161e28bf8236f99fc757a23ddb07be0d7c72d17944e3340249562e3"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
+      "filename": "Rev-IQ-founder-led-sales-kit-chatgpt.zip",
+      "bytes": 139815,
+      "sha256": "46de72d94cfaa65b00140afed96d4475b89da22c28eff1dd634aff30ebd78b34"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-gtm-motion-picker",
+      "label": "Rev-IQ GTM Motion Picker",
+      "filename": "rev-iq-gtm-motion-picker.zip",
+      "bytes": 3208,
+      "sha256": "b13a5a1459cd8e80408cff2256dfb211590a08e7c5bf584c249f0e329945a697"
+     },
+     {
+      "key": "rev-iq-discovery-call-prep-and-debrief",
+      "label": "Rev-IQ Discovery Call Prep and Debrief",
+      "filename": "rev-iq-discovery-call-prep-and-debrief.zip",
+      "bytes": 3348,
+      "sha256": "01f55a28c161e19977bfee509acb64321a180d37da441c57cecb808b48a0dbaf"
+     },
+     {
+      "key": "rev-iq-deal-qualification-scorer",
+      "label": "Rev-IQ Deal Qualification Scorer",
+      "filename": "rev-iq-deal-qualification-scorer.zip",
+      "bytes": 4817,
+      "sha256": "b16bef05df4dfbfa14406bf473bda09b262e8b8663ae1cfc16328e0668cd59d9"
+     },
+     {
+      "key": "rev-iq-follow-up-email-writer",
+      "label": "Rev-IQ Follow-up Email Writer",
+      "filename": "rev-iq-follow-up-email-writer.zip",
+      "bytes": 3997,
+      "sha256": "35472bc73872d1e5bc505cc4eb1dbae4d293ae355e5766b49968dd18d4d233e4"
+     },
+     {
+      "key": "rev-iq-account-plan-builder",
+      "label": "Rev-IQ Account Plan Builder",
+      "filename": "rev-iq-account-plan-builder.zip",
+      "bytes": 5469,
+      "sha256": "d389ab99bb497cdb31dfef9c14f741e120d442695da1d0f97818df0b0becce61"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
+      "filename": "Rev-IQ-founder-led-sales-kit-perplexity.zip",
+      "bytes": 128505,
+      "sha256": "9fdc2812982f5fdec311dae067db80fbda2c4133715be2560b54414a8e3c718a"
+     }
+    ]
+   }
+  },
+  "board-and-leadership-pack": {
+   "name": "Rev-IQ Board and Leadership Pack",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-management-report-drafter",
+      "label": "Rev-IQ Management Report Drafter",
+      "filename": "rev-iq-management-report-drafter.zip",
+      "bytes": 5200,
+      "sha256": "57c88f94af259fa9a5d3cad67833d1e9416b641c80a068db7dabaf205917652b"
+     },
+     {
+      "key": "rev-iq-board-agenda-and-pre-read-builder",
+      "label": "Rev-IQ Board Agenda and Pre-read Builder",
+      "filename": "rev-iq-board-agenda-and-pre-read-builder.zip",
+      "bytes": 4047,
+      "sha256": "671a6c12c7e54ec37806437df42313cbc1c07086b453f79be61afccbd2978678"
+     },
+     {
+      "key": "rev-iq-decision-rights-matrix",
+      "label": "Rev-IQ Decision Rights Matrix",
+      "filename": "rev-iq-decision-rights-matrix.zip",
+      "bytes": 2964,
+      "sha256": "b9f5ddd1901678a565b7431d3154c6c371a13a7c524fbfdaf7d5046d6cc1a382"
+     },
+     {
+      "key": "rev-iq-executive-alignment-review",
+      "label": "Rev-IQ Executive Alignment Review",
+      "filename": "rev-iq-executive-alignment-review.zip",
+      "bytes": 3079,
+      "sha256": "5a5543678210bd1f70d5a3f8c111c5eb0d721e9c45704f5c7f04cf790fc5b739"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
+      "filename": "Rev-IQ-board-and-leadership-pack-claude.zip",
+      "bytes": 129322,
+      "sha256": "b5f7a0904c28ac782adfa16f880c483f37758246626ea964ae4cf3e2668b48b4"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-management-report-drafter",
+      "label": "Rev-IQ Management Report Drafter",
+      "filename": "rev-iq-management-report-drafter.zip",
+      "bytes": 5569,
+      "sha256": "1a02a81c245849c4f3640e6c6eeb8cd7e798993db147e420312073d2fd7cc4c0"
+     },
+     {
+      "key": "rev-iq-board-agenda-and-pre-read-builder",
+      "label": "Rev-IQ Board Agenda and Pre-read Builder",
+      "filename": "rev-iq-board-agenda-and-pre-read-builder.zip",
+      "bytes": 4434,
+      "sha256": "0b3dea297693f746a58332fd010d66639325ce56c38703cc67843bf516042123"
+     },
+     {
+      "key": "rev-iq-decision-rights-matrix",
+      "label": "Rev-IQ Decision Rights Matrix",
+      "filename": "rev-iq-decision-rights-matrix.zip",
+      "bytes": 3332,
+      "sha256": "a91b0c89058fb67b37c54dc4500301de9fbc3a226705854aaee0380f1e01c5a8"
+     },
+     {
+      "key": "rev-iq-executive-alignment-review",
+      "label": "Rev-IQ Executive Alignment Review",
+      "filename": "rev-iq-executive-alignment-review.zip",
+      "bytes": 3455,
+      "sha256": "28dd130463c801fc83957eaf6d3be2c1442c555006a9d4aebf7a009305e10ae5"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
+      "filename": "Rev-IQ-board-and-leadership-pack-chatgpt.zip",
+      "bytes": 132779,
+      "sha256": "862a94c4b5b21a1f89f1ec4c81c865fad151f35760b653ea19301eb0e5d2cfdc"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-management-report-drafter",
+      "label": "Rev-IQ Management Report Drafter",
+      "filename": "rev-iq-management-report-drafter.zip",
+      "bytes": 5068,
+      "sha256": "211d30eccbb02f17a0b89087834c096ca6334c0c4943ce6e88ff53ef8e1d1516"
+     },
+     {
+      "key": "rev-iq-board-agenda-and-pre-read-builder",
+      "label": "Rev-IQ Board Agenda and Pre-read Builder",
+      "filename": "rev-iq-board-agenda-and-pre-read-builder.zip",
+      "bytes": 3883,
+      "sha256": "6ebbe3d7f206a8bc2b8276384be25c09076f4825a4da795cd961607025b4cb80"
+     },
+     {
+      "key": "rev-iq-decision-rights-matrix",
+      "label": "Rev-IQ Decision Rights Matrix",
+      "filename": "rev-iq-decision-rights-matrix.zip",
+      "bytes": 2904,
+      "sha256": "2295d184d4385f5ff7da879bc0f8a2ac74cc9f5948c87e3bdd306053455192f4"
+     },
+     {
+      "key": "rev-iq-executive-alignment-review",
+      "label": "Rev-IQ Executive Alignment Review",
+      "filename": "rev-iq-executive-alignment-review.zip",
+      "bytes": 3011,
+      "sha256": "8f8bd5ae74c0fce6d58ce003bdd312d2de2e0c42737bb773d4c277026d8f70df"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
+      "filename": "Rev-IQ-board-and-leadership-pack-perplexity.zip",
+      "bytes": 120758,
+      "sha256": "96fc2e21e52d8e2b5eaf3ce4567e2481f49412304e561b9613059e2e65bb2c2a"
+     }
+    ]
+   }
+  }
+ }
+}

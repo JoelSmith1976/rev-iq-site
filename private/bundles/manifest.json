@@ -44,8 +44,8 @@
       "key": "all",
       "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
       "filename": "Rev-IQ-founder-led-sales-kit-claude.zip",
-      "bytes": 134516,
-      "sha256": "53f413936e3ed49cd8716a34cb4cf7f8990eb8891cb3fb571f18194c1c15e049"
+      "bytes": 134497,
+      "sha256": "cdc7d0de83284bc57c6bf7adc0ae53b0473bb44c68ebce709cb5fbff8ae985ef"
      }
     ],
     "chatgpt": [
@@ -88,8 +88,8 @@
       "key": "all",
       "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
       "filename": "Rev-IQ-founder-led-sales-kit-chatgpt.zip",
-      "bytes": 139815,
-      "sha256": "46de72d94cfaa65b00140afed96d4475b89da22c28eff1dd634aff30ebd78b34"
+      "bytes": 139819,
+      "sha256": "b5f71b182e0a2c61239ddeadaa37c6597617e0e24bc3d76f159e6b359fafd2a5"
      }
     ],
     "perplexity": [
@@ -132,8 +132,8 @@
       "key": "all",
       "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
       "filename": "Rev-IQ-founder-led-sales-kit-perplexity.zip",
-      "bytes": 128505,
-      "sha256": "9fdc2812982f5fdec311dae067db80fbda2c4133715be2560b54414a8e3c718a"
+      "bytes": 128488,
+      "sha256": "294baebc606b33028c54ba94633084facb37081c50104c28954046c27a28df31"
      }
     ]
    }
@@ -174,8 +174,8 @@
       "key": "all",
       "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
       "filename": "Rev-IQ-board-and-leadership-pack-claude.zip",
-      "bytes": 129322,
-      "sha256": "b5f7a0904c28ac782adfa16f880c483f37758246626ea964ae4cf3e2668b48b4"
+      "bytes": 129351,
+      "sha256": "7699ef27ff104ec8e380644d63408f31ab74725ce79afbff60f8da4e313560d7"
      }
     ],
     "chatgpt": [
@@ -211,8 +211,8 @@
       "key": "all",
       "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
       "filename": "Rev-IQ-board-and-leadership-pack-chatgpt.zip",
-      "bytes": 132779,
-      "sha256": "862a94c4b5b21a1f89f1ec4c81c865fad151f35760b653ea19301eb0e5d2cfdc"
+      "bytes": 132792,
+      "sha256": "ecd1fda1076c7c7eb7d4ad03d46ac15791bb371e7ca8e6cea0142db8b2b3f923"
      }
     ],
     "perplexity": [
@@ -248,8 +248,577 @@
       "key": "all",
       "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
       "filename": "Rev-IQ-board-and-leadership-pack-perplexity.zip",
-      "bytes": 120758,
-      "sha256": "96fc2e21e52d8e2b5eaf3ce4567e2481f49412304e561b9613059e2e65bb2c2a"
+      "bytes": 120756,
+      "sha256": "4d665f20f76bab8eebc6c0476c63e10159b7415fafcd496d03b1afb395a86cab"
+     }
+    ]
+   }
+  },
+  "retention-and-customer-success-kit": {
+   "name": "Rev-IQ Retention and Customer Success Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-onboarding-plan-builder",
+      "label": "Rev-IQ Onboarding Plan Builder",
+      "filename": "rev-iq-onboarding-plan-builder.zip",
+      "bytes": 3228,
+      "sha256": "0358f30f4bc041f232644e25886179af7361ec2e2b6cb6a0ee0b01ded346fd9c"
+     },
+     {
+      "key": "rev-iq-customer-health-scorer",
+      "label": "Rev-IQ Customer Health Scorer",
+      "filename": "rev-iq-customer-health-scorer.zip",
+      "bytes": 6032,
+      "sha256": "5b988118bad0605c49590824b36ed4781e84772d93bb3ed938ce5e01e0a0d18d"
+     },
+     {
+      "key": "rev-iq-at-risk-account-save-plan",
+      "label": "Rev-IQ At-risk Account Save Plan",
+      "filename": "rev-iq-at-risk-account-save-plan.zip",
+      "bytes": 2968,
+      "sha256": "91e8138854420f6ef43f0d953172e22b3c1af2e60a3edc14c0ef4a7a9f701975"
+     },
+     {
+      "key": "rev-iq-quarterly-review-call",
+      "label": "Rev-IQ Quarterly Review Call",
+      "filename": "rev-iq-quarterly-review-call.zip",
+      "bytes": 2525,
+      "sha256": "7e92eae21daa0249721726d0b33e6a46475d1c17c5d6c382fd426f138e6db630"
+     },
+     {
+      "key": "rev-iq-support-tiers-and-sla-designer",
+      "label": "Rev-IQ Support Tiers and SLA Designer",
+      "filename": "rev-iq-support-tiers-and-sla-designer.zip",
+      "bytes": 5409,
+      "sha256": "358e3b0612203eb9c87a3e83b767e0223c43e0e7ef520a0192bd593ea3d81600"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Retention and Customer Success Kit: all skills and install guide",
+      "filename": "Rev-IQ-retention-and-customer-success-kit-claude.zip",
+      "bytes": 134352,
+      "sha256": "de78b40ec55441b7a50f769d47854041ceaf8d1e4d3230b40b29f0db463c3822"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-onboarding-plan-builder",
+      "label": "Rev-IQ Onboarding Plan Builder",
+      "filename": "rev-iq-onboarding-plan-builder.zip",
+      "bytes": 3597,
+      "sha256": "58a2c31bb057815b41ca3d2b37dc345db5401066cce3ea5b64c1b1367c63b740"
+     },
+     {
+      "key": "rev-iq-customer-health-scorer",
+      "label": "Rev-IQ Customer Health Scorer",
+      "filename": "rev-iq-customer-health-scorer.zip",
+      "bytes": 6392,
+      "sha256": "877ea433f532976c8cc6fb4bbf8e0f21fb350eaff9da3fd6cd492d7b8b994222"
+     },
+     {
+      "key": "rev-iq-at-risk-account-save-plan",
+      "label": "Rev-IQ At-risk Account Save Plan",
+      "filename": "rev-iq-at-risk-account-save-plan.zip",
+      "bytes": 3334,
+      "sha256": "8d238110a039b6594801ebf4f8f7a3ec9c0c42691e42d8fa22c3d4acac03925c"
+     },
+     {
+      "key": "rev-iq-quarterly-review-call",
+      "label": "Rev-IQ Quarterly Review Call",
+      "filename": "rev-iq-quarterly-review-call.zip",
+      "bytes": 2884,
+      "sha256": "6b3e41e98d9807e0c70b64e9cfc62d77e3209b32860f3ee423750022ece6a2c6"
+     },
+     {
+      "key": "rev-iq-support-tiers-and-sla-designer",
+      "label": "Rev-IQ Support Tiers and SLA Designer",
+      "filename": "rev-iq-support-tiers-and-sla-designer.zip",
+      "bytes": 5784,
+      "sha256": "354648e433dbc00f7bb86b9e3162c750191a5a6fdf59bdbfd4e4a1ce663263ff"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Retention and Customer Success Kit: all skills and install guide",
+      "filename": "Rev-IQ-retention-and-customer-success-kit-chatgpt.zip",
+      "bytes": 139623,
+      "sha256": "ba88d21b057e50d54452f6cbc63f8e1cebeefb8b38e62d15ec17b681d9d230cf"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-onboarding-plan-builder",
+      "label": "Rev-IQ Onboarding Plan Builder",
+      "filename": "rev-iq-onboarding-plan-builder.zip",
+      "bytes": 3166,
+      "sha256": "6ab5a6cbe953c498e5962e1691926e6ccde748e2ee0491360813060a7cb0975f"
+     },
+     {
+      "key": "rev-iq-customer-health-scorer",
+      "label": "Rev-IQ Customer Health Scorer",
+      "filename": "rev-iq-customer-health-scorer.zip",
+      "bytes": 5912,
+      "sha256": "31398c224cbe40570ac06e9a75c696e0ed6787dee64da001bf5c4ff70a35a0d9"
+     },
+     {
+      "key": "rev-iq-at-risk-account-save-plan",
+      "label": "Rev-IQ At-risk Account Save Plan",
+      "filename": "rev-iq-at-risk-account-save-plan.zip",
+      "bytes": 2902,
+      "sha256": "6b96ffc0e0aaea2a14fc965a4a583cffda8d12550cc51dc78f446e173e24d7c8"
+     },
+     {
+      "key": "rev-iq-quarterly-review-call",
+      "label": "Rev-IQ Quarterly Review Call",
+      "filename": "rev-iq-quarterly-review-call.zip",
+      "bytes": 2467,
+      "sha256": "076c00e2671997e3e1d96595b125478d10286823105539856b84ea40bc2b1db9"
+     },
+     {
+      "key": "rev-iq-support-tiers-and-sla-designer",
+      "label": "Rev-IQ Support Tiers and SLA Designer",
+      "filename": "rev-iq-support-tiers-and-sla-designer.zip",
+      "bytes": 5257,
+      "sha256": "4ab94ea53f04a8a5a969a2f795125718ea9e819c23899450ec55c264f362be2e"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Retention and Customer Success Kit: all skills and install guide",
+      "filename": "Rev-IQ-retention-and-customer-success-kit-perplexity.zip",
+      "bytes": 132583,
+      "sha256": "eb3cfebf8733dbd4691116a5836bfe3f894ed478acfb23716f16142fef719d99"
+     }
+    ]
+   }
+  },
+  "ai-strategy-kit": {
+   "name": "Rev-IQ AI Strategy Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-3-pillar-ai-plan-builder",
+      "label": "Rev-IQ 3-Pillar AI Plan Builder",
+      "filename": "rev-iq-3-pillar-ai-plan-builder.zip",
+      "bytes": 2748,
+      "sha256": "4851a43b8a4affc12c1b1bbdcaf302712d6ab8948f2aaef10eea767d9bec8b64"
+     },
+     {
+      "key": "rev-iq-ai-use-case-prioritiser",
+      "label": "Rev-IQ AI Use Case Prioritiser",
+      "filename": "rev-iq-ai-use-case-prioritiser.zip",
+      "bytes": 4746,
+      "sha256": "d55ba42d9c38fd61d9a1f88ffb5792965884d8b86fb54dfd4b2b8bd7c43092b9"
+     },
+     {
+      "key": "rev-iq-ai-workforce-enablement-plan",
+      "label": "Rev-IQ AI Workforce Enablement Plan",
+      "filename": "rev-iq-ai-workforce-enablement-plan.zip",
+      "bytes": 2709,
+      "sha256": "81e57e687286d5e5aef18f4d4c636e268b37b9a4e8c8917d63bc3d5fedca077a"
+     },
+     {
+      "key": "rev-iq-operational-ai-playbook",
+      "label": "Rev-IQ Operational AI Playbook",
+      "filename": "rev-iq-operational-ai-playbook.zip",
+      "bytes": 2452,
+      "sha256": "73abb40cdf2d9d765e9c3e2d9f25cba2da3dbf2dd9851f6f06036966005b445e"
+     },
+     {
+      "key": "rev-iq-ai-governance-policy-drafter",
+      "label": "Rev-IQ AI Governance Policy Drafter",
+      "filename": "rev-iq-ai-governance-policy-drafter.zip",
+      "bytes": 5041,
+      "sha256": "0d55d6d0c2905ecf319a9a14cb104953d277c131c47ab1ba7b26e9df03a6d084"
+     },
+     {
+      "key": "rev-iq-product-ai-decision",
+      "label": "Rev-IQ Product AI Decision",
+      "filename": "rev-iq-product-ai-decision.zip",
+      "bytes": 2710,
+      "sha256": "f318bde5d7cbd3f97d83065322de17fb798bec45f62dc335acc0b02565a09d31"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ AI Strategy Kit: all skills and install guide",
+      "filename": "Rev-IQ-ai-strategy-kit-claude.zip",
+      "bytes": 135216,
+      "sha256": "a9072b76b585fdd03e061a7f8a896383f2ad7aa0ee2c2138ee3e1296a118a23b"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-3-pillar-ai-plan-builder",
+      "label": "Rev-IQ 3-Pillar AI Plan Builder",
+      "filename": "rev-iq-3-pillar-ai-plan-builder.zip",
+      "bytes": 3115,
+      "sha256": "8166876e012399dfa190f188733988497d00220cc386f51754c29087d65be6d2"
+     },
+     {
+      "key": "rev-iq-ai-use-case-prioritiser",
+      "label": "Rev-IQ AI Use Case Prioritiser",
+      "filename": "rev-iq-ai-use-case-prioritiser.zip",
+      "bytes": 5111,
+      "sha256": "1f548e38ad3a8dd7f234b723aba16054da9d510930827e1130df54f3a618fc67"
+     },
+     {
+      "key": "rev-iq-ai-workforce-enablement-plan",
+      "label": "Rev-IQ AI Workforce Enablement Plan",
+      "filename": "rev-iq-ai-workforce-enablement-plan.zip",
+      "bytes": 3088,
+      "sha256": "adcb93065e001edd5ffb63a9425c08479607a57824b504a33bd8ae8632a3eee9"
+     },
+     {
+      "key": "rev-iq-operational-ai-playbook",
+      "label": "Rev-IQ Operational AI Playbook",
+      "filename": "rev-iq-operational-ai-playbook.zip",
+      "bytes": 2821,
+      "sha256": "a7bb69540fae439527edf875e49ef298ecde0a3f5cde3412bb8231353082c9da"
+     },
+     {
+      "key": "rev-iq-ai-governance-policy-drafter",
+      "label": "Rev-IQ AI Governance Policy Drafter",
+      "filename": "rev-iq-ai-governance-policy-drafter.zip",
+      "bytes": 5389,
+      "sha256": "ee9f6ae2670820ea02945e3ea62a3c34e05c6ac3378492bfe4236c3b2c13ace2"
+     },
+     {
+      "key": "rev-iq-product-ai-decision",
+      "label": "Rev-IQ Product AI Decision",
+      "filename": "rev-iq-product-ai-decision.zip",
+      "bytes": 3072,
+      "sha256": "a4f2e65d22c3bf07f5643cd0ac05ee42de2a1df20cf8e6598f8ce15b2907ec6d"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ AI Strategy Kit: all skills and install guide",
+      "filename": "Rev-IQ-ai-strategy-kit-chatgpt.zip",
+      "bytes": 139669,
+      "sha256": "a3ab835cdc3c38e2970f76d62425296da318ba63c322d71c93500bd98f4ea805"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-3-pillar-ai-plan-builder",
+      "label": "Rev-IQ 3-Pillar AI Plan Builder",
+      "filename": "rev-iq-3-pillar-ai-plan-builder.zip",
+      "bytes": 2684,
+      "sha256": "5c2829a4d0d868822aea1751e2be037a85430602e75f4df9bd6b3f5d4d793ce4"
+     },
+     {
+      "key": "rev-iq-ai-use-case-prioritiser",
+      "label": "Rev-IQ AI Use Case Prioritiser",
+      "filename": "rev-iq-ai-use-case-prioritiser.zip",
+      "bytes": 4622,
+      "sha256": "8c1d47a5bc89f4bd0e846323d87454a679e5f1f9a783539bc438e5031d27ec21"
+     },
+     {
+      "key": "rev-iq-ai-workforce-enablement-plan",
+      "label": "Rev-IQ AI Workforce Enablement Plan",
+      "filename": "rev-iq-ai-workforce-enablement-plan.zip",
+      "bytes": 2637,
+      "sha256": "9ce6f8420f9da95940e8b8ee4324073bfe8e38a630450987a7191cf2c675656f"
+     },
+     {
+      "key": "rev-iq-operational-ai-playbook",
+      "label": "Rev-IQ Operational AI Playbook",
+      "filename": "rev-iq-operational-ai-playbook.zip",
+      "bytes": 2390,
+      "sha256": "0e0289ad15026b71f6901f86fac755d223b80901dbc9d18b286949fa4e8af7eb"
+     },
+     {
+      "key": "rev-iq-ai-governance-policy-drafter",
+      "label": "Rev-IQ AI Governance Policy Drafter",
+      "filename": "rev-iq-ai-governance-policy-drafter.zip",
+      "bytes": 4897,
+      "sha256": "ab1e35116cbb858ada13c5652704e93b79c4480ff9b68cae143c4085a92048c6"
+     },
+     {
+      "key": "rev-iq-product-ai-decision",
+      "label": "Rev-IQ Product AI Decision",
+      "filename": "rev-iq-product-ai-decision.zip",
+      "bytes": 2656,
+      "sha256": "29b01df71fcf67aaf14cbea19db875d120e30514d9d7282d840aaa3fae5394cc"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ AI Strategy Kit: all skills and install guide",
+      "filename": "Rev-IQ-ai-strategy-kit-perplexity.zip",
+      "bytes": 126875,
+      "sha256": "fcfcc866e3bb2bbc4aa9e7d8468a2de7e92ebf8957fa036e43659f44d61c2167"
+     }
+    ]
+   }
+  },
+  "partner-and-channel-kit": {
+   "name": "Rev-IQ Partner and Channel Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-partner-strategy-picker",
+      "label": "Rev-IQ Partner Strategy Picker",
+      "filename": "rev-iq-partner-strategy-picker.zip",
+      "bytes": 2652,
+      "sha256": "3471d0d5a093af2a3b093460dbb7b21d9ee469ccccdf7119d917e221b1e56331"
+     },
+     {
+      "key": "rev-iq-partner-fit-scorer",
+      "label": "Rev-IQ Partner Fit Scorer",
+      "filename": "rev-iq-partner-fit-scorer.zip",
+      "bytes": 4905,
+      "sha256": "054775b18d66d0c9afce601dff2b7d47215bdaf6bcd9e0482455bc242015c188"
+     },
+     {
+      "key": "rev-iq-partner-90-day-activation-plan",
+      "label": "Rev-IQ Partner 90-day Activation Plan",
+      "filename": "rev-iq-partner-90-day-activation-plan.zip",
+      "bytes": 2560,
+      "sha256": "40f9d995e97fbf132d9d3f9a5b99d6cb93692aa6a7762335f1aa9b2bb31774ef"
+     },
+     {
+      "key": "rev-iq-referral-motion-designer",
+      "label": "Rev-IQ Referral Motion Designer",
+      "filename": "rev-iq-referral-motion-designer.zip",
+      "bytes": 2653,
+      "sha256": "1e928e3d875d19424a12b4cf80ac097a4db9118aab68c46e88065dfed171141e"
+     },
+     {
+      "key": "rev-iq-partner-review-cadence",
+      "label": "Rev-IQ Partner Review Cadence",
+      "filename": "rev-iq-partner-review-cadence.zip",
+      "bytes": 5018,
+      "sha256": "a8c138523458ff53591efde8021cc4a12a2062243689ca5bc5ac32fd7d8e5c8d"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Partner and Channel Kit: all skills and install guide",
+      "filename": "Rev-IQ-partner-and-channel-kit-claude.zip",
+      "bytes": 130671,
+      "sha256": "dc167f364f4921f51773bfefc12f2a1447e4bb9a2d1512920dcc62f881c2df92"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-partner-strategy-picker",
+      "label": "Rev-IQ Partner Strategy Picker",
+      "filename": "rev-iq-partner-strategy-picker.zip",
+      "bytes": 3014,
+      "sha256": "182916c678c0c1e8fd29b1e8b26ecfa5d91dd7220a9dad3d83f32eb55db6d544"
+     },
+     {
+      "key": "rev-iq-partner-fit-scorer",
+      "label": "Rev-IQ Partner Fit Scorer",
+      "filename": "rev-iq-partner-fit-scorer.zip",
+      "bytes": 5253,
+      "sha256": "b77882b815ced8709ac7264da989b9120738308914edcfb8a685942ba26639d8"
+     },
+     {
+      "key": "rev-iq-partner-90-day-activation-plan",
+      "label": "Rev-IQ Partner 90-day Activation Plan",
+      "filename": "rev-iq-partner-90-day-activation-plan.zip",
+      "bytes": 2940,
+      "sha256": "2267b1c4dc912deb6cc755f6efa1af63241bf3fc33d421c239618db973d0904b"
+     },
+     {
+      "key": "rev-iq-referral-motion-designer",
+      "label": "Rev-IQ Referral Motion Designer",
+      "filename": "rev-iq-referral-motion-designer.zip",
+      "bytes": 3002,
+      "sha256": "db2a1f2015d6400f0ae7a5483a7980bdd1fd8240819771675869b59a1a35c1c2"
+     },
+     {
+      "key": "rev-iq-partner-review-cadence",
+      "label": "Rev-IQ Partner Review Cadence",
+      "filename": "rev-iq-partner-review-cadence.zip",
+      "bytes": 5365,
+      "sha256": "f1cbc9cb8860b4aaa423c7407ca539280392eb1cd5cd53fb0fd08561b4e34b41"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Partner and Channel Kit: all skills and install guide",
+      "filename": "Rev-IQ-partner-and-channel-kit-chatgpt.zip",
+      "bytes": 135599,
+      "sha256": "5e9b3d6b58183f6164c0a573e45b869e570dfea2dbd214d68da6586d5f6e9587"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-partner-strategy-picker",
+      "label": "Rev-IQ Partner Strategy Picker",
+      "filename": "rev-iq-partner-strategy-picker.zip",
+      "bytes": 2590,
+      "sha256": "b9a8cd6bd853c15c1a305c1dd204381c6161c66043035848ce1ced15d7178a98"
+     },
+     {
+      "key": "rev-iq-partner-fit-scorer",
+      "label": "Rev-IQ Partner Fit Scorer",
+      "filename": "rev-iq-partner-fit-scorer.zip",
+      "bytes": 4801,
+      "sha256": "49ead983fa39ac1fb9388147ad4b1e524d2d1579cc17328b4c1371cf37b9f360"
+     },
+     {
+      "key": "rev-iq-partner-90-day-activation-plan",
+      "label": "Rev-IQ Partner 90-day Activation Plan",
+      "filename": "rev-iq-partner-90-day-activation-plan.zip",
+      "bytes": 2484,
+      "sha256": "a5821ee217e98490e2ef1108abfdf1021975ee8bd753f3021ecc49f237daee61"
+     },
+     {
+      "key": "rev-iq-referral-motion-designer",
+      "label": "Rev-IQ Referral Motion Designer",
+      "filename": "rev-iq-referral-motion-designer.zip",
+      "bytes": 2589,
+      "sha256": "a157b52e5ab304eb2fb0b70ef1d70a3c276e233e004f633657ffd30d81fc049d"
+     },
+     {
+      "key": "rev-iq-partner-review-cadence",
+      "label": "Rev-IQ Partner Review Cadence",
+      "filename": "rev-iq-partner-review-cadence.zip",
+      "bytes": 4898,
+      "sha256": "7f566c64225c11e428f425068c1216b44c59c66509530f650ea76495883c36a6"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Partner and Channel Kit: all skills and install guide",
+      "filename": "Rev-IQ-partner-and-channel-kit-perplexity.zip",
+      "bytes": 123660,
+      "sha256": "38a4454b66aa2c5588e313230dc4f0be39f97d9ee812bdba88b17e384719d2d0"
+     }
+    ]
+   }
+  },
+  "security-questionnaire-and-trust-kit": {
+   "name": "Rev-IQ Security Questionnaire and Trust Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-security-questionnaire-responder",
+      "label": "Rev-IQ Security Questionnaire Responder",
+      "filename": "rev-iq-security-questionnaire-responder.zip",
+      "bytes": 7644,
+      "sha256": "50026bf65653da529280670ac8bc4c0981d18db990e56e1a57617ed611e94bdc"
+     },
+     {
+      "key": "rev-iq-security-baseline-check",
+      "label": "Rev-IQ Security Baseline Check",
+      "filename": "rev-iq-security-baseline-check.zip",
+      "bytes": 2731,
+      "sha256": "271b8695c5b9acbff6a77e5586f8de045d9e18a363fc07111d28756b02745d26"
+     },
+     {
+      "key": "rev-iq-access-and-data-policy-builder",
+      "label": "Rev-IQ Access and Data Policy Builder",
+      "filename": "rev-iq-access-and-data-policy-builder.zip",
+      "bytes": 2889,
+      "sha256": "da4fe2617021d4e69d92399c0a5c90d5f67177047a13ae8d9e5d5090acc50a78"
+     },
+     {
+      "key": "rev-iq-vendor-risk-review",
+      "label": "Rev-IQ Vendor Risk Review",
+      "filename": "rev-iq-vendor-risk-review.zip",
+      "bytes": 2631,
+      "sha256": "b805176b3b8e9889f606f6227bb2808f6e25c3dca3d28c46efdfd056fdc56a99"
+     },
+     {
+      "key": "rev-iq-incident-first-hour-plan",
+      "label": "Rev-IQ Incident First-hour Plan",
+      "filename": "rev-iq-incident-first-hour-plan.zip",
+      "bytes": 2811,
+      "sha256": "781375e700bbbd179c8ef00d4af21f150c8ad312109d3e7c792d2c443b6b2b3c"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Security Questionnaire and Trust Kit: all skills and install guide",
+      "filename": "Rev-IQ-security-questionnaire-and-trust-kit-claude.zip",
+      "bytes": 130793,
+      "sha256": "a9f670fc1be8cc746360d868f352cf5f88cd10c4098e919f7eb7a4f4ddcfa0a2"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-security-questionnaire-responder",
+      "label": "Rev-IQ Security Questionnaire Responder",
+      "filename": "rev-iq-security-questionnaire-responder.zip",
+      "bytes": 8025,
+      "sha256": "f2c2cd53f0aa8b83f1615772fe9eaa28659f506782c64c149c3939bdbdf62dde"
+     },
+     {
+      "key": "rev-iq-security-baseline-check",
+      "label": "Rev-IQ Security Baseline Check",
+      "filename": "rev-iq-security-baseline-check.zip",
+      "bytes": 3097,
+      "sha256": "6420a2f74fa54fef9827711a77b63e47f0568e69f9130e6f7ae824de55e623a2"
+     },
+     {
+      "key": "rev-iq-access-and-data-policy-builder",
+      "label": "Rev-IQ Access and Data Policy Builder",
+      "filename": "rev-iq-access-and-data-policy-builder.zip",
+      "bytes": 3265,
+      "sha256": "1b435576278fc50a38e779edd50949e571b918992d4e71d121bd6e7a43ccbda4"
+     },
+     {
+      "key": "rev-iq-vendor-risk-review",
+      "label": "Rev-IQ Vendor Risk Review",
+      "filename": "rev-iq-vendor-risk-review.zip",
+      "bytes": 2971,
+      "sha256": "c4ad63c3d8453823ab210fddbd6d85de0a9da0482e79b7f82c7a44e1520ad0ad"
+     },
+     {
+      "key": "rev-iq-incident-first-hour-plan",
+      "label": "Rev-IQ Incident First-hour Plan",
+      "filename": "rev-iq-incident-first-hour-plan.zip",
+      "bytes": 3163,
+      "sha256": "4bb8f0dfebd9a9ee2a2ee8ac065cb4ead33a5ca0f3af55fec5968f48eee60825"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Security Questionnaire and Trust Kit: all skills and install guide",
+      "filename": "Rev-IQ-security-questionnaire-and-trust-kit-chatgpt.zip",
+      "bytes": 135875,
+      "sha256": "d742555d176de4eea0d38a71c151dbc262ed7ee9d589b80112ec8b8b320a114b"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-security-questionnaire-responder",
+      "label": "Rev-IQ Security Questionnaire Responder",
+      "filename": "rev-iq-security-questionnaire-responder.zip",
+      "bytes": 7404,
+      "sha256": "cbf34d500be4d3eb550aa8144fd18bc1b2d3079ebf64cf8c5c8199258ed866c9"
+     },
+     {
+      "key": "rev-iq-security-baseline-check",
+      "label": "Rev-IQ Security Baseline Check",
+      "filename": "rev-iq-security-baseline-check.zip",
+      "bytes": 2669,
+      "sha256": "0dee8d9e5df79280b394983951f3315d78b924057cb8164a74e1fd9258fa3370"
+     },
+     {
+      "key": "rev-iq-access-and-data-policy-builder",
+      "label": "Rev-IQ Access and Data Policy Builder",
+      "filename": "rev-iq-access-and-data-policy-builder.zip",
+      "bytes": 2813,
+      "sha256": "7d25c3820ebbd4c54abb33fd58d3cd67ca88ba639897c72ac3f5e187fa16c362"
+     },
+     {
+      "key": "rev-iq-vendor-risk-review",
+      "label": "Rev-IQ Vendor Risk Review",
+      "filename": "rev-iq-vendor-risk-review.zip",
+      "bytes": 2579,
+      "sha256": "e443d4cddbebb41a719bfe1aec5a7ede711c71febb4bd45df5d6a0a34f65ce85"
+     },
+     {
+      "key": "rev-iq-incident-first-hour-plan",
+      "label": "Rev-IQ Incident First-hour Plan",
+      "filename": "rev-iq-incident-first-hour-plan.zip",
+      "bytes": 2747,
+      "sha256": "bff52a4d267ce4e38d2667f464a26738f1cb4d784c9b9ec3a20ed31d9792eac1"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ Security Questionnaire and Trust Kit: all skills and install guide",
+      "filename": "Rev-IQ-security-questionnaire-and-trust-kit-perplexity.zip",
+      "bytes": 124386,
+      "sha256": "461992725b8b98dc17bef8ee84848d32bab7c439a36ca92d3777fea966b2bac2"
      }
     ]
    }

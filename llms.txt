@@ -28,6 +28,10 @@ Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framew
 - [Rev-IQ Positioning Sharpener](https://rev-iq.ai/skills/positioning-sharpener): Works through a seven-part positioning canvas and drafts your statement and headlines.
 - [Rev-IQ Founder-led Sales Kit](https://rev-iq.ai/skills/bundles/founder-led-sales-kit): Paid bundle (A$149 inc GST) of five skills: GTM motion picker, discovery call prep and debrief, deal qualification scorer, follow-up email writer and account plan builder.
 - [Rev-IQ Board and Leadership Pack](https://rev-iq.ai/skills/bundles/board-and-leadership-pack): Paid bundle (A$199 inc GST) of four skills: management report drafter, board agenda and pre-read builder, decision rights matrix and executive alignment review.
+- [Rev-IQ Retention and Customer Success Kit](https://rev-iq.ai/skills/bundles/retention-and-customer-success-kit): Paid bundle (A$149 inc GST) of five skills: onboarding plan builder, customer health scorer, at-risk account save plan, quarterly review call and support tiers and SLA designer.
+- [Rev-IQ AI Strategy Kit](https://rev-iq.ai/skills/bundles/ai-strategy-kit): Paid bundle (A$199 inc GST) of six skills: 3-pillar AI plan builder, AI use case prioritiser, AI workforce enablement plan, operational AI playbook, AI governance policy drafter and product AI decision.
+- [Rev-IQ Partner and Channel Kit](https://rev-iq.ai/skills/bundles/partner-and-channel-kit): Paid bundle (A$149 inc GST) of five skills: partner strategy picker, partner fit scorer, partner 90-day activation plan, referral motion designer and partner review cadence.
+- [Rev-IQ Security Questionnaire and Trust Kit](https://rev-iq.ai/skills/bundles/security-questionnaire-and-trust-kit): Paid bundle (A$199 inc GST) of five skills: security questionnaire responder, security baseline check, access and data policy builder, vendor risk review and incident first-hour plan.
 
 ## About
 

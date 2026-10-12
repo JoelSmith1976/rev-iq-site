@@ -16,6 +16,17 @@ Rev-IQ publishes a free resource library of frameworks and templates covering re
 - [Browse by Challenge](https://rev-iq.ai/browse-by-challenge): Find the right resource by the specific business problem you're facing.
 - [Who It's For](https://rev-iq.ai/who-its-for): How Rev-IQ resources map to different leadership roles and company stages.
 
+## AI Skills
+
+Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framework and run inside the user's own AI account.
+
+- [AI Skills](https://rev-iq.ai/skills): Overview, supported platforms and plans, and install guides.
+- [Rev-IQ Commercial Engine Scorecard](https://rev-iq.ai/skills/commercial-engine-scorecard): Scores the five levers that drive revenue and names the one constraint to fix first.
+- [Rev-IQ Six SaaS Numbers](https://rev-iq.ai/skills/six-saas-numbers): Calculates MRR, churn, CAC, payback and runway from your P&L and flags what needs attention.
+- [Rev-IQ Pipeline Health Check](https://rev-iq.ai/skills/pipeline-health-check): Reads your CRM export, flags stalled deals and missing next steps, and shows the trusted pipeline.
+- [Rev-IQ AI Readiness Check](https://rev-iq.ai/skills/ai-readiness-check): Scores tooling, governance, skills and use cases and names the readiness gap to close first.
+- [Rev-IQ Positioning Sharpener](https://rev-iq.ai/skills/positioning-sharpener): Works through a seven-part positioning canvas and drafts your statement and headlines.
+
 ## About
 
 - [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
@@ -24,3 +35,4 @@ Rev-IQ publishes a free resource library of frameworks and templates covering re
 - [Fractional CRO](https://rev-iq.ai/fractional-cro): What a fractional Chief Revenue Officer does, when it makes sense, how an engagement runs, and common questions. Based in Sydney, serving Australia, New Zealand and the UK.
 - [Contact](https://rev-iq.ai/contact): Get in touch with Rev-IQ.
 - [Privacy notice](https://rev-iq.ai/privacy): How Rev-IQ collects, uses and stores personal information.
+- [Terms of Use](https://rev-iq.ai/terms): Terms for using the site, free resources and Rev-IQ AI Skills, free or paid.

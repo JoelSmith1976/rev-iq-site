@@ -13,5 +13,11 @@
       "destination": "https://rev-iq.ai/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/skills",
+      "destination": "/skills/index.html"
+    }
   ]
 }

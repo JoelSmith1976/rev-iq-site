@@ -288,6 +288,8 @@
       .segment-grid, .pathway-grid, .flagship-grid { grid-template-columns: 1fr; }
     }
 
+    .chip-dark { display: inline-flex; font-size: var(--text-sm); font-weight: 600; padding: 0.45rem 0.95rem; border-radius: 999px; border: 1px solid var(--color-ink-border); background: var(--color-ink-surface); color: var(--color-ink-text); }
+    .chip-dark:hover { border-color: #e0a63a; }
   </style>
 </head>
 <body>
@@ -313,7 +315,7 @@
         <ul>
           <li><a href="/" aria-current="page">Home</a></li>
           <li><a href="resources">Resource Library</a></li>
-          <li><a href="browse-by-challenge">Browse by Challenge</a></li>
+          <li><a href="/skills">AI Skills</a></li>
           <li><a href="who-its-for">Who It's For</a></li>
           <li><a href="advisory">Advisory</a></li><li><a href="fractional-cro">Fractional CRO</a></li>
           <li><a href="about">About Rev-IQ</a></li>
@@ -562,6 +564,26 @@
       </div>
     </section>
 
+    <section id="ai-skills" style="padding-top: 0;">
+      <div class="container">
+        <div class="card" style="background: var(--color-ink); color: var(--color-ink-text); border-color: var(--color-ink); padding: var(--space-10) var(--space-8); display: grid; gap: var(--space-6);">
+          <div>
+            <span class="kicker" style="color: #e0a63a;">AI Skills</span>
+            <h2 style="font-size: clamp(1.7rem, 3.2vw, 2.4rem); max-width: 26ch; margin: var(--space-2) 0 var(--space-3); color: var(--color-ink-text);">Run Rev-IQ's frameworks in your own AI assistant</h2>
+            <p style="margin: 0; color: var(--color-ink-muted); max-width: 64ch;">Free skills for Claude, ChatGPT and Perplexity that score your revenue engine, check your SaaS numbers, test your pipeline, assess AI readiness and sharpen your positioning, using your own data.</p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a class="chip-dark" href="/skills/commercial-engine-scorecard">Commercial Engine Scorecard</a>
+            <a class="chip-dark" href="/skills/six-saas-numbers">Six SaaS Numbers</a>
+            <a class="chip-dark" href="/skills/pipeline-health-check">Pipeline Health Check</a>
+            <a class="chip-dark" href="/skills/ai-readiness-check">AI Readiness Check</a>
+            <a class="chip-dark" href="/skills/positioning-sharpener">Positioning Sharpener</a>
+          </div>
+          <div><a class="btn btn-primary" href="/skills">Explore AI Skills</a></div>
+        </div>
+      </div>
+    </section>
+
     <section class="muted-band" id="engage">
       <div class="container">
         <div class="section-intro">
@@ -653,6 +675,7 @@
           <h2>Explore</h2>
           <ul>
             <li><a href="resources">Resource Library</a></li>
+            <li><a href="/skills">AI Skills</a></li>
             <li><a href="browse-by-challenge">Browse by Challenge</a></li>
             <li><a href="who-its-for">Who It's For</a></li>
           </ul>
@@ -664,6 +687,7 @@
             <li><a href="about">About Rev-IQ</a></li>
             <li><a href="contact">Contact</a></li>
             <li><a href="privacy">Privacy</a></li>
+            <li><a href="terms">Terms of Use</a></li>
           </ul>
         </div>
       </div>

@@ -302,6 +302,14 @@
     .journey li::before { content: counter(step); width: 1.4rem; height: 1.4rem; border-radius: 50%; background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; font-size: 0.72rem; display: inline-flex; align-items: center; justify-content: center; }
     .journey li a { color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-primary-soft-2); text-underline-offset: 3px; }
     .journey li a:hover { color: var(--color-primary); text-decoration-color: var(--color-primary); }
+    .lib-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: var(--space-6); padding: 0.3rem; border: 1px solid var(--color-border); border-radius: var(--radius-full); width: fit-content; max-width: 100%; background: var(--color-surface); }
+    .lib-tabs a { padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; color: var(--color-text-muted); }
+    .lib-tabs a:hover { color: var(--color-primary); }
+    .lib-tabs a[aria-current="page"] { background: var(--color-primary); color: #fff; }
+    .badge.badge-ai { background: #1c1912; color: #f6f1e7; }
+    .ai-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-6) var(--space-8); margin-bottom: var(--space-10); }
+    .ai-band h2 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin: 0 0 var(--space-2); }
+    .ai-band p { margin: 0; color: var(--color-text-muted); max-width: 62ch; }
   </style>
 </head>
 <body>
@@ -327,7 +335,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="resources" aria-current="page">Resource Library</a></li>
-          <li><a href="browse-by-challenge">Browse by Challenge</a></li>
+          <li><a href="/skills">AI Skills</a></li>
           <li><a href="who-its-for">Who It's For</a></li>
           <li><a href="advisory">Advisory</a></li><li><a href="fractional-cro">Fractional CRO</a></li>
           <li><a href="about">About Rev-IQ</a></li>
@@ -368,10 +376,19 @@
         <div class="eyebrow"><span class="dot"></span>46 frameworks &amp; worksheets</div>
         <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 26ch;">The Resource Library</h1>
         <p class="lead" style="max-width: 68ch;">Practical frameworks and worksheets for founders and leaders building the commercial engine to scale a technology business. Browse by the part of the business you're responsible for, the problem you're trying to solve, or the stage your company is at.</p>
+        <nav class="lib-tabs" aria-label="Library views"><a href="resources" aria-current="page">All resources</a><a href="browse-by-challenge">Browse by challenge</a><a href="/skills">AI Skills</a></nav>
       </div>
     </section>
     <section>
       <div class="container">
+        <div class="card ai-band">
+          <div>
+            <span class="kicker">AI Skills</span>
+            <h2>Five of these frameworks also run in your AI assistant</h2>
+            <p>Free skills for Claude, ChatGPT and Perplexity that apply the framework to your own numbers, CRM export or answers. Look for the AI skill badge.</p>
+          </div>
+          <a class="btn btn-primary btn-sm" href="/skills">Explore AI Skills</a>
+        </div>
         <div class="journeys" id="journeys">
           <div class="journeys-head">
             <div>
@@ -432,7 +449,7 @@
         <div class="res-grid">
         <a class="card-link res-card-link" href="articles/01-the-5-levers-that-actually-drive-saas-revenue" data-function="strategy" data-challenge="no-gtm" data-stage="pre-revenue early-traction">
           <article class="card res-card">
-            <div class="badge-row"><span class="badge">Strategy</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">Strategy</span></div>
             <h3>The 5 Levers That Actually Drive SaaS Revenue</h3>
             <p>If you built a product but have no revenue motion, here's the operating logic behind SaaS growth, reduced to five levers you can pull.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Founders and early SaaS teams without a GTM structure</dd></div></dl>
@@ -468,7 +485,7 @@
         </a>
         <a class="card-link res-card-link" href="articles/04-your-product-works-your-story-doesn-t-exist-yet" data-function="marketing" data-challenge="no-gtm insufficient-pipeline" data-stage="pre-revenue early-traction">
           <article class="card res-card">
-            <div class="badge-row"><span class="badge">Marketing</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">Marketing</span></div>
             <h3>Your Product Works. Your Story Doesn’t Exist Yet.</h3>
             <p>A step-by-step way to define who the product is for, what it solves, and why now, so the market can finally understand what you built.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Teams with a working product but no clear market story</dd></div></dl>
@@ -504,7 +521,7 @@
         </a>
         <a class="card-link res-card-link" href="articles/07-fixing-the-pipeline-mess-so-you-can-forecast-with-confidence" data-function="new-business-development-sales" data-challenge="stalled-deals unreliable-forecast" data-stage="early-traction scaling">
           <article class="card res-card">
-            <div class="badge-row"><span class="badge">New Business Development &amp; Sales</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">New Business Development &amp; Sales</span></div>
             <h3>Fixing the Pipeline Mess So You Can Forecast With Confidence</h3>
             <p>A pipeline you cannot trust is not a forecasting problem, it is a data hygiene problem, and it is fixable with three habits: clean stages, tracked reasons, and aging rules.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Early-stage founders and sales leads with an untrustworthy pipeline</dd></div></dl>
@@ -576,7 +593,7 @@
         </a>
         <a class="card-link res-card-link" href="articles/13-the-six-saas-numbers-that-actually-matter" data-function="finance" data-challenge="pricing churn board-investor-reporting" data-stage="early-traction scaling mature">
           <article class="card res-card">
-            <div class="badge-row"><span class="badge">Finance</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">Finance</span></div>
             <h3>The Six SaaS Numbers That Actually Matter</h3>
             <p>A plain-language guide to the six numbers that matter: recurring revenue, gross churn, net churn, CAC, CAC payback and runway, plus where LTV fits.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>SaaS founders and operators without a finance team</dd></div></dl>
@@ -780,7 +797,7 @@
         </a>
         <a class="card-link res-card-link" href="articles/30-the-rev-iq-3-pillar-ai-strategy-framework" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="scaling mature">
           <article class="card res-card card-featured">
-            <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-flagship">Flagship</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">AI Strategy</span><span class="badge is-flagship">Flagship</span></div>
             <h3>The Rev-IQ 3-Pillar AI Strategy Framework</h3>
             <p>Most technology companies don't have an AI strategy problem. They have an AI sequencing problem, and this framework fixes the order.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams sequencing AI effort across their technology business</dd></div></dl>
@@ -792,7 +809,7 @@
         </a>
         <a class="card-link res-card-link" href="articles/31-is-your-company-actually-ready-for-ai-or-just-using-it" data-function="ai-strategy" data-challenge="ai-strategy-gap" data-stage="early-traction scaling">
           <article class="card res-card">
-            <div class="badge-row"><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
+            <div class="badge-row"><span class="badge badge-ai">AI skill</span><span class="badge">AI Strategy</span><span class="badge is-new">AI</span></div>
             <h3>Is Your Company Actually Ready for AI, or Just Using It?</h3>
             <p>There's a real difference between individuals using AI tools and an organisation that's genuinely ready to adopt AI at scale. Most companies confuse the two.</p>
             <dl class="res-meta"><div><dt>Best for</dt><dd>Leadership teams setting a baseline before an AI roadmap</dd></div></dl>
@@ -1008,6 +1025,7 @@
           <h2>Explore</h2>
           <ul>
             <li><a href="resources">Resource Library</a></li>
+            <li><a href="/skills">AI Skills</a></li>
             <li><a href="browse-by-challenge">Browse by Challenge</a></li>
             <li><a href="who-its-for">Who It's For</a></li>
           </ul>
@@ -1019,6 +1037,7 @@
             <li><a href="about">About Rev-IQ</a></li>
             <li><a href="contact">Contact</a></li>
             <li><a href="privacy">Privacy</a></li>
+            <li><a href="terms">Terms of Use</a></li>
           </ul>
         </div>
       </div>

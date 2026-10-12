@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/private/:path*",
+      "destination": "/skills",
+      "permanent": false
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
@@ -18,6 +23,27 @@
     {
       "source": "/skills",
       "destination": "/skills/index.html"
+    }
+  ],
+  "functions": {
+    "api/bundle.js": {
+      "includeFiles": "private/bundles/**",
+      "maxDuration": 15
+    }
+  },
+  "headers": [
+    {
+      "source": "/skills/bundles/download",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
     }
   ]
 }

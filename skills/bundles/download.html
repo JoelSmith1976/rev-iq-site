@@ -498,7 +498,7 @@
           <div data-dl="missing" hidden><h2>We couldn't find your purchase</h2><p>This page needs the link you were sent to after checkout. If you've bought a bundle and lost the link, email <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a> with your Stripe receipt and we'll send it again.</p><p><a class="btn btn-secondary btn-sm" href="/skills#bundles">See the bundles</a></p></div>
           <div data-dl="unpaid" hidden><h2>Your payment hasn't completed</h2><p>Stripe hasn't confirmed this payment yet. If you were charged, wait a minute and refresh. Otherwise, return to the bundle page and try again.</p></div>
           <div data-dl="expired" hidden><h2>This download link has expired</h2><p>Download links last 12 months from purchase. Email <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a> with your receipt and we'll help.</p></div>
-          <div data-dl="error" hidden><h2>Something went wrong</h2><p>We couldn't load your downloads just now. Refresh the page in a minute. If it keeps happening, email <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a> with your receipt and we'll send the files directly.</p></div>
+          <div data-dl="error" hidden><h2>Something went wrong</h2><p>We couldn't load your downloads just now. Refresh the page in a minute. If it keeps happening, email <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a> with your receipt and we'll send the files directly.</p><p class="dl-note" data-ref></p></div>
         </div>
         <p class="legal-line" style="margin-top: var(--space-8);">Licensed for use within one business under the Rev-IQ <a href="/terms">Terms of Use</a>. Not for resale or redistribution.</p>
       </div>
@@ -573,7 +573,7 @@
       function kb(n) { return n > 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB'; }
       if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(sid)) { show('missing'); return; }
       fetch('/api/bundle?session_id=' + encodeURIComponent(sid)).then(function (r) { return r.json().then(function (j) { return { s: r.status, j: j }; }); }).then(function (x) {
-        if (x.s !== 200) { show(x.s === 402 ? 'unpaid' : x.s === 410 ? 'expired' : 'error'); return; }
+        if (x.s !== 200) { var rc = root.querySelector('[data-ref]'); if (rc) rc.textContent = 'Reference: ' + x.s + ' ' + ((x.j && x.j.error) || 'unknown'); show(x.s === 402 ? 'unpaid' : x.s === 410 ? 'expired' : 'error'); return; }
         var d = x.j, plat = d.platform_hint || 'claude';
         root.querySelector('[data-name]').textContent = d.name;
         root.querySelector('[data-expires]').textContent = new Date(d.expires).toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -598,7 +598,7 @@
           var k = 'reviq_purchase_' + sid.slice(-12);
           if (!localStorage.getItem(k) && typeof gtag === 'function') { gtag('event', 'purchase', { transaction_id: sid.slice(-12), currency: 'AUD', items: [{ item_id: d.bundle, item_name: d.name }] }); localStorage.setItem(k, '1'); }
         } catch (e) {}
-      }).catch(function () { show('error'); });
+      }).catch(function (e) { var rc = root.querySelector('[data-ref]'); if (rc) rc.textContent = 'Reference: no response (' + (e && e.message ? e.message : 'network') + ')'; show('error'); });
     })();
   </script>
 </body>

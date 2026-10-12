@@ -14,12 +14,20 @@
   ],
   "rewrites": [
     {
-      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|fractional-cro|about|contact|privacy)",
+      "source": "/:page(resources|browse-by-challenge|who-its-for|advisory|fractional-cro|about|contact|privacy|terms)",
       "destination": "/:page.html"
     },
     {
       "source": "/articles/:slug([^./]+)",
       "destination": "/articles/:slug.html"
+    },
+    {
+      "source": "/skills",
+      "destination": "/skills/index.html"
+    },
+    {
+      "source": "/skills/:slug([^./]+)",
+      "destination": "/skills/:slug.html"
     }
   ]
 }

@@ -31,8 +31,28 @@ function setFormState(form, state) {
   });
 }
 
+const SKILL_PLATFORMS = { claude: "Claude", chatgpt: "ChatGPT", perplexity: "Perplexity" };
+
+function skillFiles(form) {
+  const checked = form.querySelector("input[name=platform]:checked");
+  const platform = checked ? checked.value : "claude";
+  return {
+    platform,
+    label: SKILL_PLATFORMS[platform] || platform,
+    zip: "/assets/skills/" + platform + "/" + form.dataset.skill + ".zip",
+    guide: "/assets/skills/rev-iq-ai-skills-install-guide-" + platform + ".pdf",
+  };
+}
+
 async function submitRevIqForm(form) {
   const data = new FormData(form);
+  let skill = null;
+  if (form.dataset.skill) {
+    skill = skillFiles(form);
+    const name = form.dataset.skillName || form.dataset.skill;
+    data.set("asset", name + " (" + skill.label + ")");
+    data.set("_subject", "Skill Download: " + name + " for " + skill.label + " | rev-iq.ai");
+  }
   const submitBtn = form.querySelector("button[type=submit]");
   const originalLabel = submitBtn ? submitBtn.textContent : "";
   if (submitBtn) {
@@ -47,6 +67,15 @@ async function submitRevIqForm(form) {
     });
     if (response.ok) {
       setFormState(form, "success");
+      if (skill) {
+        form.querySelectorAll("[data-skill-zip]").forEach((a) => { a.href = skill.zip; });
+        form.querySelectorAll("[data-skill-guide]").forEach((a) => { a.href = skill.guide; });
+        form.querySelectorAll("[data-skill-platform]").forEach((el) => { el.textContent = skill.label; });
+        if (typeof gtag === "function") {
+          gtag("event", "skill_download", { skill_name: form.dataset.skill, platform: skill.platform });
+        }
+        triggerDownload(skill.zip);
+      }
       const pdf = form.dataset.pdf;
       if (pdf) triggerDownload(pdf);
       form.reset();

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67DC4XWDK8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-67DC4XWDK8');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Run an SDR Team That Builds Real Pipeline | Rev-IQ</title>
+  <meta name="description" content="SDR teams are usually measured on activity and meetings booked, then blamed when pipeline doesn&#x27;t follow. Here&#x27;s how to define the job, the handoff and the numbers so meetings turn into opportunities." />
+  <link rel="canonical" href="https://rev-iq.ai/articles/48-running-an-sdr-function-that-feeds-real-pipeline" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rev-IQ" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://rev-iq.ai/articles/48-running-an-sdr-function-that-feeds-real-pipeline" />
+  <meta property="og:title" content="Running an SDR Function That Feeds Real Pipeline" />
+  <meta property="og:description" content="SDR teams are usually measured on activity and meetings booked, then blamed when pipeline doesn&#x27;t follow. Here&#x27;s how to define the job, the handoff and the numbers so meetings turn into opportunities." />
+  <meta property="og:image" content="https://rev-iq.ai/images/og/48-running-an-sdr-function-that-feeds-real-pipeline.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rev-IQ: Running an SDR Function That Feeds Real Pipeline" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Running an SDR Function That Feeds Real Pipeline" />
+  <meta name="twitter:description" content="SDR teams are usually measured on activity and meetings booked, then blamed when pipeline doesn&#x27;t follow. Here&#x27;s how to define the job, the handoff and the numbers so meetings turn into opportunities." />
+  <meta name="twitter:image" content="https://rev-iq.ai/images/og/48-running-an-sdr-function-that-feeds-real-pipeline.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.1rem, 1.2rem + 3vw, 3.75rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f5efe4;
+      --color-surface: #ffffff;
+      --color-surface-2: #ece2d0;
+      --color-border: #ddd0b7;
+      --color-divider: #e6dac0;
+      --color-text: #1c1912;
+      --color-text-muted: #5c5344;
+      --color-text-faint: #938970;
+      --color-primary: #0b6e66;
+      --color-primary-hover: #084f49;
+      --color-primary-soft: #dceeea;
+      --color-primary-soft-2: #c3e2dc;
+      --color-accent: #a8710f;
+      --color-accent-hover: #8a5c0b;
+      --color-accent-soft: #f5e6c4;
+      --color-ink: #0e2624;
+      --color-ink-surface: #143733;
+      --color-ink-border: rgba(220,238,234,0.14);
+      --color-ink-text: #f4f1e6;
+      --color-ink-muted: #a3beb8;
+      --color-error: #a3323b;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.375rem;
+      --radius-full: 999px;
+      --shadow-sm: 0 1px 2px rgba(20,16,8,0.05), 0 2px 10px rgba(20,16,8,0.05);
+      --shadow-md: 0 10px 28px rgba(20,16,8,0.09);
+      --shadow-lg: 0 24px 55px rgba(14,38,36,0.16);
+      --shadow-teal: 0 14px 32px rgba(11,110,102,0.18);
+      --font-display: 'Space Grotesk', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    .container-wide { width: min(calc(100% - 2rem), 1240px); margin: 0 auto; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 1rem; top: 1rem; background: var(--color-surface); padding: 0.75rem 1rem; z-index: 1000; border-radius: var(--radius-sm); }
+    header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px); background: rgba(245,239,228,0.88); border-bottom: 1px solid rgba(28,25,18,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; flex-shrink: 0; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--color-ink); color: var(--color-primary-soft); display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.15rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-xs); flex-wrap: nowrap; }
+    nav ul a { position: relative; padding-bottom: 2px; transition: color 160ms var(--ease); }
+    nav ul a:hover, nav ul a[aria-current="page"] { color: var(--color-primary); }
+    nav ul a[aria-current="page"] { font-weight: 700; }
+    nav ul a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--color-primary); border-radius: 2px; }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; border: 1px solid rgba(28,25,18,0.16); border-radius: var(--radius-md); background: transparent; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .nav-toggle-bar { width: 18px; height: 2px; background: var(--color-text); transition: 160ms ease; }
+    body.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    body.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    h1, h2, h3 { margin: 0; line-height: 1.1; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-primary-hover); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); font-weight: 700; }
+    .dot { width: 7px; height: 7px; border-radius: 999px; background: var(--color-accent); }
+    .hero { padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 6vw, 4rem); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: -10% -10% auto auto; width: 46vw; height: 46vw; max-width: 640px; max-height: 640px; background: radial-gradient(circle at 70% 30%, rgba(11,110,102,0.10), transparent 62%); pointer-events: none; z-index: 0; }
+    .hero > .container { position: relative; z-index: 1; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); max-width: 17ch; letter-spacing: -0.025em; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: start; }
+    .lead { margin-top: var(--space-6); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .hero-card { background: var(--color-ink); color: var(--color-ink-text); border: 1px solid var(--color-ink-border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-lg); margin-top: 2.6rem; }
+    .hero-card p { margin: 0 0 var(--space-5); color: var(--color-ink-muted); }
+    .hero-card strong { display: block; font-size: var(--text-sm); margin-bottom: 0.4rem; color: var(--color-ink-text); font-family: var(--font-display); }
+    .hero-diagram { display: flex; align-items: stretch; gap: 0.5rem; margin: -0.4rem -0.4rem var(--space-6); padding-bottom: var(--space-6); border-bottom: 1px solid var(--color-ink-border); }
+    .hero-diagram .node { flex: 1; text-align: center; padding: 0.7rem 0.3rem; border-radius: var(--radius-sm); background: rgba(244,241,230,0.06); border: 1px solid var(--color-ink-border); position: relative; }
+    .hero-diagram .node span { display: block; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-ink-muted); font-weight: 700; }
+    .hero-diagram .node.is-active { background: rgba(168,113,15,0.16); border-color: rgba(168,113,15,0.4); }
+    .hero-diagram .node.is-active span { color: #e3b45c; }
+    .hero-diagram .arrow { display: flex; align-items: center; color: var(--color-ink-muted); flex: 0 0 auto; font-size: 0.8rem; }
+    .actions { display: flex; gap: 0.9rem; margin-top: var(--space-8); flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: var(--radius-md); font-size: var(--text-sm); font-weight: 600; transition: 180ms var(--ease); border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.05); }
+    .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-teal); }
+    .btn-secondary { border: 1px solid rgba(28,25,18,0.18); background: var(--color-surface); color: var(--color-text); }
+    .btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .btn-ghost { border: 1px solid rgba(28,25,18,0.14); background: transparent; color: var(--color-text-muted); }
+    .btn-ghost:hover { color: var(--color-primary); border-color: var(--color-primary); }
+    .btn-sm { min-height: 38px; padding: 0.55rem 1.05rem; font-size: var(--text-xs); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    section { padding: clamp(3.2rem, 6.5vw, 5.5rem) 0; }
+    .section-tight { padding: clamp(1.2rem, 3vw, 2.2rem) 0; }
+    .section-intro { margin-bottom: var(--space-8); max-width: 60ch; }
+    .section-intro h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); margin-bottom: var(--space-4); }
+    .section-intro p { color: var(--color-text-muted); margin: 0; }
+    .kicker { font-size: var(--text-xs); color: var(--color-primary-hover); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: var(--space-3); display: block; }
+    .kicker.is-flagship { color: var(--color-accent-hover); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+    .card { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); transition: 220ms var(--ease); }
+    .card h3 { font-size: 1.12rem; margin-bottom: var(--space-3); }
+    .card p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .card-link { display: block; transition: 220ms var(--ease); }
+    .card-link:hover .card { border-color: var(--color-primary); box-shadow: var(--shadow-teal); transform: translateY(-3px); }
+    .card-link .card { transition: 220ms var(--ease); }
+    .card-featured { border: 1.5px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, var(--color-surface) 55%); position: relative; }
+    .card-link:hover .card-featured { border-color: var(--color-accent-hover); box-shadow: 0 16px 36px rgba(168,113,15,0.2); }
+    .badge { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-primary-hover); }
+    .badge.is-flagship { background: var(--color-accent-soft); color: var(--color-accent-hover); }
+    .badge.is-new { background: var(--color-ink); color: var(--color-ink-text); }
+    .tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: var(--space-4); }
+    .tag { font-size: var(--text-xs); padding: 0.3rem 0.7rem; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-primary-hover); font-weight: 600; }
+    .tag-muted { background: var(--color-surface-2); color: var(--color-text-muted); }
+    .muted-band { background: var(--color-surface-2); border-block: 1px solid var(--color-divider); }
+    .band-dark { background: var(--color-ink); color: var(--color-ink-text); position: relative; overflow: hidden; }
+    .band-dark::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 12% 18%, rgba(220,238,234,0.07), transparent 55%), radial-gradient(circle at 88% 82%, rgba(168,113,15,0.12), transparent 50%); pointer-events: none; }
+    .band-dark .container, .band-dark .container-wide, .band-dark .container-narrow { position: relative; z-index: 1; }
+    .band-dark h2, .band-dark h3 { color: var(--color-ink-text); }
+    .band-dark p { color: var(--color-ink-muted); }
+    .band-dark .kicker { color: #8fcfc6; }
+    .band-dark .card { background: var(--color-ink-surface); border-color: var(--color-ink-border); }
+    .band-dark .card p { color: var(--color-ink-muted); }
+    .band-dark .btn-secondary { background: transparent; border-color: rgba(244,241,230,0.3); color: var(--color-ink-text); }
+    .band-dark .btn-secondary:hover { border-color: var(--color-ink-text); }
+    .list { display: grid; gap: var(--space-4); }
+    .list-item { display: grid; grid-template-columns: 44px 1fr; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--color-divider); transition: 180ms var(--ease); }
+    .list-item:last-child { border-bottom: 0; }
+    .list-item .num { color: var(--color-primary); font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0; }
+    .list-item span.eyebrow-sm { display: block; color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .list-item h3 { font-size: 1.15rem; margin-bottom: 0.35rem; font-weight: 700; }
+    .list-item h3 a { transition: color 160ms var(--ease); }
+    .list-item:hover h3 a { color: var(--color-primary); }
+    .list-item p { margin: 0; color: var(--color-text-muted); }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center; }
+    .about-grid, .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
+    .note { background: var(--color-primary-soft); border-radius: var(--radius-lg); padding: var(--space-6); color: var(--color-text); }
+    form { display: grid; gap: var(--space-4); background: var(--color-surface); padding: var(--space-6); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    label { font-size: var(--text-sm); font-weight: 600; }
+    input, textarea, select { width: 100%; margin-top: 0.45rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 0.9rem 1rem; font: inherit; background: #fff; color: var(--color-text); transition: border-color 160ms var(--ease); }
+    input:hover, textarea:hover, select:hover { border-color: var(--color-text-faint); }
+    textarea { min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus { outline: 2px solid rgba(11,110,102,0.35); outline-offset: 1px; border-color: var(--color-primary); }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    .footer-links { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+    .footer-links a { transition: color 160ms var(--ease); }
+    .footer-links a:hover { color: var(--color-primary); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--space-10); align-items: start; }
+    .footer-brand .brand { color: var(--color-text); margin-bottom: var(--space-3); }
+    .footer-brand p { margin: 0 0 var(--space-4); max-width: 36ch; color: var(--color-text-muted); }
+    .footer-contact { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+    .footer-contact a { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-primary); font-weight: 600; }
+    .footer-contact a:hover { color: var(--color-primary-hover); }
+    .footer-contact svg { width: 15px; height: 15px; }
+    .footer-col h2 { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); margin: 0 0 var(--space-3); }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+    .footer-col a { transition: color 160ms var(--ease); }
+    .footer-col a:hover { color: var(--color-primary); }
+    .footer-legal { margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--color-divider); font-size: var(--text-xs); color: var(--color-text-faint); }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); } .footer-brand { grid-column: 1 / -1; } }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .path-card { border-left: 3px solid var(--color-primary); }
+    .path-card .kicker { margin-bottom: var(--space-2); }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 620ms var(--ease), transform 620ms var(--ease); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 1080px) {
+      nav ul { gap: 0.85rem; font-size: 0.72rem; }
+    }
+    @media (max-width: 920px) {
+      .hero-grid, .about-grid, .contact-grid, .grid-3, .grid-4, .split { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero-card { margin-top: var(--space-8); }
+      .nav { flex-wrap: wrap; }
+      .nav-toggle { display: flex; }
+      nav[aria-label="Primary"] { flex-basis: 100%; order: 3; max-height: 0; overflow: hidden; transition: max-height 220ms ease; }
+      body.nav-open nav[aria-label="Primary"] { max-height: 70vh; overflow-y: auto; }
+      nav ul { display: flex; flex-direction: column; gap: 0; flex-wrap: nowrap; padding: var(--space-2) 0 var(--space-5); font-size: var(--text-base); }
+      nav ul li { border-bottom: 1px solid var(--color-divider); }
+      nav ul a { display: block; padding: 0.85rem 0.1rem; }
+      nav ul a[aria-current="page"]::after { display: none; }
+      .list-item { grid-template-columns: 1fr; gap: var(--space-2); }
+      h1 { max-width: 100%; }
+      .hero-diagram { flex-wrap: wrap; }
+    }
+
+
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    h1.article-h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
+    .article-body { padding-top: var(--space-4); }
+    .article-body h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-optin { display: flex; gap: var(--space-2); align-items: flex-start; font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; cursor: pointer; }
+    .gate-optin input { margin-top: 0.2rem; accent-color: var(--color-primary); width: 16px; height: 16px; flex-shrink: 0; }
+    .gate-note a, .gate-msg a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .gate-msg-error { color: var(--color-error); }
+    .diagnose-card { margin: var(--space-10) 0; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; max-width: 46ch; }
+    .nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--space-4) var(--space-8); }
+    .nav-links .nav-next { grid-column: 2; justify-self: end; text-align: right; }
+    @media (max-width: 640px) { .nav-links { grid-template-columns: 1fr; } .nav-links .nav-next { grid-column: 1; } }
+    @media (max-width: 920px) {
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+    .faq-block { margin: var(--space-12) 0; }
+    .faq-block h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: var(--space-5); font-weight: 700; }
+    .faq-item { border-top: 1px solid var(--color-divider); padding: var(--space-5) 0; }
+    .faq-item:first-of-type { border-top: none; }
+    .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
+    .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
+
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
+      .article-body .container-narrow > h3 { font-size: 1.2rem; font-weight: 700; margin: var(--space-8) 0 var(--space-3); }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .article-body .container-narrow > ol a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .example-box { margin: var(--space-6) 0 var(--space-8); padding: var(--space-5) var(--space-6); border-left: 3px solid var(--color-primary); background: var(--color-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .example-box p { margin: 0 0 var(--space-3); }
+    .example-box p:last-child { margin-bottom: 0; }
+    .example-box .example-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>Rev-IQ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav aria-label="Primary" id="primary-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="../resources" aria-current="page">Resource Library</a></li>
+          <li><a href="/skills">AI Skills</a></li>
+          <li><a href="../who-its-for">Who It's For</a></li>
+          <li><a href="../advisory">Advisory</a></li><li><a href="../fractional-cro">Fractional CRO</a></li>
+          <li><a href="../about">About Rev-IQ</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      function closeMenu() {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+      toggle.addEventListener('click', function () {
+        var open = document.body.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 920) closeMenu();
+      });
+    })();
+  </script>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../resources">Resource Library</a>&nbsp;/&nbsp;New Business Development &amp; Sales</div>
+        <div class="eyebrow"><span class="dot"></span>New Business Development &amp; Sales</div>
+        <h1 class="article-h1">Running an SDR Function That Feeds Real Pipeline</h1>
+        <p class="dek">SDR teams are usually measured on activity and meetings booked, then blamed when pipeline doesn&#x27;t follow. Here&#x27;s how to define the job, the handoff and the numbers so meetings turn into opportunities.</p>
+        <div class="meta-row"><span>11 min read</span><span>Free · email required</span><span>Published 13 October 2026</span></div>
+        <div class="tag-row"><span class="tag">Not enough qualified pipeline</span><span class="tag">Inconsistent hiring, onboarding or management rhythm</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+        <h2>The Meeting Nobody Wanted</h2>
+<p>Most struggling SDR teams have the same weekly argument. The SDRs point to the meetings they booked. The account executives point to the meetings that were a waste of time: the wrong person, no real problem, a prospect who thought they were getting a free consultation, or a calendar invite nobody turned up to. Leadership looks at a healthy meetings number and a flat pipeline and can't work out which side is right.</p>
+<p>Usually both are. The SDRs did what they were measured on. The account executives are right that it didn't produce pipeline. The failure sits in between: nobody defined what a good meeting is, how it gets handed over, or which numbers prove the function is working. An SDR team without those definitions will optimise for activity, because activity is the only thing anyone can see.</p>
+<p>The fix is not a better script or a new sequencing tool. It is a small set of operating decisions, made once and enforced every week, that connect what an SDR does on Monday to qualified pipeline at the end of the month.</p>
+
+<h2>Before You Hire One: Do You Have Something to Scale?</h2>
+<p>SDRs scale a motion that already works. They are not good at discovering one. If the founder or the first account executives haven't yet proven which accounts buy, why they buy and what message gets a reply, an SDR will spend months testing hypotheses with the least experience and context in the business. That is expensive for you and demoralising for them.</p>
+<p>A reasonable test of readiness is whether you can answer yes to most of these:</p>
+<ul>
+<li>You have an ideal customer profile built from real customers, with clear disqualifiers.</li>
+<li>Someone has already booked and run meetings from outbound or inbound using a message that works, and can show an SDR what good looks like.</li>
+<li>There are enough accounts in the market to keep an SDR busy for a year without recycling the same list.</li>
+<li>Account executives, or the founder, have capacity to take more first meetings and follow them up properly.</li>
+<li>A manager will spend real time each week coaching, reviewing calls and inspecting meeting quality.</li>
+</ul>
+<p>If several of those are missing, the better first step is usually to strengthen founder-led or account executive-led prospecting until the pattern is clear. Then hire the SDR to run it at greater volume.</p>
+<p>It is also worth deciding which kind of SDR role you are hiring for. An inbound role qualifies and books leads who have raised their hand, and success depends on speed and judgement. An outbound role creates conversations with people who haven't, and success depends on research, persistence and messaging. The skills overlap but the daily work, targets and coaching are different. Blending the two in one junior role often means inbound leads get answered late while outbound gets done in whatever time is left.</p>
+
+<h2>Define What a Good Meeting Is</h2>
+<p>The single most useful document an SDR function can have is a short list of meeting acceptance criteria, agreed by the SDRs, the account executives and their manager. It answers one question: what has to be true for a meeting to count?</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Criterion</th><th>What it means in practice</th></tr></thead>
+<tbody>
+<tr><td>Right account</td><td>The account matches the ideal customer profile and sits in tier A or B</td></tr>
+<tr><td>Right person</td><td>The contact feels the problem or influences the decision, or has agreed to bring someone who does</td></tr>
+<tr><td>A real reason to meet</td><td>The prospect has confirmed a problem, a trigger or an active initiative in their own words</td></tr>
+<tr><td>Agreed agenda</td><td>The prospect knows what the meeting is for and what they'll get from it</td></tr>
+<tr><td>Calendar accepted</td><td>The invite is accepted, not just sent, with the right attendees on it</td></tr>
+</tbody>
+</table>
+</div>
+<p>Then separate the stages that most teams blur together. A meeting <strong>booked</strong> is on the calendar. A meeting <strong>held</strong> actually happened. A meeting <strong>accepted</strong> is one the account executive agrees met the criteria. An <strong>opportunity created</strong> is one where there is a genuine reason to keep working the deal. Each step is a different measure of quality, and each one belongs in the weekly numbers.</p>
+<p>Give account executives a simple rule: accept or reject every held meeting within one working day, and if you reject it, choose a reason from a short fixed list such as wrong account, wrong person, no confirmed problem, or no-show. Free-text reasons are impossible to analyse. A fixed list turns arguments about meeting quality into a pattern you can coach.</p>
+
+<h2>The Handoff Note</h2>
+<p>A lot of good SDR work is lost in the handoff. The SDR learned why the prospect agreed to meet, what they said about the problem and who else is involved, then the account executive walks into the meeting with nothing but a name and a job title, and asks the prospect to repeat it all. Prospects notice, and it makes the second conversation feel like the first.</p>
+<p>A handoff note fixes this in five minutes. It should cover:</p>
+<ol>
+<li><strong>Why this account.</strong> The profile fit and tier.</li>
+<li><strong>Why now.</strong> The signal or trigger that prompted outreach.</li>
+<li><strong>What they said.</strong> The problem in the prospect's own words, quoted where possible.</li>
+<li><strong>Who else.</strong> Other people mentioned, and whether they'll attend.</li>
+<li><strong>What was promised.</strong> Anything the SDR told them the meeting would cover.</li>
+<li><strong>Open questions.</strong> What the SDR didn't find out and the account executive should ask.</li>
+</ol>
+<p>For tier A accounts, consider a warm handoff: the SDR joins the first few minutes of the meeting, introduces the account executive and recaps what they heard. It shows the prospect that the business listened, and it gives the SDR a direct view of what happens next, which is the fastest way they learn what a good meeting looks like.</p>
+
+<h2>No-Shows Are a Signal, Not Bad Luck</h2>
+<p>Every team gets no-shows, but a high or rising no-show rate is almost always a sign that the prospect's agreement to meet was weak. They said yes to get off the phone, they weren't clear what the meeting was for, or the meeting was booked so far out that the reason went stale.</p>
+<p>A few habits reduce no-shows without being pushy. Book the meeting as soon as possible after the conversation rather than weeks away. Send a short confirmation the day before that restates the agenda and what the prospect will get from the meeting, rather than a generic reminder. Make it easy to reschedule. If someone doesn't show, follow up the same day with a simple, friendly offer of two alternative times, and treat a second no-show as a clear answer.</p>
+<p>Then look at the pattern. Track no-shows by source, message, SDR and how far ahead the meeting was booked. If one segment or one opening line produces most of them, the problem is upstream, in targeting or messaging, not in the reminder process.</p>
+
+<h2>The Funnel That Tells You Where It Leaks</h2>
+<p>An SDR funnel has more steps than most dashboards show. Tracking each conversion step, rather than just activity and meetings, tells you exactly where to look when results fall short.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Step</th><th>If this conversion is low</th><th>Where to look</th></tr></thead>
+<tbody>
+<tr><td>Activity to conversation</td><td>People aren't replying or picking up</td><td>List quality, contact data, timing, channel mix</td></tr>
+<tr><td>Conversation to meeting booked</td><td>People talk but don't see a reason to meet</td><td>Message relevance, the ask, objection handling</td></tr>
+<tr><td>Booked to held</td><td>Agreement to meet was weak</td><td>Agenda clarity, booking lead time, confirmations</td></tr>
+<tr><td>Held to accepted</td><td>Meetings don't meet the criteria</td><td>Targeting, qualification during booking, criteria understanding</td></tr>
+<tr><td>Accepted to opportunity</td><td>Good meetings aren't progressing</td><td>Account executive follow-up and discovery, not just the SDR</td></tr>
+</tbody>
+</table>
+</div>
+<p>That last row matters. An SDR function can only be judged fairly if the account executive side of the handoff is inspected too. If accepted meetings regularly stall before becoming opportunities, the problem may be in discovery, follow-up or capacity, and pushing the SDRs harder won't fix it.</p>
+<p>Resist the urge to import benchmark conversion rates from vendor reports. They vary enormously with market, price point, deal size and list quality. Run the funnel for six to eight weeks, establish your own baseline, then set improvement targets against it.</p>
+
+<h2>Targets and Pay That Reward the Right Thing</h2>
+<p>What you pay SDRs on is what you'll get. Paying on meetings booked produces meetings booked, including ones that should never have been booked. Paying only on closed revenue puts most of the outcome outside the SDR's control and makes the variable pay feel like a lottery.</p>
+<p>A sound middle ground is to pay mainly on meetings that are held and accepted against the agreed criteria, with a smaller component tied to opportunities created or pipeline value from those meetings. That keeps the SDR focused on quality while staying close enough to their own work that they can influence it. Keep the plan simple enough to calculate on a napkin. If an SDR can't tell you what they'll earn from this week's work, the plan isn't motivating them.</p>
+<p>Activity targets still have a place, especially in the first months, but treat them as leading indicators for coaching rather than the thing you reward. An SDR hitting activity targets with no meetings needs help with targeting or messaging. An SDR producing accepted meetings with lower activity is doing something worth copying.</p>
+
+<h2>A Weekly Rhythm That Builds Skill</h2>
+<p>SDR performance improves through repetition and specific feedback, which means the management rhythm matters more than the tooling. A simple cadence covers most of it:</p>
+<ul>
+<li><strong>A weekly one-to-one of around thirty minutes.</strong> Review the funnel numbers for the week, listen to two call recordings or read two email threads together, and agree one specific skill to work on before next week.</li>
+<li><strong>A short weekly team review.</strong> Look at accepted and rejected meetings, share messages and openers that worked, and flag signals worth chasing.</li>
+<li><strong>A monthly calibration with the account executives.</strong> Go through a sample of rejected meetings together, agree whether the criteria were applied fairly, and update the criteria if the market has taught you something.</li>
+</ul>
+<p>The coaching focus should change as the SDR develops: research and targeting early, then message and opener, then objection handling and booking discipline. Keep a simple coaching log so both the SDR and the manager can see progress over time, rather than repeating the same feedback every week.</p>
+
+<h2>Ramp: The First Ninety Days</h2>
+<p>A new SDR needs a structured ramp with clear expectations at each stage. A practical shape for the first ninety days looks like this:</p>
+<ul>
+<li><strong>Days 1 to 30: learn.</strong> The ideal customer profile and its disqualifiers, the problem you solve in the buyer's words, the main competitors and alternatives. Listen to recorded calls, shadow account executive meetings, and write first sequences that the manager reviews before they go out. Goals here are about knowledge and quality, not volume.</li>
+<li><strong>Days 31 to 60: run.</strong> Own a defined set of tiered accounts. Hit agreed activity and conversation levels, and book first meetings against the acceptance criteria. Weekly reviews focus on what is and isn't converting.</li>
+<li><strong>Days 61 to 90: produce.</strong> Work toward the full target for held and accepted meetings, with a ramped quota that steps up rather than jumping to the full number on day one.</li>
+</ul>
+<p>Write the ramp plan down before the person starts, and review it with them at day 30 and day 60. The <a href="21-the-30-60-90-day-plan-that-actually-shortens-ramp-up">30-60-90 day plan framework</a> in the Resource Library covers the general approach in more detail.</p>
+
+<h2>Where SDRs Sit and Where They Go Next</h2>
+<p>SDRs can report into sales or marketing, and either can work. What matters is that the person they report to owns the result they're measured on. If SDRs are measured on accepted meetings and opportunities, reporting into the sales leader usually keeps the feedback loop with account executives tight. If they mainly qualify inbound demand, marketing can be a natural home. Avoid dual reporting, where two leaders each assume the other is coaching.</p>
+<p>Most people take an SDR role as a step toward something else, usually an account executive role. Make that path explicit: the skills and results that make someone ready, and roughly how long it typically takes in your business. A clear path is one of the strongest retention tools you have, and promoting a proven SDR into an account executive role is often lower risk than hiring one externally, because they already know your market and your buyers.</p>
+
+<h2>Putting It Into Practice</h2>
+<p>Use the SDR Operating Kit to set up the foundations: the meeting acceptance criteria, the rejection reasons, the handoff note, the weekly funnel review and a ninety-day ramp plan. If you already have an SDR team, start with the acceptance criteria and the handoff note. Those two documents resolve most of the friction between SDRs and account executives within a few weeks, and they make every other number in the funnel more meaningful.</p>
+
+        <div class="takeaways">
+          <strong>Key takeaways</strong>
+          <ul>
+            <li>SDRs scale a motion that already works. Prove the profile and the message before hiring someone to run it at volume.</li>
+            <li>Agree written meeting acceptance criteria, and have account executives accept or reject every held meeting within a day using a fixed list of reasons.</li>
+            <li>Track booked, held, accepted and opportunity created as separate steps, because each one diagnoses a different problem.</li>
+            <li>A five-minute handoff note, covering why this account, why now and what the prospect said, stops buyers repeating themselves.</li>
+            <li>Pay mainly on held and accepted meetings, not meetings booked, and treat activity numbers as coaching signals.</li>
+            <li>A weekly one-to-one with real call and email review, plus a written 90-day ramp, does more for performance than any tool.</li>
+          </ul>
+        </div>
+        <div class="faq-block">
+          <h2>Frequently asked questions</h2>
+          <div class="faq-item"><h3>When should a technology business hire its first SDR?</h3><p>When the profile and the outbound message have already been proven by a founder or account executive, there are enough accounts to work for a year, someone has capacity to take the meetings, and a manager will coach weekly. SDRs scale a working motion; they rarely discover one.</p></div>
+          <div class="faq-item"><h3>What should SDRs be paid on?</h3><p>Mainly on meetings that are held and accepted against agreed criteria, with a smaller component tied to opportunities or pipeline created. Paying on meetings booked rewards volume over quality.</p></div>
+          <div class="faq-item"><h3>What is a meeting acceptance criteria list?</h3><p>A short, agreed definition of what makes a meeting count: the right account, the right person, a confirmed reason to meet, an agreed agenda and an accepted calendar invite. It turns arguments about meeting quality into something you can measure and coach.</p></div>
+          <div class="faq-item"><h3>Should SDRs report to sales or marketing?</h3><p>Either can work. What matters is that the leader they report to owns the result they&#x27;re measured on, and that there&#x27;s one clear manager responsible for coaching them.</p></div>
+        </div>
+        <div class="download-card has-inside" id="download">
+          <div class="dl-top">
+          <div>
+            <div class="label">Template · Free with email</div>
+            <h3>SDR Operating Kit</h3>
+            <p>For sales leaders setting up or resetting an SDR function so that booked meetings become accepted meetings and real opportunities.</p>
+          </div>
+          <form class="gate-form" data-rev-iq-form data-pdf="../assets/48-sdr-operating-kit.pdf">
+            <input type="hidden" name="_subject" value="Download Request: SDR Operating Kit | rev-iq.ai" />
+            <input type="hidden" name="asset" value="SDR Operating Kit" />
+            <input type="hidden" name="form_type" value="Download request" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+            <div data-state="idle" class="gate-fields">
+              <input type="email" name="email" placeholder="you@company.com" required aria-label="Email address" />
+              <button class="btn btn-primary" type="submit">Get the PDF</button>
+            </div>
+            <label class="gate-optin" data-state="idle"><input type="checkbox" name="marketing_opt_in" value="yes" /><span>Also send me occasional Rev-IQ resources and updates. Unsubscribe any time.</span></label>
+            <p data-state="success" hidden class="gate-msg">Thanks. Your download should start automatically. If it doesn't, <a href="../assets/48-sdr-operating-kit.pdf" download>open the PDF here</a>.</p>
+            <p data-state="error" hidden class="gate-msg gate-msg-error">Something went wrong. Email joel.smith@rev-iq.ai and we'll send it directly.</p>
+            <p class="gate-note" data-state="idle">We only use your email for this request unless you opt in. <a href="../privacy">Privacy notice</a></p>
+          </form>
+          </div>
+          <div class="dl-inside">
+            <img class="dl-thumb" src="../assets/previews/48.webp" alt="First page of the SDR Operating Kit PDF" width="560" height="449" loading="lazy" />
+            <div class="dl-details">
+              <div class="dl-label">What's inside</div>
+              <ol class="dl-sections"><li>Readiness Check</li><li>Meeting Acceptance Criteria</li><li>Rejection Reasons</li><li>SDR to AE Handoff Note</li><li>Weekly Funnel Review</li><li>Weekly One-to-One Agenda</li><li>Coaching Log</li><li>90-Day Ramp Plan</li></ol>
+              <dl class="dl-facts">
+                <div><dt>Format</dt><dd>PDF, 5 pages, designed to print and fill in</dd></div>
+                <div><dt>Best for</dt><dd>Sales leaders hiring their first SDRs or fixing friction between SDRs and account executives</dd></div>
+                <div><dt>What to bring</dt><dd>Your ideal customer profile, last month&#x27;s meeting and opportunity numbers, and examples of good and poor meetings</dd></div>
+                <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="card path-card diagnose-card">
+          <span class="kicker">Want it applied to your business?</span>
+          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">Templates get you moving fast. If you want a structured read on where this is actually breaking down in your business, that's a short diagnostic conversation, not another download.</p>
+          <a class="btn btn-secondary btn-sm" href="../advisory">Discuss advisory support →</a>
+        </div>
+        <div class="nav-links">
+          <a href="47-outbound-prospecting-that-doesn-t-burn-your-market">← Outbound Prospecting That Doesn&#x27;t Burn Your Market</a>
+          <a class="nav-next" href="49-building-a-business-case-the-buyer-s-cfo-will-sign">Building a Business Case the Buyer&#x27;s CFO Will Sign →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Rev-IQ home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/><path d="M9 13h2.2"/><circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/></svg></span><span>Rev-IQ</span></a>
+          <p>Commercial frameworks and advisory for technology businesses ready to scale.</p>
+          <div class="footer-contact">
+            <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a>
+            <a href="https://www.linkedin.com/company/rev-iq-ai/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h3.96V21H3V9.75zm6.38 0h3.8v1.54h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.63 4.74 6.05V21h-3.96v-5.03c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.3-1.93 2.65V21H9.38V9.75z"/></svg>Rev-IQ on LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col" role="navigation" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../resources">Resource Library</a></li>
+            <li><a href="/skills">AI Skills</a></li>
+            <li><a href="../browse-by-challenge">Browse by Challenge</a></li>
+            <li><a href="../who-its-for">Who It's For</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" role="navigation" aria-label="Work with Rev-IQ">
+          <h2>Engage</h2>
+          <ul>
+            <li><a href="../advisory">Advisory</a></li><li><a href="../fractional-cro">Fractional CRO</a></li>
+            <li><a href="../about">About Rev-IQ</a></li>
+            <li><a href="../contact">Contact</a></li>
+            <li><a href="../privacy">Privacy</a></li>
+            <li><a href="../terms">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">© 2026 Rev-IQ Advisory Pty Ltd · ABN 34 702 630 304 · Sydney, Australia</div>
+    </div>
+  </footer>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rev-IQ",
+    "legalName": "Rev-IQ Advisory Pty Ltd",
+    "alternateName": "Rev-IQ Advisory",
+    "url": "https://rev-iq.ai",
+    "logo": "https://rev-iq.ai/apple-touch-icon.png",
+    "email": "mailto:joel.smith@rev-iq.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressCountry": "AU"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Joel Smith",
+      "jobTitle": "Founder, Rev-IQ",
+      "description": "Group CEO and CRO-level commercial operator with three decades of experience across telecommunications, technology services, software and SaaS businesses in Australia, New Zealand, and the UK.",
+      "sameAs": ["https://www.linkedin.com/in/joelsmithau/"]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Running an SDR Function That Feeds Real Pipeline",
+  "description": "SDR teams are usually measured on activity and meetings booked, then blamed when pipeline doesn't follow. Here's how to define the job, the handoff and the numbers so meetings turn into opportunities.",
+  "datePublished": "2026-10-13",
+  "dateModified": "2026-10-13",
+  "author": {
+    "@type": "Person",
+    "name": "Joel Smith",
+    "url": "https://www.linkedin.com/in/joelsmithau/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rev-IQ",
+    "legalName": "Rev-IQ Advisory Pty Ltd",
+    "alternateName": "Rev-IQ Advisory",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rev-iq.ai/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rev-iq.ai/articles/48-running-an-sdr-function-that-feeds-real-pipeline"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rev-iq.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Resource Library",
+      "item": "https://rev-iq.ai/resources"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Running an SDR Function That Feeds Real Pipeline",
+      "item": "https://rev-iq.ai/articles/48-running-an-sdr-function-that-feeds-real-pipeline"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When should a technology business hire its first SDR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the profile and the outbound message have already been proven by a founder or account executive, there are enough accounts to work for a year, someone has capacity to take the meetings, and a manager will coach weekly. SDRs scale a working motion; they rarely discover one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should SDRs be paid on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mainly on meetings that are held and accepted against agreed criteria, with a smaller component tied to opportunities or pipeline created. Paying on meetings booked rewards volume over quality."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a meeting acceptance criteria list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A short, agreed definition of what makes a meeting count: the right account, the right person, a confirmed reason to meet, an agreed agenda and an accepted calendar invite. It turns arguments about meeting quality into something you can measure and coach."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should SDRs report to sales or marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either can work. What matters is that the leader they report to owns the result they're measured on, and that there's one clear manager responsible for coaching them."
+      }
+    }
+  ]
+}
+  </script>
+
+  <script src="../js/forms.js" defer></script>
+  <script>
+    (function () {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>

@@ -32,6 +32,8 @@ Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framew
 - [Rev-IQ AI Strategy Kit](https://rev-iq.ai/skills/bundles/ai-strategy-kit): Paid bundle (A$199 inc GST) of six skills: 3-pillar AI plan builder, AI use case prioritiser, AI workforce enablement plan, operational AI playbook, AI governance policy drafter and product AI decision.
 - [Rev-IQ Partner and Channel Kit](https://rev-iq.ai/skills/bundles/partner-and-channel-kit): Paid bundle (A$149 inc GST) of five skills: partner strategy picker, partner fit scorer, partner 90-day activation plan, referral motion designer and partner review cadence.
 - [Rev-IQ Security Questionnaire and Trust Kit](https://rev-iq.ai/skills/bundles/security-questionnaire-and-trust-kit): Paid bundle (A$199 inc GST) of five skills: security questionnaire responder, security baseline check, access and data policy builder, vendor risk review and incident first-hour plan.
+- [Rev-IQ SDR Kit](https://rev-iq.ai/skills/bundles/sdr-kit): Paid bundle (A$149 inc GST) of six skills: ICP and target account builder, account research brief, outbound sequence writer, cold call and objection coach, meeting handoff and SDR weekly review.
+- [Rev-IQ New Business BDM Kit](https://rev-iq.ai/skills/bundles/new-business-bdm-kit): Paid bundle (A$199 inc GST) of six skills: territory and coverage plan, stakeholder map, business case builder, mutual action plan, proposal and negotiation prep and deal strategy review.
 
 ## About
 

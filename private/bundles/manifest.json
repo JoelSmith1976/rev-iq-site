@@ -88,8 +88,8 @@
       "key": "all",
       "label": "Rev-IQ Founder-led Sales Kit: all skills and install guide",
       "filename": "Rev-IQ-founder-led-sales-kit-chatgpt.zip",
-      "bytes": 139819,
-      "sha256": "b5f71b182e0a2c61239ddeadaa37c6597617e0e24bc3d76f159e6b359fafd2a5"
+      "bytes": 139787,
+      "sha256": "b782874845d1ea1aae0ec1ca22fa10af5518f7ffc925e8d3f4ad01d6b66d617d"
      }
     ],
     "perplexity": [
@@ -211,8 +211,8 @@
       "key": "all",
       "label": "Rev-IQ Board and Leadership Pack: all skills and install guide",
       "filename": "Rev-IQ-board-and-leadership-pack-chatgpt.zip",
-      "bytes": 132792,
-      "sha256": "ecd1fda1076c7c7eb7d4ad03d46ac15791bb371e7ca8e6cea0142db8b2b3f923"
+      "bytes": 132786,
+      "sha256": "95aa87799bfdbc5ea3ae8c59a7246905d1d24b76a434e895d50e7511ac182a17"
      }
     ],
     "perplexity": [
@@ -341,8 +341,8 @@
       "key": "all",
       "label": "Rev-IQ Retention and Customer Success Kit: all skills and install guide",
       "filename": "Rev-IQ-retention-and-customer-success-kit-chatgpt.zip",
-      "bytes": 139623,
-      "sha256": "ba88d21b057e50d54452f6cbc63f8e1cebeefb8b38e62d15ec17b681d9d230cf"
+      "bytes": 139609,
+      "sha256": "3c27a3d00bcff51c70d5d342e0181208f336b43fdf1ef439d184ffc647460cb5"
      }
     ],
     "perplexity": [
@@ -492,8 +492,8 @@
       "key": "all",
       "label": "Rev-IQ AI Strategy Kit: all skills and install guide",
       "filename": "Rev-IQ-ai-strategy-kit-chatgpt.zip",
-      "bytes": 139669,
-      "sha256": "a3ab835cdc3c38e2970f76d62425296da318ba63c322d71c93500bd98f4ea805"
+      "bytes": 139686,
+      "sha256": "84b5c9e453825bc8ef7be06ac3bd2de4703b831e9e3322919ddf2bf229f5e364"
      }
     ],
     "perplexity": [
@@ -636,8 +636,8 @@
       "key": "all",
       "label": "Rev-IQ Partner and Channel Kit: all skills and install guide",
       "filename": "Rev-IQ-partner-and-channel-kit-chatgpt.zip",
-      "bytes": 135599,
-      "sha256": "5e9b3d6b58183f6164c0a573e45b869e570dfea2dbd214d68da6586d5f6e9587"
+      "bytes": 135569,
+      "sha256": "07b95f5ff0c88f5b0fc62d9f563e29be279eb167c427f19976e0758327a2d4b5"
      }
     ],
     "perplexity": [
@@ -773,8 +773,8 @@
       "key": "all",
       "label": "Rev-IQ Security Questionnaire and Trust Kit: all skills and install guide",
       "filename": "Rev-IQ-security-questionnaire-and-trust-kit-chatgpt.zip",
-      "bytes": 135875,
-      "sha256": "d742555d176de4eea0d38a71c151dbc262ed7ee9d589b80112ec8b8b320a114b"
+      "bytes": 135890,
+      "sha256": "733fd44ca952abcdbb822d89c95c1fe3c112a5d9ad93cc7fbfd361cf0058aed1"
      }
     ],
     "perplexity": [
@@ -819,6 +819,322 @@
       "filename": "Rev-IQ-security-questionnaire-and-trust-kit-perplexity.zip",
       "bytes": 124386,
       "sha256": "461992725b8b98dc17bef8ee84848d32bab7c439a36ca92d3777fea966b2bac2"
+     }
+    ]
+   }
+  },
+  "sdr-kit": {
+   "name": "Rev-IQ SDR Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-icp-and-target-account-builder",
+      "label": "Rev-IQ ICP and Target Account Builder",
+      "filename": "rev-iq-icp-and-target-account-builder.zip",
+      "bytes": 6683,
+      "sha256": "89e01256b1281ffa40f60e8077d7c33f67c1e0a0a8ebb2ce620079848d000706"
+     },
+     {
+      "key": "rev-iq-account-research-brief",
+      "label": "Rev-IQ Account Research Brief",
+      "filename": "rev-iq-account-research-brief.zip",
+      "bytes": 2812,
+      "sha256": "9667bab1f80dfa3c88b4ae199c0f112521ecfb0c831955d2845200122b4da746"
+     },
+     {
+      "key": "rev-iq-outbound-sequence-writer",
+      "label": "Rev-IQ Outbound Sequence Writer",
+      "filename": "rev-iq-outbound-sequence-writer.zip",
+      "bytes": 9340,
+      "sha256": "76a14eb9d76b9902c9996dcbade7e86cf003a36c7f11e3b854cda047fdfbd9ed"
+     },
+     {
+      "key": "rev-iq-cold-call-and-objection-coach",
+      "label": "Rev-IQ Cold Call and Objection Coach",
+      "filename": "rev-iq-cold-call-and-objection-coach.zip",
+      "bytes": 3319,
+      "sha256": "8f7c6adf902448e6998ac2cbee2254b9077a4904eb3c1d6f96b4198c0baf3972"
+     },
+     {
+      "key": "rev-iq-meeting-handoff",
+      "label": "Rev-IQ Meeting Handoff",
+      "filename": "rev-iq-meeting-handoff.zip",
+      "bytes": 2820,
+      "sha256": "de51ef9e9c1a0588bc1f05122b5fb7b72c6d0ef6d6fb11e6552a1159a902030c"
+     },
+     {
+      "key": "rev-iq-sdr-weekly-review",
+      "label": "Rev-IQ SDR Weekly Review",
+      "filename": "rev-iq-sdr-weekly-review.zip",
+      "bytes": 6671,
+      "sha256": "1ed2604ab6146e8f0307390e760dc4dd4451e6dc10a4fcd3834368806db8e3a9"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ SDR Kit: all skills and install guide",
+      "filename": "Rev-IQ-sdr-kit-claude.zip",
+      "bytes": 144257,
+      "sha256": "1dfa1a5146bcc422728025769dce68472832e1568dc2b6d19f90be46fde1bf75"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-icp-and-target-account-builder",
+      "label": "Rev-IQ ICP and Target Account Builder",
+      "filename": "rev-iq-icp-and-target-account-builder.zip",
+      "bytes": 7066,
+      "sha256": "9241cf604629afe48bdf9b3db57f9bf2982c2f31d4e078990876b3f786f0e22a"
+     },
+     {
+      "key": "rev-iq-account-research-brief",
+      "label": "Rev-IQ Account Research Brief",
+      "filename": "rev-iq-account-research-brief.zip",
+      "bytes": 3166,
+      "sha256": "863372139b213c1a7257dbad9c9471506ca2cf4877b7296fab6007a0ebcc5a6c"
+     },
+     {
+      "key": "rev-iq-outbound-sequence-writer",
+      "label": "Rev-IQ Outbound Sequence Writer",
+      "filename": "rev-iq-outbound-sequence-writer.zip",
+      "bytes": 9707,
+      "sha256": "f12e735d1670f220d76f5403342a6948f94f576134de6225f98ab59c1c55ccc8"
+     },
+     {
+      "key": "rev-iq-cold-call-and-objection-coach",
+      "label": "Rev-IQ Cold Call and Objection Coach",
+      "filename": "rev-iq-cold-call-and-objection-coach.zip",
+      "bytes": 3703,
+      "sha256": "ab953113f2a364ad3ba411ce717efade1f75c12b25c2e5c4f10c0f962cc5f48d"
+     },
+     {
+      "key": "rev-iq-meeting-handoff",
+      "label": "Rev-IQ Meeting Handoff",
+      "filename": "rev-iq-meeting-handoff.zip",
+      "bytes": 3168,
+      "sha256": "6140ab1a35390f9053e34d6556b44973e52d2119b88d8bd4895b765bb2c53ea6"
+     },
+     {
+      "key": "rev-iq-sdr-weekly-review",
+      "label": "Rev-IQ SDR Weekly Review",
+      "filename": "rev-iq-sdr-weekly-review.zip",
+      "bytes": 7014,
+      "sha256": "2a7262d94f270e51cb732c9791966d2ad603dac5a40a7552c9af3a425e9b9fbe"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ SDR Kit: all skills and install guide",
+      "filename": "Rev-IQ-sdr-kit-chatgpt.zip",
+      "bytes": 149592,
+      "sha256": "d2ba888e927efa5b1568941510232e1c1aa87a4cec4749cee58132317f2a130d"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-icp-and-target-account-builder",
+      "label": "Rev-IQ ICP and Target Account Builder",
+      "filename": "rev-iq-icp-and-target-account-builder.zip",
+      "bytes": 6531,
+      "sha256": "98ded4815e20b6f9d3c5784679bb4c00ee6cff5a3e64ff1405bfc4798e7bba61"
+     },
+     {
+      "key": "rev-iq-account-research-brief",
+      "label": "Rev-IQ Account Research Brief",
+      "filename": "rev-iq-account-research-brief.zip",
+      "bytes": 2752,
+      "sha256": "b6cb0ab15dcb9b10095e6e10aa5effb7ed59bcd4aa10c65ed309618689b64749"
+     },
+     {
+      "key": "rev-iq-outbound-sequence-writer",
+      "label": "Rev-IQ Outbound Sequence Writer",
+      "filename": "rev-iq-outbound-sequence-writer.zip",
+      "bytes": 9148,
+      "sha256": "d7eba92ccb478833a7f5c7fdb3eecae8c253a2c20f846355613f591fa672f408"
+     },
+     {
+      "key": "rev-iq-cold-call-and-objection-coach",
+      "label": "Rev-IQ Cold Call and Objection Coach",
+      "filename": "rev-iq-cold-call-and-objection-coach.zip",
+      "bytes": 3245,
+      "sha256": "cce6399034003650f6c3fb654b9cc6c9a051933f4caebf3dfa6d6bdab6ad63cb"
+     },
+     {
+      "key": "rev-iq-meeting-handoff",
+      "label": "Rev-IQ Meeting Handoff",
+      "filename": "rev-iq-meeting-handoff.zip",
+      "bytes": 2774,
+      "sha256": "d7b3bd00839fda337d1cffa1455174b032416879aecf267fafa8c2513567b8ef"
+     },
+     {
+      "key": "rev-iq-sdr-weekly-review",
+      "label": "Rev-IQ SDR Weekly Review",
+      "filename": "rev-iq-sdr-weekly-review.zip",
+      "bytes": 6571,
+      "sha256": "36afc87a8560499ed3f79c6dab392c9b288b868c4e40682fc0a7dd4b6f2b8e28"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ SDR Kit: all skills and install guide",
+      "filename": "Rev-IQ-sdr-kit-perplexity.zip",
+      "bytes": 137588,
+      "sha256": "9edd5c86b93647c14d15d7cbbbb744ae75916fd81a921619b9ef218061f327be"
+     }
+    ]
+   }
+  },
+  "new-business-bdm-kit": {
+   "name": "Rev-IQ New Business BDM Kit",
+   "platforms": {
+    "claude": [
+     {
+      "key": "rev-iq-territory-and-coverage-plan",
+      "label": "Rev-IQ Territory and Coverage Plan",
+      "filename": "rev-iq-territory-and-coverage-plan.zip",
+      "bytes": 6185,
+      "sha256": "a9a440f3eb2ca8dabce636759e4799b883899e7619cccaa19ad3b23451e1eb39"
+     },
+     {
+      "key": "rev-iq-stakeholder-map",
+      "label": "Rev-IQ Stakeholder Map",
+      "filename": "rev-iq-stakeholder-map.zip",
+      "bytes": 2707,
+      "sha256": "d2cbe3a8bed0bc4375b71fa437279da66f95118e1bd8062f379e84a292a40230"
+     },
+     {
+      "key": "rev-iq-business-case-builder",
+      "label": "Rev-IQ Business Case Builder",
+      "filename": "rev-iq-business-case-builder.zip",
+      "bytes": 6977,
+      "sha256": "060e181ccdcd3383bf1b601e42cb1a994537403b806b647e41dba2682fb9e684"
+     },
+     {
+      "key": "rev-iq-mutual-action-plan",
+      "label": "Rev-IQ Mutual Action Plan",
+      "filename": "rev-iq-mutual-action-plan.zip",
+      "bytes": 6361,
+      "sha256": "c28307919298178dac93c09c17450b55a15e0c8e5d374053165102336273eadc"
+     },
+     {
+      "key": "rev-iq-proposal-and-negotiation-prep",
+      "label": "Rev-IQ Proposal and Negotiation Prep",
+      "filename": "rev-iq-proposal-and-negotiation-prep.zip",
+      "bytes": 5447,
+      "sha256": "05a537b23b5b81386b3d10795b994b5fc8a94c2a5b038b1695625b8eba6f527b"
+     },
+     {
+      "key": "rev-iq-deal-strategy-review",
+      "label": "Rev-IQ Deal Strategy Review",
+      "filename": "rev-iq-deal-strategy-review.zip",
+      "bytes": 3062,
+      "sha256": "23c6727c60ac2f210310e550adb36c0baec61c86a01a5a828554a56d5a1423cf"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ New Business BDM Kit: all skills and install guide",
+      "filename": "Rev-IQ-new-business-bdm-kit-claude.zip",
+      "bytes": 142593,
+      "sha256": "e1f06c6874cf553db46b1a90480a1c5fbf815c2dd4f3d18b2cbad917ff3cc258"
+     }
+    ],
+    "chatgpt": [
+     {
+      "key": "rev-iq-territory-and-coverage-plan",
+      "label": "Rev-IQ Territory and Coverage Plan",
+      "filename": "rev-iq-territory-and-coverage-plan.zip",
+      "bytes": 6573,
+      "sha256": "70db429fcc9f63d654eaf046757cb458b31c85a69bee1e1ac35ad3fb03647d2f"
+     },
+     {
+      "key": "rev-iq-stakeholder-map",
+      "label": "Rev-IQ Stakeholder Map",
+      "filename": "rev-iq-stakeholder-map.zip",
+      "bytes": 3059,
+      "sha256": "801319fc86d4b4d9e11aa663bd11b4173607919e053a28e6abf0c85546cd49d7"
+     },
+     {
+      "key": "rev-iq-business-case-builder",
+      "label": "Rev-IQ Business Case Builder",
+      "filename": "rev-iq-business-case-builder.zip",
+      "bytes": 7331,
+      "sha256": "47df72cbe0cdfe70c879c3ca5267db0a997f417e3ea6ca8e3be12a36b7e5d9ce"
+     },
+     {
+      "key": "rev-iq-mutual-action-plan",
+      "label": "Rev-IQ Mutual Action Plan",
+      "filename": "rev-iq-mutual-action-plan.zip",
+      "bytes": 6729,
+      "sha256": "3ca3de284e8e4be715f3ac21b6c647cf312e88a5ee71e1fa258bf131f8637292"
+     },
+     {
+      "key": "rev-iq-proposal-and-negotiation-prep",
+      "label": "Rev-IQ Proposal and Negotiation Prep",
+      "filename": "rev-iq-proposal-and-negotiation-prep.zip",
+      "bytes": 5831,
+      "sha256": "f66862d252400d8696d6ea964d907543f45ea401e32ab23cd9cad03df2373263"
+     },
+     {
+      "key": "rev-iq-deal-strategy-review",
+      "label": "Rev-IQ Deal Strategy Review",
+      "filename": "rev-iq-deal-strategy-review.zip",
+      "bytes": 3420,
+      "sha256": "3f04b6b9e0fe35fcbc651513594cbe81d8cf177df820e9edfc3e67e3c5f49178"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ New Business BDM Kit: all skills and install guide",
+      "filename": "Rev-IQ-new-business-bdm-kit-chatgpt.zip",
+      "bytes": 148003,
+      "sha256": "5296320466f2a4e71c2c10382346219fe81f11f180109560d76fccfb997c3feb"
+     }
+    ],
+    "perplexity": [
+     {
+      "key": "rev-iq-territory-and-coverage-plan",
+      "label": "Rev-IQ Territory and Coverage Plan",
+      "filename": "rev-iq-territory-and-coverage-plan.zip",
+      "bytes": 6045,
+      "sha256": "99bde45a4cf43415ad5c899b0b858b1b742325a165bc5279e7b19ec2b54b748b"
+     },
+     {
+      "key": "rev-iq-stakeholder-map",
+      "label": "Rev-IQ Stakeholder Map",
+      "filename": "rev-iq-stakeholder-map.zip",
+      "bytes": 2661,
+      "sha256": "f817617549037328a1e3e96fd35b5d1d88bb8ba9b3325cf665c2848ee1cad010"
+     },
+     {
+      "key": "rev-iq-business-case-builder",
+      "label": "Rev-IQ Business Case Builder",
+      "filename": "rev-iq-business-case-builder.zip",
+      "bytes": 6861,
+      "sha256": "d85a7021e4bdb43353a00aad41e8ef4cde75494a555f7d720dd3bf725831c028"
+     },
+     {
+      "key": "rev-iq-mutual-action-plan",
+      "label": "Rev-IQ Mutual Action Plan",
+      "filename": "rev-iq-mutual-action-plan.zip",
+      "bytes": 6257,
+      "sha256": "56c24d5f092ca5cfa11b42ae41be6851fe3f0570365d91a2f47dbd310af31cea"
+     },
+     {
+      "key": "rev-iq-proposal-and-negotiation-prep",
+      "label": "Rev-IQ Proposal and Negotiation Prep",
+      "filename": "rev-iq-proposal-and-negotiation-prep.zip",
+      "bytes": 5299,
+      "sha256": "71a8ddcec1824de137d56d22feacc9d3c7c811e31fee7b43b440ea7c20fb6166"
+     },
+     {
+      "key": "rev-iq-deal-strategy-review",
+      "label": "Rev-IQ Deal Strategy Review",
+      "filename": "rev-iq-deal-strategy-review.zip",
+      "bytes": 3006,
+      "sha256": "dade1ce74f8ba13f2e7f54155f03d4235eb50faa537b7fac64f5fe501bd0031b"
+     },
+     {
+      "key": "all",
+      "label": "Rev-IQ New Business BDM Kit: all skills and install guide",
+      "filename": "Rev-IQ-new-business-bdm-kit-perplexity.zip",
+      "bytes": 135885,
+      "sha256": "8b4d709d34fe5f22240e46970343db01e2cb79c628ef3a28d67f7813d756ce81"
      }
     ]
    }

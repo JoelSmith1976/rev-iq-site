@@ -1,6 +1,6 @@
-# Rev-IQ
+# Rev-IQ Advisory
 
-> Rev-IQ is a commercial and revenue operations resource for leaders of technology businesses, from SaaS and software to technology services: practical frameworks, templates, and advisory support for founders and executives who want revenue that grows in a straight line rather than a rollercoaster.
+> Rev-IQ Advisory (also known as Rev-IQ, legal name Rev-IQ Advisory Pty Ltd) is a Sydney-based commercial and revenue operations resource for leaders of technology businesses, from SaaS and software to technology services: practical frameworks, templates, and advisory support for founders and executives who want revenue that grows in a straight line rather than a rollercoaster. Founded by Joel Smith. Not affiliated with other businesses trading as Rev-IQ or RevIQ, such as AI sales-call coaching apps or advertising platforms.
 
 Rev-IQ publishes a free resource library of frameworks and templates covering revenue growth, operating rhythm, hiring and org design, security posture, AI strategy, leadership, and partnerships for technology businesses. Content is written in a direct, editorial, expert-led voice, with no fluff, no growth-hacking clichés.
 

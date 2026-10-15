@@ -49,6 +49,7 @@ Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framew
 - [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
 - [About Rev-IQ](https://rev-iq.ai/about): Background on Rev-IQ and its approach to commercial and revenue operations.
 - [Advisory](https://rev-iq.ai/advisory): Commercial diagnostics, advisory board seats, growth and GTM advisory, retention advisory, and workshops for technology businesses.
+- [MyHub case study](https://rev-iq.ai/case-studies/myhub): How a Rev-IQ commercial diagnostic gave MyHub, a New Zealand SaaS business, one clear view of its performance and a prioritised 12-month growth plan.
 - [Fractional CRO](https://rev-iq.ai/fractional-cro): What a fractional Chief Revenue Officer does, when it makes sense, how an engagement runs, and common questions. Based in Sydney, serving Australia, New Zealand and the UK.
 - [Contact](https://rev-iq.ai/contact): Get in touch with Rev-IQ.
 - [Privacy notice](https://rev-iq.ai/privacy): How Rev-IQ collects, uses and stores personal information.

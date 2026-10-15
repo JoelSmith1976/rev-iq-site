@@ -23,6 +23,10 @@
     {
       "source": "/skills",
       "destination": "/skills/index.html"
+    },
+    {
+      "source": "/insights",
+      "destination": "/insights/index.html"
     }
   ],
   "functions": {

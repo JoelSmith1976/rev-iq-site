@@ -13,21 +13,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Governance Starter Pack for Tech Companies | Rev-IQ Advisory</title>
-  <meta name="description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong." />
+  <meta name="description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong, and whether you could show a customer or regulator that someone does." />
   <link rel="canonical" href="https://rev-iq.ai/articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Rev-IQ Advisory" />
   <meta property="og:locale" content="en_AU" />
   <meta property="og:url" content="https://rev-iq.ai/articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now" />
   <meta property="og:title" content="The AI Governance Gap Almost Every Technology Company Has Right Now" />
-  <meta property="og:description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong." />
+  <meta property="og:description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong, and whether you could show a customer or regulator that someone does." />
   <meta property="og:image" content="https://rev-iq.ai/images/og/36-the-ai-governance-gap-almost-every-software-company-has-right-now.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Rev-IQ: The AI Governance Gap Almost Every Technology Company Has Right Now" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The AI Governance Gap Almost Every Technology Company Has Right Now" />
-  <meta name="twitter:description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong." />
+  <meta name="twitter:description" content="AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong, and whether you could show a customer or regulator that someone does." />
   <meta name="twitter:image" content="https://rev-iq.ai/images/og/36-the-ai-governance-gap-almost-every-software-company-has-right-now.jpg" />
   <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="../favicon.ico" sizes="any" />
@@ -301,6 +301,32 @@
       .dl-thumb { max-width: 220px; }
       .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
     }
+
+    /* Governance baseline update, October 2026 */
+    .article-body h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin-top: var(--space-8); margin-bottom: var(--space-3); font-weight: 700; }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .standards-box a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .standards-box { margin: var(--space-10) 0 var(--space-6); padding: var(--space-6) var(--space-6) var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .standards-box .kicker { display: block; font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: var(--space-2); }
+    .standards-box .sb-intro { margin: 0 0 var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .standards-box .table-wrap { margin: var(--space-4) 0 var(--space-4); }
+    .standards-box .table-wrap td:first-child { font-weight: 600; width: 34%; }
+    .standards-box .sb-note { margin: 0; font-size: var(--text-xs); color: var(--color-text-faint); }
+    .standards-box .table-wrap table { min-width: 0; }
+    @media (max-width: 640px) {
+      .standards-box thead { display: none; }
+      .standards-box tr { display: block; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); }
+      .standards-box tr:last-child { border-bottom: none; }
+      .standards-box .table-wrap td { display: block; padding: 0; border: none; width: auto; }
+      .standards-box .table-wrap td:first-child { width: auto; margin-bottom: 0.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -367,8 +393,8 @@
         <div class="breadcrumb"><a href="../resources">Resource Library</a>&nbsp;/&nbsp;AI Strategy</div>
         <div class="eyebrow"><span class="dot"></span>AI Strategy</div>
         <h1 class="article-h1">The AI Governance Gap Almost Every Technology Company Has Right Now</h1>
-        <p class="dek">AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong.</p>
-        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 11 October 2026</span></div>
+        <p class="dek">AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong, and whether you could show a customer or regulator that someone does.</p>
+        <div class="meta-row"><span>6 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 17 October 2026</span></div>
         <div class="tag-row"><span class="tag">No AI governance, policy or risk controls</span><span class="tag">No clear AI strategy or use cases</span><span class="tag tag-muted">Scaling</span><span class="tag tag-muted">Established / next chapter</span></div>
         <div style="margin-top: var(--space-6);"><figure class="framework-diagram" style="margin:0; padding: var(--space-6); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-2); min-height: 220px; display:flex; flex-direction:column; align-items:center; justify-content:center;"><div style="width:100%;"><svg viewBox="0 0 398 126" width="100%" role="img" aria-label="The Rev-IQ 3-pillar AI strategy framework: educate, operationalise, productise" xmlns="http://www.w3.org/2000/svg"><defs><marker id="rq-arrow-l" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7fb8b2"/></marker></defs><line x1="118" y1="89.0" x2="140" y2="80.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><line x1="258" y1="80.0" x2="280" y2="70.0" stroke="#7fb8b2" stroke-width="2" marker-end="url(#rq-arrow-l)"/><rect x="0" y="60" width="118" height="58" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="59.0" y="84.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Educate</text><text x="59.0" y="99.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#5c5344">Build fluency</text><rect x="140" y="42" width="118" height="76" rx="10" fill="#ffffff" stroke="#0b6e66" stroke-width="1.5"/><text x="199.0" y="75.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#0e2624">Operationalise</text><text x="199.0" y="90.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#5c5344">Embed in workflow</text><rect x="280" y="22" width="118" height="96" rx="10" fill="#f5e6c4" stroke="#a8710f" stroke-width="1.5"/><text x="339.0" y="65.0" text-anchor="middle" font-family="Space Grotesk, Inter, sans-serif" font-size="12.5" font-weight="700" fill="#5c3c07">Productise</text><text x="339.0" y="80.0" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#8a5c0b">Ship AI value</text></svg></div><figcaption style="margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-muted); text-align:center;">Educate → operationalise → productise</figcaption></figure></div>
       </div>
@@ -376,36 +402,41 @@
     <section class="article-body">
       <div class="container-narrow">
         <h2>Governance Isn’t Bureaucracy, It’s an Answer to a Simple Question</h2>
-<p>Ask almost any technology company leadership team a simple question: if an AI tool produced a wrong, biased, or harmful output tomorrow (in a customer email, a piece of code, a hiring decision, a financial figure), who would find out first, who would decide what to do, and how fast would it get fixed? In most companies, there's an uncomfortable pause, because the honest answer is 'whoever happens to notice, if they notice.' That pause is the governance gap, and it exists in nearly every technology company that has adopted AI faster than it has governed it, which, at this point, is nearly every technology company.</p>
-<p>Governance is not about slowing AI adoption down with process for its own sake. It's about making sure that when something goes wrong (and at some point, something will) there's a clear owner, a clear process, and a clear escalation path, rather than a scramble to figure out who's responsible after the fact. Companies with real governance in place aren't the ones using AI the least; they're often using it the most, because clear ownership makes people more confident to use AI, not less.</p>
+<p>Ask almost any technology company leadership team a simple question: if an AI tool produced a wrong, biased, or harmful output tomorrow (in a customer email, a piece of code, a hiring decision, a financial figure), who would find out first, who would decide what to do, and how fast would it get fixed? In most companies there's an uncomfortable pause, because the honest answer is "whoever happens to notice, if they notice". That pause is the governance gap, and it exists in nearly every technology company that has adopted AI faster than it has governed it.</p>
+<p>Governance is not about slowing AI adoption down with process for its own sake. It's about making sure that when something goes wrong (and at some point, something will) there's a clear owner, a clear process, and a clear escalation path, rather than a scramble to work out who's responsible after the fact. Companies with real governance in place aren't the ones using AI the least; they're often using it the most, because clear ownership makes people more confident to use AI, not less.</p>
 <h2>Why This Gap Is Especially Costly for Technology Companies</h2>
-<p>Technology companies are often further ahead on AI usage than the average business, which means the governance gap is proportionally larger, not smaller. Engineering teams are shipping AI-generated code, support teams are drafting AI-assisted customer communications, and product teams are considering AI features, often with more real usage than actual oversight. The absence of governance doesn't show up as a dramatic failure most of the time; it shows up as small, quiet risks accumulating: unreviewed code with subtle security issues, customer communications that drift in tone or accuracy, AI tools approved by individual engineers without any data handling review.</p>
-<p>The cost of this gap tends to surface at the worst possible moment: during due diligence for a fundraise or acquisition, when a customer contract requires evidence of AI governance, or after an actual incident that could have been caught earlier with a basic review step. Building governance proactively is dramatically cheaper than building it reactively under pressure.</p>
-<h2>Seven Policies, Not One Giant Document</h2>
-<p>Effective AI governance for a small or mid-size technology company isn't one sprawling policy nobody reads. It's a small set of short, specific documents that each answer one real question: what's acceptable use, how is data handled, who reviews AI output before it matters, how are new AI tools approved, what's the verification standard, what do we tell customers, and what's the escalation path when something goes wrong. Each one is short enough to actually be read and followed, which is the entire point.</p>
-<p>This is deliberately different from adopting a generic enterprise AI governance framework built for a much larger, more regulated organisation. A ten-person technology company doesn't need a compliance department's worth of process. It needs seven clear, adoptable documents that assign real ownership and give the team an actual answer when the uncomfortable question comes up.</p>
+<p>Technology companies are often further ahead on AI usage than the average business, which means the governance gap is proportionally larger, not smaller. Engineering teams are shipping AI-generated code, support teams are drafting AI-assisted customer communications, and product teams are building AI features, often with more real usage than actual oversight. Much of it isn't even visible: in an <a href="https://www.theregister.com/ai-ml/2026/05/27/bosses-blinded-by-confidence-about-shadow-ai-use-by-workers/5247275" target="_blank" rel="noopener">Okta survey reported by The Register</a>, 60% of Australian workers said they had used AI in ways their employer hadn't approved.</p>
+<p>The cost tends to surface at the worst possible moment: during due diligence for a fundraise or acquisition, when an enterprise customer's security review adds an AI section, or after an incident that a basic review step would have caught. <a href="https://www.a-lign.com/articles/iso-42001-is-about-to-become-table-stakes" target="_blank" rel="noopener">A-LIGN's 2026 Compliance Benchmark Report</a> found four out of five organisations now field direct customer questions about their AI risk management. Building governance before those questions arrive is far cheaper than building it under pressure.</p>
+<h2>The Australian Deadline: 10 December 2026</h2>
+<p>For Australian businesses covered by the Privacy Act (generally those with annual turnover above A$3 million, plus some smaller businesses such as health service providers), governance now has a date attached. From 10 December 2026, privacy policies must describe the kinds of decisions a computer program makes, or substantially and directly assists, where those decisions could significantly affect someone's rights or interests and use their personal information.</p>
+<p>The <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">OAIC's guidance</a> makes three points that matter for technology companies. Human review doesn't take a decision out of scope. The obligation generally stays with the business that arranged for the software to be used, even when a vendor runs it. And "computer program" is read broadly, covering everything from simple rules-based automation to generative AI and chatbots. You can't describe decisions you haven't found, which is why the starter pack now includes an AI register. Read <a href="/insights/automated-decisions-and-your-privacy-policy-10-december-2026">our full explainer on the 10 December change</a>.</p>
+<h2>Seven Policies and a Register, Not One Giant Document</h2>
+<p>Effective AI governance for a small or mid-size technology company isn't one sprawling policy nobody reads. It's a small set of short, specific documents that each answer one real question, plus one living list that ties them together. Each lines up with a practice in <a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-foundations" target="_blank" rel="noopener">Australia's Guidance for AI Adoption</a>, the national guidance published in May 2026:</p>
+<div class="table-wrap"><table><thead><tr><th>Document</th><th>The question it answers</th><th>National guidance practice</th></tr></thead><tbody><tr><td>Acceptable Use of AI Policy</td><td>What can people use AI for, with which tools?</td><td>1. Decide who is accountable</td></tr><tr><td>AI Data Handling Policy</td><td>What data can go into which tools?</td><td>3. Measure and manage risks</td></tr><tr><td>Human Review and Accountability Policy</td><td>Who checks AI output before it matters?</td><td>1. Decide who is accountable; 6. Maintain human control</td></tr><tr><td>AI Procurement and Tool Approval Policy</td><td>How does a new AI tool or vendor get approved?</td><td>1. Clarify supply chain accountabilities; 5. Test and monitor</td></tr><tr><td>AI Output Verification Standard</td><td>How much checking does each kind of output need?</td><td>5. Test and monitor</td></tr><tr><td>AI Transparency / Disclosure Guidance</td><td>What do we tell customers, candidates and partners?</td><td>4. Share essential information</td></tr><tr><td>AI Risk and Escalation Framework</td><td>What happens when AI goes wrong?</td><td>2. Understand impacts; 3. Measure and manage risks</td></tr><tr><td>AI Register and Risk Screening (new)</td><td>What AI do we use, who owns it, and how risky is it?</td><td>4. Share essential information; 3. Measure and manage risks</td></tr></tbody></table></div>
+<p>This is deliberately different from adopting a generic enterprise AI governance framework built for a much larger, more regulated organisation. A ten-person technology company doesn't need a compliance department's worth of process. It needs a few clear, adoptable documents that assign real ownership and give the team an answer when the uncomfortable question comes up. Each document also shows where it lines up with ISO/IEC 42001 and the NIST AI Risk Management Framework, so the work isn't wasted if a customer later asks for a certification.</p>
 <h2>Starting Point, Not Finish Line</h2>
-<p>The starter pack is meant to be adopted close to as-is and then adjusted as the company's actual AI use evolves: a company shipping its first customer-facing AI feature will need to revisit the transparency and verification documents specifically; a company scaling its engineering team will need to revisit tool approval. Governance that's never revisited becomes theatre; governance that's revisited as usage changes stays genuinely useful.</p>
-<p>Use the AI Governance Starter Pack to put basic ownership, review, and escalation structure around AI use in your company this week, not eventually, starting with whichever document addresses your most immediate exposure, and rolling out the rest over the following month.</p>
+<p>Start with the register. Listing every AI tool, feature and workflow (including the unapproved ones you find) tells you which policies matter most and where any automated decisions about individuals sit. Then adopt the acceptable use and data handling policies, and roll out the rest over the following month. A company shipping its first customer-facing AI feature will need to revisit the transparency and verification documents; a company scaling its engineering team will need to revisit tool approval.</p>
+<p>Governance that's never revisited becomes theatre. Governance that's revisited as usage changes stays useful. Use the AI Governance Starter Pack to put ownership, review and escalation around AI use this month, well before 10 December, and use the <a href="30-the-rev-iq-3-pillar-ai-strategy-framework">3-Pillar AI Strategy Framework</a> to decide how fast to scale from there.</p>
+<aside class="standards-box" aria-label="Standards and obligations"><span class="kicker">Standards and obligations</span><p class="sb-intro">The pack is a practical starting point for a small technology company, not a certification. Here is how it lines up.</p><div class="table-wrap"><table><thead><tr><th>Framework or obligation</th><th>Where this resource lines up</th></tr></thead><tbody><tr><td><a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-foundations" target="_blank" rel="noopener">Australia's Guidance for AI Adoption</a></td><td>All six practices are covered across the eight documents, including the AI register (practice 4)</td></tr><tr><td><a href="https://www.iso.org/standard/42001" target="_blank" rel="noopener">ISO/IEC 42001</a></td><td>Annex A.2 AI policy; A.3 internal organisation; A.5 impact assessment; A.7 data; A.8 information for interested parties; A.9 use of AI systems; A.10 third parties</td></tr><tr><td><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a></td><td>Govern, Map, Measure and Manage</td></tr><tr><td><a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">Australian Privacy Act, APP 1.7 to 1.9</a></td><td>The register and transparency guidance support automated decision disclosure from 10 December 2026</td></tr><tr><td>EU AI Act, Article 50</td><td>Transparency for AI systems that interact with people or generate content, where you serve EU users</td></tr></tbody></table></div><p class="sb-note">General guidance, not legal advice. This shows where the resource lines up with each framework; using it does not make a business compliant or certified. Regulatory references checked October 2026.</p></aside>
+
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
             <li>The core governance question is simple: if AI produces a wrong or harmful output, who finds out, who decides what to do, and how fast does it get fixed?</li>
-<li>Technology companies often have a larger governance gap than average because AI usage is already ahead of oversight across engineering, support, and product.</li>
-<li>The cost of missing governance tends to surface at the worst time: due diligence, customer contract review, or after an actual incident.</li>
-<li>Effective governance for a small technology company is seven short, specific policy documents, not one sprawling enterprise framework.</li>
-<li>The starter pack is a starting point that should be revisited as AI use evolves, especially around new customer-facing features or tool adoption.</li>
-
+<li>Technology companies often have a larger governance gap than average because AI usage, much of it unapproved, is already ahead of oversight.</li>
+<li>From 10 December 2026, Australian businesses covered by the Privacy Act must describe certain automated decisions in their privacy policies, even when a human reviews the outcome or a vendor runs the software.</li>
+<li>Effective governance for a small technology company is seven short policies plus an AI register, each lined up with a practice in the national AI guidance.</li>
+<li>Start with the register, then the acceptable use and data handling policies, and revisit the pack as AI use changes.</li>
           </ul>
         </div>
         
         <div class="download-card has-inside" id="download">
           <div class="dl-top">
           <div>
-            <div class="label">Policy Bundle · Free with email</div>
+            <div class="label">Policy Bundle and Register · Free with email</div>
             <h3>AI Governance Starter Pack</h3>
-            <p>Seven adoptable policy documents that give a small technology company real ownership, review, and escalation structure around AI use. Includes 7 ready-to-use policy documents as a single ZIP download.</p>
+            <p>Seven adoptable policies plus an AI register that give a small technology company real ownership, review and escalation structure around AI use. Includes 8 ready-to-use documents as a single ZIP download.</p>
           </div>
           <form class="gate-form" data-rev-iq-form data-pdf="../assets/ai-governance-starter-pack.zip">
             <input type="hidden" name="_subject" value="Download Request: AI Governance Starter Pack | rev-iq.ai" />
@@ -426,11 +457,11 @@
             <img class="dl-thumb" src="../assets/previews/36.webp" alt="First page of the Acceptable Use of AI Policy" width="560" height="449" loading="lazy" />
             <div class="dl-details">
               <div class="dl-label">What's inside the pack</div>
-              <ol class="dl-sections"><li>Acceptable Use of AI Policy</li><li>AI Data Handling Policy</li><li>Human Review and Accountability Policy</li><li>AI Procurement and Tool Approval Policy</li><li>AI Output Verification Standard</li><li>AI Transparency / Disclosure Guidance</li><li>AI Risk and Escalation Framework</li></ol>
+              <ol class="dl-sections"><li>AI Register and Risk Screening</li><li>Acceptable Use of AI Policy</li><li>AI Data Handling Policy</li><li>Human Review and Accountability Policy</li><li>AI Procurement and Tool Approval Policy</li><li>AI Output Verification Standard</li><li>AI Transparency / Disclosure Guidance</li><li>AI Risk and Escalation Framework</li></ol>
               <dl class="dl-facts">
-                <div><dt>Format</dt><dd>ZIP file of 7 PDF policies, 8 pages in total, ready to adapt</dd></div>
+                <div><dt>Format</dt><dd>ZIP file of 8 PDFs (7 policies and an AI register), 16 pages in total, ready to adapt</dd></div>
                 <div><dt>Best for</dt><dd>Leaders at small technology companies already using AI</dd></div>
-                <div><dt>What to bring</dt><dd>Current AI tools and uses, data types involved, and who owns decisions</dd></div>
+                <div><dt>What to bring</dt><dd>Current AI tools and uses (including unapproved ones), data types involved, any decisions about people that AI informs, and who owns decisions</dd></div>
                 <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
               </dl>
             </div>
@@ -476,6 +507,7 @@
             <li><a href="../about">About Rev-IQ</a></li>
             <li><a href="../contact">Contact</a></li>
             <li><a href="../privacy">Privacy</a></li>
+            <li><a href="../ai-use">AI Use</a></li>
             <li><a href="../terms">Terms of Use</a></li>
           </ul>
         </div>
@@ -512,9 +544,9 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "The AI Governance Gap Almost Every Technology Company Has Right Now",
-  "description": "AI is already making decisions and producing content inside your company \u2014 the question is whether anyone owns what happens when it goes wrong.",
+  "description": "AI is already making decisions and producing content inside your company. The question is whether anyone owns what happens when it goes wrong, and whether you could show a customer or regulator that someone does.",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-10-11",
+  "dateModified": "2026-10-17",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

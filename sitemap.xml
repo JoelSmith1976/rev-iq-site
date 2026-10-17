@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rev-iq.ai/</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/resources</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/browse-by-challenge</loc>
@@ -45,7 +45,7 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/04-your-product-works-your-story-doesnt-exist-yet</loc>
+    <loc>https://rev-iq.ai/articles/04-your-product-works-your-story-doesn-t-exist-yet</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -109,11 +109,11 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/20-a-hiring-process-for-small-software-teams-that-doesnt-need-hr-to-run-it</loc>
+    <loc>https://rev-iq.ai/articles/20-a-hiring-process-for-small-software-teams-that-doesn-t-need-hr-to-run-it</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/21-the-306090-day-plan-that-actually-shortens-ramp-up</loc>
+    <loc>https://rev-iq.ai/articles/21-the-30-60-90-day-plan-that-actually-shortens-ramp-up</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -126,31 +126,31 @@
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/24-the-minimum-viable-security-posture-every-software-business-needs</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/25-how-to-stop-losing-weeks-to-customer-security-questionnaires</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/26-why-access-control-is-the-cheapest-risk-youre-not-managing</loc>
-    <lastmod>2026-10-11</lastmod>
+    <loc>https://rev-iq.ai/articles/26-why-access-control-is-the-cheapest-risk-you-re-not-managing</loc>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/27-you-cant-protect-data-you-havent-classified</loc>
-    <lastmod>2026-10-11</lastmod>
+    <loc>https://rev-iq.ai/articles/27-you-can-t-protect-data-you-haven-t-classified</loc>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/28-your-vendor-stack-is-your-risk-surface-treat-it-that-way</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/29-what-to-actually-do-in-the-first-hour-of-a-security-incident</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/30-the-rev-iq-3-pillar-ai-strategy-framework</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/31-is-your-company-actually-ready-for-ai-or-just-using-it</loc>
@@ -161,7 +161,7 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/33-most-ai-ideas-are-not-worth-doing-yet-heres-how-to-tell-which-ones-are</loc>
+    <loc>https://rev-iq.ai/articles/33-most-ai-ideas-are-not-worth-doing-yet-here-s-how-to-tell-which-ones-are</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -169,12 +169,12 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesnt</loc>
+    <loc>https://rev-iq.ai/articles/35-where-ai-actually-belongs-in-your-product-and-where-it-doesn-t</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/36-the-ai-governance-gap-almost-every-software-company-has-right-now</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/37-the-leadership-operating-model-software-businesses-actually-need</loc>
@@ -193,7 +193,7 @@
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
-    <loc>https://rev-iq.ai/articles/41-the-executive-alignment-review-catching-drift-before-its-expensive</loc>
+    <loc>https://rev-iq.ai/articles/41-the-executive-alignment-review-catching-drift-before-it-s-expensive</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
   <url>
@@ -298,7 +298,15 @@
   </url>
   <url>
     <loc>https://rev-iq.ai/insights</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://rev-iq.ai/insights/automated-decisions-and-your-privacy-policy-10-december-2026</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://rev-iq.ai/ai-use</loc>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/insights/the-five-year-exit-is-over</loc>

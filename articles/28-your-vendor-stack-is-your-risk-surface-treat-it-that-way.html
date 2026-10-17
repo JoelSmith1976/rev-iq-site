@@ -301,6 +301,24 @@
       .dl-thumb { max-width: 220px; }
       .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
     }
+
+    /* Governance baseline update, October 2026 */
+    .article-body h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin-top: var(--space-8); margin-bottom: var(--space-3); font-weight: 700; }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .standards-box a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .standards-box { margin: var(--space-10) 0 var(--space-6); padding: var(--space-6) var(--space-6) var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .standards-box .kicker { display: block; font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: var(--space-2); }
+    .standards-box .sb-intro { margin: 0 0 var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .standards-box .table-wrap { margin: var(--space-4) 0 var(--space-4); }
+    .standards-box .table-wrap td:first-child { font-weight: 600; width: 34%; }
+    .standards-box .sb-note { margin: 0; font-size: var(--text-xs); color: var(--color-text-faint); }
   </style>
 </head>
 <body>
@@ -368,7 +386,7 @@
         <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
         <h1 class="article-h1">Your Vendor Stack Is Your Risk Surface: Treat It That Way</h1>
         <p class="dek">Every tool you connect to customer data or company systems inherits a piece of your risk, whether or not anyone reviewed it before signing up.</p>
-        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 11 October 2026</span></div>
+        <div class="meta-row"><span>5 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 17 October 2026</span></div>
         <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag">Losing deals to security or procurement reviews</span><span class="tag tag-muted">Scaling</span><span class="tag tag-muted">Established / next chapter</span></div>
         
       </div>
@@ -376,27 +394,30 @@
     <section class="article-body">
       <div class="container-narrow">
         <h2>The Tool You Signed Up for in Five Minutes Is Now Part of Your Risk Profile</h2>
-<p>Modern technology businesses run on a stack of third-party tools (analytics, payments, support, email, AI features, infrastructure), and most of those tools got adopted the way small teams adopt everything: someone needed to solve a problem, found a tool, signed up with a company card, and connected it to real data within the hour. That speed is a genuine advantage. It's also how a company ends up with dozens of vendors touching customer or operational data that nobody formally assessed.</p>
-<p>This isn't a call to slow down tool adoption to a crawl. It's a recognition that every vendor with access to customer data, source code, or company systems is now, functionally, an extension of your own security and operational posture. If that vendor has a breach, an outage, or shuts down abruptly, the consequences land on your business and your customers, not on a hypothetical third party far removed from the relationship.</p>
-<h2>What Actually Needs Reviewing, and What Doesn’t</h2>
-<p>Not every vendor deserves the same scrutiny, and treating them all identically is how vendor review programs collapse under their own process. A project management tool with no customer data in it and a payments processor handling card details are not the same risk category, and shouldn't take the same amount of time to assess. The right approach tiers vendors by what they touch: critical vendors (customer data, payments, core infrastructure, code) get a real review; low-risk vendors (internal productivity tools with no sensitive data) get a lighter check and move on.</p>
-<p>For the vendors that matter, the review doesn't need to be exhaustive. It needs to answer a short list of consistent questions: what data can they access, where is it stored, what's their security posture, what happens if they have an incident, and what's the exit plan if the relationship ends. Most of this is answerable from a vendor's public security page, their own security questionnaire responses, or a five-minute conversation with their sales team.</p>
-<h2>The Underrated Risk: Operational Dependency, Not Just Security</h2>
-<p>Security is the obvious risk people think of with vendors, but operational dependency is just as damaging and far more common. A vendor that raises prices sharply, changes its API, gets acquired and sunsets the product, or simply goes down for a day during a critical period can disrupt a small company as badly as a security incident, sometimes worse, because there's no incident response plan for 'our billing provider just deprecated the feature we depend on.'</p>
-<p>A useful vendor review asks not just 'is this safe' but 'what happens to us if this vendor disappears or changes tomorrow.' For any vendor a core workflow depends on, it's worth knowing roughly how hard that dependency would be to replace, and whether an alternative has ever been evaluated even informally. Concentration risk in a vendor stack is invisible until the day it isn't.</p>
-<h2>Making Vendor Review a Habit, Not a One-Time Audit</h2>
-<p>The realistic goal isn't a perfect, exhaustive audit of every tool in use today. That project will stall and never finish. The realistic goal is a lightweight review applied consistently to new vendors going forward, plus a prioritised pass through the existing stack starting with whatever touches the most sensitive data or the most critical workflows.</p>
-<p>Use the Vendor Risk Review Checklist to tier your current vendors, assess the ones that matter most, and build the habit of reviewing new tools before they're connected to real data, not after.</p>
+<p>Modern technology businesses run on a stack of third-party tools (analytics, payments, support, email, AI, infrastructure), and most were adopted the way small teams adopt everything: someone needed to solve a problem, signed up with a company card, and connected it to real data within the hour. That speed is an advantage. It's also how a company ends up with dozens of vendors touching customer data that nobody assessed.</p>
+<p>Every vendor with access to customer data, source code or company systems is functionally an extension of your own security posture. If that vendor has a breach, an outage or shuts down, the consequences land on your business and your customers.</p>
+<h2>What Actually Needs Reviewing, and What Doesn't</h2>
+<p>Treating every vendor identically is how review programs collapse under their own process. A project management tool with no customer data and a payments processor handling card details aren't the same risk. Tier vendors by what they touch: critical vendors (customer data, payments, core infrastructure, code) get a real review; low-risk tools get a light check and move on.</p>
+<p>For the vendors that matter, the review needs to answer a short list of consistent questions: what data can they access, where is it stored, what's their security posture, how fast will they tell you about an incident, and what's the exit plan. Most of it is answerable from a vendor's security page, their questionnaire responses or a short conversation.</p>
+<h2>AI Vendors Need Five More Questions</h2>
+<p>AI has changed vendor risk in two ways. New AI vendors arrive constantly, and existing vendors switch on AI features in product updates, often by default. Either way, add these questions for any vendor whose product includes AI:</p>
+<ul><li><strong>Training:</strong> is our data, including prompts, files and outputs, used to train or improve any model, and does the contract say so?</li><li><strong>Retention and location:</strong> how long are prompts, outputs and logs kept, and in which country?</li><li><strong>Model providers:</strong> which models sit behind the product, and will we be told before that changes?</li><li><strong>Control:</strong> can we switch AI features off, or limit them to certain data?</li><li><strong>Decisions about people:</strong> does the product make or substantially inform decisions about individuals?</li></ul>
+<p>That last one carries a deadline. From 10 December 2026, Australian businesses covered by the Privacy Act must describe certain automated decisions in their privacy policies, and the <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">OAIC's guidance</a> says the obligation generally stays with the business that arranged for the software to be used, even when a vendor runs it. It also says businesses should understand how third-party programs make or assist decisions, during and after procurement, and that contracts should be clear about who keeps decision-making control. Read more in <a href="/insights/automated-decisions-and-your-privacy-policy-10-december-2026">our explainer on the 10 December change</a>.</p>
+<h2>Put It in the Contract</h2>
+<p>For critical and AI vendors, the useful protections are contractual, not just in the FAQ: no training on your data without written consent, defined retention and deletion for prompts and outputs, an incident notice period short enough to meet your own regulatory clocks, advance notice of new subprocessors or model providers, enough information about automated decision features to meet your disclosure obligations, and access to security evidence on request. Your lawyer will adapt the wording; the checklist gives you the list to raise.</p>
+<h2>The Underrated Risk: Operational Dependency</h2>
+<p>Security is the obvious vendor risk, but operational dependency is more common. A vendor that raises prices sharply, changes its API, gets acquired and sunsets the product, or goes down during a critical period can disrupt a small company as badly as a security incident. A useful review asks not just "is this safe" but "what happens to us if this vendor changes tomorrow". Use the Vendor Risk Review Checklist to tier your vendors, review the ones that matter, and build the habit of checking new tools, and new AI features, before they reach real data.</p>
+<aside class="standards-box" aria-label="Standards and obligations"><span class="kicker">Standards and obligations</span><p class="sb-intro">Supplier risk shows up in every major framework, and AI has added a specific privacy obligation in Australia.</p><div class="table-wrap"><table><thead><tr><th>Framework or obligation</th><th>Where this resource lines up</th></tr></thead><tbody><tr><td>ISO/IEC 27001:2022 Annex A</td><td>5.19 to 5.22 supplier relationships, agreements, ICT supply chain and monitoring; 5.23 cloud services</td></tr><tr><td>ISO/IEC 42001 Annex A</td><td>A.10 third-party and customer relationships</td></tr><tr><td><a href="https://www.cyber.gov.au/publication/transitioning-from-the-essential-eight" target="_blank" rel="noopener">ASD Essentials for enterprise IT</a></td><td>Cyber supply chain security</td></tr><tr><td><a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">Australian Privacy Act, APP 1.7 to 1.9</a></td><td>Understand how third-party programs make or assist decisions about individuals, from 10 December 2026</td></tr><tr><td><a href="https://www.ai.gov.au/staying-safe-and-responsible/essential-ai-practices/guidance-ai-adoption-foundations" target="_blank" rel="noopener">Australia's Guidance for AI Adoption</a></td><td>Practice 1, clarify supply chain accountabilities; practice 5, ask suppliers for proof of testing</td></tr></tbody></table></div><p class="sb-note">General guidance, not legal advice. This shows where the resource lines up with each framework; using it does not make a business compliant or certified. Regulatory references checked October 2026.</p></aside>
+
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Every third-party tool connected to customer data or company systems inherits a share of your risk profile, regardless of how quickly it was adopted.</li>
-<li>Vendors should be tiered by what they touch: critical vendors handling data, payments, or infrastructure warrant real review; low-risk tools need only a light check.</li>
-<li>A useful vendor review answers a short, consistent list of questions: data access, storage location, security posture, incident handling, and exit plan.</li>
-<li>Operational dependency (price changes, acquisitions, outages, deprecated features) is as damaging as a security incident and far more common.</li>
-<li>The realistic goal is a lightweight, consistent review applied to new vendors going forward, plus a prioritised pass through the existing stack starting with the highest-risk tools.</li>
-
+            <li>Every third-party tool connected to customer data or company systems inherits part of your risk profile.</li>
+<li>Tier vendors by what they touch; critical vendors warrant real review and low-risk tools need only a light check.</li>
+<li>AI vendors, and vendors that add AI features, need extra questions on training, retention, model providers, controls and decisions about people.</li>
+<li>From 10 December 2026, the privacy policy disclosure for automated decisions generally stays with you, even when a vendor's software makes the decision.</li>
+<li>The protections that matter belong in the contract: no training, retention limits, incident notice, subprocessor notice and decision transparency.</li>
           </ul>
         </div>
         
@@ -426,11 +447,11 @@
             <img class="dl-thumb" src="../assets/previews/28.webp" alt="First page of the Vendor Risk Review Checklist PDF" width="560" height="449" loading="lazy" />
             <div class="dl-details">
               <div class="dl-label">What's inside</div>
-              <ol class="dl-sections"><li>Vendor Tiering</li><li>Core Review Questions (Critical and Standard Tier Vendors)</li><li>Operational Dependency Check</li><li>Low-Tier Vendor Fast Check</li><li>New Vendor Intake Habit</li></ol>
+              <ol class="dl-sections"><li>Vendor Tiering</li><li>Core Review Questions</li><li>AI Vendor Questions</li><li>Contract Clauses to Ask For</li><li>Operational Dependency Check</li><li>Low-Tier Vendor Fast Check</li><li>New Vendor Intake Habit and Standards Map</li></ol>
               <dl class="dl-facts">
-                <div><dt>Format</dt><dd>PDF, 2 pages, designed to print and fill in</dd></div>
+                <div><dt>Format</dt><dd>PDF, 3 pages, designed to print and fill in</dd></div>
                 <div><dt>Best for</dt><dd>Operations and technical leaders reviewing third-party tools</dd></div>
-                <div><dt>What to bring</dt><dd>A list of current vendors and what data or systems each can access</dd></div>
+                <div><dt>What to bring</dt><dd>A list of current vendors, what data or systems each can access, and which have AI features</dd></div>
                 <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
               </dl>
             </div>
@@ -514,7 +535,7 @@
   "headline": "Your Vendor Stack Is Your Risk Surface \u2014 Treat It That Way",
   "description": "Every tool you connect to customer data or company systems inherits a piece of your risk, whether or not anyone reviewed it before signing up.",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-10-11",
+  "dateModified": "2026-10-17",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

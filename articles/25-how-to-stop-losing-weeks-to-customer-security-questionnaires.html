@@ -301,6 +301,24 @@
       .dl-thumb { max-width: 220px; }
       .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
     }
+
+    /* Governance baseline update, October 2026 */
+    .article-body h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin-top: var(--space-8); margin-bottom: var(--space-3); font-weight: 700; }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .standards-box a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .standards-box { margin: var(--space-10) 0 var(--space-6); padding: var(--space-6) var(--space-6) var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .standards-box .kicker { display: block; font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: var(--space-2); }
+    .standards-box .sb-intro { margin: 0 0 var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .standards-box .table-wrap { margin: var(--space-4) 0 var(--space-4); }
+    .standards-box .table-wrap td:first-child { font-weight: 600; width: 34%; }
+    .standards-box .sb-note { margin: 0; font-size: var(--text-xs); color: var(--color-text-faint); }
   </style>
 </head>
 <body>
@@ -368,35 +386,39 @@
         <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
         <h1 class="article-h1">How to Stop Losing Weeks to Customer Security Questionnaires</h1>
         <p class="dek">The deals that stall in procurement usually aren't lost on price. They're lost on how long it takes to answer a security review.</p>
-        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 11 October 2026</span></div>
+        <div class="meta-row"><span>5 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 17 October 2026</span></div>
         <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag">Losing deals to security or procurement reviews</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
         
       </div>
     </section>
     <section class="article-body">
       <div class="container-narrow">
-        <h2>The Questionnaire Isn’t the Obstacle: Unpreparedness Is</h2>
-<p>Somewhere between the first traction with mid-market or enterprise customers and real scale, almost every technology company gets its first real security questionnaire. It's usually a spreadsheet with 40 to 150 questions, sent by someone in IT or procurement the sales team has never spoken to, and it lands right when a deal felt close to done. Teams that haven't prepared treat it as a fire drill, pulling engineers off roadmap work, guessing at answers, and burning a week or two while the champion on the customer side goes quiet.</p>
-<p>The questionnaire itself rarely asks anything unreasonable. It asks about access control, data encryption, backups, subprocessors, incident response, and where data is hosted: the same handful of themes, phrased differently, deal after deal. The teams that handle this well aren't more secure than everyone else; they've simply already answered these questions once, written the answers down, and now just reuse and adapt them.</p>
-<h2>What Procurement and Security Reviewers Are Actually Checking For</h2>
-<p>A reviewer on the buying side isn't looking for perfection. They're looking for evidence that someone has thought about risk deliberately: that access is controlled, that data isn't floating around unmanaged, that there's a plan if something goes wrong, and that the vendor won't be the reason their own company ends up in an audit finding. Vague or contradictory answers are a bigger red flag than an honest 'not yet, here's our plan' on a control that isn't fully mature.</p>
-<p>Reviewers also check for internal consistency. If the security answers say access is tightly controlled but the sales team casually mentions an intern has admin access to the production database, that gap gets noticed and it costs trust well beyond that one question. The goal isn't to have the most impressive-sounding answers; it's to have accurate, consistent, ready ones.</p>
-<h2>Building a Reusable Answer Library Instead of Starting Over Each Time</h2>
-<p>The single highest-leverage move here is maintaining a living answer library: a document with the standard questions any serious buyer will ask, alongside current, accurate answers, updated as the business changes. This turns a two-week scramble into a same-day turnaround, and it means the answers a customer receives are the same answers legal and engineering would give, because they were written together in advance rather than improvised under deadline pressure.</p>
-<p>This library should live somewhere the whole go-to-market team can access, not buried in one engineer's inbox, because the person who first encounters a questionnaire is usually in sales or customer success, not security. If that person can pull a pre-approved answer set immediately, the questionnaire becomes a formality instead of a deal-risk event.</p>
-<h2>Treating Readiness as a Sales Asset, Not a Compliance Chore</h2>
-<p>The framing matters. A team that treats security questionnaires as an annoying compliance tax will always be reactive. A team that treats readiness as a competitive asset (something that shortens sales cycles and builds trust faster than competitors who fumble the same questions) will invest in it proactively and use it in the sales process itself, sometimes even sharing a security overview before it's asked for.</p>
-<p>Use the Security Questionnaire Readiness Checklist to build that answer library now, before the next questionnaire arrives, and to identify the handful of gaps in your actual practices that questionnaires are most likely to expose.</p>
+        <h2>The Questionnaire Isn't the Obstacle: Unpreparedness Is</h2>
+<p>Somewhere between first traction with mid-market or enterprise customers and real scale, almost every technology company gets its first real security questionnaire. It's usually a spreadsheet with 40 to 150 questions, sent by someone in IT or procurement the sales team has never spoken to, and it lands just as a deal felt close to done. Teams that haven't prepared treat it as a fire drill, pull engineers off roadmap work, guess at answers, and burn a week or two while the champion on the customer side goes quiet.</p>
+<p>The questionnaire rarely asks anything unreasonable. It covers access control, encryption, backups, subprocessors, incident response and hosting: the same themes, phrased differently, deal after deal. The teams that handle this well aren't necessarily more secure. They've answered the questions once, written the answers down, and now reuse and adapt them.</p>
+<h2>The New Section: AI</h2>
+<p>The biggest change in the last year is a new block of questions about AI. <a href="https://www.a-lign.com/articles/iso-42001-is-about-to-become-table-stakes" target="_blank" rel="noopener">A-LIGN's 2026 Compliance Benchmark Report</a> found that four out of five organisations now field direct customer questions about their AI risk management. Some buyers add a dedicated AI addendum; others fold the questions into the main review. Either way, they tend to ask the same things:</p>
+<ul><li>Which AI features are in the product, and which model providers power them?</li><li>Is our data, including prompts and outputs, used to train any model, and where does the contract say so?</li><li>How long are prompts, outputs and logs kept, and where?</li><li>Can we switch AI features off or limit what data they reach?</li><li>What human oversight applies, and how are AI features tested and monitored?</li><li>Does any feature make or substantially inform decisions about individuals?</li></ul>
+<p>That last question matters more from 10 December 2026. Australian businesses covered by the Privacy Act must describe certain automated decisions in their privacy policies from that date, and the <a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">OAIC guidance</a> says they should understand how third-party software makes or assists decisions. If your product scores, ranks, flags or approves anything about your customers' customers or staff, expect them to ask you for the detail. We cover this in <a href="/insights/automated-decisions-and-your-privacy-policy-10-december-2026">our December 10 explainer</a>.</p>
+<h2>What Reviewers Are Actually Checking For</h2>
+<p>A reviewer on the buying side isn't looking for perfection. They want evidence that someone has thought about risk deliberately: access is controlled, data isn't floating around unmanaged, there's a plan if something goes wrong, and the vendor won't be the reason their own company ends up with an audit finding. Vague or contradictory answers are a bigger red flag than an honest "not yet, here's our plan".</p>
+<p>It also helps to recognise the format. A SIG or CAIQ questionnaire signals a formal third-party risk program. Questions numbered against ISO/IEC 27001 Annex A mean the buyer will map your answers to its own controls. A SOC 2-style structure means a SOC 2 report could replace most of it. An AI addendum referencing ISO/IEC 42001 or the NIST AI Risk Management Framework means there's an AI governance function on the other side, and they'll want your AI policy and AI register.</p>
+<h2>Building a Reusable Answer Library</h2>
+<p>The highest-leverage move is a living answer library: the standard questions any serious buyer will ask, with current, accurate answers, updated as the business changes. It turns a two-week scramble into a same-day turnaround, and it means customers get the same answers legal and engineering would give, because they were written together in advance.</p>
+<p>Keep it where the go-to-market team can reach it, not in one engineer's inbox, because the first person to see a questionnaire is usually in sales or customer success. Reviewers check for consistency, too: if the security answers say access is tightly controlled but a salesperson mentions an intern has production admin rights, that gap costs trust well beyond one question.</p>
+<h2>Treating Readiness as a Sales Asset</h2>
+<p>A team that treats questionnaires as a compliance tax will always be reactive. A team that treats readiness as a competitive asset invests in it early, shares a short security and AI overview before it's asked for, and wins time back on every deal. Use the Security Questionnaire Readiness Checklist to build the library now, including the AI section, and to find the gaps questionnaires are most likely to expose.</p>
+<aside class="standards-box" aria-label="Standards and obligations"><span class="kicker">Standards and obligations</span><p class="sb-intro">Buyers map your answers to these frameworks. Knowing which one is behind a questionnaire tells you how to answer it.</p><div class="table-wrap"><table><thead><tr><th>Framework or obligation</th><th>Where this resource lines up</th></tr></thead><tbody><tr><td>ISO/IEC 27001:2022</td><td>Most enterprise questionnaires outside the US map to Annex A controls</td></tr><tr><td>SOC 2 trust services criteria</td><td>US buyers often accept a SOC 2 report in place of the questionnaire</td></tr><tr><td>ISO/IEC 42001 and the NIST AI RMF</td><td>The usual basis for AI addenda: governance, data, testing, monitoring and human oversight</td></tr><tr><td><a href="https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-1-app-1-open-and-transparent-management-of-personal-information" target="_blank" rel="noopener">Australian Privacy Act, APP 1.7 to 1.9</a></td><td>From 10 December 2026, customers may need detail on any automated decisions your product makes or assists</td></tr></tbody></table></div><p class="sb-note">General guidance, not legal advice. This shows where the resource lines up with each framework; using it does not make a business compliant or certified. Regulatory references checked October 2026.</p></aside>
+
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Most customer security questionnaires repeat the same handful of themes: access control, encryption, backups, subprocessors, incident response, and data hosting.</li>
-<li>Reviewers are checking for deliberate, consistent risk management (not perfection), and vague or contradictory answers are worse than an honest gap with a stated plan.</li>
-<li>A reusable, pre-approved answer library turns a multi-week scramble into a same-day response and keeps sales, legal, and engineering aligned.</li>
-<li>The answer library should be accessible to sales and customer success, since they're usually the first to receive a questionnaire, not security or engineering.</li>
-<li>Treating questionnaire readiness as a sales enabler rather than a compliance chore shortens sales cycles and can be used proactively, not just reactively.</li>
-
+            <li>Most security questionnaires repeat the same themes: access control, encryption, backups, subprocessors, incident response and hosting.</li>
+<li>AI is now a standard section. Expect questions on model providers, training on customer data, retention, opt-outs, oversight and testing.</li>
+<li>From 10 December 2026, Australian customers may ask for detail on automated decisions your product makes, so they can meet their own privacy policy obligations.</li>
+<li>A reusable, pre-approved answer library turns a multi-week scramble into a same-day response and keeps sales, legal and engineering aligned.</li>
+<li>Reviewers want deliberate, consistent risk management, not perfection. An honest gap with a plan beats a vague answer.</li>
           </ul>
         </div>
         
@@ -426,11 +448,11 @@
             <img class="dl-thumb" src="../assets/previews/25.webp" alt="First page of the Security Questionnaire Readiness Checklist PDF" width="560" height="449" loading="lazy" />
             <div class="dl-details">
               <div class="dl-label">What's inside</div>
-              <ol class="dl-sections"><li>Data and Access Fundamentals</li><li>Vendors, Subprocessors, and Data Flow</li><li>Continuity, Backup, and Incident Response</li><li>Certifications and Formal Frameworks</li><li>Readiness Tracker</li></ol>
+              <ol class="dl-sections"><li>Data and Access Fundamentals</li><li>Vendors, Subprocessors, and Data Flow</li><li>AI and Model Use</li><li>Continuity, Backup, and Incident Response</li><li>Certifications and Formal Frameworks</li><li>Standards Buyers Map You Against</li><li>Readiness Tracker</li></ol>
               <dl class="dl-facts">
-                <div><dt>Format</dt><dd>PDF, 2 pages, designed to print and fill in</dd></div>
+                <div><dt>Format</dt><dd>PDF, 3 pages, designed to print and fill in</dd></div>
                 <div><dt>Best for</dt><dd>Revenue and operations leaders facing customer security reviews</dd></div>
-                <div><dt>What to bring</dt><dd>Current security practices, vendor and subprocessor list, backup and incident response details, certifications held</dd></div>
+                <div><dt>What to bring</dt><dd>Current security practices, vendor and subprocessor list, AI features and model providers, backup and incident details, certifications held</dd></div>
                 <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
               </dl>
             </div>
@@ -514,7 +536,7 @@
   "headline": "How to Stop Losing Weeks to Customer Security Questionnaires",
   "description": "The deals that stall in procurement usually aren't lost on price \u2014 they're lost on how long it takes to answer a security review.",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-10-11",
+  "dateModified": "2026-10-17",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

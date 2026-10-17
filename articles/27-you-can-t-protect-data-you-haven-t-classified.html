@@ -301,6 +301,24 @@
       .dl-thumb { max-width: 220px; }
       .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
     }
+
+    /* Governance baseline update, October 2026 */
+    .article-body h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin-top: var(--space-8); margin-bottom: var(--space-3); font-weight: 700; }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .standards-box a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .standards-box { margin: var(--space-10) 0 var(--space-6); padding: var(--space-6) var(--space-6) var(--space-5); background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+    .standards-box .kicker { display: block; font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: var(--space-2); }
+    .standards-box .sb-intro { margin: 0 0 var(--space-2); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .standards-box .table-wrap { margin: var(--space-4) 0 var(--space-4); }
+    .standards-box .table-wrap td:first-child { font-weight: 600; width: 34%; }
+    .standards-box .sb-note { margin: 0; font-size: var(--text-xs); color: var(--color-text-faint); }
   </style>
 </head>
 <body>
@@ -368,7 +386,7 @@
         <div class="eyebrow"><span class="dot"></span>Compliance &amp; Security</div>
         <h1 class="article-h1">You Can’t Protect Data You Haven’t Classified</h1>
         <p class="dek">Most technology companies have no shared answer for what counts as sensitive data, where it lives, or when it should be deleted, and that gap is the real risk.</p>
-        <div class="meta-row"><span>4 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 11 October 2026</span></div>
+        <div class="meta-row"><span>5 min read</span><span>Free · email required</span><span>Published 18 July 2026 · Updated 17 October 2026</span></div>
         <div class="tag-row"><span class="tag">Weak security or compliance posture</span><span class="tag tag-muted">Early traction</span><span class="tag tag-muted">Scaling</span></div>
         
       </div>
@@ -376,27 +394,29 @@
     <section class="article-body">
       <div class="container-narrow">
         <h2>The Question Nobody Can Answer Confidently</h2>
-<p>Ask most small technology teams a simple question (what's our most sensitive data, and where does it live), and the answer is usually a shrug, a guess, or three different answers from three different people. This isn't because the team is careless. It's because data accumulates faster than anyone decides how to treat it: a spreadsheet export here, a support ticket with a customer's payment details in it there, a Slack thread with production credentials pasted in for a quick fix. None of it feels risky in the moment. Collectively, it's an unmanaged sprawl of exactly the data a breach or a bad actor would want most.</p>
-<p>Data classification sounds like a compliance exercise, but it's really a business decision: not all data deserves the same handling. Marketing copy and customer payment details do not belong in the same bucket, yet in most small companies they're treated with roughly the same level of care, which in practice means whatever level of care the person handling it that day happens to apply.</p>
+<p>Ask most small technology teams what their most sensitive data is and where it lives, and the answer is usually a shrug, a guess, or three different answers from three people. It isn't carelessness. Data accumulates faster than anyone decides how to treat it: a spreadsheet export here, a support ticket with payment details there, production credentials pasted into a chat thread for a quick fix. None of it feels risky in the moment. Together it's an unmanaged sprawl of exactly the data a breach would want most.</p>
+<p>Classification sounds like a compliance exercise, but it's a business decision: not all data deserves the same handling. Marketing copy and customer payment details don't belong in the same bucket, yet in most small companies they get roughly the same level of care.</p>
 <h2>A Simple Classification System Beats an Elaborate One</h2>
-<p>The companies that get this right don't build an elaborate taxonomy. They use two or three tiers (something like public, internal, and restricted) and apply a clear rule to each: restricted data (customer PII, payment details, credentials, health or financial data) gets encryption, tight access limits, and no casual copying into tools that weren't designed to hold it. Internal data gets normal access controls. Public data gets no special handling at all. The value isn't in the sophistication of the system; it's in everyone using the same categories to make the same decisions.</p>
-<p>Once a classification exists, it becomes possible to answer questions that are otherwise unanswerable: which systems actually need the strongest protection, which vendors are handling data they shouldn't be, and where the company is over-collecting information it doesn't need and is now responsible for protecting for no commercial reason.</p>
+<p>The companies that get this right use two or three tiers (public, internal and restricted) with a clear rule for each. Restricted data (customer personal information, payment details, credentials, health or financial data) gets encryption, tight access and no casual copying into tools not built to hold it. Internal data gets normal access controls. Public data needs no special handling. The value isn't sophistication; it's everyone using the same categories to make the same decisions.</p>
+<h2>AI Has Created New Places for Data to Hide</h2>
+<p>Most data maps were drawn before AI tools arrived, and they miss the new stores AI creates: prompts and chat histories, files uploaded for summarising, outputs saved into documents and tickets, embeddings and vector databases built from company content, and the logs model providers keep. Each can hold restricted data. Few have an owner, a location on the map, or a retention period.</p>
+<p>The fix is to treat them like any other system. Add each AI tool to the classification, decide which tiers it may hold, use company accounts on approved tools under agreements that exclude training on your data, and set retention for prompts, outputs and embeddings. Check where providers store and process data, too. Under Australia's Privacy Act, sending personal information offshore brings cross-border obligations under APP 8, and New Zealand's IPP 12 has a similar rule.</p>
 <h2>Storage, Sharing, and the Habit of Over-Collecting</h2>
-<p>Two behaviours quietly create most of the risk in this domain. The first is storing sensitive data in tools that weren't built to hold it (spreadsheets, shared drives, chat tools) because it was the fastest place to put it at the time. The second is collecting more data than the business actually needs, because a form was easy to add a field to and nobody asked whether the field should exist. Every additional field of sensitive data collected is something the company now has to protect, retain properly, and eventually justify having if anyone ever asks.</p>
-<p>The fix isn't dramatic. It's a habit of asking, before storing or sharing anything: does this need to exist here, who actually needs to see it, and how long do we actually need to keep it. Retirement and deletion are the most commonly skipped step: most companies have no practice of deleting data once it's no longer needed, so sensitive information accumulates indefinitely in more places than anyone can track.</p>
-<h2>Making Classification Practical, Not Theoretical</h2>
-<p>A data classification policy only works if it changes behaviour day to day, which means it has to be short enough that people actually remember it and specific enough that it removes ambiguity about real, recurring situations: support tickets, sales exports, engineering debugging, vendor tools. Abstract principles don't survive contact with a Tuesday afternoon deadline; concrete rules about specific data types do.</p>
-<p>Use the Data Handling and Classification Policy Template to define your tiers, map where sensitive data actually lives today, and set clear rules for storage, sharing, and retirement. Most teams find the mapping exercise alone surfaces two or three places sensitive data is sitting that nobody had flagged as a concern.</p>
+<p>Two behaviours create most of the risk in this domain. The first is storing sensitive data in tools that weren't built for it (spreadsheets, shared drives, chat tools, and now AI chats) because it was the fastest place to put it. The second is collecting more than the business needs because a form was easy to add a field to. Every extra field of sensitive data is something you now have to protect, retain properly and justify.</p>
+<p>Retirement is the most commonly skipped step. Australia's APP 11.2 expects organisations to destroy or de-identify personal information they no longer need, and New Zealand's IPP 9 and the UK GDPR's storage limitation principle say much the same. Most small companies have no deletion habit at all, so sensitive data accumulates indefinitely in more places than anyone can track.</p>
+<h2>Making Classification Practical</h2>
+<p>A classification policy only works if it changes behaviour, so it has to be short enough to remember and specific enough to settle real situations: support tickets, sales exports, debugging, vendor tools and AI prompts. Use the Data Handling and Classification Policy Template to define your tiers, map where sensitive data lives today (including AI tools), and set clear rules for storage, sharing and retirement.</p>
+<aside class="standards-box" aria-label="Standards and obligations"><span class="kicker">Standards and obligations</span><p class="sb-intro">Classification and retention are where privacy law turns into day-to-day handling rules.</p><div class="table-wrap"><table><thead><tr><th>Framework or obligation</th><th>Where this resource lines up</th></tr></thead><tbody><tr><td>Australian Privacy Act</td><td>APP 6 use and disclosure; APP 8 cross-border disclosure; APP 11.1 security; APP 11.2 destroy or de-identify information no longer needed</td></tr><tr><td>NZ Privacy Act 2020</td><td>IPP 5 storage and security; IPP 9 retention; IPP 12 disclosure outside New Zealand</td></tr><tr><td>UK GDPR</td><td>Article 5(1)(c) data minimisation; Article 5(1)(e) storage limitation; Article 32 security</td></tr><tr><td>ISO/IEC 27001:2022 Annex A</td><td>5.12 classification; 5.13 labelling; 5.34 privacy and protection of PII; 8.10 information deletion</td></tr><tr><td>ISO/IEC 42001 Annex A</td><td>A.7 data for AI systems</td></tr></tbody></table></div><p class="sb-note">General guidance, not legal advice. This shows where the resource lines up with each framework; using it does not make a business compliant or certified. Regulatory references checked October 2026.</p></aside>
+
 
         <div class="takeaways">
           <strong>Key takeaways</strong>
           <ul>
-            <li>Most small technology teams cannot confidently say what their most sensitive data is or where it lives; that ambiguity, not any single tool, is the real risk.</li>
-<li>A simple two-to-three tier classification system (e.g., public, internal, restricted) is more effective than an elaborate taxonomy because everyone can actually apply it consistently.</li>
-<li>Storing sensitive data in tools not built for it, and over-collecting data with no clear need, are the two most common sources of avoidable risk.</li>
-<li>Data retirement and deletion are the most commonly skipped practice: sensitive information accumulates indefinitely without an active decision to remove it.</li>
-<li>A classification policy only changes behaviour if it's short, concrete, and addresses real recurring situations like support tickets, sales exports, and vendor tools.</li>
-
+            <li>Most small technology teams cannot say confidently what their most sensitive data is or where it lives. That ambiguity is the real risk.</li>
+<li>A simple two-to-three tier classification beats an elaborate taxonomy because everyone can apply it.</li>
+<li>AI tools create new data stores (prompts, uploads, outputs, embeddings, provider logs) that need owners, tiers and retention periods.</li>
+<li>Know where AI providers store and process personal information; offshore handling brings cross-border obligations.</li>
+<li>Deletion is the most skipped practice, and privacy law in Australia, New Zealand and the UK expects it.</li>
           </ul>
         </div>
         
@@ -426,11 +446,11 @@
             <img class="dl-thumb" src="../assets/previews/27.webp" alt="First page of the Data Handling and Classification Policy Template PDF" width="560" height="449" loading="lazy" />
             <div class="dl-details">
               <div class="dl-label">What's inside</div>
-              <ol class="dl-sections"><li>Classification Tiers</li><li>Where Sensitive Data Actually Lives</li><li>Storage and Sharing Rules</li><li>Retention and Retirement</li><li>Adoption and Review</li></ol>
+              <ol class="dl-sections"><li>Classification Tiers (including AI tools)</li><li>Where Sensitive Data Actually Lives</li><li>AI Data Stores</li><li>Storage and Sharing Rules</li><li>Retention and Retirement</li><li>Adoption and Review</li><li>Standards Map</li></ol>
               <dl class="dl-facts">
-                <div><dt>Format</dt><dd>PDF, 2 pages, designed to print and fill in</dd></div>
+                <div><dt>Format</dt><dd>PDF, 3 pages, designed to print and fill in</dd></div>
                 <div><dt>Best for</dt><dd>Founders and operations leaders setting data handling standards</dd></div>
-                <div><dt>What to bring</dt><dd>A list of your systems, vendors and the data types each one holds</dd></div>
+                <div><dt>What to bring</dt><dd>A list of your systems, vendors and AI tools, and the data types each one holds</dd></div>
                 <div><dt>After you submit</dt><dd>Your download starts straight away. Nothing is emailed to you, and you won't be added to a mailing list unless you tick the opt-in.</dd></div>
               </dl>
             </div>
@@ -514,7 +534,7 @@
   "headline": "You Can't Protect Data You Haven't Classified",
   "description": "Most technology companies have no shared answer for what counts as sensitive data, where it lives, or when it should be deleted \u2014 and that gap is the real risk.",
   "datePublished": "2026-07-18",
-  "dateModified": "2026-10-11",
+  "dateModified": "2026-10-17",
   "author": {
     "@type": "Person",
     "name": "Joel Smith",

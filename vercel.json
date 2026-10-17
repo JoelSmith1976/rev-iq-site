@@ -27,6 +27,10 @@
     {
       "source": "/insights",
       "destination": "/insights/index.html"
+    },
+    {
+      "source": "/tools",
+      "destination": "/tools/index.html"
     }
   ],
   "functions": {

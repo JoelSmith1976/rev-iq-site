@@ -26,6 +26,14 @@ Articles giving Rev-IQ's analysis and point of view on current commercial questi
 - [Everyone's using AI. Almost nobody's getting paid for it.](https://rev-iq.ai/insights/everyone-is-using-ai-almost-nobody-is-getting-paid-for-it): Most technology businesses have plenty of AI activity. Very few can show what it's earning. Why AI stalls, and five things the businesses getting results do differently.
 - [Targets, pressure and psychosocial safety: can sales culture and the new obligations coexist?](https://rev-iq.ai/insights/targets-pressure-and-psychosocial-safety): Australia's psychosocial safety rules don't ban sales pressure. They expect it to be designed and managed. Eight practical controls that keep sales teams accountable.
 
+## Free calculators
+
+Browser-based calculators that show their formula. Nothing entered is sent to Rev-IQ.
+
+- [Free calculators](https://rev-iq.ai/tools): Overview of the Rev-IQ calculators.
+- [CAC payback calculator](https://rev-iq.ai/tools/cac-payback-calculator): CAC from fully loaded sales and marketing cost, payback in months of gross margin, a directional LTV and what would move the result.
+- [Discount cost calculator](https://rev-iq.ai/tools/discount-cost-calculator): The cost of a discount over the contract and renewals, gross profit given up and the extra volume needed to recover it.
+
 ## AI Skills
 
 Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framework and run inside the user's own AI account.

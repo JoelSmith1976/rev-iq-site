@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/13-the-six-saas-numbers-that-actually-matter</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/14-a-practical-way-to-price-early-stage-saas</loc>
@@ -230,7 +230,7 @@
   </url>
   <url>
     <loc>https://rev-iq.ai/articles/50-mutual-action-plans-and-negotiating-without-leading-with-a-discount</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://rev-iq.ai/privacy</loc>
@@ -323,5 +323,17 @@
   <url>
     <loc>https://rev-iq.ai/case-studies/myhub</loc>
     <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://rev-iq.ai/tools</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://rev-iq.ai/tools/cac-payback-calculator</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
+    <loc>https://rev-iq.ai/tools/discount-cost-calculator</loc>
+    <lastmod>2026-10-17</lastmod>
   </url>
 </urlset>

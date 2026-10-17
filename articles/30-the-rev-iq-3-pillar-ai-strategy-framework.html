@@ -319,6 +319,14 @@
     .standards-box .table-wrap { margin: var(--space-4) 0 var(--space-4); }
     .standards-box .table-wrap td:first-child { font-weight: 600; width: 34%; }
     .standards-box .sb-note { margin: 0; font-size: var(--text-xs); color: var(--color-text-faint); }
+    .standards-box .table-wrap table { min-width: 0; }
+    @media (max-width: 640px) {
+      .standards-box thead { display: none; }
+      .standards-box tr { display: block; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); }
+      .standards-box tr:last-child { border-bottom: none; }
+      .standards-box .table-wrap td { display: block; padding: 0; border: none; width: auto; }
+      .standards-box .table-wrap td:first-child { width: auto; margin-bottom: 0.25rem; }
+    }
   </style>
 </head>
 <body>
@@ -522,6 +530,7 @@
             <li><a href="../about">About Rev-IQ</a></li>
             <li><a href="../contact">Contact</a></li>
             <li><a href="../privacy">Privacy</a></li>
+            <li><a href="../ai-use">AI Use</a></li>
             <li><a href="../terms">Terms of Use</a></li>
           </ul>
         </div>

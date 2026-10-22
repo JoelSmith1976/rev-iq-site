@@ -1138,6 +1138,30 @@
      }
     ]
    }
+  },
+  "decisions-we-live-with": {
+   "name": "Decisions We Live With",
+   "type": "book",
+   "key_env": "BOOK_KEY",
+   "allow_free": true,
+   "platforms": {
+    "book": [
+     {
+      "key": "epub",
+      "label": "ePub edition (Apple Books, Kobo, Google Play Books, Send to Kindle)",
+      "filename": "Decisions-We-Live-With.epub",
+      "bytes": 1014118,
+      "sha256": "4218923044fd63e76e9be0ea7dca894eee47a15a041cd1a01e57436eb83f1edf"
+     },
+     {
+      "key": "pdf",
+      "label": "PDF edition (laptop, tablet or print at home)",
+      "filename": "Decisions-We-Live-With.pdf",
+      "bytes": 1520707,
+      "sha256": "cd6570086b25bebc2f8b816a320e87dd0a352c775044221507b3422c063610e6"
+     }
+    ]
+   }
   }
  }
 }

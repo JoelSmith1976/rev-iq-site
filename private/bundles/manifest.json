@@ -1150,15 +1150,15 @@
       "key": "epub",
       "label": "ePub edition (Apple Books, Kobo, Google Play Books, Send to Kindle)",
       "filename": "Decisions-We-Live-With.epub",
-      "bytes": 1014118,
-      "sha256": "4218923044fd63e76e9be0ea7dca894eee47a15a041cd1a01e57436eb83f1edf"
+      "bytes": 1014185,
+      "sha256": "38ba8fba85a14d52208d4b1ed61c7de28f57969ac1297d29dff1cf22aa326100"
      },
      {
       "key": "pdf",
       "label": "PDF edition (laptop, tablet or print at home)",
       "filename": "Decisions-We-Live-With.pdf",
-      "bytes": 1520707,
-      "sha256": "cd6570086b25bebc2f8b816a320e87dd0a352c775044221507b3422c063610e6"
+      "bytes": 1534843,
+      "sha256": "fadb69081785b67f15d5723c0650e8ec8cc3ef260c070e63b792dfe416793e0e"
      }
     ]
    }

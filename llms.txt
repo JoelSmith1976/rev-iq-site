@@ -28,6 +28,16 @@ Articles giving Rev-IQ's analysis and point of view on current commercial questi
 - [Everyone's using AI. Almost nobody's getting paid for it.](https://rev-iq.ai/insights/everyone-is-using-ai-almost-nobody-is-getting-paid-for-it): Most technology businesses have plenty of AI activity. Very few can show what it's earning. Why AI stalls, and five things the businesses getting results do differently.
 - [Targets, pressure and psychosocial safety: can sales culture and the new obligations coexist?](https://rev-iq.ai/insights/targets-pressure-and-psychosocial-safety): Australia's psychosocial safety rules don't ban sales pressure. They expect it to be designed and managed. Eight practical controls that keep sales teams accountable.
 
+## The Weekend Download
+
+Rev-IQ's Saturday round-up of the week in technology, with one line on why each story matters. Kept separate from the Insights articles.
+
+- [The Weekend Download](https://rev-iq.ai/insights/the-weekend-download): All editions, newest first.
+- [The Weekend Download, Edition 4: week ending 7 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-4): Drones that deliver in 30 minutes, an off switch for AI agents, a humanoid robot company goes public and a Tamagotchi that lives upside down.
+- [The Weekend Download, Edition 3: week ending 31 October 2026](https://rev-iq.ai/insights/the-weekend-download-edition-3): Apple's first touchscreen Mac, AI worlds that talk back, the biggest quantum deal yet and 110 robots who can dance better than most of us.
+- [The Weekend Download, Edition 2: week ending 24 October 2026](https://rev-iq.ai/insights/the-weekend-download-edition-2): Humans and AI crack a 31-year-old maths problem, an Australian image model that can spell, a US$10 lab on a chip and a hairdryer taller than a zebra.
+- [The Weekend Download, Edition 1: week ending 17 October 2026](https://rev-iq.ai/insights/the-weekend-download-edition-1): An AI solves a 25-year mystery, a phone that sold out in minutes, a US$6.3bn security deal and a car that does kickflips.
+
 ## Free calculators
 
 Browser-based calculators that show their formula. Nothing entered is sent to Rev-IQ.

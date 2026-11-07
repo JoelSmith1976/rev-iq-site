@@ -334,6 +334,25 @@
     .insight-meta { font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
     .insight-topic { color: var(--color-primary-hover); font-weight: 600; }
     @media (max-width: 720px) { .insight-card { grid-template-columns: 1fr; } }
+
+
+
+    /* WD-SIDEBAR */
+    .insights-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-8); align-items: start; }
+    .wd-aside { position: sticky; top: 96px; background: var(--color-surface, #fff); border: 1px solid var(--color-border); border-top: 4px solid var(--color-primary); border-radius: var(--radius-lg, 16px); padding: var(--space-5); }
+    .wd-aside .kicker { display: block; margin-bottom: var(--space-2); }
+    .wd-aside h2 { font-size: 1.35rem; margin: 0 0 var(--space-2); line-height: 1.2; }
+    .wd-aside > p { font-size: var(--text-sm); color: var(--color-text-muted); margin: 0 0 var(--space-4); line-height: 1.55; }
+    .wd-aside ol { list-style: none; padding: 0; margin: 0 0 var(--space-4); display: grid; gap: var(--space-1); border-top: 1px solid var(--color-border); }
+    .wd-aside li a { display: block; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border); text-decoration: none !important; color: var(--color-text) !important; }
+    .wd-aside li a:hover .wd-t, .wd-aside li a:focus-visible .wd-t { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .wd-aside li:last-child a { border-bottom: 0; }
+    .wd-aside .wd-d { display: block; font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); margin-bottom: 2px; }
+    .wd-aside .wd-d b { color: var(--color-accent, #a8710f); font-weight: 600; }
+    .wd-aside .wd-t { display: block; font-size: var(--text-sm); line-height: 1.45; }
+    .wd-aside .btn { width: 100%; justify-content: center; }
+    @media (max-width: 1000px) { .insights-layout { grid-template-columns: 1fr; } .wd-aside { position: static; } }
+    /* /WD-SIDEBAR */
   </style>
 </head>
 <body>
@@ -396,14 +415,15 @@
   </script>
   <main id="main">
     <section class="article-header">
-      <div class="container-narrow">
+      <div class="container">
         <div class="eyebrow"><span class="dot"></span>Analysis and point of view</div>
         <h1 class="article-h1">Insights</h1>
         <p class="dek">Rev-IQ's view on the commercial questions facing technology businesses right now, from valuations and exits to AI and sales leadership. Every article is free to read, with sources linked. For practical frameworks and worksheets, visit the <a href="/resources" style="color: var(--color-primary); text-decoration: underline;">Resource Library</a>.</p>
       </div>
     </section>
     <section class="article-body">
-      <div class="container-narrow">
+      <div class="container">
+        <div class="insights-layout">
         <div class="insight-list">
           <a class="card-link" href="/insights/china-has-already-decided-how-to-price-ai-agents">
             <article class="card insight-card">
@@ -465,6 +485,21 @@
               </div>
             </article>
           </a>
+        </div>
+          <!-- WD-ASIDE -->
+          <aside class="wd-aside" aria-labelledby="wd-aside-title">
+            <span class="kicker">Every Saturday</span>
+            <h2 id="wd-aside-title">The Weekend Download</h2>
+            <p>The week that was in technology, and why it matters. Five stories, a number and something to make you smile.</p>
+            <ol>
+              <li><a href="/insights/the-weekend-download-edition-4"><span class="wd-d"><b>Edition 4</b> · 7 November</span><span class="wd-t">The AI selloff, drone deliveries and an off switch for AI agents</span></a></li>
+              <li><a href="/insights/the-weekend-download-edition-3"><span class="wd-d"><b>Edition 3</b> · 31 October</span><span class="wd-t">Apple&#x27;s first touchscreen Mac</span></a></li>
+              <li><a href="/insights/the-weekend-download-edition-2"><span class="wd-d"><b>Edition 2</b> · 24 October</span><span class="wd-t">Humans and AI crack a 31-year-old maths problem</span></a></li>
+              <li><a href="/insights/the-weekend-download-edition-1"><span class="wd-d"><b>Edition 1</b> · 17 October</span><span class="wd-t">An AI solves a 25-year cryptography mystery</span></a></li>
+            </ol>
+            <a class="btn btn-secondary btn-sm" href="/insights/the-weekend-download">All editions →</a>
+          </aside>
+          <!-- /WD-ASIDE -->
         </div>
       </div>
     </section>

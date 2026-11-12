@@ -427,6 +427,11 @@
     .bk-blurb p.lead { color: var(--color-text); font-weight: 600; }
     .bk-buy { padding: var(--space-8); margin-top: var(--space-6); max-width: 520px; }
     .bk-buy .btn { width: 100%; justify-content: center; }
+    .bk-amazon { margin-top: var(--space-4); }
+    .bk-amz-h { font-size: 1.15rem; margin: 0 0 var(--space-2); }
+    .bk-amazon .bk-amz-p { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); }
+    .bk-amazon .btn-amazon { background: #FFA41C; border: 1px solid #FF8F00; color: #0F1111; }
+    .bk-amazon .btn-amazon:hover, .bk-amazon .btn-amazon:focus-visible { background: #FA8900; border-color: #E47911; color: #0F1111; transform: translateY(-1px); box-shadow: var(--shadow-sm); }
     .bk-buy .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: var(--space-3) 0 0; }
     .bk-parts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
     .bk-parts .card { padding: var(--space-6); }
@@ -521,6 +526,12 @@
               <a class="btn btn-primary" id="buy-btn" href="https://buy.stripe.com/28EbJ2esB9bjddn4Kt77O09">Buy the ebook for A$12.99</a>
               <p class="gate-note">Secure checkout by Stripe. If you have a code, enter it at checkout. Your download page opens straight after purchase, and Stripe emails your receipt.</p>
             </div>
+            <div class="card bk-buy bk-amazon" id="amazon">
+              <h3 class="bk-amz-h">Also on Amazon</h3>
+              <p class="bk-amz-p">Prefer to read on Kindle? The Kindle edition is available on Amazon.</p>
+              <a class="btn btn-amazon" id="amazon-kindle-btn" href="https://www.amazon.com.au/dp/B0HRBVXCP1" target="_blank" rel="noopener">Kindle edition on Amazon</a>
+              <p class="gate-note">On an iPhone or iPad, open the link in Safari to buy. The Amazon and Kindle apps in Australia don't sell Kindle books.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -558,6 +569,7 @@
   <script>
     (function () {
       var b = document.getElementById('buy-btn');
+      var k = document.getElementById('amazon-kindle-btn'); if (k) k.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'select_promotion', { promotion_name: 'amazon_kindle' }); });
       if (b) b.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'begin_checkout', { currency: 'AUD', value: 12.99, items: [{ item_id: 'decisions-we-live-with', item_name: 'Decisions We Live With' }] }); });
     })();
   </script>

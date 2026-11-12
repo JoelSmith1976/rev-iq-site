@@ -259,6 +259,13 @@
       .quote-grid { grid-template-columns: 1fr; }
     }
 
+    .about-book { display: grid; grid-template-columns: minmax(150px, 220px) 1fr; gap: clamp(1.75rem, 4vw, 3.5rem); align-items: center; }
+    .about-book-cover img { width: 100%; height: auto; display: block; border-radius: 4px; box-shadow: 0 18px 40px rgba(28,25,18,0.22); }
+    .about-book h2 { font-size: clamp(1.7rem, 3.2vw, 2.4rem); margin: 0; }
+    .about-book .about-book-sub { font-size: var(--text-lg, 1.15rem); color: var(--color-text); margin: var(--space-2) 0 0; font-style: normal; }
+    .about-book p.about-book-copy { color: var(--color-text-muted); margin: var(--space-4) 0 0; max-width: 58ch; }
+    .about-book .actions { margin-top: var(--space-6); }
+    @media (max-width: 640px) { .about-book { grid-template-columns: 1fr; } .about-book-cover { display: block; width: 160px; } }
   </style>
 </head>
 <body>
@@ -355,6 +362,20 @@
       </div>
     </section>
 
+    <section class="muted-band" id="book">
+      <div class="container about-book">
+        <a class="about-book-cover reveal" href="/book" aria-label="Decisions We Live With by Joel Smith"><img src="/images/book/decisions-we-live-with-cover-sm.jpg" alt="Cover of Decisions We Live With by Joel Smith: a brass compass on weathered stone" loading="lazy" /></a>
+        <div>
+          <span class="kicker">The book</span>
+          <h2>Decisions We Live With</h2>
+          <p class="about-book-sub">What History Reveals About Leadership Under Pressure</p>
+          <p class="about-book-copy">Before founding Rev-IQ, Joel wrote a book about judgement. It sets twenty moments from history, from the beaches of Gallipoli and the walls of Malta to the retreat from Moscow and the night before Challenger flew, alongside the pressures leaders face in organisations today.</p>
+          <p class="about-book-copy">The question at its centre also runs through Rev-IQ's work: how good decisions get made when the evidence is incomplete, the pressure is real and the consequences land on other people.</p>
+          <div class="actions"><a class="btn btn-primary" href="/book">Read about the book</a></div>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container about-grid">
         <div>
@@ -443,6 +464,7 @@
             <li><a href="/tools">Free Calculators</a></li>
             <li><a href="/insights">Insights</a></li>
             <li><a href="browse-by-challenge">Browse by Challenge</a></li>
+            <li><a href="/book">The Book</a></li>
             <li><a href="who-its-for">Who It's For</a></li>
           </ul>
         </div>

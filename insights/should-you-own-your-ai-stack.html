@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-67DC4XWDK8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-67DC4XWDK8');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Should You Own Your AI Stack? | Rev-IQ</title>
+  <meta name="description" content="When AI bills blow out, owning the hardware looks like the obvious fix. What the AI stack is in plain terms, why GPUs run AI, which jobs suit owning, renting or a hybrid, how utilisation decides the maths, nine board tests and seven myths." />
+  <link rel="canonical" href="https://rev-iq.ai/insights/should-you-own-your-ai-stack" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Rev-IQ Advisory" />
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:url" content="https://rev-iq.ai/insights/should-you-own-your-ai-stack" />
+  <meta property="og:title" content="Should You Own Your AI Stack?" />
+  <meta property="og:description" content="When AI bills blow out, owning the hardware looks like the obvious fix. What the AI stack is in plain terms, why GPUs run AI, which jobs suit owning, renting or a hybrid, how utilisation decides the maths, nine board tests and seven myths." />
+  <meta property="og:image" content="https://rev-iq.ai/images/og/insight-should-you-own-your-ai-stack.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Rev-IQ: Should You Own Your AI Stack?" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Should You Own Your AI Stack?" />
+  <meta name="twitter:description" content="When AI bills blow out, owning the hardware looks like the obvious fix. What the AI stack is in plain terms, why GPUs run AI, which jobs suit owning, renting or a hybrid, how utilisation decides the maths, nine board tests and seven myths." />
+  <meta name="twitter:image" content="https://rev-iq.ai/images/og/insight-should-you-own-your-ai-stack.jpg" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="../favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.1rem, 1.2rem + 3vw, 3.75rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem;
+      --color-bg: #f5efe4;
+      --color-surface: #ffffff;
+      --color-surface-2: #ece2d0;
+      --color-border: #ddd0b7;
+      --color-divider: #e6dac0;
+      --color-text: #1c1912;
+      --color-text-muted: #5c5344;
+      --color-text-faint: #938970;
+      --color-primary: #0b6e66;
+      --color-primary-hover: #084f49;
+      --color-primary-soft: #dceeea;
+      --color-primary-soft-2: #c3e2dc;
+      --color-accent: #a8710f;
+      --color-accent-hover: #8a5c0b;
+      --color-accent-soft: #f5e6c4;
+      --color-ink: #0e2624;
+      --color-ink-surface: #143733;
+      --color-ink-border: rgba(220,238,234,0.14);
+      --color-ink-text: #f4f1e6;
+      --color-ink-muted: #a3beb8;
+      --color-error: #a3323b;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.375rem;
+      --radius-full: 999px;
+      --shadow-sm: 0 1px 2px rgba(20,16,8,0.05), 0 2px 10px rgba(20,16,8,0.05);
+      --shadow-md: 0 10px 28px rgba(20,16,8,0.09);
+      --shadow-lg: 0 24px 55px rgba(14,38,36,0.16);
+      --shadow-teal: 0 14px 32px rgba(11,110,102,0.18);
+      --font-display: 'Space Grotesk', 'Inter', Arial, sans-serif;
+      --font-body: 'Inter', Arial, sans-serif;
+      --content: 1100px;
+      --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+    body { margin: 0; font-family: var(--font-body); font-size: var(--text-base); line-height: 1.65; color: var(--color-text); background: var(--color-bg); }
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin: 0 auto; }
+    .container-narrow { width: min(calc(100% - 2rem), 760px); margin: 0 auto; }
+    .container-wide { width: min(calc(100% - 2rem), 1240px); margin: 0 auto; }
+    .skip-link { position: absolute; left: -9999px; top: 0; }
+    .skip-link:focus { left: 1rem; top: 1rem; background: var(--color-surface); padding: 0.75rem 1rem; z-index: 1000; border-radius: var(--radius-sm); }
+    header { position: sticky; top: 0; z-index: 30; backdrop-filter: blur(10px); background: rgba(245,239,228,0.88); border-bottom: 1px solid rgba(28,25,18,0.08); }
+    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; gap: var(--space-4); }
+    .brand { display: flex; align-items: center; gap: 0.9rem; font-family: var(--font-display); font-weight: 600; letter-spacing: 0.01em; flex-shrink: 0; }
+    .brand-mark { width: 34px; height: 34px; border-radius: 9px; background: var(--color-ink); color: var(--color-primary-soft); display: grid; place-items: center; }
+    .brand-mark svg { width: 19px; height: 19px; }
+    nav ul { display: flex; list-style: none; gap: 1.15rem; padding: 0; margin: 0; color: var(--color-text-muted); font-size: var(--text-xs); flex-wrap: nowrap; }
+    nav ul a { position: relative; padding-bottom: 2px; transition: color 160ms var(--ease); }
+    nav ul a:hover, nav ul a[aria-current="page"] { color: var(--color-primary); }
+    nav ul a[aria-current="page"] { font-weight: 700; }
+    nav ul a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -8px; height: 2px; background: var(--color-primary); border-radius: 2px; }
+    .nav-toggle { display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; width: 40px; height: 40px; border: 1px solid rgba(28,25,18,0.16); border-radius: var(--radius-md); background: transparent; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .nav-toggle-bar { width: 18px; height: 2px; background: var(--color-text); transition: 160ms ease; }
+    body.nav-open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    body.nav-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    body.nav-open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    h1, h2, h3 { margin: 0; line-height: 1.1; }
+    h1, h2 { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em; }
+    h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-primary-hover); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: var(--space-5); font-weight: 700; }
+    .dot { width: 7px; height: 7px; border-radius: 999px; background: var(--color-accent); }
+    .hero { padding: clamp(3.5rem, 8vw, 6.5rem) 0 clamp(2.5rem, 6vw, 4rem); position: relative; overflow: hidden; }
+    .hero::before { content: ""; position: absolute; inset: -10% -10% auto auto; width: 46vw; height: 46vw; max-width: 640px; max-height: 640px; background: radial-gradient(circle at 70% 30%, rgba(11,110,102,0.10), transparent 62%); pointer-events: none; z-index: 0; }
+    .hero > .container { position: relative; z-index: 1; }
+    h1 { font-size: clamp(2.5rem, 5vw, 4.4rem); max-width: 17ch; letter-spacing: -0.025em; }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: var(--space-12); align-items: start; }
+    .lead { margin-top: var(--space-6); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .hero-card { background: var(--color-ink); color: var(--color-ink-text); border: 1px solid var(--color-ink-border); border-radius: var(--radius-xl); padding: var(--space-8); box-shadow: var(--shadow-lg); margin-top: 2.6rem; }
+    .hero-card p { margin: 0 0 var(--space-5); color: var(--color-ink-muted); }
+    .hero-card strong { display: block; font-size: var(--text-sm); margin-bottom: 0.4rem; color: var(--color-ink-text); font-family: var(--font-display); }
+    .hero-diagram { display: flex; align-items: stretch; gap: 0.5rem; margin: -0.4rem -0.4rem var(--space-6); padding-bottom: var(--space-6); border-bottom: 1px solid var(--color-ink-border); }
+    .hero-diagram .node { flex: 1; text-align: center; padding: 0.7rem 0.3rem; border-radius: var(--radius-sm); background: rgba(244,241,230,0.06); border: 1px solid var(--color-ink-border); position: relative; }
+    .hero-diagram .node span { display: block; font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-ink-muted); font-weight: 700; }
+    .hero-diagram .node.is-active { background: rgba(168,113,15,0.16); border-color: rgba(168,113,15,0.4); }
+    .hero-diagram .node.is-active span { color: #e3b45c; }
+    .hero-diagram .arrow { display: flex; align-items: center; color: var(--color-ink-muted); flex: 0 0 auto; font-size: 0.8rem; }
+    .actions { display: flex; gap: 0.9rem; margin-top: var(--space-8); flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0.85rem 1.4rem; border-radius: var(--radius-md); font-size: var(--text-sm); font-weight: 600; transition: 180ms var(--ease); border: none; cursor: pointer; white-space: nowrap; }
+    .btn-primary { background: var(--color-primary); color: #fff; box-shadow: 0 1px 0 rgba(0,0,0,0.05); }
+    .btn-primary:hover { background: var(--color-primary-hover); transform: translateY(-1px); box-shadow: var(--shadow-teal); }
+    .btn-secondary { border: 1px solid rgba(28,25,18,0.18); background: var(--color-surface); color: var(--color-text); }
+    .btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .btn-ghost { border: 1px solid rgba(28,25,18,0.14); background: transparent; color: var(--color-text-muted); }
+    .btn-ghost:hover { color: var(--color-primary); border-color: var(--color-primary); }
+    .btn-sm { min-height: 38px; padding: 0.55rem 1.05rem; font-size: var(--text-xs); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+    section { padding: clamp(3.2rem, 6.5vw, 5.5rem) 0; }
+    .section-tight { padding: clamp(1.2rem, 3vw, 2.2rem) 0; }
+    .section-intro { margin-bottom: var(--space-8); max-width: 60ch; }
+    .section-intro h2 { font-size: clamp(1.9rem, 3.8vw, 2.9rem); margin-bottom: var(--space-4); }
+    .section-intro p { color: var(--color-text-muted); margin: 0; }
+    .kicker { font-size: var(--text-xs); color: var(--color-primary-hover); letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin-bottom: var(--space-3); display: block; }
+    .kicker.is-flagship { color: var(--color-accent-hover); }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5); }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-5); }
+    .card { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6); box-shadow: var(--shadow-sm); transition: 220ms var(--ease); }
+    .card h3 { font-size: 1.12rem; margin-bottom: var(--space-3); }
+    .card p { margin: 0; color: var(--color-text-muted); font-size: var(--text-sm); }
+    .card-link { display: block; transition: 220ms var(--ease); }
+    .card-link:hover .card { border-color: var(--color-primary); box-shadow: var(--shadow-teal); transform: translateY(-3px); }
+    .card-link .card { transition: 220ms var(--ease); }
+    .card-featured { border: 1.5px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, var(--color-surface) 55%); position: relative; }
+    .card-link:hover .card-featured { border-color: var(--color-accent-hover); box-shadow: 0 16px 36px rgba(168,113,15,0.2); }
+    .badge { display: inline-flex; align-items: center; gap: 0.35rem; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; padding: 0.3rem 0.65rem; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-primary-hover); }
+    .badge.is-flagship { background: var(--color-accent-soft); color: var(--color-accent-hover); }
+    .badge.is-new { background: var(--color-ink); color: var(--color-ink-text); }
+    .tag-row { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: var(--space-4); }
+    .tag { font-size: var(--text-xs); padding: 0.3rem 0.7rem; border-radius: var(--radius-full); background: var(--color-primary-soft); color: var(--color-primary-hover); font-weight: 600; }
+    .tag-muted { background: var(--color-surface-2); color: var(--color-text-muted); }
+    .muted-band { background: var(--color-surface-2); border-block: 1px solid var(--color-divider); }
+    .band-dark { background: var(--color-ink); color: var(--color-ink-text); position: relative; overflow: hidden; }
+    .band-dark::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 12% 18%, rgba(220,238,234,0.07), transparent 55%), radial-gradient(circle at 88% 82%, rgba(168,113,15,0.12), transparent 50%); pointer-events: none; }
+    .band-dark .container, .band-dark .container-wide, .band-dark .container-narrow { position: relative; z-index: 1; }
+    .band-dark h2, .band-dark h3 { color: var(--color-ink-text); }
+    .band-dark p { color: var(--color-ink-muted); }
+    .band-dark .kicker { color: #8fcfc6; }
+    .band-dark .card { background: var(--color-ink-surface); border-color: var(--color-ink-border); }
+    .band-dark .card p { color: var(--color-ink-muted); }
+    .band-dark .btn-secondary { background: transparent; border-color: rgba(244,241,230,0.3); color: var(--color-ink-text); }
+    .band-dark .btn-secondary:hover { border-color: var(--color-ink-text); }
+    .list { display: grid; gap: var(--space-4); }
+    .list-item { display: grid; grid-template-columns: 44px 1fr; gap: var(--space-5); padding: var(--space-5) 0; border-bottom: 1px solid var(--color-divider); transition: 180ms var(--ease); }
+    .list-item:last-child { border-bottom: 0; }
+    .list-item .num { color: var(--color-primary); font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: 0; }
+    .list-item span.eyebrow-sm { display: block; color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.3rem; }
+    .list-item h3 { font-size: 1.15rem; margin-bottom: 0.35rem; font-weight: 700; }
+    .list-item h3 a { transition: color 160ms var(--ease); }
+    .list-item:hover h3 a { color: var(--color-primary); }
+    .list-item p { margin: 0; color: var(--color-text-muted); }
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center; }
+    .about-grid, .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); align-items: start; }
+    .note { background: var(--color-primary-soft); border-radius: var(--radius-lg); padding: var(--space-6); color: var(--color-text); }
+    form { display: grid; gap: var(--space-4); background: var(--color-surface); padding: var(--space-6); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+    label { font-size: var(--text-sm); font-weight: 600; }
+    input, textarea, select { width: 100%; margin-top: 0.45rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); padding: 0.9rem 1rem; font: inherit; background: #fff; color: var(--color-text); transition: border-color 160ms var(--ease); }
+    input:hover, textarea:hover, select:hover { border-color: var(--color-text-faint); }
+    textarea { min-height: 140px; resize: vertical; }
+    input:focus, textarea:focus, select:focus { outline: 2px solid rgba(11,110,102,0.35); outline-offset: 1px; border-color: var(--color-primary); }
+    footer { border-top: 1px solid var(--color-divider); padding: var(--space-8) 0 var(--space-10); color: var(--color-text-muted); font-size: var(--text-sm); }
+    .footer-row { display: flex; justify-content: space-between; gap: var(--space-4); flex-wrap: wrap; }
+    .footer-links { display: flex; gap: var(--space-5); flex-wrap: wrap; }
+    .footer-links a { transition: color 160ms var(--ease); }
+    .footer-links a:hover { color: var(--color-primary); }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: var(--space-10); align-items: start; }
+    .footer-brand .brand { color: var(--color-text); margin-bottom: var(--space-3); }
+    .footer-brand p { margin: 0 0 var(--space-4); max-width: 36ch; color: var(--color-text-muted); }
+    .footer-contact { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+    .footer-contact a { display: inline-flex; align-items: center; gap: 0.45rem; color: var(--color-primary); font-weight: 600; }
+    .footer-contact a:hover { color: var(--color-primary-hover); }
+    .footer-contact svg { width: 15px; height: 15px; }
+    .footer-col h2 { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-text-faint); margin: 0 0 var(--space-3); }
+    .footer-col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+    .footer-col a { transition: color 160ms var(--ease); }
+    .footer-col a:hover { color: var(--color-primary); }
+    .footer-legal { margin-top: var(--space-8); padding-top: var(--space-5); border-top: 1px solid var(--color-divider); font-size: var(--text-xs); color: var(--color-text-faint); }
+    @media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); } .footer-brand { grid-column: 1 / -1; } }
+    .breadcrumb { display: flex; align-items: center; gap: 0.5rem; font-size: var(--text-xs); color: var(--color-text-faint); margin-bottom: var(--space-6); }
+    .breadcrumb a { color: var(--color-primary); }
+    .path-card { border-left: 3px solid var(--color-primary); }
+    .path-card .kicker { margin-bottom: var(--space-2); }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 620ms var(--ease), transform 620ms var(--ease); }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 1080px) {
+      nav ul { gap: 0.85rem; font-size: 0.72rem; }
+    }
+    @media (max-width: 920px) {
+      .hero-grid, .about-grid, .contact-grid, .grid-3, .grid-4, .split { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero-card { margin-top: var(--space-8); }
+      .nav { flex-wrap: wrap; }
+      .nav-toggle { display: flex; }
+      nav[aria-label="Primary"] { flex-basis: 100%; order: 3; max-height: 0; overflow: hidden; transition: max-height 220ms ease; }
+      body.nav-open nav[aria-label="Primary"] { max-height: 70vh; overflow-y: auto; }
+      nav ul { display: flex; flex-direction: column; gap: 0; flex-wrap: nowrap; padding: var(--space-2) 0 var(--space-5); font-size: var(--text-base); }
+      nav ul li { border-bottom: 1px solid var(--color-divider); }
+      nav ul a { display: block; padding: 0.85rem 0.1rem; }
+      nav ul a[aria-current="page"]::after { display: none; }
+      .list-item { grid-template-columns: 1fr; gap: var(--space-2); }
+      h1 { max-width: 100%; }
+      .hero-diagram { flex-wrap: wrap; }
+    }
+
+
+    .article-header { padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2rem, 4vw, 3rem); }
+    h1.article-h1 { font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 22ch; }
+    .dek { margin-top: var(--space-5); max-width: 62ch; color: var(--color-text-muted); font-size: var(--text-lg); }
+    .meta-row { display: flex; gap: var(--space-4); margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; flex-wrap: wrap; }
+    .article-body { padding-top: var(--space-4); }
+    .article-body h2 { font-size: clamp(1.5rem, 2.4vw, 1.9rem); margin-top: var(--space-10); margin-bottom: var(--space-4); font-weight: 700; }
+    .article-body p { color: var(--color-text); margin: 0 0 var(--space-4); font-size: var(--text-base); max-width: 68ch; }
+    .takeaways { background: var(--color-surface); border: 1px solid rgba(28,25,18,0.08); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-8); box-shadow: var(--shadow-sm); margin: var(--space-10) 0; }
+    .takeaways strong { display: block; font-size: var(--text-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: var(--space-4); }
+    .takeaways ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-3); }
+    .takeaways li { padding-left: 1.5rem; position: relative; color: var(--color-text); }
+    .takeaways li::before { content: ""; width: 0.6rem; height: 2px; top: 0.72em; background: var(--color-primary); position: absolute; left: 0; color: var(--color-primary); }
+    .download-card { background: linear-gradient(135deg, var(--color-primary-soft), var(--color-primary-soft-2)); border: 1px solid var(--color-primary-soft-2); border-radius: var(--radius-lg); padding: var(--space-8); box-shadow: var(--shadow-teal); margin: var(--space-12) 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-6); }
+    .download-card .label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); margin-bottom: 0.4rem; }
+    .download-card h3 { font-size: 1.35rem; font-family: var(--font-display); margin-bottom: 0.4rem; }
+    .download-card p { margin: 0; color: var(--color-text-muted); max-width: 46ch; }
+    .gate-form { display: flex; flex-direction: column; gap: var(--space-2); min-width: 280px; }
+    .gate-fields { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+    .gate-fields input[type=email] { flex: 1 1 200px; min-width: 200px; min-height: 46px; padding: 0 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); background: var(--color-surface); font-size: var(--text-sm); font-family: var(--font-body); color: var(--color-text); margin-top: 0; }
+    .gate-fields input[type=email]:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: 0; }
+    .gate-msg { font-size: var(--text-sm); color: var(--color-primary); margin: 0; }
+    .gate-optin { display: flex; gap: var(--space-2); align-items: flex-start; font-size: var(--text-xs); color: var(--color-text-muted); line-height: 1.5; cursor: pointer; }
+    .gate-optin input { margin-top: 0.2rem; accent-color: var(--color-primary); width: 16px; height: 16px; flex-shrink: 0; }
+    .gate-note a, .gate-msg a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .gate-msg-error { color: var(--color-error); }
+    .diagnose-card { margin: var(--space-10) 0; }
+    .nav-links { display: flex; justify-content: space-between; margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid var(--color-divider); font-size: var(--text-sm); flex-wrap: wrap; gap: var(--space-3); }
+    .nav-links a { color: var(--color-primary); font-weight: 600; max-width: 46ch; }
+    .nav-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--space-4) var(--space-8); }
+    .nav-links .nav-next { grid-column: 2; justify-self: end; text-align: right; }
+    @media (max-width: 640px) { .nav-links { grid-template-columns: 1fr; } .nav-links .nav-next { grid-column: 1; } }
+    @media (max-width: 920px) {
+      .download-card { flex-direction: column; align-items: flex-start; }
+    }
+    .faq-block { margin: var(--space-12) 0; }
+    .faq-block h2 { font-size: clamp(1.4rem, 2.4vw, 1.8rem); margin-bottom: var(--space-5); font-weight: 700; }
+    .faq-item { border-top: 1px solid var(--color-divider); padding: var(--space-5) 0; }
+    .faq-item:first-of-type { border-top: none; }
+    .faq-item h3 { font-size: var(--text-base); font-weight: 700; margin: 0 0 var(--space-2); color: var(--color-text); }
+    .faq-item p { margin: 0; color: var(--color-text-muted); max-width: 68ch; }
+
+  
+    .download-card.has-inside { flex-direction: column; align-items: stretch; gap: var(--space-6); }
+    .dl-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); flex-wrap: wrap; }
+    .dl-inside { display: grid; grid-template-columns: 180px 1fr; gap: var(--space-6); padding-top: var(--space-6); border-top: 1px solid var(--color-primary-soft-2); }
+    .dl-thumb { width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-primary-soft-2); box-shadow: 0 6px 18px rgba(14,38,36,0.10); background: #fff; display: block; }
+    .dl-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; margin-bottom: 0.5rem; }
+    .dl-sections { margin: 0 0 var(--space-5); padding-left: 1.2rem; display: grid; gap: 0.25rem; font-size: var(--text-sm); color: var(--color-text); }
+    .dl-sections li::marker { color: var(--color-primary); font-weight: 600; }
+    .dl-more { list-style: none; margin-left: -1.2rem; color: var(--color-text-muted); }
+    .dl-facts { margin: 0; display: grid; gap: var(--space-3); font-size: var(--text-sm); }
+    .dl-facts div { display: grid; grid-template-columns: 120px 1fr; gap: var(--space-3); }
+    .dl-facts dt { font-weight: 600; color: var(--color-text); }
+    .dl-facts dd { margin: 0; color: var(--color-text-muted); }
+    @media (max-width: 720px) {
+      .dl-inside { grid-template-columns: 1fr; }
+      .dl-thumb { max-width: 220px; }
+      .dl-facts div { grid-template-columns: 1fr; gap: 0.1rem; }
+    }
+      .article-body .container-narrow > h3 { font-size: 1.2rem; font-weight: 700; margin: var(--space-8) 0 var(--space-3); }
+    .article-body .container-narrow > ul, .article-body .container-narrow > ol { margin: 0 0 var(--space-5); padding-left: 1.4rem; max-width: 68ch; display: grid; gap: var(--space-2); }
+    .article-body .container-narrow > ul > li, .article-body .container-narrow > ol > li { color: var(--color-text); line-height: 1.65; }
+    .article-body .container-narrow > ul > li::marker, .article-body .container-narrow > ol > li::marker { color: var(--color-primary); font-weight: 600; }
+    .article-body .container-narrow > p a, .article-body .container-narrow > ul a, .article-body .container-narrow > ol a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .table-wrap { margin: var(--space-6) 0 var(--space-8); overflow-x: auto; border: 1px solid var(--color-divider); border-radius: var(--radius-md); background: var(--color-surface); }
+    .table-wrap table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); min-width: 520px; }
+    .table-wrap th { text-align: left; font-weight: 600; background: var(--color-primary-soft); color: var(--color-text); padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: bottom; }
+    .table-wrap td { padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--color-divider); vertical-align: top; color: var(--color-text); line-height: 1.5; }
+    .table-wrap tr:last-child td { border-bottom: none; }
+    .example-box { margin: var(--space-6) 0 var(--space-8); padding: var(--space-5) var(--space-6); border-left: 3px solid var(--color-primary); background: var(--color-surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+    .example-box p { margin: 0 0 var(--space-3); }
+    .example-box p:last-child { margin-bottom: 0; }
+    .example-box .example-label { font-size: var(--text-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-primary-hover); font-weight: 700; }
+    .article-body h3 { font-size: clamp(1.15rem, 1.8vw, 1.35rem); margin-top: var(--space-8); margin-bottom: var(--space-3); font-weight: 700; }
+    .article-body ul, .article-body ol { max-width: 68ch; margin: 0 0 var(--space-4); padding-left: 1.25rem; }
+    .article-body li { margin-bottom: var(--space-2); }
+    .article-body a:not(.btn):not(.card-link) { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+    .sources { margin: var(--space-12) 0 var(--space-8); font-size: var(--text-sm); color: var(--color-text-muted); }
+    .sources h2 { font-size: clamp(1.2rem, 2vw, 1.4rem); }
+    .sources ol { padding-left: 1.25rem; display: grid; gap: var(--space-2); }
+    .article-body .disclaimer { font-size: var(--text-xs); color: var(--color-text-faint); margin-top: var(--space-6); }
+    .article-body .related-list { list-style: none; padding: 0; margin: 0 0 var(--space-4); display: grid; gap: var(--space-2); }
+    .related-list a { color: var(--color-primary); font-weight: 600; }
+    .insight-list { display: grid; gap: var(--space-5); margin: var(--space-4) 0 var(--space-12); }
+    .article-body .insight-card p { color: var(--color-text-muted); margin: 0; }
+    .insight-card { display: grid; grid-template-columns: 240px 1fr; gap: var(--space-6); align-items: center; padding: var(--space-5); }
+    .insight-card img { width: 100%; height: auto; border-radius: var(--radius-md); display: block; }
+    .insight-card h2 { font-size: clamp(1.25rem, 2vw, 1.6rem); margin: var(--space-2) 0 var(--space-3); line-height: 1.2; }
+    .insight-card p { font-size: var(--text-base); }
+    .insight-meta { font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); }
+    .insight-topic { color: var(--color-primary-hover); font-weight: 600; }
+    @media (max-width: 720px) { .insight-card { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/" aria-label="Rev-IQ home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/>
+            <path d="M9 13h2.2"/>
+            <circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <span>Rev-IQ</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav aria-label="Primary" id="primary-nav">
+        <ul>
+          <li><a href="../resources">Resource Library</a></li>
+          <li><a href="/skills">AI Skills</a></li>
+          <li><a href="/insights" aria-current="page">Insights</a></li>
+          <li><a href="../who-its-for">Who It's For</a></li>
+          <li><a href="../advisory">Advisory</a></li><li><a href="../fractional-cro">Fractional CRO</a></li>
+          <li><a href="../about">About Rev-IQ</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!toggle || !nav) return;
+      function closeMenu() {
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      }
+      toggle.addEventListener('click', function () {
+        var open = document.body.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') closeMenu();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 920) closeMenu();
+      });
+    })();
+  </script>
+  <main id="main">
+    <section class="article-header">
+      <div class="container-narrow">
+        <div class="breadcrumb"><a href="../insights">Insights</a>&nbsp;/&nbsp;AI and business models</div>
+        <div class="eyebrow"><span class="dot"></span>Insight · AI and business models</div>
+        <h1 class="article-h1">Should You Own Your AI Stack?</h1>
+        <p class="dek">When AI bills blow out, a growing number of businesses reach the same conclusion: stop renting and start owning. Buy the hardware, run your own models, take back control of the cost. It sounds like the obvious next step. But is owning your AI the way out of the cost problem, or simply a different way to take on the same risk? This piece starts with what “owning the stack” actually means in plain terms and what you&#x27;re actually using AI for, then looks at what it means for founders, leaders, boards and investors.</p>
+        <div class="meta-row"><span>20 min read</span><span>Free to read</span><span>Published 16 November 2026</span></div>
+      </div>
+    </section>
+    <section class="article-body">
+      <div class="container-narrow">
+<h2>Where we left off</h2>
+<p>In our last Insight, <a href="/insights/so-your-business-is-an-ai-wrapper">So Your Business Is An AI Wrapper. Is It Doomed?</a>, we looked at what happens when AI moves from a business's overheads into its cost of goods. Frontier prices are rising, the models you build on get retired, and most blowouts come from how much AI a business uses rather than what it pays per unit.</p>
+<p>That raises the obvious follow-up. If renting someone else's AI is the problem, should you own it instead?</p>
+<p>Plenty of businesses are already acting on that instinct. In one survey of 1,800 senior IT leaders, the share of enterprises using public cloud as their main home for running AI fell from 56% to 41% in a single year, and 43% of the organisations moving workloads out of the public cloud named AI among them (<a href="https://www.broadcom.com/company/news/articles/cloud/private-cloud-outlook-2026-enterprise-ai" target="_blank" rel="noopener">Broadcom</a>). That survey comes from a company that sells private cloud software, so treat the exact numbers with care. The direction is still worth noticing.</p>
+<p>Before deciding whether owning makes sense, it helps to be clear about what there is to own.</p>
+<h2>What is the “AI stack”, in plain terms?</h2>
+<p>When people talk about the AI stack, they mean the layers that have to work together for an AI product to do anything useful. There are five.</p>
+<ol><li><strong>The chips.</strong> AI runs on specialised processors, mostly graphics processing units (GPUs) made by Nvidia. They are the engine. A single Nvidia H100 costs about US$27,000 to US$37,000 to buy, or roughly US$2.50 to US$4.50 an hour to rent (<a href="https://fal.ai/learn/serverless/nvidia-h100-price" target="_blank" rel="noopener">fal</a>).</li><li><strong>The data centre.</strong> The building, power, cooling and networking the chips need. This is what the big cloud providers, such as AWS, Microsoft and Google, and the newer specialist GPU rental companies sell.</li><li><strong>The model.</strong> The trained “brain” that does the thinking: GPT, Claude, Gemini, Llama, Qwen and so on. This is the layer most people mean when they say “AI”.</li><li><strong>The software around the model.</strong> Everything that turns a raw model into something reliable: connecting it to your data, deciding which model handles which task, guardrails, testing, monitoring and cost tracking.</li><li><strong>The product.</strong> What your customer actually sees and pays for.</li></ol>
+<h3>Why do graphics chips run AI?</h3>
+<p>It's a fair question. Most of us know a graphics card as the thing that makes video games look good, so it seems odd that the same kind of chip now sits at the centre of an AI build-out that Gartner sizes in the trillions of dollars (<a href="https://www.gartner.com/en/newsroom/press-releases/2026-10-14-gartner-says-over-us-dollars-three-and-a-half-trillion-of-artificial-intelligence-infrastructure-spending-could-be-exposed-to-impairment-by-the-end-of-2030" target="_blank" rel="noopener">Gartner</a>).</p>
+<p>The link is the type of maths involved. The main processor in your laptop, the CPU, has a small number of powerful cores built to work through complicated tasks one step after another. A GPU takes the opposite approach: thousands of smaller cores that all work at the same time (<a href="https://www.csiro.au/en/news/all/articles/2024/march/gpu-ai-computer-graphics" target="_blank" rel="noopener">CSIRO</a>). That suits graphics, where the colour of millions of pixels has to be worked out at once, many times a second.</p>
+<p>It turns out an AI model needs exactly the same thing. Underneath, a model is an enormous grid of numbers, and every answer it gives involves multiplying and adding huge sets of those numbers together. CSIRO describes this as “matrix multiplication”, which is well suited to doing many simple sums in parallel (<a href="https://www.csiro.au/en/news/all/articles/2024/march/gpu-ai-computer-graphics" target="_blank" rel="noopener">CSIRO</a>). One way to picture it: a CPU is a handful of brilliant mathematicians, while a GPU is a stadium full of people with calculators, each doing one simple sum at the same moment. For AI, the stadium wins.</p>
+<p>The moment the industry noticed came in 2012, when University of Toronto researchers used Nvidia gaming cards to win a major image-recognition competition by a wide margin (<a href="https://blogs.nvidia.com/blog/first-gpu-gaming-ai/" target="_blank" rel="noopener">Nvidia</a>). In other words, gamers paid for the research and development that AI now runs on. Today's data-centre GPUs are designed specifically for this work, with dedicated circuits for that matrix maths, but the principle is the same (<a href="https://www.halbleiter.org/en/history/from-3d-accelerator-to-ai-processor-the-history-of-the-gpu/" target="_blank" rel="noopener">Halbleiter.org</a>). It also explains why these chips are expensive, why demand outstrips supply, and why the question of who owns them matters so much.</p>
+<p>One distinction matters more than any other at the model layer: <strong>closed versus open-weight</strong>.</p>
+<ul><li><strong>Closed models</strong> (the frontier models from OpenAI, Anthropic and Google) can only be rented. You send a request and pay per token, the small chunks of text the model reads and writes. You never see the model itself, and the supplier decides the price, the rules and when the model is retired.</li><li><strong>Open-weight models</strong> (such as Meta's Llama, Alibaba's Qwen, DeepSeek and OpenAI's gpt-oss) are published so anyone can download them and run them on their own hardware, or pay a hosting company to run them. Once you have a copy, nobody can retire it on you or change its price.</li></ul>
+<p>The trade-off is quality. Epoch AI estimates the best open-weight models have trailed the best closed models by an average of about four months since January 2026, or about six months under a stricter test (<a href="https://epoch.ai/data-insights/open-closed-eci-gap" target="_blank" rel="noopener">Epoch AI</a>). That's close, but at the leading edge, four months can be a long time.</p>
+<h3>Think about rooftop solar</h3>
+<p>If you live in Australia, you already understand the choice. About one in 2.5 Australian homes now has rooftop solar (<a href="https://reneweconomy.com.au/australian-households-installed-record-amount-of-rooftop-solar-and-home-batteries-in-first-half-of-2026/" target="_blank" rel="noopener">RenewEconomy, citing the Clean Energy Council</a>).</p>
+<ul><li><strong>Renting AI by the token is buying power from the grid.</strong> No upfront cost, you pay for what you use and the supply is always there. But the retailer sets the price, and if you use a lot, the bills add up.</li><li><strong>Owning the hardware is putting panels on the roof.</strong> A big upfront cost, then very cheap power, but only for the power you actually use. Panels lose efficiency every year, and the ones on the market next year will be better than yours.</li><li><strong>Almost nobody goes fully off-grid.</strong> Most solar homes stay connected for the cloudy days and the evening peak. The sensible setup is a mix.</li></ul>
+<p>As with solar, whether owning pays off has less to do with the price of the panels and more to do with how much of what you generate you actually use.</p>
+<h2>What are you actually using AI for?</h2>
+<p>Most of the own-versus-rent debate skips the most useful question. Before you ask where your AI should run, ask what job it's doing. A business that makes hundreds of videos a week and a business that uses AI to research prospects have very different needs, even if both say they “use AI”.</p>
+<h3>The creators who bought their own machines</h3>
+<p>One group has quietly worked this out faster than most companies: small content creators and studios with heavy image and video workloads.</p>
+<p>The reason is simple. Video is billed by the second, and the seconds add up fast. Google's top Veo 3.1 tier costs US$0.40 for every second of video it generates, and its cheapest tier is US$0.05 (<a href="https://www.cloudzero.com/blog/veo-3-pricing/" target="_blank" rel="noopener">CloudZero</a>). That sounds small until you remember that most clips need several attempts before one is usable, and every attempt is billed.</p>
+<p>One software studio recorded what happened when it moved this work onto a single Nvidia RTX 5090, a high-end graphics card designed for gaming. Over five days in October 2026 the card produced 1,383 images and 737 video clips. The studio estimated that the same output would have cost about €500 from cloud services, against about €2 of electricity. At that pace, it calculated the card would pay for itself in somewhere between 20 and 65 days, depending on what you paid for it (<a href="https://www.nerdheadz.com/guides/how-to-make-ai-videos" target="_blank" rel="noopener">NerdHeadz</a>).</p>
+<p>The same write-up is honest about the limits. The cloud models still did better at hard shots: convincing facial performance, physical action and lip-synced dialogue. The payback also assumed heavy daily use. The authors said that at a hobby pace of a few clips a week, the cloud is cheaper. And the hardware itself has become a moving target. The RTX 5090 launched at US$1,999, but by October it was selling for around US$4,500 in the US and €6,500 in Europe (also <a href="https://www.nerdheadz.com/guides/how-to-make-ai-videos" target="_blank" rel="noopener">NerdHeadz</a>).</p>
+<p>There's a renting lesson here too. Creators who built their work around OpenAI's Sora video model found that its API was shut down on 24 September 2026 (<a href="https://platform.openai.com/docs/models/sora-2" target="_blank" rel="noopener">OpenAI</a>). When you rent, the supplier decides how long the tool exists.</p>
+<h3>Why this work suits owning</h3>
+<p>Image and video generation ticks almost every box for owning:</p>
+<ul><li><strong>High, steady volume.</strong> Creators generate every day, so the machine stays busy.</li><li><strong>Lots of retries.</strong> On a rented service every failed attempt costs money. On your own machine it costs a little time and a little power, which encourages experimenting.</li><li><strong>“Good enough” open models.</strong> Open-weight video models are now strong enough for a large share of everyday shots.</li><li><strong>No need for live information.</strong> A video of a sunset doesn't need to know today's news.</li></ul>
+<p>That last point is the one most people miss, and it's where the picture changes.</p>
+<h3>Why some AI needs to stay connected</h3>
+<p>A lot of the value of AI comes from being online. When people say a rented model is “connected”, they usually mean one of three things, and it's worth separating them because they're not equally true.</p>
+<ol><li><strong>It can reach current information.</strong> A model that researches a prospect, checks a competitor's pricing or answers a customer about today's policy needs live access to the web or to your systems. This matters a lot.</li><li><strong>It keeps getting better without you doing anything.</strong> When the supplier releases a better model, you can switch to it the same day. If you own your model, upgrading is your job. For work at the leading edge, such as complex reasoning, coding or high-stakes writing, that gap can matter.</li><li><strong>It learns from your use.</strong> This one is mostly a myth for business users. OpenAI, for example, says it does not train its models on business or API data by default (<a href="https://openai.com/index/business-data/" target="_blank" rel="noopener">OpenAI</a>). Your rented model is not quietly getting smarter about your business from your conversations. It improves when the supplier releases a new version.</li></ol>
+<p>Two things follow from this. First, “connected” and “rented” aren't the same thing. A model running on your own hardware can still be given access to the web and your systems. Second, the real advantage of renting at the top end is access to the best model available this month, without having to rebuild anything.</p>
+<h3>Own, rent or both: matching the job</h3>
+<p>These are general patterns, not rules, but they're a useful starting point.</p>
+<p><strong>Jobs that lean towards owning, or at least open-weight models:</strong></p>
+<ul><li>High-volume image, video and audio generation, such as creators, marketing teams and e-commerce product images.</li><li>Repetitive, well-defined text work at scale, such as sorting tickets, pulling data out of forms or summarising call notes.</li><li>Sensitive material that shouldn't leave the building, such as patient records, legal files or board papers.</li><li>Work in places with poor connectivity, such as remote sites, vessels or factory floors.</li></ul>
+<p><strong>Jobs that lean towards renting frontier models:</strong></p>
+<ul><li>Hard reasoning, complex coding and anything where being slightly wrong is expensive.</li><li>Research and customer work that depends on current information.</li><li>Low-volume or unpredictable use, where hardware would sit idle.</li><li>Early experiments, where you don't yet know what you need.</li></ul>
+<p><strong>Jobs that suit a hybrid:</strong></p>
+<p>Most businesses do several of these jobs at once, so most will end up with a mix. One analysis of AI influencer production suggests running open models on owned hardware for the roughly 90% of clips that are simple shots, and paying for a premium cloud model only for the hard 10%, such as water, cloth and complex motion (<a href="https://www.thedeepfeed.ai/posts/2026-05-09-ai-influencer-wrapper-economy-fanvue-exit" target="_blank" rel="noopener">The Deep Feed</a>).</p>
+<p>Apple has built a version of this into recent iPhones and Macs. Apple Intelligence runs many tasks on the device itself, sends more complex requests to larger models on Apple's own servers, and can search the web when a request needs current information (<a href="https://www.apple.com/au/legal/privacy/data/en/intelligence-engine/" target="_blank" rel="noopener">Apple</a>). Small, private and frequent work stays local. Big or current work goes to the cloud.</p>
+<p>That's the pattern worth copying. A hybrid isn't a compromise between owning and renting. It's sending each job to wherever it's done best and most cheaply. As with solar, almost nobody goes fully off-grid.</p>
+<h2>Six ways to own more of your AI</h2>
+<p>“Owning the stack” isn't a single decision. It's a spectrum, and most businesses will end up somewhere in the middle.</p>
+<div class="table-wrap"><table><thead><tr><th>Option</th><th>What you own</th><th>How you pay</th><th>What you're exposed to</th></tr></thead><tbody><tr><td>1. Rent a frontier model by the token</td><td>Nothing but your product</td><td>Per token</td><td>Price rises, model retirements, supplier competing with you</td></tr><tr><td>2. Rent a frontier model with commitments, in your own cloud region</td><td>A contract</td><td>Committed spend, discounted per token</td><td>The same, with less flexibility and more data control</td></tr><tr><td>3. Rent an open-weight model from a hosting provider</td><td>The choice of model</td><td>Per token, usually much cheaper</td><td>Lower quality at the leading edge; the host's price</td></tr><tr><td>4. Run an open-weight model on rented GPUs</td><td>The model and how it runs</td><td>Per GPU hour, busy or idle</td><td>Paying for idle time; the people to run it</td></tr><tr><td>5. Build or tune your own model</td><td>A model nobody else has</td><td>Engineering time plus compute</td><td>The cost of keeping up with the frontier</td></tr><tr><td>6. Buy your own hardware</td><td>Everything</td><td>Upfront capital, then running costs</td><td>Depreciation, obsolescence, utilisation, staff</td></tr></tbody></table></div>
+<h3>What this looks like in practice</h3>
+<p>These examples are our own reading of public information.</p>
+<ul><li><strong>Airbnb sits mostly at option 3 or 4.</strong> Its customer service agent is built on 13 models, and chief executive Brian Chesky said the company relies heavily on Alibaba's open Qwen model because it is “very good” and “also fast and cheap”. He added that Airbnb uses OpenAI's latest models but typically doesn't use them much in production “because there are faster and cheaper models” (<a href="https://www.silicon.co.uk/e-innovation/artificial-intelligence/airbnb-alibaba-ai-627141" target="_blank" rel="noopener">Silicon UK</a>). Owning the choice of model, not the hardware, is where most of that saving comes from. It also shows that open-weight models bring their own questions: the comments drew a US congressional inquiry into the use of a Chinese model (<a href="https://www.sunherald.com/news/nation-world/national/article315835968.html" target="_blank" rel="noopener">Sun Herald, via Bloomberg</a>).</li><li><strong>Cursor and Fin moved to option 5.</strong> As we noted last time, Cursor's gross margins went from negative to slightly positive after it launched its own Composer model (<a href="https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/" target="_blank" rel="noopener">TechCrunch</a>), and Fin now runs on its own purpose-built model (<a href="https://fin.ai/about" target="_blank" rel="noopener">Fin</a>). Both are large, fast-growing businesses with very high and very predictable usage.</li><li><strong>37signals shows what option 6 can do, outside AI.</strong> The company behind Basecamp moved its applications off AWS and onto about US$700,000 of its own servers. Its annual cloud bill fell from US$3.2 million to US$1.3 million, the hardware paid for itself within the year, and it now expects to save more than US$10 million over five years (<a href="https://www.theregister.com/on-prem/2024/10/21/developer-pockets-2m-in-savings-from-going-cloud-free/1147527" target="_blank" rel="noopener">The Register</a>). That's the best-known case for owning. It's also a case built on steady, predictable workloads and hardware that stays useful for five to seven years. AI hardware doesn't yet behave like that, as we'll see.</li></ul>
+<h2>The number that decides it: how busy is the machine?</h2>
+<p>Here is the single most important idea in this whole debate, and it's simple.</p>
+<p>When you rent AI by the token, you only pay when it's working. When you own or rent the hardware, you pay every hour, whether it's working or sitting idle. So owning only wins if the machine is busy enough of the time.</p>
+<p>Most aren't. In VentureBeat's September survey, 81% of companies running AI in production said their GPUs were busy half the time or less, and most of them still planned to buy more (<a href="https://venturebeat.com/ai/nvidia-is-pitching-ai-factories-but-81-of-companies-say-their-gpus-run-at-half-capacity-or-less" target="_blank" rel="noopener">VentureBeat</a>). In a later survey, a third of organisations operating their own GPUs didn't measure how busy they were at all (<a href="https://venturebeat.com/vb-pulse-infrastructure-and-compute-report" target="_blank" rel="noopener">VentureBeat</a>).</p>
+<p>One worked example from September 2026 makes the point well (<a href="https://cohorte.co/blog/self-hosted-llm-cost-vs-api-break-even" target="_blank" rel="noopener">Cohorte</a>). It rents two Nvidia H100 GPUs for about US$6,100 a month to run OpenAI's open-weight gpt-oss model, then compares that with the alternatives.</p>
+<ul><li><strong>Against a frontier model such as Claude Sonnet 5</strong>, the two GPUs pay for themselves at around 612 million output tokens a month. For a serious AI product, that's very reachable. Owning looks like a clear win.</li><li><strong>Against a hosting company running the exact same open-weight model</strong>, at US$0.60 per million output tokens, break-even is about 10.2 billion tokens a month. On a normal business-hours schedule, the two GPUs can't physically produce that much. Owning loses, at any volume.</li><li><strong>And the utilisation trap:</strong> at 30% average load, the GPUs cost about seven times the hosted price for the same model. At 10%, which the author describes as “ordinary for an internal tool in its first quarter”, it is about 21 times.</li></ul>
+<p>The lesson is worth spelling out. <strong>Most of the saving comes from switching to a cheaper model, not from owning the machine it runs on.</strong> Specialist hosting companies keep their GPUs full by serving many customers, so they can sell each token close to cost. A single business rarely can.</p>
+<h2>The costs that don't show up in the pitch</h2>
+<p>Owning hardware swaps a bill you can see for a set of costs that are easier to miss.</p>
+<ul><li><strong>Depreciation, and an argument nobody has settled.</strong> The big cloud providers write their servers off over five to six years (<a href="https://www.amcompute.com/blog/gpu-useful-life-depreciation-schedules" target="_blank" rel="noopener">American Compute</a>). Investor Michael Burry argues that is too long for chips bought on a two- to three-year product cycle, and that the largest providers are understating depreciation by about US$176 billion from 2026 to 2028 (also via <a href="https://www.amcompute.com/blog/gpu-useful-life-depreciation-schedules" target="_blank" rel="noopener">American Compute</a>). One venture firm's analysis finds a GPU earns about half its lifetime cash in its first two years (<a href="https://www.wing.vc/content/how-long-does-a-gpu-last" target="_blank" rel="noopener">Wing VC</a>). Like solar panels, the hardware keeps working; it just gets less competitive every year.</li><li><strong>Renting GPUs isn't a fixed price either.</strong> A one-year H100 rental now costs about US$2.80 an hour, up about 65% from a low of US$1.70 in October 2025, according to SemiAnalysis's Dylan Patel (<a href="https://fourweekmba.com/ai-patels-data-puts-nvidia-h100-rent-up-65-in-a-year-at-2-80/" target="_blank" rel="noopener">FourWeekMBA</a>). Moving from tokens to GPU hours swaps one price risk for another.</li><li><strong>People.</strong> Someone has to install, run, secure, patch, monitor and fix it, and be on call when it breaks at 2am. One incident can wipe out months of savings, and the skills are scarce.</li><li><strong>You still have to keep up.</strong> Owning an open-weight model means nobody can retire it on you. It also means nobody upgrades it for you. If competitors move to a better model, testing and switching is now your job, not your supplier's.</li><li><strong>Your supplier risk moves, it doesn't vanish.</strong> Many businesses that “own” their AI actually rent GPUs from specialist providers, often called neoclouds. Gartner predicts more than 80% of them will cease operating independently by 2030 through mergers, acquisitions or failure (<a href="https://www.gartner.com/en/newsroom/press-releases/2026-10-14-gartner-says-over-us-dollars-three-and-a-half-trillion-of-artificial-intelligence-infrastructure-spending-could-be-exposed-to-impairment-by-the-end-of-2030" target="_blank" rel="noopener">Gartner</a>). If yours is one of them, what happens to your capacity and your contract?</li></ul>
+<h2>What owning genuinely solves</h2>
+<p>None of that means owning is wrong. It solves real problems that renting can't.</p>
+<ul><li><strong>Price control.</strong> Nobody can double your cost per token on a month's notice.</li><li><strong>No forced retirements.</strong> The model you tested is the model you keep, until you decide to change it. That removes the “shifting sand” problem we described last time.</li><li><strong>Data control and sovereignty.</strong> For some businesses this matters more than cost. Security and compliance were the top reason for moving workloads out of the public cloud in Broadcom's survey, cited by 51% (<a href="https://thejournal.com/articles/2026/07/01/report-enterprise-ai-workloads-are-tipping-toward-private-cloud.aspx" target="_blank" rel="noopener">THE Journal</a>). In Australia, the Prime Minister announced mandatory national AI standards in July 2026, saying Australia “can be much more than a data warehouse for AI products made overseas” (<a href="https://www.pm.gov.au/media/ai-australias-interests-0" target="_blank" rel="noopener">Prime Minister of Australia</a>). For businesses selling into government, health or financial services, where and how AI runs may become a buying criterion.</li><li><strong>Better habits.</strong> Interestingly, businesses running their own GPUs reported better utilisation than everyone else: 56% were busy half the time or less, against 83% for other companies running AI in production (<a href="https://venturebeat.com/ai/ai-bubble-update-79-of-companies-say-their-gpus-sit-idle-at-least-half-the-time-yet-most-plan-new-ai-platforms" target="_blank" rel="noopener">VentureBeat</a>). When you own the meter, you tend to watch it.</li><li><strong>Differentiation.</strong> A model trained on your own data, for your own job, is something a competitor can't rent. That's what Cursor and Fin bought.</li></ul>
+<h2>Starting, running and investing</h2>
+<p><strong>If you're starting a business,</strong> don't buy hardware. You don't yet know your usage, your best model or your product. Rent, but build so you can switch: keep the choice of model separate from your product, and test more than one from day one. The ability to move to a cheaper or open-weight model later is the most valuable thing you can own early.</p>
+<p><strong>If you're running an established business,</strong> the question is which parts of your AI workload are steady, high-volume and well understood. Those are candidates for cheaper open-weight models, whether hosted or self-run. The hard, unpredictable or leading-edge work usually stays with frontier models. Very few businesses outside AI's largest users will have enough steady demand to justify buying chips.</p>
+<p><strong>If you're investing,</strong> treat AI hardware on a balance sheet the way you would any fast-depreciating asset. Ask what utilisation the business case assumed and what it actually achieves, what depreciation life it uses and why, and what the hardware will be worth when the next two Nvidia generations arrive. A business that has bought its way out of a token bill may have bought its way into a capital problem.</p>
+<h2>A practical path</h2>
+<p>For most technology businesses, the sensible answer looks a lot like solar on a grid-connected home.</p>
+<ul><li><strong>List the jobs before you price the hardware.</strong> Separate the high-volume, repeatable work from the hard, current or experimental work. They rarely belong in the same place.</li><li><strong>Send each task to the cheapest model that does it well.</strong> Use frontier models where they earn their keep and cheaper open-weight models for routine, high-volume work. This is usually the biggest saving available, and it needs no hardware.</li><li><strong>Own the software layer first.</strong> The routing, testing, monitoring and cost tracking around the model are what let you switch suppliers, and they're the part of the stack that is genuinely yours.</li><li><strong>Measure utilisation before you buy.</strong> If you can't show your current AI capacity is busy most of the time, buying more of it won't fix your costs.</li><li><strong>Only own the base load.</strong> If a slice of your workload runs steadily all day, every day, at high volume, that slice may justify your own capacity. Keep renting for peaks and anything new.</li><li><strong>Plan for the panels to age.</strong> Any hardware business case should assume the equipment is overtaken within two to three years, even if the accountants depreciate it over five or six.</li></ul>
+<h2>Questions for boards and investors</h2>
+<ol><li><strong>The job test.</strong> What are we actually using AI for, and which of those jobs need current information or the very best model available?</li><li><strong>The base-load test.</strong> How much of our AI usage is steady and predictable, and how much is spiky or experimental?</li><li><strong>The utilisation test.</strong> How busy is the AI capacity we already pay for, and who measures it?</li><li><strong>The model test.</strong> Have we tried a cheaper or open-weight model on our routine work, and what did we lose in quality?</li><li><strong>The like-for-like test.</strong> Does our case for owning compare against a hosted version of the same open model, or only against frontier prices?</li><li><strong>The people test.</strong> Who will run this at 2am, and what does that cost?</li><li><strong>The three-year test.</strong> What is this hardware worth when the next two generations of chips arrive?</li><li><strong>The supplier test.</strong> If our GPU provider is acquired or fails, what happens to our capacity?</li><li><strong>The sovereignty test.</strong> Do our customers, or will our customers, care where and how our AI runs?</li></ol>
+<h2>Seven myths, busted</h2>
+<ol><li><strong>“Owning is always cheaper at scale.”</strong> Only if the hardware is busy. Idle capacity is the most expensive kind.</li><li><strong>“Open-weight means free.”</strong> The model may be free to download. Running it, securing it and keeping it current is not.</li><li><strong>“Open-weight models are years behind.”</strong> About four months on average, by Epoch AI's measure (<a href="https://epoch.ai/data-insights/open-closed-eci-gap" target="_blank" rel="noopener">Epoch AI</a>). Good enough for a great deal of routine work.</li><li><strong>“Renting GPUs locks in your costs.”</strong> One-year H100 rentals rose about 65% in a year (<a href="https://fourweekmba.com/ai-patels-data-puts-nvidia-h100-rent-up-65-in-a-year-at-2-80/" target="_blank" rel="noopener">FourWeekMBA</a>).</li><li><strong>“Data sovereignty means buying hardware.”</strong> Often it can be met by running models in an Australian cloud region or with a local provider, without owning a single chip.</li><li><strong>“If 37signals could leave the cloud, so can we.”</strong> Its servers last five to seven years and its workloads are steady. AI chips and AI workloads are, for now, neither.</li><li><strong>“Rented AI is learning about my business as I use it.”</strong> For business and API customers, usually not by default (<a href="https://openai.com/index/business-data/" target="_blank" rel="noopener">OpenAI</a>). It gets better when the supplier releases a new model, which is a different and still valuable thing.</li></ol>
+<h2>So, should you own the stack?</h2>
+<p>For most technology businesses, owning the chips is the wrong first move, and the right answer depends far more on what the AI is doing than on what it costs per token. The cost problem is usually about which model does which job and how much AI the business uses, and buying hardware doesn't fix either. Owning makes sense for a much smaller group: businesses with large, steady, well-understood workloads, the people to run them and a clear reason, whether cost, control or sovereignty, to accept the depreciation risk. Creators and studios generating images and video every day are a good example of that group. A business researching prospects or writing complex code usually isn't.</p>
+<p>But nearly every business should own more of its stack than it does today. Not the chips, but the choice of model, the software that sits around it and the freedom to switch. That's the part of the stack that protects your margins whichever way AI prices move.</p>
+<p>Rev-IQ Advisory works with technology businesses on growth, pricing and commercial performance, including how AI changes the economics.</p>
+
+        <div class="card path-card ai-run-card" style="border-color: var(--color-primary); margin-bottom: var(--space-6);">
+          <span class="kicker">Free AI skill · Runs in your own AI assistant</span>
+          <h3 style="margin: 0 0 var(--space-2);">Check whether your AI spend is paying off</h3>
+          <p style="margin:0 0 var(--space-4); color: var(--color-text-muted);">The AI Readiness Check looks at your tooling, governance, skills and use cases, and helps you work out where AI is worth the investment and where to start.</p>
+          <a class="btn btn-primary btn-sm" href="/skills/ai-readiness-check">AI Readiness Check →</a>
+        </div>
+        <div class="card path-card diagnose-card">
+          <span class="kicker">Related reading</span>
+          <ul class="related-list">
+            <li><a href="/insights/so-your-business-is-an-ai-wrapper">So Your Business Is An AI Wrapper. Is It Doomed?</a></li>
+            <li><a href="/insights/china-has-already-decided-how-to-price-ai-agents">China has already decided how to price AI agents</a></li>
+            <li><a href="/insights/everyone-is-using-ai-almost-nobody-is-getting-paid-for-it">Everyone's using AI. Almost nobody's getting paid for it.</a></li>
+          </ul>
+          <a class="btn btn-secondary btn-sm" href="../advisory">Discuss advisory support →</a>
+        </div>
+        <div class="sources"><h2>Sources</h2><ol><li>Broadcom, Private Cloud Outlook 2026: enterprise AI. <a href="https://www.broadcom.com/company/news/articles/cloud/private-cloud-outlook-2026-enterprise-ai" target="_blank" rel="noopener">broadcom.com</a></li><li>fal, Nvidia H100 price. <a href="https://fal.ai/learn/serverless/nvidia-h100-price" target="_blank" rel="noopener">fal.ai</a></li><li>Gartner, AI infrastructure spending exposed to impairment by 2030 (14 October 2026). <a href="https://www.gartner.com/en/newsroom/press-releases/2026-10-14-gartner-says-over-us-dollars-three-and-a-half-trillion-of-artificial-intelligence-infrastructure-spending-could-be-exposed-to-impairment-by-the-end-of-2030" target="_blank" rel="noopener">gartner.com</a></li><li>CSIRO, From computer graphics to AI: the rise of the GPU. <a href="https://www.csiro.au/en/news/all/articles/2024/march/gpu-ai-computer-graphics" target="_blank" rel="noopener">csiro.au</a></li><li>Nvidia, How gaming GPUs became the engine of AI. <a href="https://blogs.nvidia.com/blog/first-gpu-gaming-ai/" target="_blank" rel="noopener">blogs.nvidia.com</a></li><li>Halbleiter.org, From 3D accelerator to AI processor: the history of the GPU. <a href="https://www.halbleiter.org/en/history/from-3d-accelerator-to-ai-processor-the-history-of-the-gpu/" target="_blank" rel="noopener">halbleiter.org</a></li><li>Epoch AI, The gap between open and closed models. <a href="https://epoch.ai/data-insights/open-closed-eci-gap" target="_blank" rel="noopener">epoch.ai</a></li><li>RenewEconomy, Record rooftop solar and home batteries in the first half of 2026. <a href="https://reneweconomy.com.au/australian-households-installed-record-amount-of-rooftop-solar-and-home-batteries-in-first-half-of-2026/" target="_blank" rel="noopener">reneweconomy.com.au</a></li><li>CloudZero, Veo 3 pricing in 2026. <a href="https://www.cloudzero.com/blog/veo-3-pricing/" target="_blank" rel="noopener">cloudzero.com</a></li><li>NerdHeadz, How to make AI videos: local GPU vs cloud costs (October 2026). <a href="https://www.nerdheadz.com/guides/how-to-make-ai-videos" target="_blank" rel="noopener">nerdheadz.com</a></li><li>OpenAI, Sora 2 model (shut down 24 September 2026). <a href="https://platform.openai.com/docs/models/sora-2" target="_blank" rel="noopener">platform.openai.com</a></li><li>OpenAI, Business data privacy, security and compliance. <a href="https://openai.com/index/business-data/" target="_blank" rel="noopener">openai.com</a></li><li>The Deep Feed, The AI influencer wrapper economy. <a href="https://www.thedeepfeed.ai/posts/2026-05-09-ai-influencer-wrapper-economy-fanvue-exit" target="_blank" rel="noopener">thedeepfeed.ai</a></li><li>Apple, Apple Intelligence and privacy. <a href="https://www.apple.com/au/legal/privacy/data/en/intelligence-engine/" target="_blank" rel="noopener">apple.com</a></li><li>Silicon UK, Airbnb relies on Alibaba AI. <a href="https://www.silicon.co.uk/e-innovation/artificial-intelligence/airbnb-alibaba-ai-627141" target="_blank" rel="noopener">silicon.co.uk</a></li><li>Sun Herald (Bloomberg), Congressional inquiry into Airbnb use of Chinese AI model. <a href="https://www.sunherald.com/news/nation-world/national/article315835968.html" target="_blank" rel="noopener">sunherald.com</a></li><li>TechCrunch, Cursor in talks to raise $2B at $50B valuation (April 2026). <a href="https://techcrunch.com/2026/04/17/sources-cursor-in-talks-to-raise-2b-at-50b-valuation-as-enterprise-growth-surges/" target="_blank" rel="noopener">techcrunch.com</a></li><li>Fin, About Fin. <a href="https://fin.ai/about" target="_blank" rel="noopener">fin.ai</a></li><li>The Register, 37signals pockets savings from going cloud-free (October 2024). <a href="https://www.theregister.com/on-prem/2024/10/21/developer-pockets-2m-in-savings-from-going-cloud-free/1147527" target="_blank" rel="noopener">theregister.com</a></li><li>VentureBeat, 81% of companies say their GPUs run at half capacity or less. <a href="https://venturebeat.com/ai/nvidia-is-pitching-ai-factories-but-81-of-companies-say-their-gpus-run-at-half-capacity-or-less" target="_blank" rel="noopener">venturebeat.com</a></li><li>VentureBeat, VB Pulse infrastructure and compute report. <a href="https://venturebeat.com/vb-pulse-infrastructure-and-compute-report" target="_blank" rel="noopener">venturebeat.com</a></li><li>Cohorte, Self-hosted LLM cost vs API break-even (September 2026). <a href="https://cohorte.co/blog/self-hosted-llm-cost-vs-api-break-even" target="_blank" rel="noopener">cohorte.co</a></li><li>American Compute, GPU useful life and depreciation schedules. <a href="https://www.amcompute.com/blog/gpu-useful-life-depreciation-schedules" target="_blank" rel="noopener">amcompute.com</a></li><li>Wing VC, How long does a GPU last?. <a href="https://www.wing.vc/content/how-long-does-a-gpu-last" target="_blank" rel="noopener">wing.vc</a></li><li>FourWeekMBA, Nvidia H100 rent up 65% in a year. <a href="https://fourweekmba.com/ai-patels-data-puts-nvidia-h100-rent-up-65-in-a-year-at-2-80/" target="_blank" rel="noopener">fourweekmba.com</a></li><li>THE Journal, Enterprise AI workloads are tipping toward private cloud (July 2026). <a href="https://thejournal.com/articles/2026/07/01/report-enterprise-ai-workloads-are-tipping-toward-private-cloud.aspx" target="_blank" rel="noopener">thejournal.com</a></li><li>Prime Minister of Australia, AI in Australia&#x27;s interests (July 2026). <a href="https://www.pm.gov.au/media/ai-australias-interests-0" target="_blank" rel="noopener">pm.gov.au</a></li><li>VentureBeat, GPUs sit idle at least half the time, yet most plan new AI platforms. <a href="https://venturebeat.com/ai/ai-bubble-update-79-of-companies-say-their-gpus-sit-idle-at-least-half-the-time-yet-most-plan-new-ai-platforms" target="_blank" rel="noopener">venturebeat.com</a></li></ol></div>
+        <p class="disclaimer">This article is general information only, not financial or investment advice. Where named companies sit on the ownership spectrum is Rev-IQ's own view, based on public information. Model, hardware and GPU rental prices change often; check current terms before relying on them. Sources checked 16 November 2026.</p>
+        <div class="nav-links">
+          <a href="so-your-business-is-an-ai-wrapper">← So Your Business Is An AI Wrapper. Is It Doomed?</a>
+          <a class="nav-next" href="../insights">All insights →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Rev-IQ home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 18V6h5.8c2.8 0 4.2 1.4 4.2 3.7 0 1.9-1 3.1-2.8 3.5l4.8 4.8"/><path d="M9 13h2.2"/><circle cx="18.4" cy="17.4" r="0.8" fill="currentColor" stroke="none"/></svg></span><span>Rev-IQ</span></a>
+          <p>Rev-IQ Advisory: commercial frameworks and senior advice for technology businesses ready to scale.</p>
+          <div class="footer-contact">
+            <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a>
+            <a href="https://www.linkedin.com/company/rev-iq-ai/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h3.96V21H3V9.75zm6.38 0h3.8v1.54h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.63 4.74 6.05V21h-3.96v-5.03c0-1.2-.02-2.74-1.67-2.74-1.67 0-1.93 1.3-1.93 2.65V21H9.38V9.75z"/></svg>Rev-IQ on LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-col" role="navigation" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="../resources">Resource Library</a></li>
+            <li><a href="/skills">AI Skills</a></li>
+            <li><a href="/tools">Free Calculators</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="../browse-by-challenge">Browse by Challenge</a></li>
+            <li><a href="/book">The Book</a></li>
+            <li><a href="../who-its-for">Who It's For</a></li>
+          </ul>
+        </div>
+        <div class="footer-col" role="navigation" aria-label="Work with Rev-IQ">
+          <h2>Engage</h2>
+          <ul>
+            <li><a href="../advisory">Advisory</a></li><li><a href="../fractional-cro">Fractional CRO</a></li>
+            <li><a href="../about">About Rev-IQ</a></li>
+            <li><a href="../contact">Contact</a></li>
+            <li><a href="../privacy">Privacy</a></li>
+            <li><a href="../ai-use">AI Use</a></li>
+            <li><a href="../terms">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">© 2026 Rev-IQ Advisory Pty Ltd · ABN 34 702 630 304 · Sydney, Australia</div>
+    </div>
+  </footer>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Rev-IQ Advisory",
+    "legalName": "Rev-IQ Advisory Pty Ltd",
+    "alternateName": "Rev-IQ",
+    "url": "https://rev-iq.ai",
+    "logo": "https://rev-iq.ai/apple-touch-icon.png",
+    "email": "mailto:joel.smith@rev-iq.ai",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sydney",
+      "addressCountry": "AU"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Joel Smith",
+      "jobTitle": "Founder, Rev-IQ Advisory",
+      "description": "Group CEO and CRO-level commercial operator with three decades of experience across telecommunications, technology services, software and SaaS businesses in Australia, New Zealand, and the UK.",
+      "sameAs": ["https://www.linkedin.com/in/joelsmithau/"]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Should You Own Your AI Stack?",
+  "description": "When AI bills blow out, owning the hardware looks like the obvious fix. What the AI stack is in plain terms, why GPUs run AI, which jobs suit owning, renting or a hybrid, how utilisation decides the maths, nine board tests and seven myths.",
+  "datePublished": "2026-11-16",
+  "dateModified": "2026-11-16",
+  "author": {
+    "@type": "Person",
+    "name": "Joel Smith",
+    "url": "https://www.linkedin.com/in/joelsmithau/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rev-IQ Advisory",
+    "legalName": "Rev-IQ Advisory Pty Ltd",
+    "alternateName": "Rev-IQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://rev-iq.ai/apple-touch-icon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://rev-iq.ai/insights/should-you-own-your-ai-stack"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://rev-iq.ai/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insights",
+      "item": "https://rev-iq.ai/insights"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Should You Own Your AI Stack?",
+      "item": "https://rev-iq.ai/insights/should-you-own-your-ai-stack"
+    }
+  ]
+}
+  </script>
+
+  <script src="../js/forms.js" defer></script>
+  <script>
+    (function () {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      if (!('IntersectionObserver' in window)) {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>

@@ -318,7 +318,7 @@
       <div class="container">
         <div class="eyebrow"><span class="dot"></span>Privacy</div>
         <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); max-width: 22ch;">Privacy notice</h1>
-        <p class="lead" style="max-width: 62ch;">A short, plain explanation of what Rev-IQ collects through this website, why, and the choices you have. Last updated 17 October 2026.</p>
+        <p class="lead" style="max-width: 62ch;">A short, plain explanation of what Rev-IQ collects through this website, why, and the choices you have. Last updated 21 November 2026.</p>
       </div>
     </section>
     <section>
@@ -331,18 +331,20 @@
           <li><strong>AI Skill downloads:</strong> your email address, the skill and AI platform you chose, that you agreed to the Terms of Use, and whether you opted in to updates. Skills run inside your own AI account, so we don't receive anything you enter into them or the results they produce.</li>
           <li><strong>Contact messages:</strong> your name, email address, reason for reaching out, your message and whether you opted in to updates.</li>
           <li><strong>Site usage:</strong> Google Analytics records anonymous usage information such as pages visited, approximate location, device and browser type, using cookies.</li>
+          <li><strong>LinkedIn Insight Tag:</strong> If you are signed in to LinkedIn or have visited it recently, a LinkedIn cookie lets LinkedIn tell us how our LinkedIn advertising is performing and give us aggregated, anonymous reports about the types of professionals who visit the site, such as industry, job function and company size. LinkedIn may also use it to show you Rev-IQ ads on LinkedIn. We never see your LinkedIn identity or profile.</li>
         </ul>
         <h2>How we use it</h2>
         <p>We use your details to respond to your message, understand which resources are useful and improve the site. We will only send you Rev-IQ resources and updates by email if you tick the opt-in box, and every update will include a way to unsubscribe. We do not sell your information.</p>
         <h2>AI and automated decisions</h2>
         <p>We don't use computer programs, including AI, to make decisions about you that could significantly affect your rights or interests. We don't use the information you send us to train AI models. Read <a href="ai-use">how Rev-IQ uses AI</a> for more detail.</p>
         <h2>Who handles it</h2>
-        <p>Form submissions are processed by Formspree and delivered to the Rev-IQ inbox. The site is hosted by Vercel, and usage data is processed by Google. If you buy a paid skills bundle, payment is handled by Stripe, which acts as the seller of record and collects your name, email, billing and payment details under its own privacy policy. We receive your name, email, business details and order information from Stripe so we can deliver your purchase and support you. We never see or store your full card details. These providers may store information outside Australia, including in the United States.</p>
+        <p>Form submissions are processed by Formspree and delivered to the Rev-IQ inbox. The site is hosted by Vercel, and usage data is processed by Google and LinkedIn. If you buy a paid skills bundle, payment is handled by Stripe, which acts as the seller of record and collects your name, email, billing and payment details under its own privacy policy. We receive your name, email, business details and order information from Stripe so we can deliver your purchase and support you. We never see or store your full card details. These providers may store information outside Australia, including in the United States.</p>
         <h2>Your choices</h2>
         <ul>
           <li>You can ask to see, correct or delete the information we hold about you by emailing <a href="mailto:joel.smith@rev-iq.ai">joel.smith@rev-iq.ai</a>.</li>
           <li>You can withdraw your opt-in at any time by replying to any update or emailing us.</li>
           <li>You can block or delete cookies in your browser settings, or use Google's <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out add-on</a>.</li>
+          <li>You can stop LinkedIn using your visits to this site for advertising by turning off the relevant options in your <a href="https://www.linkedin.com/psettings/advertising" rel="noopener">LinkedIn advertising settings</a>.</li>
         </ul>
         <p>Our <a href="terms">Terms of Use</a> cover how you can use our resources and AI Skills. If you are not satisfied with how we handle a privacy concern, you can contact the <a href="https://www.oaic.gov.au/" rel="noopener">Office of the Australian Information Commissioner</a>.</p>
       </div>
@@ -446,5 +448,24 @@
       }
     })();
   </script>
+  <!-- LinkedIn Insight Tag -->
+  <script type="text/javascript">
+    _linkedin_partner_id = "10403580";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function(l) {
+      if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+      window.lintrk.q=[]}
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript";b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);})(window.lintrk);
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=10403580&fmt=gif" />
+  </noscript>
 </body>
 </html>

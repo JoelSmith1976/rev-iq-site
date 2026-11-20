@@ -16,6 +16,24 @@
  */
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mjgnyqgj";
 
+/**
+ * LinkedIn conversions: create each conversion in Campaign Manager
+ * (Measure > Conversion tracking, method "Event-specific"), then paste its
+ * numeric conversion ID below. Leave as null to skip.
+ */
+const LINKEDIN_CONVERSIONS = {
+  contact: null,  // homepage Contact form sent
+  download: null, // gated PDF download requested
+  skill: null,    // AI skill downloaded
+};
+
+function trackLinkedInConversion(kind) {
+  const id = LINKEDIN_CONVERSIONS[kind];
+  if (id && typeof window.lintrk === "function") {
+    window.lintrk("track", { conversion_id: id });
+  }
+}
+
 function triggerDownload(href) {
   const a = document.createElement("a");
   a.href = href;
@@ -78,6 +96,7 @@ async function submitRevIqForm(form) {
       }
       const pdf = form.dataset.pdf;
       if (pdf) triggerDownload(pdf);
+      trackLinkedInConversion(skill ? "skill" : pdf ? "download" : "contact");
       form.reset();
     } else {
       setFormState(form, "error");

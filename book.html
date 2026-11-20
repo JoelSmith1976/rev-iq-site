@@ -13,7 +13,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Decisions We Live With | Joel Smith</title>
-  <meta name="description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. ePub and PDF editions." />
+  <meta name="description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. Paperback, ePub, PDF and Kindle editions." />
   <meta name="referrer" content="no-referrer" />
   <link rel="canonical" href="https://rev-iq.ai/book" />
   <meta property="og:type" content="book" />
@@ -21,14 +21,14 @@
   <meta property="og:locale" content="en_AU" />
   <meta property="og:url" content="https://rev-iq.ai/book" />
   <meta property="og:title" content="Decisions We Live With" />
-  <meta property="og:description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. ePub and PDF editions." />
+  <meta property="og:description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. Paperback, ePub, PDF and Kindle editions." />
   <meta property="og:image" content="https://rev-iq.ai/images/og/decisions-we-live-with.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Cover of Decisions We Live With by Joel Smith" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Decisions We Live With" />
-  <meta name="twitter:description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. ePub and PDF editions." />
+  <meta name="twitter:description" content="Decisions We Live With: What History Reveals About Leadership Under Pressure. A book on judgement by Joel Smith. Paperback, ePub, PDF and Kindle editions." />
   <meta name="twitter:image" content="https://rev-iq.ai/images/og/decisions-we-live-with.jpg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -429,6 +429,7 @@
     .bk-amazon { margin-top: var(--space-4); }
     .bk-amz-h { font-size: 1.15rem; margin: 0 0 var(--space-2); }
     .bk-amazon .bk-amz-p { color: var(--color-text-muted); font-size: var(--text-sm); margin: 0 0 var(--space-4); }
+    .bk-amazon .bk-amz-btn2 { margin-top: var(--space-3); }
     .bk-amazon .btn-amazon { background: #FFA41C; border: 1px solid #FF8F00; color: #0F1111; }
     .bk-amazon .btn-amazon:hover, .bk-amazon .btn-amazon:focus-visible { background: #FA8900; border-color: #E47911; color: #0F1111; transform: translateY(-1px); box-shadow: var(--shadow-sm); }
     .bk-buy .gate-note { font-size: var(--text-xs); color: var(--color-text-faint); margin: var(--space-3) 0 0; }
@@ -527,9 +528,10 @@
             </div>
             <div class="card bk-buy bk-amazon" id="amazon">
               <h3 class="bk-amz-h">Also on Amazon</h3>
-              <p class="bk-amz-p">Prefer to read on Kindle? The Kindle edition is available on Amazon.</p>
-              <a class="btn btn-amazon" id="amazon-kindle-btn" href="https://www.amazon.com.au/dp/B0HRBVXCP1" target="_blank" rel="noopener">Kindle edition on Amazon</a>
-              <p class="gate-note">On an iPhone or iPad, open the link in Safari to buy. The Amazon and Kindle apps in Australia don't sell Kindle books.</p>
+              <p class="bk-amz-p">Prefer a printed copy, or to read on Kindle? Both editions are available on Amazon.</p>
+              <a class="btn btn-amazon" id="amazon-paperback-btn" href="https://www.amazon.com.au/dp/1763967417" target="_blank" rel="noopener">Paperback on Amazon, A$21.99</a>
+              <a class="btn btn-amazon bk-amz-btn2" id="amazon-kindle-btn" href="https://www.amazon.com.au/dp/B0HRBVXCP1" target="_blank" rel="noopener">Kindle edition on Amazon, A$12.99</a>
+              <p class="gate-note">On an iPhone or iPad, open the Kindle link in Safari to buy. The Amazon and Kindle apps in Australia don't sell Kindle books.</p>
             </div>
           </div>
         </div>
@@ -568,6 +570,7 @@
   <script>
     (function () {
       var b = document.getElementById('buy-btn');
+      var pb = document.getElementById('amazon-paperback-btn'); if (pb) pb.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'select_promotion', { promotion_name: 'amazon_paperback' }); });
       var k = document.getElementById('amazon-kindle-btn'); if (k) k.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'select_promotion', { promotion_name: 'amazon_kindle' }); });
       if (b) b.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'begin_checkout', { currency: 'AUD', value: 12.99, items: [{ item_id: 'decisions-we-live-with', item_name: 'Decisions We Live With' }] }); });
     })();
@@ -622,7 +625,8 @@
     "name": "Joel Smith",
     "url": "https://rev-iq.ai/about",
     "sameAs": [
-      "https://www.linkedin.com/in/joelsmithau/"
+      "https://www.linkedin.com/in/joelsmithau/",
+      "https://www.amazon.com/author/joelsmithofficial"
     ]
   },
   "publisher": {
@@ -634,6 +638,20 @@
   "image": "https://rev-iq.ai/images/book/decisions-we-live-with-cover.jpg",
   "description": "Twenty moments from history set alongside the pressures leaders face in organisations today. A book about judgement.",
   "workExample": [
+    {
+      "@type": "Book",
+      "bookFormat": "https://schema.org/Paperback",
+      "isbn": "9781763967410",
+      "name": "Decisions We Live With (paperback)",
+      "numberOfPages": 152,
+      "offers": {
+        "@type": "Offer",
+        "price": "21.99",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.amazon.com.au/dp/1763967417"
+      }
+    },
     {
       "@type": "Book",
       "bookFormat": "https://schema.org/EBook",
@@ -651,7 +669,14 @@
       "@type": "Book",
       "bookFormat": "https://schema.org/EBook",
       "name": "Decisions We Live With (Kindle edition)",
-      "url": "https://www.amazon.com.au/dp/B0HRBVXCP1"
+      "url": "https://www.amazon.com.au/dp/B0HRBVXCP1",
+      "offers": {
+        "@type": "Offer",
+        "price": "12.99",
+        "priceCurrency": "AUD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://www.amazon.com.au/dp/B0HRBVXCP1"
+      }
     }
   ]
 }

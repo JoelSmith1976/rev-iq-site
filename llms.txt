@@ -73,7 +73,7 @@ Free AI skills for Claude, ChatGPT and Perplexity, each built on a Rev-IQ framew
 
 - [Home](https://rev-iq.ai/): Overview of Rev-IQ's approach and resource library.
 - [About Rev-IQ](https://rev-iq.ai/about): Background on Rev-IQ and its approach to commercial and revenue operations.
-- [Decisions We Live With](https://rev-iq.ai/book): A book on judgement by Rev-IQ founder Joel Smith, setting twenty moments from history alongside the pressures leaders face in organisations today. ePub, PDF and Kindle editions.
+- [Decisions We Live With](https://rev-iq.ai/book): A book on judgement by Rev-IQ founder Joel Smith, setting twenty moments from history alongside the pressures leaders face in organisations today. Paperback, ePub, PDF and Kindle editions.
 - [Advisory](https://rev-iq.ai/advisory): Commercial diagnostics, advisory board seats, growth and GTM advisory, retention advisory, and workshops for technology businesses.
 - [MyHub case study](https://rev-iq.ai/case-studies/myhub): How a Rev-IQ commercial diagnostic gave MyHub, a New Zealand SaaS business, one clear view of its performance and a prioritised 12-month growth plan.
 - [For Investors](https://rev-iq.ai/for-investors): Pre-deal commercial checks on revenue quality, retention, pipeline, pricing, AI claims and go-to-market, plus interim and fractional CRO support for portfolio companies. For private equity and venture capital investors, working with technology businesses locally across Australia and New Zealand, and internationally.

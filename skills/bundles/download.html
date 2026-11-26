@@ -8,7 +8,8 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'G-67DC4XWDK8');
+    // Strip the Stripe session_id from URLs sent to Google Analytics (M-001)
+    gtag('config', 'G-67DC4XWDK8', { page_location: location.origin + location.pathname });
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

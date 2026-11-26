@@ -58,12 +58,12 @@
       --color-divider: #e6dac0;
       --color-text: #1c1912;
       --color-text-muted: #5c5344;
-      --color-text-faint: #938970;
+      --color-text-faint: #736a53;
       --color-primary: #0b6e66;
       --color-primary-hover: #084f49;
       --color-primary-soft: #dceeea;
       --color-primary-soft-2: #c3e2dc;
-      --color-accent: #a8710f;
+      --color-accent: #946210;
       --color-accent-hover: #8a5c0b;
       --color-accent-soft: #f5e6c4;
       --color-ink: #0e2624;
@@ -248,6 +248,7 @@
 
 
     .contact-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-10); align-items: start; }
+    @media (min-width: 921px) { .contact-wrap > form { grid-column: 2; grid-row: 1; } .contact-wrap > div { grid-column: 1; grid-row: 1; } }
     @media (max-width: 920px) {
       .contact-wrap { grid-template-columns: 1fr; }
     }
@@ -322,6 +323,24 @@
     </section>
     <section>
       <div class="container contact-wrap">
+        <form data-rev-iq-form>
+          <input type="hidden" name="_subject" value="New Contact Message | rev-iq.ai" />
+          <input type="hidden" name="form_type" value="Contact message" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <div data-state="idle"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
+          <div data-state="idle"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+          <div data-state="idle"><label for="reason">Reason for reaching out</label>
+            <select id="reason" name="reason">
+              <option value="general">General enquiry</option><option value="strategy-conversation">Start a strategy conversation</option><option value="commercial-diagnostic">Commercial diagnostic</option><option value="advisory-board">Advisory board seat</option><option value="fractional-leadership">Fractional commercial leadership</option><option value="investor">Investor or portfolio company enquiry</option><option value="gtm-advisory">Growth / GTM advisory</option><option value="retention-advisory">Retention &amp; customer journey advisory</option><option value="workshop-speaking">Workshop or speaking session</option><option value="resource-question">A question about a resource or download</option>
+            </select>
+          </div>
+          <div data-state="idle"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+          <label data-state="idle" class="form-optin"><input type="checkbox" name="marketing_opt_in" value="yes" /><span>Also send me occasional Rev-IQ resources and updates. Unsubscribe any time.</span></label>
+          <button data-state="idle" class="btn btn-primary" type="submit">Send message</button>
+          <p data-state="idle" class="form-note">We use your details to reply to your message. <a href="privacy">Privacy notice</a></p>
+          <p data-state="success" hidden style="color: var(--color-primary); margin: 0; font-weight: 600;">Thanks. Your message is on its way. We'll be in touch.</p>
+          <p data-state="error" hidden style="color: var(--color-error); margin: 0;">Something went wrong. Please email joel.smith@rev-iq.ai directly.</p>
+        </form>
         <div>
           <div class="section-intro">
             <h2>What happens next</h2>
@@ -343,24 +362,6 @@
             </p>
           </div>
         </div>
-        <form data-rev-iq-form>
-          <input type="hidden" name="_subject" value="New Contact Message | rev-iq.ai" />
-          <input type="hidden" name="form_type" value="Contact message" />
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-          <div data-state="idle"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
-          <div data-state="idle"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
-          <div data-state="idle"><label for="reason">Reason for reaching out</label>
-            <select id="reason" name="reason">
-              <option value="general">General enquiry</option><option value="strategy-conversation">Book a strategy conversation</option><option value="commercial-diagnostic">Commercial diagnostic</option><option value="advisory-board">Advisory board seat</option><option value="fractional-leadership">Fractional commercial leadership</option><option value="investor">Investor or portfolio company enquiry</option><option value="gtm-advisory">Growth / GTM advisory</option><option value="retention-advisory">Retention &amp; customer journey advisory</option><option value="workshop-speaking">Workshop or speaking session</option><option value="resource-question">A question about a resource or download</option>
-            </select>
-          </div>
-          <div data-state="idle"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
-          <label data-state="idle" class="form-optin"><input type="checkbox" name="marketing_opt_in" value="yes" /><span>Also send me occasional Rev-IQ resources and updates. Unsubscribe any time.</span></label>
-          <button data-state="idle" class="btn btn-primary" type="submit">Send message</button>
-          <p data-state="idle" class="form-note">We use your details to reply to your message. <a href="privacy">Privacy notice</a></p>
-          <p data-state="success" hidden style="color: var(--color-primary); margin: 0; font-weight: 600;">Thanks. Your message is on its way. We'll be in touch.</p>
-          <p data-state="error" hidden style="color: var(--color-error); margin: 0;">Something went wrong. Please email joel.smith@rev-iq.ai directly.</p>
-        </form>
       </div>
     </section>
   </main>

@@ -96,6 +96,13 @@ async function submitRevIqForm(form) {
       }
       const pdf = form.dataset.pdf;
       if (pdf) triggerDownload(pdf);
+      if (!skill && typeof gtag === "function") {
+        if (pdf) {
+          gtag("event", "download_request", { asset: data.get("asset") || pdf });
+        } else {
+          gtag("event", "contact_submit", { reason: data.get("reason") || "unspecified" });
+        }
+      }
       trackLinkedInConversion(skill ? "skill" : pdf ? "download" : "contact");
       form.reset();
     } else {

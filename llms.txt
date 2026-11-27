@@ -36,7 +36,7 @@ Articles giving Rev-IQ's analysis and point of view on current commercial questi
 Rev-IQ's Saturday round-up of the week in technology, with one line on why each story matters. Kept separate from the Insights articles.
 
 - [The Weekend Download](https://rev-iq.ai/insights/the-weekend-download): All editions, newest first.
-- [The Weekend Download, Edition 7: week ending 28 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-7): AI helps prove the Riemann hypothesis, a US$43.9bn cyber deal, Nvidia's CEO returns, a million satellites and a message sent through a wall by gravity.
+- [The Weekend Download, Edition 7: week ending 28 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-7): An AI-assisted Riemann hypothesis proof, a US$43.9bn cyber deal, Nvidia's CEO returns, a million satellites and a message sent through a wall by gravity.
 - [The Weekend Download, Edition 6: week ending 21 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-6): We actually got GTA VI. Plus electrons that pair up at room temperature, a battery that runs on vitamin B12, Voyager 1 reaches one light-day and 151 robots dance in sync.
 - [The Weekend Download, Edition 5: week ending 14 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-5): Nvidia changes leaders, Microsoft goes quiet, an AI that only answers yes or no, an Australian team backs a famous black hole photo and a robot dog walks a real one.
 - [The Weekend Download, Edition 4: week ending 7 November 2026](https://rev-iq.ai/insights/the-weekend-download-edition-4): Drones that deliver in 30 minutes, an off switch for AI agents, a humanoid robot company goes public and a Tamagotchi that lives upside down.
